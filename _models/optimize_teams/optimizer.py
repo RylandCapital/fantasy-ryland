@@ -1,8 +1,10 @@
-from ortools.linear_solver import pywraplp
+import os
 import numpy as np
 import pandas as pd
 import time
 import csv
+
+from ortools.linear_solver import pywraplp\
 
 class Player:
   def __init__(self, opts):
@@ -70,8 +72,7 @@ ROSTER_SIZE = 9
 def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
-  with open(r"P:\10_CWP Trade Department\Ryland\FantasyRyland\pulsar_database\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
-#  with open(r"P:\10_CWP Trade Department\Ryland\fantasy\cashodds.csv", 'r') as csvfile:
+  with open(os.getcwd() + r"\_models\player_stats\stats_by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
    
     for row in csvdata:

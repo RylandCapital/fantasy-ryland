@@ -1,9 +1,17 @@
-import optimizer
+import os
 
+from _models.optimize_teams import optimizer
 from multiprocessing import Pool
 
 
-'''Optimize Test Set'''
+'''Create Local Export Env'''
+user = os.getlogin()
+# Specify path
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+isExist = os.path.exists(path)
+print(isExist)
+ 
+'''Optimize'''
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
