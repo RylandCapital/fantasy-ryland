@@ -1,7 +1,9 @@
 import pandas as pd
-from selenium import webdriver
 import time
 import numpy as np
+import os
+
+from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
@@ -14,9 +16,9 @@ driver.get(webpage)
 time.sleep(2)
 
 
-we = 1520
-we_file = '15_20'
-strdates = ['12/09/20']
+we = 121
+we_file = '1_21'
+strdates = ['09/09/21']
 pddates = [pd.to_datetime(i) for i in strdates]
 
 dates = []
@@ -27,25 +29,25 @@ for date, we in zip(dates[0:], [we]):
     driver.refresh()
     time.sleep(2)
     print('\n\n\ncurrently scraping date : {0}'.format(date))
-    date_box = driver.find_element_by_xpath('//*[@id="slate-select"]/input')
+    date_box = driver.find_element('xpath','//*[@id="slate-select"]/input')
     date_box.send_keys(Keys.BACKSPACE*10)
     time.sleep(1)
     date_box.send_keys(date)
     date_box.click()
     time.sleep(5)
-    position_box = driver.find_element_by_xpath('/html/body/article/section[1]/div[2]')
+    position_box = driver.find_element('xpath','/html/body/article/section[1]/div[2]')
     position_box.click()
     time.sleep(5)   
     
 #    fd = pd.read_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\weekly_salaries\Week{0}_20_Main_Info.csv'.format(we))
     #%%
-    rb_box = driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[2]/a').click()
+    rb_box = driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[2]/a').click()
     time.sleep(5)
     
     name = 'RB'
     
     rbcolumns =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
-                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'sr2', 'buzz', 'buzz2',  
+                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
                      'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
                      'delta', 'spread', 'o/u', 'spread%', 'rush_td%', 'rush_yards%',
                      'snaps%', 'rush_att', 'not sure', 'rush_yards',  'rush_y/a',
@@ -60,7 +62,7 @@ for date, we in zip(dates[0:], [we]):
                      
     
     #this gets the little blue number that shows number of players in that position that day
-    num_players = int(driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+    num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
     
     #loop on for left columns
     #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -68,7 +70,7 @@ for date, we in zip(dates[0:], [we]):
     columns = []
     column_names = ['rating', 'name', 'salary', 'team', 'opp']
     for n, t in zip(column_names, np.arange(2,7)):
-        column = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+        column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
         columns.append(column) 
     left = pd.concat(columns, axis=1) 
 
@@ -83,10 +85,10 @@ for date, we in zip(dates[0:], [we]):
     len_names = len(rcolumn_names)
     for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
         try:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
         except:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
             
     right = pd.concat(rcolumns, axis=1)  
@@ -98,21 +100,21 @@ for date, we in zip(dates[0:], [we]):
     
 
     rbdf = finalrb.copy()
-    rbdf = rbdf.drop(['sr2', 'buzz2'], axis=1)
+    #rbdf = rbdf.drop(['sr2', 'buzz2'], axis=1)
     #%%
     
-    wr_box = driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[3]/a').click()
+    wr_box = driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[3]/a').click()
     time.sleep(5)
     
     
     name = 'WR'
     
     wrcolumns =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
-                     'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'sr2', 'buzz', 'buzz2',
+                     'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
                      'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
                      'delta', 'spread', 'o/u', 'spread%', 'rec_trgts%', 'rec_td%',
                      'rec_yds%', 'rec_trgts', 'not_sure2', 'rec_yards',
-                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rz_opp', 'rz_opp10',
+                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rec_TAY', 'rec_TAY%', 'rz_opp', 'rz_opp10',
                      'rz-opp5', 'rz_td_pct', 'temp', 'humidity', 
                      'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
                      'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
@@ -121,7 +123,7 @@ for date, we in zip(dates[0:], [we]):
                                       
     
     #this gets the little blue number that shows number of players in that position that day
-    num_players = int(driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+    num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
     
     #loop on for left columns
     #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -129,7 +131,7 @@ for date, we in zip(dates[0:], [we]):
     columns = []
     column_names = ['rating', 'name', 'salary', 'team', 'opp']
     for n, t in zip(column_names, np.arange(2,7)):
-        column = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+        column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
         columns.append(column) 
     left = pd.concat(columns, axis=1) 
 
@@ -144,10 +146,10 @@ for date, we in zip(dates[0:], [we]):
     len_names = len(rcolumn_names)
     for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
         try:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
         except:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
             
     right = pd.concat(rcolumns, axis=1)  
@@ -159,20 +161,20 @@ for date, we in zip(dates[0:], [we]):
   
         
     wrdf = finalwr.copy()
-    wrdf = wrdf.drop(['sr2', 'buzz2'], axis=1)
+ 
     #%%
        
-    te_box = driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[4]/a').click()
+    te_box = driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[4]/a').click()
     time.sleep(5)
 
     name = 'TE'
     
     tecolumns =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
-                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'sr2', 'buzz', 'buzz2',
+                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz', 
                      'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
                      'delta', 'spread', 'o/u', 'spread%', 'rec_trgts%', 'rec_td%',
                      'rec_yds%', 'rec_trgts', 'not_sure2', 'rec_yards',
-                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rz_opp', 'rz_opp10',
+                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rec_TAY', 'rec_TAY%', 'rz_opp', 'rz_opp10',
                      'rz-opp5', 'rz_td_pct', 'temp', 'humidity', 
                      'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
                      'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
@@ -181,7 +183,7 @@ for date, we in zip(dates[0:], [we]):
 
         
     #this gets the little blue number that shows number of players in that position that day
-    num_players = int(driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+    num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
     
     #loop on for left columns
     #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -189,7 +191,7 @@ for date, we in zip(dates[0:], [we]):
     columns = []
     column_names = ['rating', 'name', 'salary', 'team', 'opp']
     for n, t in zip(column_names, np.arange(2,7)):
-        column = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+        column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
         columns.append(column) 
     left = pd.concat(columns, axis=1) 
 
@@ -204,10 +206,10 @@ for date, we in zip(dates[0:], [we]):
     len_names = len(rcolumn_names)
     for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
         try:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
         except:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
             
     right = pd.concat(rcolumns, axis=1)  
@@ -218,19 +220,19 @@ for date, we in zip(dates[0:], [we]):
     finalte.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
     tedf = finalte.copy()
-    tedf = tedf.drop(['sr2', 'buzz2'], axis=1)
+    
     
     #%%
     
         
-    qb_box = driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[1]/a').click()
+    qb_box = driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[1]/a').click()
     time.sleep(5)
     
     name = 'QB'
     
         
     #this gets the little blue number that shows number of players in that position that day
-    num_players = int(driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+    num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
     
     #loop on for left columns
     #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -238,7 +240,7 @@ for date, we in zip(dates[0:], [we]):
     columns = []
     column_names = ['rating', 'name', 'salary', 'team', 'opp']
     for n, t in zip(column_names, np.arange(2,7)):
-        column = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+        column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
         columns.append(column) 
     left = pd.concat(columns, axis=1) 
 
@@ -249,8 +251,8 @@ for date, we in zip(dates[0:], [we]):
     #np.arange(1, len(names)) below
     #
     rcolumns = []
-    rcolumn_names =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',  'act_pts', 'impld_pts','lev_rank', 'leverage', 'sr', 'sr2', 'buzz', 'buzz2', 'pro', 'my',
-     'bargain', 'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u', 'spread%', 'comp', 'att', 'yards', '%', 'y/a', 'adj ypa', 'td', 'long',
+    rcolumn_names =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',  'act_pts', 'impld_pts','lev_rank', 'leverage', 'sr', 'buzz',  'pro', 'my',
+     'bargain', 'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u', 'spread%', 'comp', 'att', 'yards', '%', 'y/a', 'adj ypa', 'td', 'long', 'CAY', 'IAY',
      '%rb', '%wr', '%te', '%td', 'int%', 'sack%', 'rush-att', 'not sure', 'rush_yards', 'rush_y/a', 'rush_td', 'success', 'rz_opp', 'rz_opp10',
      'rz-opp5', 'temp', 'humidity', 'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps', 'consistency', 'upside', 'duds', 'count',
      'year_ppg', 'year+-', 'year_change', 'year_fpo', 'year_fps', 'year_consistency', 'year_upside', 'year_duds', 'year_count']
@@ -258,10 +260,10 @@ for date, we in zip(dates[0:], [we]):
     len_names = len(rcolumn_names)
     for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
         try:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
         except:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
             
     right = pd.concat(rcolumns, axis=1)  
@@ -272,17 +274,17 @@ for date, we in zip(dates[0:], [we]):
     finalqb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
     qbdf = finalqb.copy()  
-    qbdf = qbdf.drop(['sr2', 'buzz2'], axis=1)
+   
     #%%
             
-    d_box = driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[6]/a').click()
+    d_box = driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[6]/a').click()
     time.sleep(5)
         
     name = 'DEF'
  
     
     #this gets the little blue number that shows number of players in that position that day
-    num_players = int(driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+    num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
     
     #loop on for left columns
     #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -290,7 +292,7 @@ for date, we in zip(dates[0:], [we]):
     columns = []
     column_names = ['rating', 'name', 'salary', 'team', 'opp']
     for n, t in zip(column_names, np.arange(2,7)):
-        column = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+        column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
         columns.append(column) 
     left = pd.concat(columns, axis=1) 
 
@@ -301,7 +303,7 @@ for date, we in zip(dates[0:], [we]):
     #np.arange(1, len(names)) below
     #
     rcolumns = []
-    rcolumn_names  = ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own', 'proj_sacks', 'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'sr2', 'buzz', 'buzz2', 'pro',
+    rcolumn_names  = ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own', 'proj_sacks', 'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz', 'pro',
                 'my', 'bargain', 'opp+-', 'pts', 'opppts', 'delta', 'spread', 'o/u', 'spread%', 'int%', 'pass_succ', 'rush_succ', 'sack%', 
                 'takeaway%', 'td%', 'ypp', 'rz_snaps', 'rz_snaps10', 'rz_snaps5', 'TD%', 'temp', 'humidity', 'precip%', 'month_ppg',
                 'month_change', 'consistency', 'upside', 'duds', 'count', 'year_ppg', 'year+-', 'year_change', 'year_consistency', 
@@ -309,10 +311,10 @@ for date, we in zip(dates[0:], [we]):
     len_names = len(rcolumn_names)
     for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
         try:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
         except:
-            rcolumn = pd.DataFrame([driver.find_element_by_xpath('/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+            rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
             
     right = pd.concat(rcolumns, axis=1)  
@@ -325,7 +327,7 @@ for date, we in zip(dates[0:], [we]):
 
     
     defdf = finaldef.copy()   
-    defdf = defdf.drop(['sr2', 'buzz2'], axis=1)
+   
     #%%  
     '''make all numbers and clean'''
     
@@ -339,7 +341,7 @@ for date, we in zip(dates[0:], [we]):
     master['floor'] = master['floor'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
     master['proj+-'] = master['proj+-'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
     master['pts/sal'] = master['pts/sal'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
-    master['proj_own'] = master['proj_own'].apply(lambda x: x.replace('','0-0') if len(x)==0 else x).fillna('0-0').apply(lambda x: (int(x.split('-')[0]) + int(x.split('-')[1]))/2 if len(x)>2 else int(x))
+    master['proj_own'] = master['proj_own'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna('0').apply(lambda x: float(x))
     master['impld_pts'] = master['impld_pts'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
     master['lev_rank'] = master['lev_rank'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
     master['leverage'] = master['leverage'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x[:-1])/100)
@@ -363,7 +365,7 @@ for date, we in zip(dates[0:], [we]):
     master['adj ypa'] = master['adj ypa'].fillna(0).apply(lambda x: x.replace('','0') if len(str(x))==0 else x).astype(float)
     master['td'] = master['td'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
     master['long'] = master['long'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
-    master['%rb'] = master['%rb'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
+    master["%rb"] = master["%rb"].apply(lambda x: str(x).replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
     master['%wr'] = master['%wr'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
     master['%te'] = master['%te'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
     master['%td'] = master['%td'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
@@ -428,27 +430,27 @@ for date, we in zip(dates[0:], [we]):
     
     
     
-    fd = pd.read_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\weekly_salaries\Week{0}_Main_Info.csv'.format(we_file))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' v', '') if x.split(' ')[-1] == 'v' else x)
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' jr.', ''))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
-    fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ', ''))
-    fd['City Name'] = np.where(fd['Position'] == 'D', fd['Nickname'].apply(lambda x: x.split(' ')[1]), ['ryland'])
-    fd['City Name2'] = fd['City Name'].apply(lambda x: 'NY' if x =='York' else  x)
-    fd['City Name2'] = fd['City Name2'].apply(lambda x: 'LA' if x == 'Angeles' else  x)
-    fd['City Name3'] = np.where((fd['City Name2'] == 'LA') | (fd['City Name2'] == 'NY'), fd['City Name2'].astype(str) + ' ' + fd['Last Name'], fd['First Name'])
-    fd['City Name3'] = fd['City Name3'].str.lower()
-    fd['First Name'] = fd['First Name'].str.lower().apply(lambda x: x.replace(' ', '')[0])
-    fd['RylandID'] = np.where(fd['Position'] == 'D', fd['City Name3'] + fd['Salary'].astype(str), fd['Last Name'] + fd['Salary'].astype(str) + fd['Position'].str.lower() + fd['First Name'])
+    # fd = pd.read_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\weekly_salaries\Week{0}_Main_Info.csv'.format(we_file))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' v', '') if x.split(' ')[-1] == 'v' else x)
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' jr.', ''))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
+    # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ', ''))
+    # fd['City Name'] = np.where(fd['Position'] == 'D', fd['Nickname'].apply(lambda x: x.split(' ')[1]), ['ryland'])
+    # fd['City Name2'] = fd['City Name'].apply(lambda x: 'NY' if x =='York' else  x)
+    # fd['City Name2'] = fd['City Name2'].apply(lambda x: 'LA' if x == 'Angeles' else  x)
+    # fd['City Name3'] = np.where((fd['City Name2'] == 'LA') | (fd['City Name2'] == 'NY'), fd['City Name2'].astype(str) + ' ' + fd['Last Name'], fd['First Name'])
+    # fd['City Name3'] = fd['City Name3'].str.lower()
+    # fd['First Name'] = fd['First Name'].str.lower().apply(lambda x: x.replace(' ', '')[0])
+    # fd['RylandID'] = np.where(fd['Position'] == 'D', fd['City Name3'] + fd['Salary'].astype(str), fd['Last Name'] + fd['Salary'].astype(str) + fd['Position'].str.lower() + fd['First Name'])
     
     
     master['name'] = master['name'].apply(lambda x: x.replace(' Defense', ''))
-    master['name'] = np.where(master['name'] == 'Jesus Wilson', 'Bobo Wilson' ,master['name'])
+    # master['name'] = np.where(master['name'] == 'Jesus Wilson', 'Bobo Wilson' ,master['name'])
     master['Last Name_master'] = master['name'].apply(lambda x: x.lower())
     master['City Name_master'] = master['name'].apply(lambda x: x.lower())
     master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iii', ''))
@@ -465,14 +467,14 @@ for date, we in zip(dates[0:], [we]):
     master['RylandID_master'] = np.where(master['pos'] == 'DEF', master['City Name_master'] + + master['salary'].astype(str),  master['Last Name_master'] + master['salary'].astype(str) + master['pos'].str.lower() + master['First Name_master'])
     
     
-    
+    master['pos'] = np.where(master['pos']=='DEF','D',master['pos'])
     master.index = master['RylandID_master']
-    fd.index = fd['RylandID']
+    # fd.index = fd['RylandID']
     
-    master = master.join(fd)
-    
-    
-    master.to_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\pulsar_database\{0}.csv'.format(we))
+    # master = master.join(fd)
+    master = master.copy()
+
+    master.to_csv(os.getcwd() + r"\_historical\player_stats\by_week\{0}.csv".format(format(we)))
     
     
     

@@ -1,29 +1,30 @@
 import os
 
-from _models.optimize_teams import optimizer
+from _historical.optimize.optimize import fantasyze
 from multiprocessing import Pool
+
+from config import curr_optimize_weeks
+
 
 
 '''Create Local Export Env'''
 user = os.getlogin()
 # Specify path
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-isExist = os.path.exists(path)
-print(isExist)
- 
-'''Optimize'''
+if os.path.exists(path) == False:
+  os.mkdir(path)
+  os.mkdir(path+'optimized_teams_by_week\\')
+
+
+
+'''Optimize New Histoical Teams'''
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = [
-          [1,2],[3,4],[5,6],[7,8],[9,10],[11,12],
-          [13,14],[15,16],[120,220],[320,420],[520,620],[720,820],
-          [920,1020],[1120,1220],[1320,1420],[1520]
-        ]
-weeks = [[1420, 1520]]
+weeks = curr_optimize_weeks
 
 pool = Pool(processes=len(weeks))
-pool.map(optimizer.fantasyze, weeks)
+pool.map(fantasyze, weeks)
 pool.close()
 
 ################################################

@@ -4,12 +4,16 @@ import pandas as pd
 import time
 import csv
 
-from ortools.linear_solver import pywraplp\
+from ortools.linear_solver import pywraplp
+from config import historical_winning_scores
+
+
+
 
 class Player:
   def __init__(self, opts):
     self.name = opts['name']
-    self.position = opts['Position'].upper()
+    self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
     self.theo_actual = float(np.random.randint(1,30)) + float(opts['act_pts'])
     self.actual = float(opts['act_pts'])
@@ -72,7 +76,7 @@ ROSTER_SIZE = 9
 def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
-  with open(os.getcwd() + r"\_models\player_stats\stats_by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
+  with open(os.getcwd() + r"\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
    
     for row in csvdata:
@@ -141,39 +145,7 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 start_time = time.time()
 print('initiating dfs calculations''')  
     
-milly_winners_dict = {     
-'1':241.96,
-'2':205.32,
-'3':238.54,
-'4':216.78,
-'5':285.64,
-'6':215.80,
-'7':214.86,
-'8':225.86,
-'9':233.52,
-'10':218.92,
-'11':197.74,
-'12':225.18,
-'13':188.66,
-'14':206.46,
-'15':232.00,
-'16':234.00,
-'120':215.46,
-'220':223.60,
-'320':214.90,
-'420':232.00,
-'520':205.00,
-'620':208.00,
-'720':235.00,
-'820':211.24,
-'920':201.16,
-'1020':196.06,
-'1120':187.96,
-'1220':230,
-'1320':220, 
-'1420':220, #GUESSES
-'1520':220, #GUESSES
-}
+milly_winners_dict = historical_winning_scores
 
 def fantasyze(ws):
   for w in ws:
@@ -312,7 +284,7 @@ def fantasyze(ws):
           masterf = pd.concat(dfs)
           masterf = masterf.set_index('name')
 
-          mypath = r'P:\10_CWP Trade Department\Ryland\FantasyRyland\pulsar_database'
+          mypath = os.getcwd() + r"\_historical\player_stats\by_week"
           stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(w)) 
           stats = stats.set_index('name')
           
@@ -330,8 +302,11 @@ def fantasyze(ws):
 
           print("--- %s seconds ---" % (time.time() - start_time))
 
-          masterf.to_csv(r'P:\10_CWP Trade Department\Ryland\FantasyRyland\pulsar_database\optimized_teams_by_week\{0}.csv.gz'.format(w),
-                              compression='gzip', index=True)
+          user = os.getlogin()
+          # Specify path
+          path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(user)
+
+          masterf.to_csv(path+'{0}.csv.gz'.format(w),compression='gzip', index=True)
           
           print("--- %s seconds ---" % (time.time() - start_time))
 
