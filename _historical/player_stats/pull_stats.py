@@ -6,6 +6,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
+from config import rbcolumns_hist, wrcolumns_hist, tecolumns_hist, qbcolumns_hist, defcolumns_hist 
 
 fire = webdriver.FirefoxProfile()
 fire.set_preference("http.response.timeout", 5)
@@ -46,20 +47,7 @@ for date, we in zip(dates[0:], [we]):
     
     name = 'RB'
     
-    rbcolumns =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
-                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
-                     'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
-                     'delta', 'spread', 'o/u', 'spread%', 'rush_td%', 'rush_yards%',
-                     'snaps%', 'rush_att', 'not sure', 'rush_yards',  'rush_y/a',
-                     'rush_td', 'success', 'rec_trgts', 'not_sure2', 'rec_yards',
-                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rz_opp', 'rz_opp10',
-                     'rz-opp5', 'rz_td_pct', 'rz_succ%', 'temp', 'humidity', 
-                     'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
-                     'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
-                     'year_change', 'year_fpo','year_fps', 'year_consistency', 
-                     'year_upside', 'year_duds', 'year_count']
-    
-                     
+    rbcolumns =  rbcolumns_hist
     
     #this gets the little blue number that shows number of players in that position that day
     num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
@@ -109,19 +97,8 @@ for date, we in zip(dates[0:], [we]):
     
     name = 'WR'
     
-    wrcolumns =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
-                     'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
-                     'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
-                     'delta', 'spread', 'o/u', 'spread%', 'rec_trgts%', 'rec_td%',
-                     'rec_yds%', 'rec_trgts', 'not_sure2', 'rec_yards',
-                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rec_TAY', 'rec_TAY%', 'rz_opp', 'rz_opp10',
-                     'rz-opp5', 'rz_td_pct', 'temp', 'humidity', 
-                     'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
-                     'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
-                     'year_change', 'year_fpo','year_fps', 'year_consistency', 
-                     'year_upside', 'year_duds', 'year_count']
+    wrcolumns =  wrcolumns_hist
                                       
-    
     #this gets the little blue number that shows number of players in that position that day
     num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
     
@@ -169,17 +146,7 @@ for date, we in zip(dates[0:], [we]):
 
     name = 'TE'
     
-    tecolumns =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
-                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz', 
-                     'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
-                     'delta', 'spread', 'o/u', 'spread%', 'rec_trgts%', 'rec_td%',
-                     'rec_yds%', 'rec_trgts', 'not_sure2', 'rec_yards',
-                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rec_TAY', 'rec_TAY%', 'rz_opp', 'rz_opp10',
-                     'rz-opp5', 'rz_td_pct', 'temp', 'humidity', 
-                     'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
-                     'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
-                     'year_change', 'year_fpo','year_fps', 'year_consistency', 
-                     'year_upside', 'year_duds', 'year_count']
+    tecolumns =  tecolumns_hist
 
         
     #this gets the little blue number that shows number of players in that position that day
@@ -251,14 +218,10 @@ for date, we in zip(dates[0:], [we]):
     #np.arange(1, len(names)) below
     #
     rcolumns = []
-    rcolumn_names =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',  'act_pts', 'impld_pts','lev_rank', 'leverage', 'sr', 'buzz',  'pro', 'my',
-     'bargain', 'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u', 'spread%', 'comp', 'att', 'yards', '%', 'y/a', 'adj ypa', 'td', 'long', 'CAY', 'IAY',
-     '%rb', '%wr', '%te', '%td', 'int%', 'sack%', 'rush-att', 'not sure', 'rush_yards', 'rush_y/a', 'rush_td', 'success', 'rz_opp', 'rz_opp10',
-     'rz-opp5', 'temp', 'humidity', 'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps', 'consistency', 'upside', 'duds', 'count',
-     'year_ppg', 'year+-', 'year_change', 'year_fpo', 'year_fps', 'year_consistency', 'year_upside', 'year_duds', 'year_count']
+    qbcolumns =  qbcolumns_hist
     
-    len_names = len(rcolumn_names)
-    for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
+    len_names = len(qbcolumns)
+    for n, t in zip(qbcolumns, np.arange(1,len_names+1)):
         try:
             rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 
@@ -303,13 +266,10 @@ for date, we in zip(dates[0:], [we]):
     #np.arange(1, len(names)) below
     #
     rcolumns = []
-    rcolumn_names  = ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own', 'proj_sacks', 'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz', 'pro',
-                'my', 'bargain', 'opp+-', 'pts', 'opppts', 'delta', 'spread', 'o/u', 'spread%', 'int%', 'pass_succ', 'rush_succ', 'sack%', 
-                'takeaway%', 'td%', 'ypp', 'rz_snaps', 'rz_snaps10', 'rz_snaps5', 'TD%', 'temp', 'humidity', 'precip%', 'month_ppg',
-                'month_change', 'consistency', 'upside', 'duds', 'count', 'year_ppg', 'year+-', 'year_change', 'year_consistency', 
-                'year_upside', 'year_duds', 'year_count']
-    len_names = len(rcolumn_names)
-    for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
+    defcolumns  = defcolumns_hist
+
+    len_names = len(defcolumns)
+    for n, t in zip(defcolumns, np.arange(1,len_names+1)):
         try:
             rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
             rcolumns.append(rcolumn) 

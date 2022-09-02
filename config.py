@@ -39,10 +39,64 @@ master_historical_weeks = [
           [920,1020],[1120,1220],[1320,1420],[1520]
         ]
 
-curr_optimize_weeks = [
+curr_historical_optimize_weeks = [
     [121]
 ]
 
+
+rbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
+                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
+                     'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
+                     'delta', 'spread', 'o/u', 'spread%', 'rush_td%', 'rush_yards%',
+                     'snaps%', 'rush_att', 'not sure', 'rush_yards',  'rush_y/a',
+                     'rush_td', 'success', 'rec_trgts', 'not_sure2', 'rec_yards',
+                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rz_opp', 'rz_opp10',
+                     'rz-opp5', 'rz_td_pct', 'rz_succ%', 'temp', 'humidity', 
+                     'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
+                     'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
+                     'year_change', 'year_fpo','year_fps', 'year_consistency', 
+                     'year_upside', 'year_duds', 'year_count']
+
+wrcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
+                     'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
+                     'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
+                     'delta', 'spread', 'o/u', 'spread%', 'rec_trgts%', 'rec_td%',
+                     'rec_yds%', 'rec_trgts', 'not_sure2', 'rec_yards',
+                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rec_TAY', 'rec_TAY%', 'rz_opp', 'rz_opp10',
+                     'rz-opp5', 'rz_td_pct', 'temp', 'humidity', 
+                     'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
+                     'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
+                     'year_change', 'year_fpo','year_fps', 'year_consistency', 
+                     'year_upside', 'year_duds', 'year_count']
+
+tecolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
+                   'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz', 
+                     'pro', 'my', 'bargain', 'opp+-', 'snaps', 'pts', 'opppts',
+                     'delta', 'spread', 'o/u', 'spread%', 'rec_trgts%', 'rec_td%',
+                     'rec_yds%', 'rec_trgts', 'not_sure2', 'rec_yards',
+                     'rec_long', 'rec_yr', 'rec_td', 'rec_yt', 'rec_TAY', 'rec_TAY%', 'rz_opp', 'rz_opp10',
+                     'rz-opp5', 'rz_td_pct', 'temp', 'humidity', 
+                     'precip%', 'month_ppg', 'month_change', 'month_fpo', 'month_fps',
+                     'consistency', 'upside', 'duds', 'count','year_ppg', 'year+-',
+                     'year_change', 'year_fpo','year_fps', 'year_consistency', 
+                     'year_upside', 'year_duds', 'year_count']
+
+qbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
+                  'act_pts', 'impld_pts','lev_rank', 'leverage', 'sr', 'buzz',  'pro', 'my',
+                  'bargain', 'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u', 'spread%',
+                  'comp', 'att', 'yards', '%', 'y/a', 'adj ypa', 'td', 'long', 'CAY', 'IAY', '%rb',
+                  '%wr', '%te', '%td', 'int%', 'sack%', 'rush-att', 'not sure', 'rush_yards', 'rush_y/a',
+                  'rush_td', 'success', 'rz_opp', 'rz_opp10', 'rz-opp5', 'temp', 'humidity', 'precip%',
+                  'month_ppg', 'month_change', 'month_fpo', 'month_fps', 'consistency', 'upside', 'duds',
+                  'count', 'year_ppg', 'year+-', 'year_change', 'year_fpo', 'year_fps', 'year_consistency',
+                  'year_upside', 'year_duds', 'year_count']
+
+defcolumns_hist  = ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own', 'proj_sacks', 'act_pts',
+               'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz', 'pro', 'my', 'bargain', 'opp+-', 'pts',
+              'opppts', 'delta', 'spread', 'o/u', 'spread%', 'int%', 'pass_succ', 'rush_succ', 'sack%', 
+              'takeaway%', 'td%', 'ypp', 'rz_snaps', 'rz_snaps10', 'rz_snaps5', 'TD%', 'temp', 'humidity',
+              'precip%', 'month_ppg', 'month_change', 'consistency', 'upside', 'duds', 'count', 'year_ppg',
+              'year+-', 'year_change', 'year_consistency', 'year_upside', 'year_duds', 'year_count']
 
 
 
