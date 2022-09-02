@@ -1,6 +1,7 @@
 import os
 import math
 import numpy as np
+import pandas as pd
 
 from _historical.optimize.optimize import fantasyze
 from _historical.feature_generation.frv1 import buildml
@@ -20,6 +21,7 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 if os.path.exists(path) == False:
   os.mkdir(path)
   os.mkdir(path+'optimized_teams_by_week\\')
+  os.mkdir(path+'optimized_ml_by_week\\')
 
 '''Optimize New Histoical Teams'''
 #optimize teams using optimizer. this creates teams from the 
@@ -65,4 +67,14 @@ pool = Pool(processes=cores)
 results = pool.map(buildml, ranges)
 pool.close()
 pool.join() 
+
+
+'''concat all ml files to create master training set'''
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week\\'.format(user)
+onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineup') for f in onlyfiles])
+file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 ################################################
+
+
+
