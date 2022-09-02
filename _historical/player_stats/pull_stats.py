@@ -289,9 +289,8 @@ for date, we in zip(dates[0:], [we]):
     defdf = finaldef.copy()   
    
     #%%  
-    '''make all numbers and clean'''
+    '''CLEANING'''
     
-
     master = pd.concat([qbdf, rbdf, wrdf, tedf, defdf], sort=False).reset_index(drop=True)
     master['salary'] = master['salary'].apply(lambda x: int(x[1:]))
     master['snaps'] = master['snaps'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
@@ -386,6 +385,10 @@ for date, we in zip(dates[0:], [we]):
     master['rz_snaps10'] = master['rz_snaps10'].apply(lambda x: x.replace('','0') if (len(str(x))==0) | (len(str(x))==1) else x).fillna(0).apply(lambda x: float(x))
     master['rz_snaps5'] = master['rz_snaps5'].apply(lambda x: x.replace('','0') if (len(str(x))==0) | (len(str(x))==1) else x).fillna(0).apply(lambda x: float(x))
     master['TD%'] = master['TD%'].apply(lambda x: x.replace(' ','0') if len(str(x))==1 else x).apply(lambda x: x.replace('%','') if str(x)[-1]=='%' else x).fillna(0).astype(float)/100
+    master['rec_TAY'] = master['rec_TAY'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
+    master['rec_TAY%'] = master['rec_TAY%'].fillna(0).apply(lambda x: x.replace('','0') if len(str(x))==0 else x).apply(lambda x: x.replace('%','') if str(x)[-1]=='%' else x).fillna(0).astype(float)
+    master['CAY'] = master['CAY'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
+    master['IAY'] = master['IAY'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
     
     
     

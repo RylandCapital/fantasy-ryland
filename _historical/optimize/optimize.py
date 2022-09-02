@@ -295,7 +295,7 @@ def fantasyze(ws):
                       'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u',
                       '%rb','%wr', '%te', 'proj_sacks', 'int%', 'bargain',
                       'spread%',  'temp', 'humidity', 'precip%', 'consistency',
-                      'Position',  'rec_trgts%', 'rec_td%', 'rec_yds%', 'rz_opp',
+                      'pos','rec_trgts%', 'rec_td%', 'rec_yds%', 'rz_opp',
                       'rush_yards%', 'pass_succ', 'rush_succ', 'takeaway%',
                       'lineup', 'week']
           masterf = masterf[features]

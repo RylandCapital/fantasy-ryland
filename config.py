@@ -43,6 +43,9 @@ curr_historical_optimize_weeks = [
     [121]
 ]
 
+mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,120,220,320,420,520,620,720,
+          820, 920, 1020, 1120, 1220, 1320, 1420, 1520, 121]
+
 
 rbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
                    'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
