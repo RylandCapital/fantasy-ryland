@@ -3,10 +3,10 @@ import numpy as np
 from os import listdir
 from os.path import isfile, join
 import time
-from multiprocessing import Pool
 import math
 import traceback
 import os
+
 
 
 '''1) pull all hisotrical teams from the database created from the optimizer'''
