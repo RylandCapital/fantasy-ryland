@@ -5,7 +5,7 @@ import os
 
 from selenium.webdriver.common.keys import Keys
 
-from _historical.player_stats import helpers
+from _predict.player_stats import helpers
 
 from config import rbcolumns_hist, wrcolumns_hist, tecolumns_hist, qbcolumns_hist, defcolumns_hist, shift, \
     rbcolumns_hist_shift, wrcolumns_hist_shift, tecolumns_hist_shift, qbcolumns_hist_shift, defcolumns_hist_shift
@@ -38,6 +38,7 @@ def pull_stats(weeks=[], strdates=[]):
                 else:
                     rbcolumns = rbcolumns_hist_shift
                 
+                rbcolumns.remove('act_pts')
                 #this gets the little blue number that shows number of players in that position that day
                 num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
                 
@@ -91,7 +92,8 @@ def pull_stats(weeks=[], strdates=[]):
                     wrcolumns =  wrcolumns_hist
                 else: 
                     wrcolumns = wrcolumns_hist_shift
-                                                
+
+                wrcolumns.remove('act_pts')                         
                 #this gets the little blue number that shows number of players in that position that day
                 num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
                 
@@ -145,7 +147,7 @@ def pull_stats(weeks=[], strdates=[]):
                 else:
                     tecolumns = tecolumns_hist_shift
 
-                    
+                tecolumns.remove('act_pts')
                 #this gets the little blue number that shows number of players in that position that day
                 num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
                 
@@ -195,7 +197,7 @@ def pull_stats(weeks=[], strdates=[]):
                 
                 name = 'QB'
                 
-                    
+                qbcolumns.remove('act_pts')
                 #this gets the little blue number that shows number of players in that position that day
                 num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
                 
@@ -274,6 +276,7 @@ def pull_stats(weeks=[], strdates=[]):
                 else:
                     defcolumns = defcolumns_hist_shift
 
+                defcolumns.remove('act_pts')
                 len_names = len(defcolumns)
                 for n, t in zip(defcolumns, np.arange(1,len_names+1)):
                     try:
@@ -300,7 +303,7 @@ def pull_stats(weeks=[], strdates=[]):
                 master = pd.concat([qbdf, rbdf, wrdf, tedf, defdf], sort=False).reset_index(drop=True)
                 master['salary'] = master['salary'].apply(lambda x: int(x[1:]))
                 master['snaps'] = master['snaps'].apply(lambda x: x.replace('','0') if len(str(x))==0 else x).fillna(0).apply(lambda x: float(x))
-                master['act_pts'] = master['act_pts'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
+                # master['act_pts'] = master['act_pts'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
                 master['proj'] = master['proj'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
                 master['ceil'] = master['ceil'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
                 master['floor'] = master['floor'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
@@ -397,29 +400,26 @@ def pull_stats(weeks=[], strdates=[]):
                 master['IAY'] = master['IAY'].apply(lambda x: x.replace(' ','0') if len(str(x))==1 else x).fillna(0).apply(lambda x: float(x))
                 
                 
-                
-                
-                # fd = pd.read_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\weekly_salaries\Week{0}_Main_Info.csv'.format(we_file))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' v', '') if x.split(' ')[-1] == 'v' else x)
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' jr.', ''))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
-                # fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ', ''))
-                # fd['City Name'] = np.where(fd['Position'] == 'D', fd['Nickname'].apply(lambda x: x.split(' ')[1]), ['ryland'])
-                # fd['City Name2'] = fd['City Name'].apply(lambda x: 'NY' if x =='York' else  x)
-                # fd['City Name2'] = fd['City Name2'].apply(lambda x: 'LA' if x == 'Angeles' else  x)
-                # fd['City Name3'] = np.where((fd['City Name2'] == 'LA') | (fd['City Name2'] == 'NY'), fd['City Name2'].astype(str) + ' ' + fd['Last Name'], fd['First Name'])
-                # fd['City Name3'] = fd['City Name3'].str.lower()
-                # fd['First Name'] = fd['First Name'].str.lower().apply(lambda x: x.replace(' ', '')[0])
-                # fd['RylandID'] = np.where(fd['Position'] == 'D', fd['City Name3'] + fd['Salary'].astype(str), fd['Last Name'] + fd['Salary'].astype(str) + fd['Position'].str.lower() + fd['First Name'])
+                fd = pd.read_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\weekly_salaries\Week{0}_Main_Info.csv'.format(we))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' v', '') if x.split(' ')[-1] == 'v' else x)
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' jr.', ''))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ', ''))
+                fd['City Name'] = np.where(fd['Position'] == 'D', fd['Nickname'].apply(lambda x: x.split(' ')[1]), ['ryland'])
+                fd['City Name2'] = fd['City Name'].apply(lambda x: 'NY' if x =='York' else  x)
+                fd['City Name2'] = fd['City Name2'].apply(lambda x: 'LA' if x == 'Angeles' else  x)
+                fd['City Name3'] = np.where((fd['City Name2'] == 'LA') | (fd['City Name2'] == 'NY'), fd['City Name2'].astype(str) + ' ' + fd['Last Name'], fd['First Name'])
+                fd['City Name3'] = fd['City Name3'].str.lower()
+                fd['First Name'] = fd['First Name'].str.lower().apply(lambda x: x.replace(' ', '')[0])
+                fd['RylandID'] = np.where(fd['Position'] == 'D', fd['City Name3'] + fd['Salary'].astype(str), fd['Last Name'] + fd['Salary'].astype(str) + fd['Position'].str.lower() + fd['First Name'])
                 
                 
                 master['name'] = master['name'].apply(lambda x: x.replace(' Defense', ''))
-                # master['name'] = np.where(master['name'] == 'Jesus Wilson', 'Bobo Wilson' ,master['name'])
                 master['Last Name_master'] = master['name'].apply(lambda x: x.lower())
                 master['City Name_master'] = master['name'].apply(lambda x: x.lower())
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iii', ''))
@@ -438,9 +438,9 @@ def pull_stats(weeks=[], strdates=[]):
                 
                 master['pos'] = np.where(master['pos']=='DEF','D',master['pos'])
                 master.index = master['RylandID_master']
-                # fd.index = fd['RylandID']
+                fd.index = fd['RylandID']
                 
-                # master = master.join(fd)
+                master = master.join(fd)
                 master = master.copy()
 
                 master.to_csv(os.getcwd() + r"\_historical\player_stats\by_week\{0}.csv".format(format(we)))

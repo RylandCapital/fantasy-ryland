@@ -7,7 +7,7 @@ from _historical.optimize.optimize import fantasyze
 from _historical.feature_generation.frv1 import buildml
 from multiprocessing import Pool
 
-from config import curr_historical_optimize_weeks
+from config import curr_historical_optimize_weeks, master_historical_weeks
 
 
 
@@ -27,14 +27,12 @@ if os.path.exists(path) == False:
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = curr_historical_optimize_weeks
+weeks = curr_historical_optimize_weeks 
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
 pool.close()
 ################################################
-
-
 
 #%%
 '''Machine Learning Data Prep'''
@@ -54,16 +52,16 @@ mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(use
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     
 
-cores = 30
-names = [f[:-7] for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
-weeks_available = len(names)
-weeks_core = math.ceil(len(names)/cores)
-week_ranges = np.arange(0,weeks_available+weeks_core,weeks_core)
-ranges = [names[week_ranges[i]:week_ranges[i+1]] for i in np.arange(
-        len(week_ranges)-1)]
+# cores = 30
+# names = [f[:-7] for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
+# weeks_available = len(names)
+# weeks_core = math.ceil(len(names)/cores)
+# week_ranges = np.arange(0,weeks_available+weeks_core,weeks_core)
+# ranges = [names[week_ranges[i]:week_ranges[i+1]] for i in np.arange(
+#         len(week_ranges)-1)]
+ranges = master_historical_weeks
 
-
-pool = Pool(processes=cores)
+pool = Pool(processes=len(ranges))
 results = pool.map(buildml, ranges)
 pool.close()
 pool.join() 
