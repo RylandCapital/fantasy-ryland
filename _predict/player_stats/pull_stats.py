@@ -11,7 +11,7 @@ from config import rbcolumns_hist, wrcolumns_hist, tecolumns_hist, qbcolumns_his
     rbcolumns_hist_shift, wrcolumns_hist_shift, tecolumns_hist_shift, qbcolumns_hist_shift, defcolumns_hist_shift
 
 
-def pull_stats(weeks=[], strdates=[]):
+def pull_stats_live(weeks=[], strdates=[]):
     
         driver = helpers.load_window_fanduel()
         time.sleep(10)
@@ -195,7 +195,7 @@ def pull_stats(weeks=[], strdates=[]):
                 
                 name = 'QB'
                 
-                qbcolumns.remove('act_pts')
+                
                 #this gets the little blue number that shows number of players in that position that day
                 num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
                 
@@ -220,7 +220,9 @@ def pull_stats(weeks=[], strdates=[]):
                     qbcolumns =  qbcolumns_hist
                 else:
                     qbcolumns = qbcolumns_hist_shift
-                
+
+                qbcolumns.remove('act_pts')
+
                 len_names = len(qbcolumns)
                 for n, t in zip(qbcolumns, np.arange(1,len_names+1)):
                     try:
@@ -263,7 +265,6 @@ def pull_stats(weeks=[], strdates=[]):
                 left = pd.concat(columns, axis=1) 
 
                                             
-                
                 #loop 2 for right columns
                 #this loop gets all columns, starting at column 1 as you can see in
                 #np.arange(1, len(names)) below
@@ -452,7 +453,7 @@ def pull_stats(weeks=[], strdates=[]):
     
             
             
-pull_stats(weeks=['9/14/22'], strdates=['9/14/22'])         
+
 
 
 

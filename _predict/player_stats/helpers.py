@@ -1,5 +1,7 @@
 import time
 import os
+import pandas as pd
+import numpy as np
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -47,3 +49,40 @@ def load_window_fanduel():
     driver.set_context("content")
 
     return driver
+
+
+def fanduel_ticket(predictions, teams, entries=150, injuries=[]):
+
+  user = os.getlogin()
+  path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
+
+  picks = predictions[['lineup', 'whose_in_flex', 'prediction']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks.sort_values(by='prediction', ascending=False, inplace=True)
+
+  ticket = picks.iloc[:(entries*60)]
+
+  remove = injuries 
+  tests = []
+  for i in ticket.index.unique():
+    ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
+    df = ticket.loc[i][['pos','Id','whose_in_flex','prediction']].sort_values('Id')
+    id2 = sorted(df['Id'].values)
+    injury = len(list(set(id2).intersection(set(remove))))
+    proj = df['prediction'].iloc[0]
+    flex = df['whose_in_flex'].iloc[0]
+    df = df[['pos','Id']].sort_values('pos')
+    df.set_index('pos', inplace=True)
+    df.index = np.where(df.index=='D', 'DEF', df.index)
+    flex_pull = df[df.index==flex].iloc[0,0]
+    df.index = np.where(df['Id']==flex_pull, 'FLEX', df.index)
+    df = df.loc[ticket_cols].drop_duplicates('Id').T
+    df['id2'] = str(id2)
+    df['prediction'] = proj
+    df['injury'] = injury
+    tests.append(df)
+  upload = pd.concat(tests)
+  upload = upload[upload['injury']==0].sort_values(by='prediction', ascending=False).drop_duplicates('id2',keep='first')
+  upload.iloc[:entries,:-2].to_csv(path+'ticket.csv')
+
+  return upload
+

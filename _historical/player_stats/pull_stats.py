@@ -453,7 +453,7 @@ def pull_stats(weeks=[], strdates=[]):
     
             
             
-pull_stats(weeks=[38], strdates=['10/20/21'])         
+  
 
 
 

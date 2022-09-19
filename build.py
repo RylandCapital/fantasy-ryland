@@ -5,13 +5,33 @@ import pandas as pd
 
 from _historical.optimize.optimize import fantasyze
 from _predict.optimize.optimize import fantasyze_live
+
+from _historical.player_stats.pull_stats import pull_stats
+from _predict.player_stats.pull_stats import pull_stats_live
+
 from _historical.feature_generation.frv1 import buildml
 from _predict.feature_generation.frv1 import buildml_live
+
+from _predict.player_stats.helpers import fanduel_ticket
+
 from multiprocessing import Pool
 from itertools import repeat
 
-from config import curr_historical_optimize_weeks, master_historical_weeks
+from config import curr_historical_optimize_weeks, master_historical_weeks, gameday_week
 
+
+
+
+################################################
+################################################
+################################################
+'''HISTORICAL TOOLS'''
+################################################
+################################################
+################################################
+
+'''pull historical week'''
+pull_stats(weeks=[], strdates=[])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -83,6 +103,18 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 
 
 
+################################################
+################################################
+################################################
+'''GAMEDAY PREDICTION TOOLS'''
+################################################
+################################################
+################################################
+
+'''pull live week stats from fantasy labs'''
+pull_stats_live(weeks=['9/21/22'], strdates=['9/21/22'])    
+
+
 '''Optimize Live Theoretical Teams for Gameday'''
 ################################################
 ################################################
@@ -150,44 +182,16 @@ upload ticket'''
 ################################################
 ################################################
 user = os.getlogin()
-
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+
 onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
+onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
 teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
+
 preds = pd.read_csv(path + 'predictions.csv').sort_values(by='lineup',ascending=False).drop_duplicates('prediction',keep='first')
 
-picks = preds[['lineup', 'whose_in_flex', 'prediction']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
-picks.sort_values(by='prediction', ascending=False, inplace=True)
-
-ticket = picks.iloc[:9000]
-
-
-remove = ['80468-69213', '80468-42104', '80468-89981', '80468-94094', '80468-86192'] #86192 is hamler 
-tests = []
-for i in ticket.index.unique():
-  ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
-  test = ticket.loc[i][['pos','Id','whose_in_flex','prediction']].sort_values('Id')
-  id2 = sorted(test['Id'].values)
-  injury = len(list(set(id2).intersection(set(remove))))
-  proj = test['prediction'].iloc[0]
-  flex = test['whose_in_flex'].iloc[0]
-  test = test[['pos','Id']].sort_values('pos')
-  test.set_index('pos', inplace=True)
-  test.index = np.where(test.index=='D', 'DEF', test.index)
-  flex_pull = test[test.index==flex].iloc[0,0]
-  test.index = np.where(test['Id']==flex_pull, 'FLEX', test.index)
-  test = test.loc[ticket_cols].drop_duplicates('Id').T
-  test['id2'] = str(id2)
-  test['prediction'] = proj
-  test['injury'] = injury
-  tests.append(test)
-upload = pd.concat(tests)
-upload = upload[upload['injury']==0].sort_values(by='prediction', ascending=False).drop_duplicates('id2',keep='first')
-upload.iloc[:140,:-2].to_csv(path+'ticket.csv')
-
-
-
+ticket = fanduel_ticket(preds, teams, entries=150, injuries=[])
 
 
 

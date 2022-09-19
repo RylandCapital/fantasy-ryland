@@ -178,16 +178,6 @@ def fantasyze_live(ws, week):
           stats = stats.set_index('RylandID_master')
           
           masterf = masterf.join(stats, how='outer', lsuffix='_ot')
-          # features = ['rating', 'salary', 'team', 'opp', 'proj',
-          #             'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own', 'act_pts',
-          #             'impld_pts', 'sr', 'buzz', 'leverage', 'pro', 'my', 'bargain',
-          #             'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u',
-          #             '%rb','%wr', '%te', 'proj_sacks', 'int%', 'bargain',
-          #             'spread%',  'temp', 'humidity', 'precip%', 'consistency',
-          #             'pos','rec_trgts%', 'rec_td%', 'rec_yds%', 'rz_opp',
-          #             'rush_yards%', 'pass_succ', 'rush_succ', 'takeaway%',
-          #             'lineup', 'week']
-          # masterf = masterf[features]
 
           print("--- %s seconds ---" % (time.time() - start_time))
 
