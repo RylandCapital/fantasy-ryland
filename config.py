@@ -1,3 +1,4 @@
+
 historical_winning_scores = {     
 '1':241.96,
 '2':205.32,
@@ -62,7 +63,7 @@ mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
           44,45]
 
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
-shift = False
+shift = True
 
 rbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
                    'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',

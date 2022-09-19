@@ -15,8 +15,8 @@ class Player:
     self.name = opts['RylandID_master']
     self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
-    self.theo_actual = float(np.random.randint(1,30)) + float(opts['act_pts'])
-    self.actual = float(opts['act_pts'])
+    self.theo_actual = float(np.random.randint(-5,15)) + float(opts['proj'])
+    self.actual = float(opts['proj'])
     self.lock = False
     self.ban = False
 
@@ -76,7 +76,7 @@ ROSTER_SIZE = 9
 def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
-  with open(os.getcwd() + r"\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
+  with open(os.getcwd() + r"\_predict\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
    
     for row in csvdata:
@@ -145,136 +145,36 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 start_time = time.time()
 print('initiating dfs calculations''')  
     
-milly_winners_dict = historical_winning_scores
-
-def fantasyze(ws):
+def fantasyze_live(ws, week):
   for w in ws:
-      milly = milly_winners_dict[str((w))]
       for iters in [0]:
           dfs = [] 
-          for i in np.arange(1,5000):
+          for i in np.arange(1,120000):
               
               print('{0}-{1}'.format(w,i))
               
-              if i < 101:
               #lim low is 90 percent for that week
-                  team = run(60000, 59900, w, milly*.99, 500).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) + str(iters) +'_959'
-                    
-                  dfs.append(df)
+              team = run(60000, 59900, week, 1, 500).players
+              #######
+                
+              names = [i.name for i in team]
+              actual = [i.actual for i in team]
+              position = [i.position for i in team]
+              salary = [i.salary for i in team]
               
-              #############################
-              if i < 1001:
-                  team = run(60000, 59900, w, milly*.9, milly*.9594).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_9'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i < 2001:
-                  team = run(60000, 59900, w, milly*.8, milly*.9).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_8'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i <3001:
-                  team = run(60000, 59900, w, milly*.6, milly*.8).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_6'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i <4001:
-                  team = run(60000, 59900, w, milly*.4, milly*.6).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_4'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i <5001:
-                  team = run(60000, 59900, w, milly*.2 , milly*.4).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_2'
-                    
-                  dfs.append(df)
+              actual_sum = sum(actual)
+                
+              df = pd.DataFrame([names, actual, position, salary], index = ['name',
+                                  'actual', 'position', 'salary']).T
+              df['team_salary'] = actual_sum
+              df['lineup'] = 'lineup_' + str(i) + '_' + str(w)               
+              dfs.append(df)
               
           masterf = pd.concat(dfs)
           masterf = masterf.set_index('name')
 
-          mypath = os.getcwd() + r"\_historical\player_stats\by_week"
-          stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(w)) 
+          mypath = os.getcwd() + r"\_predict\player_stats\by_week"
+          stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(week)) 
           stats = stats.set_index('RylandID_master')
           
           masterf = masterf.join(stats, how='outer', lsuffix='_ot')
@@ -293,9 +193,9 @@ def fantasyze(ws):
 
           user = os.getlogin()
           # Specify path
-          path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(user)
+          path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
 
-          masterf.to_csv(path+'{0}.csv.gz'.format(w),compression='gzip', index=True)
+          masterf.to_csv(path+'{0}_{1}.csv.gz'.format(week,w),compression='gzip', index=True)
           
           print("--- %s seconds ---" % (time.time() - start_time))
 

@@ -642,7 +642,7 @@ def buildml(ws):
                     ]
             
             analysis = analysis.reset_index()
-            analysis['week'] = file['week'].iloc[0]
+            analysis['week'] = onlyf
             analysis['id'] = analysis['week'].astype(str) + \
             analysis['lineup'].astype(str) 
 

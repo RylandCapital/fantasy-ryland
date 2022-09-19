@@ -15,8 +15,6 @@ def pull_stats(weeks=[], strdates=[]):
     
         driver = helpers.load_window_fanduel()
         time.sleep(10)
-        #we = 37
-        #strdates = ['10202021']
   
         for date, we in zip(strdates[0:], weeks):
 
@@ -74,7 +72,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalrb = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalrb['pos'] = name
                 finalrb['week'] = we
-                #finalrb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalrb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
                 
 
                 rbdf = finalrb.copy()
@@ -129,7 +127,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalwr = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalwr['pos'] = name
                 finalwr['week'] = we
-                #finalwr.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalwr.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
             
                     
                 wrdf = finalwr.copy()
@@ -183,7 +181,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalte = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalte['pos'] = name
                 finalte['week'] = we
-                #finalte.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalte.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
                 tedf = finalte.copy()
                 
@@ -237,7 +235,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalqb = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalqb['pos'] = name
                 finalqb['week'] = we
-                #finalqb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalqb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
                 qbdf = finalqb.copy()  
             
@@ -291,7 +289,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finaldef = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finaldef['pos'] = name
                 finaldef['week'] = we
-                #finaldef.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finaldef.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
 
                 
@@ -400,7 +398,7 @@ def pull_stats(weeks=[], strdates=[]):
                 master['IAY'] = master['IAY'].apply(lambda x: x.replace(' ','0') if len(str(x))==1 else x).fillna(0).apply(lambda x: float(x))
                 
                 
-                fd = pd.read_csv(r'P:\10_CWP Trade Department\Ryland\fantasy\weekly_salaries\Week{0}_Main_Info.csv'.format(we))
+                fd = pd.read_csv(os.getcwd() + r'\_predict\player_stats\fanduel_files\{0}.csv'.format(we.replace('/','.')), header=6, index_col=13).iloc[:,13:]
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
@@ -417,6 +415,8 @@ def pull_stats(weeks=[], strdates=[]):
                 fd['City Name3'] = fd['City Name3'].str.lower()
                 fd['First Name'] = fd['First Name'].str.lower().apply(lambda x: x.replace(' ', '')[0])
                 fd['RylandID'] = np.where(fd['Position'] == 'D', fd['City Name3'] + fd['Salary'].astype(str), fd['Last Name'] + fd['Salary'].astype(str) + fd['Position'].str.lower() + fd['First Name'])
+
+                fd.index = fd['RylandID']
                 
                 
                 master['name'] = master['name'].apply(lambda x: x.replace(' Defense', ''))
@@ -434,16 +434,15 @@ def pull_stats(weeks=[], strdates=[]):
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' ', ''))
                 master['First Name_master'] = master['First Name_master'].str.lower().apply(lambda x: x.replace(' ', '')[0])
                 master['RylandID_master'] = np.where(master['pos'] == 'DEF', master['City Name_master'] + + master['salary'].astype(str),  master['Last Name_master'] + master['salary'].astype(str) + master['pos'].str.lower() + master['First Name_master'])
-                
-                
                 master['pos'] = np.where(master['pos']=='DEF','D',master['pos'])
+
                 master.index = master['RylandID_master']
-                fd.index = fd['RylandID']
+                
                 
                 master = master.join(fd)
                 master = master.copy()
 
-                master.to_csv(os.getcwd() + r"\_historical\player_stats\by_week\{0}.csv".format(format(we)))
+                master.to_csv(os.getcwd() + r"\_predict\player_stats\by_week\{0}.csv".format(format(we.replace('/','.'))))
             
             except Exception as ex:
                 print(ex)
@@ -453,7 +452,7 @@ def pull_stats(weeks=[], strdates=[]):
     
             
             
-pull_stats(weeks=[38], strdates=['10/20/21'])         
+pull_stats(weeks=['9/14/22'], strdates=['9/14/22'])         
 
 
 

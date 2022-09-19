@@ -7,16 +7,16 @@ import math
 import traceback
 import os
 
-from config import historical_winning_scores
+
 
 
 
 '''1) pull all hisotrical teams from the database created from the optimizer'''
 user = os.getlogin()
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(user)
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
 
     
-def buildml(ws):
+def buildml_live(ws):
 
     '''3) Calculate Features'''
 #%%  
@@ -72,7 +72,7 @@ def buildml(ws):
             if (lencheck.index[0]==9) & (len(lencheck)==9):
                 raise NameError('Team Lengths Not All 9')
                 
-            team_sums = lineups['act_pts','proj','proj_own','proj+-', 'pts', 'o/u',
+            team_sums = lineups['proj','proj_own','proj+-', 'pts', 'o/u',
                                 'opp+-', 'snaps','spread', 'pass_succ', 'rush_succ',
                                 'takeaway%'].sum()
             team_prods = lineups[['proj_own']].prod()
@@ -414,7 +414,6 @@ def buildml(ws):
                                 ], axis=1)
              
             analysis.columns = [
-                    'team_actual',
                     'team_proj',
                     'team_proj_own',
                     'team_proj+-',
@@ -642,13 +641,12 @@ def buildml(ws):
                     ]
             
             analysis = analysis.reset_index()
-            analysis['week'] = file['week'].iloc[0]
+            analysis['week'] = onlyf
             analysis['id'] = analysis['week'].astype(str) + \
             analysis['lineup'].astype(str) 
 
-            analysis['ismilly'] = np.where(analysis['team_actual']>(historical_winning_scores[str(onlyf)]*.99), 1,0)
 
-            analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week\\{1}.csv.gz'.format(user, onlyf),
+            analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live\\{1}.csv.gz'.format(user, onlyf),
                                compression='gzip', index=False)
         except Exception as e:
             print('Caught exception in worker thread (x = {0}):'.format(onlyf))
