@@ -50,6 +50,9 @@ def buildml_live(ws):
             
             file['games'] = (file['team'] + file['opp']).str.replace(
                     '@', '').str.split('')
+                    
+            file['games2'] = (file['team'] + '_' + file['opp']).str.replace('@','').str.split('_')
+
             file['opp'] = file['opp'].str.replace('@', '')
             file['games'] = file['games'].apply(lambda x: sorted(x))
             file['games'] = file['games'].apply(lambda x: ''.join(x))
@@ -277,6 +280,29 @@ def buildml_live(ws):
             team_stack_strings = teamstackgroup.apply(
                     lambda x: x['slot'].tolist() if len(x)>1
                     else [])
+
+            team_stack_game = teamstackgroup.apply(
+                    lambda x: x['games'].tolist()[0] if len(x)>1
+                    else [])
+
+            team_stack_game_raw = teamstackgroup.apply(
+                    lambda x: x['games2'].tolist()[0] if len(x)>0
+                    else [])
+
+            
+            team_stack_comeback = pd.concat([team_stack_game, team_stack_game_raw, team_stack_strings], axis=1)
+            team_stack_comeback['opp'] = team_stack_comeback[1].apply(lambda x: x[1])
+            team_stack_comeback['isteamstack'] = team_stack_comeback[2].apply(lambda x: len(x))
+            team_stack_comeback['teamtemp'] = team_stack_comeback.index.get_level_values(1)
+            lineup_teams = lineups.apply(lambda x: x['team'].tolist())
+            lineup_teams.name = 'lineup_teams'
+            team_stack_comeback = team_stack_comeback.join(lineup_teams)
+            team_stack_comeback['player_opp_same_team'] = team_stack_comeback.groupby(level=[0,1]).apply(
+                    lambda x: len(set([x['opp'].iloc[0]]).intersection(x['lineup_teams'].iloc[0])))
+            team_stack_comeback['comeback'] = np.where((team_stack_comeback['player_opp_same_team']==1) & (team_stack_comeback['isteamstack']>0),1,0)
+            team_stack_comeback = team_stack_comeback['comeback']
+            
+
             
             team_stack_salaries = teamstackgroup.apply(
                     lambda x: x['salary'].sum()/len(x) if len(x)>1
@@ -288,9 +314,13 @@ def buildml_live(ws):
             
             teamstackdf = pd.DataFrame(team_stack_strings).join(
                     pd.DataFrame(team_stack_salaries), rsuffix='_salary').join \
-                    (pd.DataFrame(team_stack_ou)).reset_index()
+                    (pd.DataFrame(team_stack_ou))
+            teamstackdf = teamstackdf.join(pd.DataFrame(team_stack_game, columns=['stack_game']))
+            teamstackdf = teamstackdf.join(pd.DataFrame(team_stack_comeback, columns=['comeback'])).reset_index()
+
             teamstackdf['0'] = teamstackdf['0'].apply(lambda x: ''.join(
                     sorted(x)) if len(x)>1 else 0)
+
             teamstackdf = teamstackdf.sort_values(['lineup','0'])
                     
                     
@@ -298,6 +328,14 @@ def buildml_live(ws):
             team_stack_strings2 = teamstackdf.groupby('lineup').apply(
                     lambda x: x[x[0]!=0].sort_values(['0'])['0'] \
                                      .tolist())
+
+            team_stack_games2 = teamstackdf.groupby('lineup').apply(
+                    lambda x: x[x[0]!=0].sort_values(['0'])['stack_game'] \
+                                     .tolist())
+            team_stack_games2 = team_stack_games2.apply(lambda x: len(x)==len(set(x)))
+        
+            team_stack_comeback2 = teamstackdf.groupby('lineup').apply(
+                    lambda x: x[x[0]!=0]['comeback'].sum())
             
             
             team_stack_salaries2 = teamstackdf.groupby('lineup').apply(
@@ -335,8 +373,11 @@ def buildml_live(ws):
                                                     if len(x)>=3 else 0)
             team_stack4ou = team_stack_ou2.apply(lambda x: x[3]
                                                     if len(x)==4 else 0)
-        
-              
+
+            head_to_head_team_stacks = pd.DataFrame(team_stack_games2.copy(), columns=['head_to_head_team_stacks'])
+            head_to_head_team_stacks['head_to_head_team_stacks'] = np.where(head_to_head_team_stacks['head_to_head_team_stacks']==False,1,0)
+            head_to_head_team_stacks = head_to_head_team_stacks['head_to_head_team_stacks']
+            
             #flex analysis
             whose_in_flex = lineups.apply(lambda x: x['Position'].value_counts() \
                                           .subtract(
@@ -406,6 +447,7 @@ def buildml_live(ws):
                                   team_stack2ou,
                                   team_stack3ou,
                                   team_stack4ou,
+                                  head_to_head_team_stacks,
                                   whose_in_flex,
                                   throw_2rb,
                                   throw_2wr,
@@ -634,6 +676,7 @@ def buildml_live(ws):
                     'team_stack2ou',
                     'team_stack3ou',
                     'team_stack4ou',
+                    'head_to_head_stacks',
                     'whose_in_flex',
                     'throw_2rb',
                     'throw_2wr',

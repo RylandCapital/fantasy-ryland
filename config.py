@@ -45,13 +45,15 @@ historical_winning_scores = {
 '43':219, #week 13 2021 FL: 12/01/21
 '44':201, #week 14 2021 FL: 12/08/21
 '45':186, #week 15 2021 FL: 12/15/21
+'46':221, #week 1 2022 FL: 9/7/22
+'47':245, #week 2 2021 FL: 9/14/22
 }
 
 master_historical_weeks = [
           [1,2],[3,4],[5,6],[7,8],[9,10],[11,12],
           [13,14],[15,16],[17,18],[19,20],[21,22],[23,24],
           [25,26],[27,28],[29,30],[31,32], [33,34],[35,36],
-          [37,38],[39,40],[41,42],[43,44],[45]
+          [37,38],[39,40],[41,42],[43,44],[45,46],[47]
         ]
 
 curr_historical_optimize_weeks = [
@@ -63,7 +65,7 @@ mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
           44,45]
 
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
-shift = True
+shift = False
 
 gameday_week = '9.14.22'
 

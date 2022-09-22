@@ -15,7 +15,8 @@ class Player:
     self.name = opts['RylandID_master']
     self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
-    self.theo_actual = float(np.random.randint(-5,15)) + float(opts['proj'])
+    self.theo_actual = float(np.random.randint(0,30)) ##+ float(opts['proj'])
+    self.team = str(opts['team'])
     self.actual = float(opts['proj'])
     self.lock = False
     self.ban = False
@@ -81,7 +82,7 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
    
     for row in csvdata:
         test = Player(row)
-        if (test.actual > 0):
+        if (test.actual > -5):
             all_players.append(Player(row))
 
   variables = []
@@ -145,31 +146,43 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 start_time = time.time()
 print('initiating dfs calculations''')  
     
-def fantasyze_live(ws, week):
+def fantasyze_live(ws, week, teamstacks_only=False):
   for w in ws:
-      for iters in [0]:
           dfs = [] 
-          for i in np.arange(1,120000):
+          count=0
+          while count < 125000:
               
-              print('{0}-{1}'.format(w,i))
-              
-              #lim low is 90 percent for that week
-              team = run(60000, 59900, week, 1, 500).players
+              team = run(60000, 60000, week, 1, 5000).players
               #######
-                
               names = [i.name for i in team]
               actual = [i.actual for i in team]
               position = [i.position for i in team]
               salary = [i.salary for i in team]
               
-              actual_sum = sum(actual)
-                
+              #setings
+              team_exposures = [i.team for i in team]
+              isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
+              
               df = pd.DataFrame([names, actual, position, salary], index = ['name',
                                   'actual', 'position', 'salary']).T
-              df['team_salary'] = actual_sum
-              df['lineup'] = 'lineup_' + str(i) + '_' + str(w)               
-              dfs.append(df)
-              
+              df['team_salary'] = sum(actual)
+              df['lineup'] = 'lineup_' + str(count) + '_' + str(w)   
+        
+    
+
+              if teamstacks_only == False:
+                print('{0}-{1}'.format(w, count))
+                dfs.append(df)
+              elif teamstacks_only == True:
+                 if isteamstack > 0:
+                  count+=1
+                  print('{0}-{1}-TS'.format(w,count))
+                  dfs.append(df)
+                 else:
+                  print ('no team stack')
+
+
+
           masterf = pd.concat(dfs)
           masterf = masterf.set_index('name')
 
@@ -222,3 +235,5 @@ def fantasyze_live(ws, week):
 
 
 
+
+# %%

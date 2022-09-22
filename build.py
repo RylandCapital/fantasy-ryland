@@ -31,7 +31,7 @@ from config import curr_historical_optimize_weeks, master_historical_weeks, game
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[], strdates=[])         
+pull_stats(weeks=[46,47], strdates=['9/7/22', '9/14/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -51,7 +51,7 @@ if os.path.exists(path) == False:
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = curr_historical_optimize_weeks 
+weeks = master_historical_weeks
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -70,19 +70,7 @@ if os.path.exists(path) == False:
   os.mkdir(path)
 
 '''pull all hisotrical teams from the database created from the optimizer'''
-user = os.getlogin()
-          # Specify path
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(user)
-onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
-    
 
-# cores = 30
-# names = [f[:-7] for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
-# weeks_available = len(names)
-# weeks_core = math.ceil(len(names)/cores)
-# week_ranges = np.arange(0,weeks_available+weeks_core,weeks_core)
-# ranges = [names[week_ranges[i]:week_ranges[i+1]] for i in np.arange(
-#         len(week_ranges)-1)]
 ranges = master_historical_weeks
 
 pool = Pool(processes=len(ranges))
@@ -97,8 +85,6 @@ onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath
 file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineup') for f in onlyfiles])
 file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 ################################################
-
-
 
 
 
@@ -125,10 +111,10 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(us
 if os.path.exists(path) == False:
   os.mkdir(path+'optimized_teams_by_week_live\\')
 
-workers = [[i] for i in np.arange(1,30)]
+workers = [[i] for i in np.arange(1,40)]
 
 pool = Pool(processes=len(workers))
-pool.starmap(fantasyze_live, zip(workers, repeat('9.14.22')))
+pool.starmap(fantasyze_live, zip(workers, repeat('9.14.22'), repeat(True)))
 pool.close()
 ################################################
 
@@ -150,7 +136,7 @@ mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.forma
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     
 
-cores = 30
+cores = 40
 names = [f[:-7] for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 weeks_available = len(names)
 weeks_core = math.ceil(len(names)/cores)
