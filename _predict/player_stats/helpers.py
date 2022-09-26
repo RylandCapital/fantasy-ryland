@@ -8,6 +8,8 @@ from selenium.webdriver.common.keys import Keys
 
 from dotenv import load_dotenv
 
+from config import gameday_week
+
 load_dotenv()
 #fantasy labs username
 FLUSER = os.getenv("FLUSER")
@@ -51,38 +53,58 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(predictions, teams, entries=150, injuries=[]):
+def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
+  path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
 
-  picks = predictions[['lineup', 'whose_in_flex', 'prediction']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
-  picks.sort_values(by='prediction', ascending=False, inplace=True)
+  onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
+  onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
+  teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
 
-  ticket = picks.iloc[:(entries*60)]
+  preds = pd.read_csv(path + 'predictions.csv')
+  preds=preds.sort_values(by='lineup',ascending=False).drop_duplicates('proba_1',keep='first')
 
-  remove = injuries 
-  tests = []
-  for i in ticket.index.unique():
-    ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
-    df = ticket.loc[i][['pos','Id','whose_in_flex','prediction']].sort_values('Id')
-    id2 = sorted(df['Id'].values)
-    injury = len(list(set(id2).intersection(set(remove))))
-    proj = df['prediction'].iloc[0]
-    flex = df['whose_in_flex'].iloc[0]
-    df = df[['pos','Id']].sort_values('pos')
-    df.set_index('pos', inplace=True)
-    df.index = np.where(df.index=='D', 'DEF', df.index)
-    flex_pull = df[df.index==flex].iloc[0,0]
-    df.index = np.where(df['Id']==flex_pull, 'FLEX', df.index)
-    df = df.loc[ticket_cols].drop_duplicates('Id').T
-    df['id2'] = str(id2)
-    df['prediction'] = proj
-    df['injury'] = injury
-    tests.append(df)
-  upload = pd.concat(tests)
-  upload = upload[upload['injury']==0].sort_values(by='prediction', ascending=False).drop_duplicates('id2',keep='first')
-  upload.iloc[:entries,:-2].to_csv(path+'ticket.csv')
+  picks = preds[['lineup', 'whose_in_flex', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
-  return upload
+  ticket = picks.iloc[:(entries*100*9)]
+
+  selections = []
+  exposures = dict(zip(ticket['name'].unique().tolist(), '0'*len(ticket['name'].unique().tolist())))
+  count = 0
+  for i,n in zip(ticket.index.unique(), np.arange(len(ticket.index.unique()))):
+      ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
+      df = ticket.loc[i][['pos','Id','whose_in_flex','name','proba_1']].sort_values('Id')
+      id2 = sorted(df['Id'].values)
+      id2_names = sorted(df['name'].values)
+      maxex = max([float(exposures[i])+1 for i in id2_names])
+      injury = len(list(set(id2).intersection(set(injuries))))
+      proj = df['proba_1'].iloc[0]
+      flex = df['whose_in_flex'].iloc[0]
+      df = df[['pos','Id']].sort_values('pos')
+      df.set_index('pos', inplace=True)
+      df.index = np.where(df.index=='D', 'DEF', df.index)
+      flex_pull = df[df.index==flex].iloc[0,0]
+      df.index = np.where(df['Id']==flex_pull, 'FLEX', df.index)
+      df = df.loc[ticket_cols].drop_duplicates('Id').T
+      df['id2'] = str(id2)
+      df['name'] = str(id2_names)
+      df['proba_1'] = proj
+      df['injury'] = injury
+
+      if maxex<=max_exposure:
+        update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]
+        print('Loop:{2} - Count:{1} - Proba_1:{0}'.format(proj,count,n))
+        selections.append(df)
+        count+=1
+        if count==entries:
+          break
+
+  upload = pd.concat(selections)
+  upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
+  upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket.csv')
+
+  return upload, pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)
 

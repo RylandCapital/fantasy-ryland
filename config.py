@@ -49,6 +49,20 @@ historical_winning_scores = {
 '47':245, #week 2 2021 FL: 9/14/22
 }
 
+dkshowdown_winning_scores = {
+  '1':{ #id representing a slate/week (chronological 1 MUST BE a game before 2 etc)
+    'slate_date':'9.7.22', #wendesday for that slate
+    'thursday':'', #winning score thursday game for that slate slate
+    'monday':'' #winning score monday night game for that slate date (if there are 2 MNFs get score for later game)
+  },
+  '2':{ 
+    'slate_date':'', 
+    'thursday':'', 
+    'monday':'' 
+  },
+
+}
+
 master_historical_weeks = [
           [1,2],[3,4],[5,6],[7,8],[9,10],[11,12],
           [13,14],[15,16],[17,18],[19,20],[21,22],[23,24],
@@ -67,7 +81,7 @@ mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '9.14.22'
+gameday_week = '9.21.22'
 
 rbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
                    'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',

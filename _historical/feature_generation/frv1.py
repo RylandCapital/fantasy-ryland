@@ -22,6 +22,8 @@ def buildml(ws):
 #%%  
     for onlyf in ws:
         try:
+                
+            start_time = time.time()
             
             print('initiating dfs calculations''')   
             
@@ -704,6 +706,8 @@ def buildml(ws):
         
             print()
             raise e
+        
+        print("--- %s seconds ---" % (time.time() - start_time))
 
     return True
     

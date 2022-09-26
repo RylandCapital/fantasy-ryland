@@ -150,7 +150,7 @@ def fantasyze_live(ws, week, teamstacks_only=False):
   for w in ws:
           dfs = [] 
           count=0
-          while count < 125000:
+          while count < 167000:
               
               team = run(60000, 60000, week, 1, 5000).players
               #######

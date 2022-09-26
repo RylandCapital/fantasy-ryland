@@ -22,6 +22,8 @@ def buildml_live(ws):
 #%%  
     for onlyf in ws:
         try:
+                
+            start_time = time.time()
             
             print('initiating dfs calculations''')   
             
@@ -50,7 +52,7 @@ def buildml_live(ws):
             
             file['games'] = (file['team'] + file['opp']).str.replace(
                     '@', '').str.split('')
-                    
+
             file['games2'] = (file['team'] + '_' + file['opp']).str.replace('@','').str.split('_')
 
             file['opp'] = file['opp'].str.replace('@', '')
@@ -448,6 +450,7 @@ def buildml_live(ws):
                                   team_stack3ou,
                                   team_stack4ou,
                                   head_to_head_team_stacks,
+                                  team_stack_comeback2,
                                   whose_in_flex,
                                   throw_2rb,
                                   throw_2wr,
@@ -677,6 +680,7 @@ def buildml_live(ws):
                     'team_stack3ou',
                     'team_stack4ou',
                     'head_to_head_stacks',
+                    'comeback',
                     'whose_in_flex',
                     'throw_2rb',
                     'throw_2wr',
@@ -700,6 +704,8 @@ def buildml_live(ws):
         
             print()
             raise e
+        
+        print("--- %s seconds ---" % (time.time() - start_time))
 
     return True
     

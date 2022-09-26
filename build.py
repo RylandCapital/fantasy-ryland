@@ -111,10 +111,10 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(us
 if os.path.exists(path) == False:
   os.mkdir(path+'optimized_teams_by_week_live\\')
 
-workers = [[i] for i in np.arange(1,40)]
+workers = [[i] for i in np.arange(1,30)]
 
 pool = Pool(processes=len(workers))
-pool.starmap(fantasyze_live, zip(workers, repeat('9.14.22'), repeat(True)))
+pool.starmap(fantasyze_live, zip(workers, repeat('9.21.22'), repeat(True)))
 pool.close()
 ################################################
 
@@ -136,7 +136,7 @@ mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.forma
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     
 
-cores = 40
+cores = 30
 names = [f[:-7] for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 weeks_available = len(names)
 weeks_core = math.ceil(len(names)/cores)
@@ -161,23 +161,12 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_live.csv'.format(user))
 
 
 '''after live teams have been uploaded to dataiku and 
-predicted and the file has been dropped into 
+predictions.csv a file has been dropped into 
 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user).
-this block brings in the predictions to create 
-upload ticket'''
+this block creates upload ticket'''
 ################################################
 ################################################
-user = os.getlogin()
-path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
-
-onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
-onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
-teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
-
-preds = pd.read_csv(path + 'predictions.csv').sort_values(by='lineup',ascending=False).drop_duplicates('prediction',keep='first')
-
-ticket = fanduel_ticket(preds, teams, entries=150, injuries=[])
+ticket, exposures = fanduel_ticket(entries=300, max_exposure=300, injuries=[])
 
 
 
