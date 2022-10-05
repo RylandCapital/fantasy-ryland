@@ -1,3 +1,4 @@
+from hmac import trans_36
 import time
 import os
 import pandas as pd
@@ -66,23 +67,37 @@ def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
   preds = pd.read_csv(path + 'predictions.csv')
   preds=preds.sort_values(by='lineup',ascending=False).drop_duplicates('proba_1',keep='first')
 
-  picks = preds[['lineup', 'whose_in_flex', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks = preds[['lineup', 'whose_in_flex', 'proba_1', 
+   'game_stack4', 'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
+   'numberofgamestacks', 'numberofteamstacks','num_games_represented']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
   ticket = picks.iloc[:(entries*100*9)]
+  all_stacks = ticket['team_stack1'].unique().tolist() + \
+     ticket['team_stack2'].unique().tolist() + \
+      ticket['team_stack3'].unique().tolist() + \
+        ticket['team_stack4'].unique().tolist()
 
   selections = []
-  exposures = dict(zip(ticket['name'].unique().tolist(), '0'*len(ticket['name'].unique().tolist())))
+  exposures = dict(zip(ticket['name'].unique().tolist(),'0'*len(ticket['name'].unique().tolist())))
+  stacks = dict(zip(all_stacks, '0'*len(all_stacks)))
+
   count = 0
   for i,n in zip(ticket.index.unique(), np.arange(len(ticket.index.unique()))):
       ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
-      df = ticket.loc[i][['pos','Id','whose_in_flex','name','proba_1']].sort_values('Id')
+      df = ticket.loc[i][['pos','Id','whose_in_flex','name','proba_1',
+        'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
+         'numberofgamestacks', 'numberofteamstacks','num_games_represented']].sort_values('Id')
       id2 = sorted(df['Id'].values)
       id2_names = sorted(df['name'].values)
+      id2_stacks = pd.concat([df['team_stack1'], df['team_stack2'], df['team_stack3'], df['team_stack4']]).unique()
       maxex = max([float(exposures[i])+1 for i in id2_names])
       injury = len(list(set(id2).intersection(set(injuries))))
       proj = df['proba_1'].iloc[0]
       flex = df['whose_in_flex'].iloc[0]
+      numberteamstacks = df['numberofteamstacks'].iloc[0]
+      numbergamestacks = df['numberofgamestacks'].iloc[0]
+      games_represented = df['num_games_represented'].iloc[0]
       df = df[['pos','Id']].sort_values('pos')
       df.set_index('pos', inplace=True)
       df.index = np.where(df.index=='D', 'DEF', df.index)
@@ -93,9 +108,12 @@ def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
       df['name'] = str(id2_names)
       df['proba_1'] = proj
       df['injury'] = injury
-
+      df['numberteamstacks'] = numberteamstacks
+      df['numbergamestacks'] = numbergamestacks
+      df['games_represented '] = games_represented 
       if maxex<=max_exposure:
         update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]
+        update_stacks = [stacks.update({i:float(stacks[i])+1}) for i in id2_stacks]
         print('Loop:{2} - Count:{1} - Proba_1:{0}'.format(proj,count,n))
         selections.append(df)
         count+=1
@@ -106,5 +124,5 @@ def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
   upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
   upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket.csv')
 
-  return upload, pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)
+  return upload, pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False), pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
 

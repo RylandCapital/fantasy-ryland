@@ -31,7 +31,7 @@ from config import curr_historical_optimize_weeks, master_historical_weeks, game
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[46,47], strdates=['9/7/22', '9/14/22'])         
+pull_stats(weeks=[49], strdates=['9/28/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -51,7 +51,7 @@ if os.path.exists(path) == False:
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = master_historical_weeks
+weeks = curr_historical_optimize_weeks
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -71,7 +71,7 @@ if os.path.exists(path) == False:
 
 '''pull all hisotrical teams from the database created from the optimizer'''
 
-ranges = master_historical_weeks
+ranges = curr_historical_optimize_weeks
 
 pool = Pool(processes=len(ranges))
 results = pool.map(buildml, ranges)
@@ -98,7 +98,7 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['9/21/22'], strdates=['9/21/22'])    
+pull_stats_live(weeks=['9/28/22'], strdates=['9/28/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -114,7 +114,7 @@ if os.path.exists(path) == False:
 workers = [[i] for i in np.arange(1,30)]
 
 pool = Pool(processes=len(workers))
-pool.starmap(fantasyze_live, zip(workers, repeat('9.21.22'), repeat(True)))
+pool.starmap(fantasyze_live, zip(workers, repeat('9.28.22'), repeat(True)))
 pool.close()
 ################################################
 
@@ -166,7 +166,7 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures = fanduel_ticket(entries=300, max_exposure=300, injuries=[])
+ticket, exposures, stacks = fanduel_ticket(entries=300, max_exposure=150, injuries=[])
 
 
 
