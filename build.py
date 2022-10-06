@@ -13,6 +13,7 @@ from _historical.feature_generation.frv1 import buildml
 from _predict.feature_generation.frv1 import buildml_live
 
 from _predict.player_stats.helpers import fanduel_ticket
+from _review.helpers import analyze_gameday_pool
 
 from multiprocessing import Pool
 from itertools import repeat
@@ -171,3 +172,5 @@ ticket, exposures, stacks = fanduel_ticket(entries=300, max_exposure=150, injuri
 
 
 
+'''review'''
+df, team_scores, act_describe, player_pcts, top, corr = analyze_gameday_pool(historical_id = 49, week='9.28.22')

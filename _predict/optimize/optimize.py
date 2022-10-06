@@ -17,6 +17,7 @@ class Player:
     self.salary = int(float((opts['salary'])))
     self.theo_actual = float(np.random.randint(0,30)) ##+ float(opts['proj'])
     self.team = str(opts['team'])
+    self.opp = str(opts['opp'])
     self.actual = float(opts['proj'])
     self.lock = False
     self.ban = False
@@ -161,6 +162,7 @@ def fantasyze_live(ws, week, teamstacks_only=False):
               
               #setings
               team_exposures = [i.team for i in team]
+              opps = [i.opp.replace('@','') for i in team]
               isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
               
               df = pd.DataFrame([names, actual, position, salary], index = ['name',
@@ -168,20 +170,16 @@ def fantasyze_live(ws, week, teamstacks_only=False):
               df['team_salary'] = sum(actual)
               df['lineup'] = 'lineup_' + str(count) + '_' + str(w)   
         
-    
-
               if teamstacks_only == False:
                 print('{0}-{1}'.format(w, count))
                 dfs.append(df)
               elif teamstacks_only == True:
-                 if isteamstack > 0:
+                 if (isteamstack > 0) & ((team_exposures[-1] in opps)==False):
                   count+=1
                   print('{0}-{1}-TS'.format(w,count))
                   dfs.append(df)
                  else:
-                  print ('no team stack')
-
-
+                  print ('missing team stack, or playing d')
 
           masterf = pd.concat(dfs)
           masterf = masterf.set_index('name')
