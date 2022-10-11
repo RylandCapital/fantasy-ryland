@@ -54,7 +54,7 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
+def fanduel_ticket(entries=300, max_exposure=150, removals=[]):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
@@ -92,7 +92,7 @@ def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
       id2_names = sorted(df['name'].values)
       id2_stacks = pd.concat([df['team_stack1'], df['team_stack2'], df['team_stack3'], df['team_stack4']]).unique()
       maxex = max([float(exposures[i])+1 for i in id2_names])
-      injury = len(list(set(id2).intersection(set(injuries))))
+      removal = len(list(set(id2).intersection(set(removals))))
       proj = df['proba_1'].iloc[0]
       flex = df['whose_in_flex'].iloc[0]
       numberteamstacks = df['numberofteamstacks'].iloc[0]
@@ -107,7 +107,7 @@ def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
       df['id2'] = str(id2)
       df['name'] = str(id2_names)
       df['proba_1'] = proj
-      df['injury'] = injury
+      df['removals'] = removal
       df['numberteamstacks'] = numberteamstacks
       df['numbergamestacks'] = numbergamestacks
       df['games_represented '] = games_represented 
@@ -125,4 +125,27 @@ def fanduel_ticket(entries=300, max_exposure=300, injuries=[]):
   upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket.csv')
 
   return upload, pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False), pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
+
+
+
+def easy_remove(ids = []):
+
+  user = os.getlogin()
+  path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
+  tkt = pd.read_csv(path+'ticket.csv')
+
+  keepers = []
+  for i in tkt.index.unique():
+    s = tkt.loc[i]
+    tf = len(s.isin(ids)[s.isin(ids) == True])
+    if tf == 0:
+      keepers.append(tkt.loc[i])
+
+  final = pd.concat(keepers, axis=1).T
+  final.to_csv(path+'ticket_easy_remove.csv', index=False)
+
+
+
+
+
 

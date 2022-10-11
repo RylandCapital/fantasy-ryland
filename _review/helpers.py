@@ -34,4 +34,6 @@ def analyze_gameday_pool(historical_id = 49, week='9.28.22'):
     corr['pct_proba'] = corr['proba_1'].rank(pct=True)
     top['pct_proba'] = corr.loc[top.index[0]].pct_proba
 
-    return df, team_scores, act_describe, player_pcts, top, corr
+    duplicates = len(teams.groupby(['lineup'])) - len(teams.groupby(['lineup'])['name'].sum().apply(lambda x: ''.join(sorted(x))).unique())
+
+    return df, team_scores, act_describe, player_pcts, top, corr, duplicates

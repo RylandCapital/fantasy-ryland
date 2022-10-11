@@ -12,8 +12,10 @@ from _predict.player_stats.pull_stats import pull_stats_live
 from _historical.feature_generation.frv1 import buildml
 from _predict.feature_generation.frv1 import buildml_live
 
-from _predict.player_stats.helpers import fanduel_ticket
+from _predict.player_stats.helpers import fanduel_ticket, easy_remove
 from _review.helpers import analyze_gameday_pool
+
+from _fantasyml import neuterPredictions
 
 from multiprocessing import Pool
 from itertools import repeat
@@ -99,7 +101,7 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['9/28/22'], strdates=['9/28/22'])    
+pull_stats_live(weeks=['10/5/22'], strdates=['10/5/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -115,7 +117,7 @@ if os.path.exists(path) == False:
 workers = [[i] for i in np.arange(1,30)]
 
 pool = Pool(processes=len(workers))
-pool.starmap(fantasyze_live, zip(workers, repeat('9.28.22'), repeat(True)))
+pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
 pool.close()
 ################################################
 
@@ -167,10 +169,18 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=300, max_exposure=150, injuries=[])
+ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=150, injuries=[])
+user = os.getlogin()
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+exposures.to_csv(path+'exposures.csv')
+
+easy_remove(ids = [])
 
 
+
+
+neutered_predictions = neuterPredictions(1)
 
 
 '''review'''
-df, team_scores, act_describe, player_pcts, top, corr = analyze_gameday_pool(historical_id = 49, week='9.28.22')
+df, team_scores, act_describe, player_pcts, top, corr, duplicates = analyze_gameday_pool(historical_id = 49, week='9.28.22')
