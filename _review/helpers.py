@@ -1,15 +1,22 @@
 import pandas as pd
 import os 
 
+from _fantasyml import neuterPredictions
 
-
-def analyze_gameday_pool(historical_id = 49, week='9.28.22'):
+def analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False):
 
     user = os.getlogin()
-    path = 'C:\\Users\\{0}\\.fantasy-ryland\\_predictions_vault\\{1}\\'.format(user, week)
+    path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
     path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
 
     predictions = pd.read_csv(path+'predictions.csv')
+
+    if neuter==True:
+        nps = neuterPredictions(1)[['lineup','proba_1_neutralized']].set_index('lineup')
+        predictions = predictions.set_index('lineup').join(nps)
+        predictions.reset_index(inplace=True)
+        predictions['proba_1'] = predictions['proba_1_neutralized']
+        predictions.drop(['proba_1_neutralized'], axis=1, inplace=True)
 
     onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
     onlyfiles = [f for f in onlyfiles if f.split('_')[0] == week]
@@ -26,6 +33,7 @@ def analyze_gameday_pool(historical_id = 49, week='9.28.22'):
     dflineup = df.groupby(['lineup'])
     df.index = df['lineup']
     team_scores = dflineup['act_pts'].sum().sort_values()
+    ticket_scores = dflineup[['act_pts']].sum().join(dflineup['proba_1'].first()).sort_values(by='proba_1', ascending=False).iloc[0:300]
     act_describe = team_scores.describe().round(2)
     player_pcts =  (df['Unnamed: 0.1'].value_counts()/(df['Unnamed: 0.1'].value_counts().sum()/9)).round(5)
 
@@ -33,7 +41,8 @@ def analyze_gameday_pool(historical_id = 49, week='9.28.22'):
     corr = pd.concat([dflineup[['act_pts']].sum(), (dflineup[['proba_1']].first())], axis=1)
     corr['pct_proba'] = corr['proba_1'].rank(pct=True)
     top['pct_proba'] = corr.loc[top.index[0]].pct_proba
+    corr['act_pts'].corr(corr['proba_1'])
 
     duplicates = len(teams.groupby(['lineup'])) - len(teams.groupby(['lineup'])['name'].sum().apply(lambda x: ''.join(sorted(x))).unique())
 
-    return df, team_scores, act_describe, player_pcts, top, corr, duplicates
+    return df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores

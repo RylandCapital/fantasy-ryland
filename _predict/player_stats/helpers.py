@@ -7,9 +7,15 @@ import numpy as np
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-from dotenv import load_dotenv
+from _fantasyml import neuterPredictions
 
 from config import gameday_week
+
+from dotenv import load_dotenv
+
+
+
+
 
 load_dotenv()
 #fantasy labs username
@@ -40,7 +46,8 @@ def load_window_fanduel():
     time.sleep(2)
     driver.set_window_size(3000, 2000)
     time.sleep(2)
-    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[3]/nav/ul/li[2]/a').click()
+    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[1]/a[1]').click()
+    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[2]/div[4]').click()
     driver.set_context("chrome")
     win = driver.find_element('tag name', "html")
     win.send_keys(Keys.CONTROL + "-")
@@ -54,7 +61,7 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(entries=300, max_exposure=150, removals=[]):
+def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
@@ -66,6 +73,13 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[]):
 
   preds = pd.read_csv(path + 'predictions.csv')
   preds=preds.sort_values(by='lineup',ascending=False).drop_duplicates('proba_1',keep='first')
+
+  if neuter==True:
+    nps = neuterPredictions(1)[['lineup','proba_1_neutralized']].set_index('lineup')
+    preds = preds.set_index('lineup').join(nps)
+    preds.reset_index(inplace=True)
+    preds['proba_1'] = preds['proba_1_neutralized']
+    preds.drop(['proba_1_neutralized'], axis=1, inplace=True)
 
   picks = preds[['lineup', 'whose_in_flex', 'proba_1', 
    'game_stack4', 'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',

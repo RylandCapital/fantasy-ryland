@@ -28,7 +28,8 @@ def pull_stats(weeks=[], strdates=[]):
                 time.sleep(5)
                 
                 #%%
-                driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[2]/a').click()
+                driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[2]/a').click()
+                                             #/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[2]/a
                 time.sleep(5)
                 
                 name = 'RB'
@@ -39,7 +40,7 @@ def pull_stats(weeks=[], strdates=[]):
                     rbcolumns = rbcolumns_hist_shift
                 
                 #this gets the little blue number that shows number of players in that position that day
-                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/div/ul/li[2]/a/span').text)
                 
                 #loop on for left columns
                 #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -47,7 +48,7 @@ def pull_stats(weeks=[], strdates=[]):
                 columns = []
                 column_names = ['rating', 'name', 'salary', 'team', 'opp']
                 for n, t in zip(column_names, np.arange(2,7)):
-                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                     columns.append(column) 
                 left = pd.concat(columns, axis=1) 
 
@@ -62,10 +63,10 @@ def pull_stats(weeks=[], strdates=[]):
                 len_names = len(rcolumn_names)
                 for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
                     try:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                     except:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                         
                 right = pd.concat(rcolumns, axis=1)  
@@ -81,7 +82,7 @@ def pull_stats(weeks=[], strdates=[]):
                 #%%
                 driver.refresh()
                 time.sleep(10)
-                driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[3]/a').click()
+                driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[3]/a').click()
                 time.sleep(5)
                 
                 
@@ -93,7 +94,7 @@ def pull_stats(weeks=[], strdates=[]):
                     wrcolumns = wrcolumns_hist_shift
                                                 
                 #this gets the little blue number that shows number of players in that position that day
-                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/div/ul/li[2]/a/span').text)
                 
                 #loop on for left columns
                 #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -101,7 +102,7 @@ def pull_stats(weeks=[], strdates=[]):
                 columns = []
                 column_names = ['rating', 'name', 'salary', 'team', 'opp']
                 for n, t in zip(column_names, np.arange(2,7)):
-                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                     columns.append(column) 
                 left = pd.concat(columns, axis=1) 
 
@@ -116,10 +117,10 @@ def pull_stats(weeks=[], strdates=[]):
                 len_names = len(rcolumn_names)
                 for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
                     try:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                     except:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                         
                 right = pd.concat(rcolumns, axis=1)  
@@ -135,7 +136,7 @@ def pull_stats(weeks=[], strdates=[]):
                 #%%
                 driver.refresh()
                 time.sleep(10)
-                driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[4]/a').click()
+                driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[4]/a').click()
                 time.sleep(5)
 
                 name = 'TE'
@@ -147,7 +148,7 @@ def pull_stats(weeks=[], strdates=[]):
 
                     
                 #this gets the little blue number that shows number of players in that position that day
-                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/div/ul/li[2]/a/span').text)
                 
                 #loop on for left columns
                 #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -155,7 +156,7 @@ def pull_stats(weeks=[], strdates=[]):
                 columns = []
                 column_names = ['rating', 'name', 'salary', 'team', 'opp']
                 for n, t in zip(column_names, np.arange(2,7)):
-                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                     columns.append(column) 
                 left = pd.concat(columns, axis=1) 
 
@@ -170,10 +171,10 @@ def pull_stats(weeks=[], strdates=[]):
                 len_names = len(rcolumn_names)
                 for n, t in zip(rcolumn_names, np.arange(1,len_names+1)):
                     try:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                     except:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                         
                 right = pd.concat(rcolumns, axis=1)  
@@ -190,14 +191,14 @@ def pull_stats(weeks=[], strdates=[]):
                 driver.refresh()
                 time.sleep(10)
 
-                driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[1]/a').click()
+                driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[1]/a').click()
                 time.sleep(5)
                 
                 name = 'QB'
                 
                     
                 #this gets the little blue number that shows number of players in that position that day
-                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/div/ul/li[2]/a/span').text)
                 
                 #loop on for left columns
                 #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -205,7 +206,7 @@ def pull_stats(weeks=[], strdates=[]):
                 columns = []
                 column_names = ['rating', 'name', 'salary', 'team', 'opp']
                 for n, t in zip(column_names, np.arange(2,7)):
-                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                     columns.append(column) 
                 left = pd.concat(columns, axis=1) 
 
@@ -224,10 +225,10 @@ def pull_stats(weeks=[], strdates=[]):
                 len_names = len(qbcolumns)
                 for n, t in zip(qbcolumns, np.arange(1,len_names+1)):
                     try:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                     except:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                         
                 right = pd.concat(rcolumns, axis=1)  
@@ -243,14 +244,14 @@ def pull_stats(weeks=[], strdates=[]):
                 driver.refresh()
                 time.sleep(10)
 
-                driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/nav/ul/li[6]/a').click()
+                driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[6]/a').click()
                 time.sleep(5)
                     
                 name = 'DEF'
             
                 
                 #this gets the little blue number that shows number of players in that position that day
-                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[1]/div/div/ul/li[3]/a/span').text)
+                num_players = int(driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/div/ul/li[2]/a/span').text)
                 
                 #loop on for left columns
                 #this loop gets the first 4 columns, starting at column 3 as you can see in
@@ -258,7 +259,7 @@ def pull_stats(weeks=[], strdates=[]):
                 columns = []
                 column_names = ['rating', 'name', 'salary', 'team', 'opp']
                 for n, t in zip(column_names, np.arange(2,7)):
-                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                    column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                     columns.append(column) 
                 left = pd.concat(columns, axis=1) 
 
@@ -277,10 +278,10 @@ def pull_stats(weeks=[], strdates=[]):
                 len_names = len(defcolumns)
                 for n, t in zip(defcolumns, np.arange(1,len_names+1)):
                     try:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                     except:
-                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[3]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
+                        rcolumn = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                         rcolumns.append(rcolumn) 
                         
                 right = pd.concat(rcolumns, axis=1)  

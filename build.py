@@ -15,8 +15,6 @@ from _predict.feature_generation.frv1 import buildml_live
 from _predict.player_stats.helpers import fanduel_ticket, easy_remove
 from _review.helpers import analyze_gameday_pool
 
-from _fantasyml import neuterPredictions
-
 from multiprocessing import Pool
 from itertools import repeat
 
@@ -34,7 +32,7 @@ from config import curr_historical_optimize_weeks, master_historical_weeks, game
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[49], strdates=['9/28/22'])         
+pull_stats(weeks=[50], strdates=['10/5/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -61,7 +59,7 @@ pool.map(fantasyze, weeks)
 pool.close()
 ################################################
 
-#%%
+
 '''Machine Learning Data Prep'''
 ################################################
 ################################################
@@ -89,6 +87,16 @@ file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineu
 file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 ################################################
 
+#%%
+
+
+
+
+
+
+
+
+
 
 
 
@@ -101,7 +109,7 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['10/5/22'], strdates=['10/5/22'])    
+pull_stats_live(weeks=['10/12/22'], strdates=['10/12/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -169,7 +177,7 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=150, injuries=[])
+ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=150, removals=[], neuter=True)
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 exposures.to_csv(path+'exposures.csv')
@@ -178,9 +186,6 @@ easy_remove(ids = [])
 
 
 
-
-neutered_predictions = neuterPredictions(1)
-
-
 '''review'''
-df, team_scores, act_describe, player_pcts, top, corr, duplicates = analyze_gameday_pool(historical_id = 49, week='9.28.22')
+df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores = analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False)
+dfn, team_scoresn, act_describen, player_pctsn, top, corrn, duplicatesn, ticket_scoresn = analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=True)
