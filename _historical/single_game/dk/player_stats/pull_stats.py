@@ -5,7 +5,7 @@ import os
 
 from selenium.webdriver.common.keys import Keys
 
-from _historical.player_stats import helpers
+from _historical.single_game.dk.player_stats import helpers
 
 from config import rbcolumns_hist, wrcolumns_hist, tecolumns_hist, qbcolumns_hist, defcolumns_hist, shift, \
     rbcolumns_hist_shift, wrcolumns_hist_shift, tecolumns_hist_shift, qbcolumns_hist_shift, defcolumns_hist_shift
