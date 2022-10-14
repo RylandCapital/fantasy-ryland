@@ -3,22 +3,22 @@ import math
 import numpy as np
 import pandas as pd
 
-from _historical.optimize.optimize import fantasyze
-from _predict.optimize.optimize import fantasyze_live
+from fd_mainline._historical.optimize.optimize import fantasyze
+from fd_mainline._predict.optimize.optimize import fantasyze_live
 
-from _historical.player_stats.pull_stats import pull_stats
-from _predict.player_stats.pull_stats import pull_stats_live
+from fd_mainline._historical.player_stats.pull_stats import pull_stats
+from fd_mainline._predict.player_stats.pull_stats import pull_stats_live
 
-from _historical.feature_generation.frv1 import buildml
-from _predict.feature_generation.frv1 import buildml_live
+from fd_mainline._historical.feature_generation.frv1 import buildml
+from fd_mainline._predict.feature_generation.frv1 import buildml_live
 
-from _predict.player_stats.helpers import fanduel_ticket, easy_remove
-from _review.helpers import analyze_gameday_pool
+from fd_mainline._predict.player_stats.helpers import fanduel_ticket, easy_remove
+from fd_mainline._review.helpers import analyze_gameday_pool
 
 from multiprocessing import Pool
 from itertools import repeat
 
-from config import curr_historical_optimize_weeks, master_historical_weeks, gameday_week
+from fd_mainline.config import curr_historical_optimize_weeks, master_historical_weeks, gameday_week
 
 
 

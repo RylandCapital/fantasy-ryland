@@ -5,7 +5,7 @@ import time
 import csv
 
 from ortools.linear_solver import pywraplp
-from config import historical_winning_scores
+from fd_mainline.config import historical_winning_scores
 
 
 
@@ -76,7 +76,7 @@ ROSTER_SIZE = 9
 def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
-  with open(os.getcwd() + r"\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
+  with open(os.getcwd() + r"\fd_mainline\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
    
     for row in csvdata:

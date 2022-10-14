@@ -1,7 +1,7 @@
 import pandas as pd
 import os 
 
-from _fantasyml import neuterPredictions
+from fd_mainline._fantasyml import neuterPredictions
 
 def analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False):
 

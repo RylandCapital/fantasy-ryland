@@ -7,9 +7,9 @@ import numpy as np
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-from _fantasyml import neuterPredictions
+from fd_mainline._fantasyml import neuterPredictions
 
-from config import gameday_week
+from fd_mainline.config import gameday_week
 
 from dotenv import load_dotenv
 

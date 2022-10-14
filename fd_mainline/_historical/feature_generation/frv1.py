@@ -7,7 +7,7 @@ import math
 import traceback
 import os
 
-from config import historical_winning_scores
+from fd_mainline.config import historical_winning_scores
 
 
 
