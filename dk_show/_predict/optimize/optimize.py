@@ -150,7 +150,7 @@ def fantasyze_live(ws, week, teamstacks_only=False):
   for w in ws:
           dfs = [] 
           count=0
-          while count < 100000:
+          while count < 167000:
               
               team = run(60000, 60000, week, 1, 5000).players
               #######
@@ -183,7 +183,7 @@ def fantasyze_live(ws, week, teamstacks_only=False):
           masterf = pd.concat(dfs)
           masterf = masterf.set_index('name')
 
-          mypath = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
+          mypath = os.getcwd() + r"\_predict\player_stats\by_week"
           stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(week)) 
           stats = stats.set_index('RylandID_master')
           

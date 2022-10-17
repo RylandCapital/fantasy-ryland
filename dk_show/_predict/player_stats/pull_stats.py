@@ -399,7 +399,7 @@ def pull_stats_live(weeks=[], strdates=[]):
                 master['IAY'] = master['IAY'].apply(lambda x: x.replace(' ','0') if len(str(x))==1 else x).fillna(0).apply(lambda x: float(x))
                 
                 
-                fd = pd.read_csv(os.getcwd() + r'\fd_mainline\_predict\player_stats\fanduel_files\{0}.csv'.format(we.replace('/','.')), header=6, index_col=13).iloc[:,13:]
+                fd = pd.read_csv(os.getcwd() + r'\_predict\player_stats\fanduel_files\{0}.csv'.format(we.replace('/','.')), header=6, index_col=13).iloc[:,13:]
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))

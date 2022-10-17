@@ -177,12 +177,12 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=200, max_exposure=75, removals=[], neuter=False)
+ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=150, removals=[], neuter=True)
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 exposures.to_csv(path+'exposures.csv')
 
-easy_remove(ids = ['81659-26251','81659-28744','81659-83117', '81659-87770', '81659-60930', '81659-90584'])
+easy_remove(ids = [])
 
 
 
