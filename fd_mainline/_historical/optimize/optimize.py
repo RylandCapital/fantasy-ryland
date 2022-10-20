@@ -15,8 +15,10 @@ class Player:
     self.name = opts['RylandID_master']
     self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
-    self.theo_actual = float(np.random.randint(1,30)) + float(opts['act_pts'])
+    self.theo_actual = float(np.random.randint(-30,30)) + float(opts['act_pts'])
     self.actual = float(opts['act_pts'])
+    self.team = str(opts['team'])
+    self.opp = str(opts['opp'])
     self.lock = False
     self.ban = False
 
@@ -146,158 +148,204 @@ start_time = time.time()
 print('initiating dfs calculations''')  
     
 milly_winners_dict = historical_winning_scores
-
+# print('{0}-{1}'.format(w,i))
 def fantasyze(ws):
   for w in ws:
-      milly = milly_winners_dict[str((w))]
-      for iters in [0]:
-          dfs = [] 
-          for i in np.arange(1,5000):
-              
-              print('{0}-{1}'.format(w,i))
-              
-              if i < 101:
-              #lim low is 90 percent for that week
-                  team = run(60000, 59900, w, milly*.99, 500).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) + str(iters) +'_959'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i < 1001:
-                  team = run(60000, 59900, w, milly*.9, milly*.9594).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_9'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i < 2001:
-                  team = run(60000, 59900, w, milly*.8, milly*.9).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_8'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i <3001:
-                  team = run(60000, 59900, w, milly*.6, milly*.8).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_6'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i <4001:
-                  team = run(60000, 59900, w, milly*.4, milly*.6).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_4'
-                    
-                  dfs.append(df)
-              
-              #############################
-              if i <5001:
-                  team = run(60000, 59900, w, milly*.2 , milly*.4).players
-                  #######
-                    
-                  names = [i.name for i in team]
-                  actual = [i.actual for i in team]
-                  position = [i.position for i in team]
-                  salary = [i.salary for i in team]
-                  
-                  actual_sum = sum(actual)
-                    
-                  df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                      'actual', 'position', 'salary']).T
-                  df['team_salary'] = actual_sum
-                  df['lineup'] = str(i) +  str(iters) +'_2'
-                    
-                  dfs.append(df)
-              
-          masterf = pd.concat(dfs)
-          masterf = masterf.set_index('name')
+    milly = milly_winners_dict[str((w))]  
+    dupdf = pd.DataFrame([], columns = ['id'])
+    dfs = [] 
 
-          mypath = os.getcwd() + r"\_historical\player_stats\by_week"
-          stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(w)) 
-          stats = stats.set_index('RylandID_master')
+
+    
+    i = 0
+    while i < 501:
+        
+        team = run(60000, 60000, w, milly*.99, 500).players
+        #######
           
-          masterf = masterf.join(stats, how='outer', lsuffix='_ot')
-          # features = ['rating', 'salary', 'team', 'opp', 'proj',
-          #             'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own', 'act_pts',
-          #             'impld_pts', 'sr', 'buzz', 'leverage', 'pro', 'my', 'bargain',
-          #             'opp+-', 'snaps', 'pts', 'opppts', 'delta', 'spread', 'o/u',
-          #             '%rb','%wr', '%te', 'proj_sacks', 'int%', 'bargain',
-          #             'spread%',  'temp', 'humidity', 'precip%', 'consistency',
-          #             'pos','rec_trgts%', 'rec_td%', 'rec_yds%', 'rz_opp',
-          #             'rush_yards%', 'pass_succ', 'rush_succ', 'takeaway%',
-          #             'lineup', 'week']
-          # masterf = masterf[features]
+        names = [i.name for i in team]
+        actual = [i.actual for i in team]
+        position = [i.position for i in team]
+        salary = [i.salary for i in team]
+        
+        actual_sum = sum(actual)
 
-          print("--- %s seconds ---" % (time.time() - start_time))
-
-          user = os.getlogin()
-          # Specify path
-          path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(user)
-
-          masterf.to_csv(path+'{0}.csv.gz'.format(w),compression='gzip', index=True)
+        team_exposures = [i.team for i in team]
+        opps = [i.opp.replace('@','') for i in team]
+        isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
           
-          print("--- %s seconds ---" % (time.time() - start_time))
+        df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                            'actual', 'position', 'salary', 'teamz']).T
+        df['team_salary'] = actual_sum
+        df['lineup'] = str(i) + str(0) +'_959'
+
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+          dupdf.loc[i,'id'] = ''.join(sorted(''.join(names)))
+          print('{0}-{1}'.format(w,i))  
+          df.drop('teamz', inplace=True, axis=1)
+          dfs.append(df)
+          i+=1
+
+    
+    #############################
+    i = 0
+    while i < 1001:
+        team = run(60000, 60000, w, milly*.9, milly*.989).players
+        #######
+          
+        names = [i.name for i in team]
+        actual = [i.actual for i in team]
+        position = [i.position for i in team]
+        salary = [i.salary for i in team]
+
+        actual_sum = sum(actual)
+        
+        team_exposures = [i.team for i in team]
+        opps = [i.opp.replace('@','') for i in team]
+        isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
+          
+        df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                            'actual', 'position', 'salary', 'teamz']).T
+        df['team_salary'] = actual_sum
+        df['lineup'] = str(i) + str(0) +'_9'
+
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+          print('{0}-{1}'.format(w,i))  
+          df.drop('teamz', inplace=True, axis=1)
+          dfs.append(df)
+          i+=1
+    
+    #############################
+    i = 0
+    while i < 2001:
+        team = run(60000, 60000, w, milly*.8, milly*.9).players
+        #######
+          
+        names = [i.name for i in team]
+        actual = [i.actual for i in team]
+        position = [i.position for i in team]
+        salary = [i.salary for i in team]
+        
+        actual_sum = sum(actual)
+        
+        team_exposures = [i.team for i in team]
+        opps = [i.opp.replace('@','') for i in team]
+        isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
+          
+        df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                            'actual', 'position', 'salary', 'teamz']).T
+        df['team_salary'] = actual_sum
+        df['lineup'] = str(i) + str(0) +'_8'
+
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+          print('{0}-{1}'.format(w,i))  
+          df.drop('teamz', inplace=True, axis=1)
+          dfs.append(df)
+          i+=1
+    
+    #############################
+    i = 0
+    while i < 3001:
+        team = run(60000, 60000, w, milly*.6, milly*.8).players
+        #######
+          
+        names = [i.name for i in team]
+        actual = [i.actual for i in team]
+        position = [i.position for i in team]
+        salary = [i.salary for i in team]
+        
+        actual_sum = sum(actual)
+        
+        team_exposures = [i.team for i in team]
+        opps = [i.opp.replace('@','') for i in team]
+        isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
+          
+        df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                            'actual', 'position', 'salary', 'teamz']).T
+        df['team_salary'] = actual_sum
+        df['lineup'] = str(i) + str(0) +'_6'
+
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+          print('{0}-{1}'.format(w,i))  
+          df.drop('teamz', inplace=True, axis=1)
+          dfs.append(df)
+          i+=1
+    
+    #############################
+    i = 0
+    while i < 4001:
+        team = run(60000, 60000, w, milly*.6, milly*.8).players
+        #######
+          
+        names = [i.name for i in team]
+        actual = [i.actual for i in team]
+        position = [i.position for i in team]
+        salary = [i.salary for i in team]
+        
+        actual_sum = sum(actual)
+        
+        team_exposures = [i.team for i in team]
+        opps = [i.opp.replace('@','') for i in team]
+        isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
+          
+        df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                            'actual', 'position', 'salary', 'teamz']).T
+        df['team_salary'] = actual_sum
+        df['lineup'] = str(i) + str(0) +'_62'
+
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+          print('{0}-{1}'.format(w,i)) 
+          df.drop('teamz', inplace=True, axis=1) 
+          dfs.append(df)
+          i+=1
+    
+    #############################
+    i = 0
+    while i < 4501:
+        team = run(60000, 60000, w, milly*.5 , milly*.7).players
+        #######
+          
+        names = [i.name for i in team]
+        actual = [i.actual for i in team]
+        position = [i.position for i in team]
+        salary = [i.salary for i in team]
+        
+        actual_sum = sum(actual)
+        
+        team_exposures = [i.team for i in team]
+        opps = [i.opp.replace('@','') for i in team]
+        isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
+          
+        df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                            'actual', 'position', 'salary', 'teamz']).T
+        df['team_salary'] = actual_sum
+        df['lineup'] = str(i) + str(0) +'_5'
+
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+          print('{0}-{1}'.format(w,i))  
+          df.drop('teamz', inplace=True, axis=1)
+          dfs.append(df)
+          i+=1
+              
+    masterf = pd.concat(dfs)
+    masterf = masterf.set_index('name')
+
+    mypath = os.getcwd() + r"\fd_mainline\_historical\player_stats\by_week"
+    stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(w)) 
+    stats = stats.set_index('RylandID_master')
+    
+    masterf = masterf.join(stats, how='outer', lsuffix='_ot')
+
+
+    print("--- %s seconds ---" % (time.time() - start_time))
+
+    user = os.getlogin()
+    # Specify path
+    path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week\\'.format(user)
+
+    masterf.to_csv(path+'{0}.csv.gz'.format(w),compression='gzip', index=True)
+    
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 
 

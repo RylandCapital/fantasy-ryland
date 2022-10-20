@@ -35,9 +35,9 @@ historical_winning_scores = {
 '33':204, #week 3 2021
 '34':233, #week 4 2021
 '35':231, #week 5 2021
-'36':210, #week 6 2021
+'36':210, #week 6 2021 
 '37':208, #week 7 2021 FL: 10/20/21
-'38':190, #week 8 2021 FL: 10/27/21
+'38':190, #week 8 2021 FL: 10/27/21 
 '39':196, #week 9 2021 FL: 11/03/21
 '40':184, #week 10 2021 FL: 11/10/21
 '41':221, #week 11 2021 FL: 11/17/21
@@ -49,21 +49,8 @@ historical_winning_scores = {
 '47':245, #week 2 2022 FL: 9/14/22
 '48':190, #week 3 2022 FL: 9/21/22
 '49':228, #week 4 2022 FL: 9/28/22
-'50':228  #week 5 2022 FL: 10/12/22
-}
-
-dkshowdown_winning_scores = {
-  '1':{ #id representing a slate/week (chronological 1 MUST BE a game before 2 etc)
-    'slate_date':'9.7.22', #wendesday for that slate
-    'thursday':'', #winning score thursday game for that slate slate
-    'monday':'' #winning score monday night game for that slate date (if there are 2 MNFs get score for later game)
-  },
-  '2':{ 
-    'slate_date':'', 
-    'thursday':'', 
-    'monday':'' 
-  },
-
+'50':228, #week 5 2022 FL: 10/5/22
+'51':198, #week 6 2022 FL: 10/12/22  
 }
 
 master_historical_weeks = [
@@ -71,16 +58,16 @@ master_historical_weeks = [
           [13,14],[15,16],[17,18],[19,20],[21,22],[23,24],
           [25,26],[27,28],[29,30],[31,32], [33,34],[35,36],
           [37,38],[39,40],[41,42],[43,44],[45,46],[47,48],
-          [49,50]
+          [49,50],[51]
         ]
 
 curr_historical_optimize_weeks = [
-    [50]
+    [46]
     ]
 
 mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
           24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,
-          44,45,46,47,48,49,50] 
+          44,45,46,47,48,49,50,51] 
 
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False

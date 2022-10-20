@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[50], strdates=['10/5/22'])         
+pull_stats(weeks=[51], strdates=['10/12/21'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -97,13 +97,18 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
 
 
 
-
-
-
 ################################################
 ################################################
 ################################################
-'''GAMEDAY PREDICTION TOOLS'''
+'''
+GAMEDAY PREDICTION TOOLS
+
+CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
+
+'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(user) and 
+'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+
+''' 
 ################################################
 ################################################
 ################################################
@@ -162,7 +167,7 @@ pool.close()
 pool.join() 
 
 
-'''concat all ml files to create master training set'''
+'''concat all ml files to create master team pool'''
 mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live\\'.format(user)
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineup') for f in onlyfiles])

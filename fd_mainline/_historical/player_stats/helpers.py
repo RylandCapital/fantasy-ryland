@@ -36,7 +36,8 @@ def load_window_fanduel():
     driver.set_window_size(3000, 2000)
     time.sleep(2)
     driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[1]/a[1]').click()
-    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[2]/div[4]').click()
+    time.sleep(2)
+    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[2]/div[3]').click()
     driver.set_context("chrome")
     win = driver.find_element('tag name', "html")
     win.send_keys(Keys.CONTROL + "-")
@@ -46,5 +47,7 @@ def load_window_fanduel():
     win.send_keys(Keys.CONTROL + "-")
     win.send_keys(Keys.CONTROL + "-")
     driver.set_context("content")
+
+    
 
     return driver

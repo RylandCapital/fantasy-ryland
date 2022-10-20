@@ -146,7 +146,7 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 start_time = time.time()
 print('initiating dfs calculations''')  
     
-def fantasyze_live(ws, week, teamstacks_only=False):
+def fantasyze_live(ws, week, teamstacks_only=True):
   for w in ws:
           dfs = [] 
           count=0
@@ -164,8 +164,8 @@ def fantasyze_live(ws, week, teamstacks_only=False):
               opps = [i.opp.replace('@','') for i in team]
               isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
               
-              df = pd.DataFrame([names, actual, position, salary], index = ['name',
-                                  'actual', 'position', 'salary']).T
+              df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
+                                  'actual', 'position', 'salary','teamz']).T
               df['team_salary'] = sum(actual)
               df['lineup'] = 'lineup_' + str(count) + '_' + str(w)   
         
@@ -173,9 +173,10 @@ def fantasyze_live(ws, week, teamstacks_only=False):
                 print('{0}-{1}'.format(w, count))
                 dfs.append(df)
               elif teamstacks_only == True:
-                 if (isteamstack > 0) & ((team_exposures[-1] in opps)==False):
+                 if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
                   count+=1
                   print('{0}-{1}-TS'.format(w,count))
+                  df.drop('teamz', inplace=True, axis=1)
                   dfs.append(df)
                  else:
                   print ('missing team stack, or playing d')
