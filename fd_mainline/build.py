@@ -114,7 +114,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['10/12/22'], strdates=['10/12/22'])    
+pull_stats_live(weeks=['10/19/22'], strdates=['10/19/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
