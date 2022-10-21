@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[51], strdates=['10/12/21'])         
+pull_stats(weeks=[51], strdates=['10/12/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -182,15 +182,40 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=200, max_exposure=75, removals=[], neuter=False)
+ticket, exposures, stacks = fanduel_ticket(entries=200, max_exposure=70, removals=[], neuter=False)
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-exposures.to_csv(path+'exposures.csv')
 
-easy_remove(ids = ['81659-26251','81659-28744','81659-83117', '81659-87770', '81659-60930', '81659-90584'])
+'''qickly remove injuries from ticket'''
+easy_remove(ids = ['81659-26251','81659-28744','81659-83117', '81659-87770', '81659-60930', '81659-90584'], neuter=False)
 
 
 
 '''review'''
 df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores = analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False)
 dfn, team_scoresn, act_describen, player_pctsn, top, corrn, duplicatesn, ticket_scoresn = analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=True)
+
+
+
+# df = pd.read_csv(r'C:\Users\rmathews\Downloads\mlupload_scored.csv')
+# df = df[df['week']>41]
+# df['prediction'] = np.where(df['proba_1']>.45,1,0)
+# df['correct'] = np.where((df['prediction']==1) & (df['ismilly']==1),1,0)
+# df.groupby('week')['correct'].value_counts()
+
+# xdf = pd.DataFrame([], columns=['week', 'corrects', 'top_correct_proba', 'ticket_spot'])
+# for i in df['week'].unique():
+#   temp = df[df['week']==i].sort_values(by='proba_1', ascending=False)
+#   temp.reset_index(drop=True, inplace=True)
+#   posdf = temp[temp['correct']==1]
+#   xdf.loc[i,'week'] = i
+#   xdf.loc[i,'correct'] = len(posdf)
+#   try:
+#     xdf.loc[i,'top_correct_proba'] = posdf.iloc[0]['proba_1']
+#     xdf.loc[i,'ticket_spot'] = posdf.index[0]
+#   except:
+#     xdf.loc[i,'top_correct_proba'] = -1
+#     xdf.loc[i,'ticket_spot'] = -1
+
+# xdf.to_csv(r'C:\Users\rmathews\Downloads\analysis.csv')
+

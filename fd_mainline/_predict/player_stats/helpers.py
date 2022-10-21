@@ -136,17 +136,27 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False):
 
   upload = pd.concat(selections)
   upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
-  upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket.csv')
+  exposuresdf = pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)
+  if neuter==True:
+    upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket_neutered.csv')
+    exposuresdf.to_csv(path+'exposures_neutered.csv')
+  else:
+    upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket.csv')
+    exposuresdf.to_csv(path+'exposures.csv')
 
-  return upload, pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False), pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
+
+  return upload, exposuresdf, pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
 
 
 
-def easy_remove(ids = []):
+def easy_remove(ids = [], neuter=False):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
-  tkt = pd.read_csv(path+'ticket.csv')
+  if neuter==False:
+    tkt = pd.read_csv(path+'ticket.csv')
+  else:
+    tkt = pd.read_csv(path+'ticket_neutered.csv')
 
   keepers = []
   for i in tkt.index.unique():
@@ -156,7 +166,11 @@ def easy_remove(ids = []):
       keepers.append(tkt.loc[i])
 
   final = pd.concat(keepers, axis=1).T
-  final.to_csv(path+'ticket_easy_remove.csv', index=False)
+  if neuter==False:
+    final.to_csv(path+'ticket_easy_remove.csv', index=False)
+  else:
+    final.to_csv(path+'ticket_easy_remove_neutered.csv', index=False)
+
 
 
 
