@@ -52,7 +52,7 @@ if os.path.exists(path) == False:
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = curr_historical_optimize_weeks
+weeks = master_historical_weeks
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -72,7 +72,7 @@ if os.path.exists(path) == False:
 
 '''pull all hisotrical teams from the database created from the optimizer'''
 
-ranges = curr_historical_optimize_weeks
+ranges = master_historical_weeks
 
 pool = Pool(processes=len(ranges))
 results = pool.map(buildml, ranges)
@@ -182,12 +182,12 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=200, max_exposure=70, removals=[], neuter=False)
+ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=140, removals=[], neuter=False)
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 
 '''qickly remove injuries from ticket'''
-easy_remove(ids = ['81659-26251','81659-28744','81659-83117', '81659-87770', '81659-60930', '81659-90584'], neuter=False)
+easy_remove(ids = ['81947-104278', '81947-25011', '81947-26355', '81947-87418', '81947-91598', '81947-29253' ], neuter=False)
 
 
 

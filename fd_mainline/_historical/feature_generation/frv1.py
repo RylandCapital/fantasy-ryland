@@ -80,7 +80,7 @@ def buildml(ws):
             team_sums = lineups['act_pts','proj','proj_own','proj+-', 'pts', 'o/u',
                                 'opp+-', 'snaps','spread', 'pass_succ', 'rush_succ',
                                 'takeaway%'].sum()
-            team_prods = lineups[['proj_own']].prod()
+            team_prods = lineups[['proj_own']].apply(lambda x: (x/100).prod())
         
             rbown = rblineups['proj_own'].sum()
             wrown = wrlineups['proj_own'].sum()
@@ -91,7 +91,7 @@ def buildml(ws):
             sal_std = lineups['salary'].std()/file.drop_duplicates(subset=['name',
                          'proj'], keep='first')['salary'].std()
             
-            plyrs_eq_0= lineups.apply(lambda x: len(x[x['salary']<4000]))
+            plyrs_eq_0= lineups.apply(lambda x: len(x[x['salary']==4000]))
             plyrs_0= lineups.apply(lambda x: len(x[x['salary']<4500]))
             plyrs_less_5 = lineups.apply(lambda x: len(x[x['salary']<5000]))
             plyrs_less_10 = lineups.apply(lambda x: len(x[x['salary']<5200]))
@@ -313,12 +313,20 @@ def buildml(ws):
             team_stack_ou = teamstackgroup.apply(
                     lambda x: x['o/u'].sum()/len(x) if len(x)>1
                     else 0)
-            
+
+            '''New'''
+            team_stack_fpo = teamstackgroup.apply(
+                    lambda x: x['month_fpo'].sum()/len(x) if len(x)>1
+                    else 0)
+
             teamstackdf = pd.DataFrame(team_stack_strings).join(
                     pd.DataFrame(team_stack_salaries), rsuffix='_salary').join \
                     (pd.DataFrame(team_stack_ou))
             teamstackdf = teamstackdf.join(pd.DataFrame(team_stack_game, columns=['stack_game']))
-            teamstackdf = teamstackdf.join(pd.DataFrame(team_stack_comeback, columns=['comeback'])).reset_index()
+            teamstackdf = teamstackdf.join(pd.DataFrame(team_stack_comeback, columns=['comeback']))
+
+            '''New'''
+            teamstackdf = teamstackdf.join(pd.DataFrame(team_stack_fpo, columns=['stack_fpo'])).reset_index()
 
             teamstackdf['0'] = teamstackdf['0'].apply(lambda x: ''.join(
                     sorted(x)) if len(x)>1 else 0)
@@ -347,6 +355,9 @@ def buildml(ws):
             team_stack_ou2 = teamstackdf.groupby('lineup').apply(
                     lambda x: x[x[0]!=0][0] \
                                      .tolist())
+            '''New'''
+            team_stack_fpo2 = teamstackdf.groupby('lineup').apply(
+                    lambda x: x[x[0]!=0]['stack_fpo'].sum()/len(x[x[0]!=0]))
             
             #part 3 create feature column by stack string
             team_stack1 = team_stack_strings2.apply(lambda x: x[0] 
@@ -389,7 +400,12 @@ def buildml(ws):
             #%thrown to positions   
             throw_2rb = lineups['%rb'].sum()
             throw_2wr = lineups['%wr'].sum()
-            throw_2te = lineups['%te'].sum()          
+            throw_2te = lineups['%te'].sum()  
+
+            #rolling month fantasy points per snap / fantasy points per opporunity 
+            points_per_opp = lineups['month_fpo'].sum()
+            points_per_snap = lineups['month_fps'].sum()
+            opps_per_snap = points_per_snap/points_per_opp        
             
             analysis = pd.concat([
                                   team_sums,
@@ -449,12 +465,16 @@ def buildml(ws):
                                   team_stack2ou,
                                   team_stack3ou,
                                   team_stack4ou,
+                                  team_stack_fpo2,
                                   head_to_head_team_stacks,
                                   team_stack_comeback2,
                                   whose_in_flex,
                                   throw_2rb,
                                   throw_2wr,
-                                  throw_2te
+                                  throw_2te,
+                                  points_per_opp,
+                                  points_per_snap,
+                                  opps_per_snap
                                   
                                 ], axis=1)
              
@@ -680,12 +700,16 @@ def buildml(ws):
                     'team_stack2ou',
                     'team_stack3ou',
                     'team_stack4ou',
+                    'team_stack_fpo2',
                     'head_to_head_stacks',
                     'comeback',
                     'whose_in_flex',
                     'throw_2rb',
                     'throw_2wr',
-                    'throw_2te'
+                    'throw_2te',
+                    'points_per_opp',
+                    'points_per_snap',
+                    'opps_per_snap'
                     ]
             
             analysis = analysis.reset_index()
