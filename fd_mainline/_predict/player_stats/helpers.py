@@ -61,18 +61,18 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False):
+def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False, model=''):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
   path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
 
+  preds = pd.read_csv(path + 'predictions_{0}.csv'.format(model))
+  preds=preds.sort_values(by='lineup',ascending=False).drop_duplicates('proba_1',keep='first')
+
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
-
-  preds = pd.read_csv(path + 'predictions.csv')
-  preds=preds.sort_values(by='lineup',ascending=False).drop_duplicates('proba_1',keep='first')
 
   if neuter==True:
     nps = neuterPredictions(1)[['lineup','proba_1_neutralized']].set_index('lineup')
@@ -138,25 +138,25 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False):
   upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
   exposuresdf = pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)
   if neuter==True:
-    upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket_neutered.csv')
-    exposuresdf.to_csv(path+'exposures_neutered.csv')
+    upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket_neutered_{0}.csv'.format(model))
+    exposuresdf.to_csv(path+'exposures_neutered_{0}.csv'.format(model))
   else:
-    upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket.csv')
-    exposuresdf.to_csv(path+'exposures.csv')
+    upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket_{0}.csv'.format(model))
+    exposuresdf.to_csv(path+'exposures_{0}.csv'.format(model))
 
 
   return upload, exposuresdf, pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
 
 
 
-def easy_remove(ids = [], neuter=False):
+def easy_remove(ids = [], neuter=False, model=''):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
   if neuter==False:
-    tkt = pd.read_csv(path+'ticket.csv')
+    tkt = pd.read_csv(path+'ticket_{0}.csv'.format(model))
   else:
-    tkt = pd.read_csv(path+'ticket_neutered.csv')
+    tkt = pd.read_csv(path+'ticket_neutered_{0}.csv'.format(model))
 
   keepers = []
   for i in tkt.index.unique():
@@ -167,9 +167,9 @@ def easy_remove(ids = [], neuter=False):
 
   final = pd.concat(keepers, axis=1).T
   if neuter==False:
-    final.to_csv(path+'ticket_easy_remove.csv', index=False)
+    final.to_csv(path+'ticket_easy_remove_{0}.csv'.format(model), index=False)
   else:
-    final.to_csv(path+'ticket_easy_remove_neutered.csv', index=False)
+    final.to_csv(path+'ticket_easy_remove_neutered_{0}.csv'.format(model), index=False)
 
 
 

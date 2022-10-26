@@ -400,7 +400,16 @@ def pull_stats_live(weeks=[], strdates=[]):
                 
                 
                 fd = pd.read_csv(os.getcwd() + r'\fd_mainline\_predict\player_stats\fanduel_files\{0}.csv'.format(we.replace('/','.')), header=6, index_col=13).iloc[:,13:]
+                
+                '''NEW'''
+                fd['First Name'] = fd['First Name'].apply(lambda x: x.replace('-', ''))
+
+                
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
+
+                '''NEW'''
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace('st. ', ''))
+
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))
@@ -423,6 +432,11 @@ def pull_stats_live(weeks=[], strdates=[]):
                 master['name'] = master['name'].apply(lambda x: x.replace(' Defense', ''))
                 master['Last Name_master'] = master['name'].apply(lambda x: x.lower())
                 master['City Name_master'] = master['name'].apply(lambda x: x.lower())
+
+                '''NEW'''
+                master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace('st. ', ''))
+                master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace('-', ''))
+
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iii', ''))
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' ii', ''))
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iv', ''))

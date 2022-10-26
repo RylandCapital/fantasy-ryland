@@ -15,7 +15,7 @@ class Player:
     self.name = opts['RylandID_master']
     self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
-    self.theo_actual = float(np.random.randint(-30,30)) + float(opts['act_pts'])
+    self.theo_actual = float(np.random.randint(-30,30)) 
     self.actual = float(opts['act_pts'])
     self.team = str(opts['team'])
     self.opp = str(opts['opp'])

@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[51], strdates=['10/12/22'])         
+pull_stats(weeks=[46], strdates=['9/7/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -114,7 +114,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['10/19/22'], strdates=['10/19/22'])    
+pull_stats_live(weeks=['10/26/22'], strdates=['10/26/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -175,25 +175,32 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_live.csv'.format(user))
 ################################################
 
 
-
 '''after live teams have been uploaded to dataiku and 
 predictions.csv a file has been dropped into 
 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user).
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=140, removals=[], neuter=False)
+ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=140, removals=[], neuter=False, model='lr')
+ticket, exposures, stacks = fanduel_ticket(entries=200, max_exposure=70, removals=[], neuter=False, model='rf')
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 
 '''qickly remove injuries from ticket'''
-easy_remove(ids = ['81947-104278', '81947-25011', '81947-26355', '81947-87418', '81947-91598', '81947-29253' ], neuter=False)
-
+easy_remove(ids = [], neuter=False, model='rf')
 
 
 '''review'''
-df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores = analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False)
-dfn, team_scoresn, act_describen, player_pctsn, top, corrn, duplicatesn, ticket_scoresn = analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=True)
+df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores = analyze_gameday_pool(
+  historical_id = 50,
+  week='10.5.22',
+  neuter=False
+  )
+dfn, team_scoresn, act_describen, player_pctsn, top, corrn, duplicatesn, ticket_scoresn = analyze_gameday_pool(
+  historical_id = 50,
+  week='10.5.22',
+  neuter=True
+  )
 
 
 
