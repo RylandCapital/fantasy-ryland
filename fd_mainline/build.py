@@ -127,7 +127,7 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(us
 if os.path.exists(path) == False:
   os.mkdir(path+'optimized_teams_by_week_live\\')
 
-workers = [[i] for i in np.arange(1,30)]
+workers = [[i] for i in np.arange(1,40)]
 
 pool = Pool(processes=len(workers))
 pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
@@ -181,10 +181,9 @@ predictions.csv a file has been dropped into
 this block creates upload ticket'''
 ################################################
 ################################################
-ticket, exposures, stacks = fanduel_ticket(entries=400, max_exposure=140, removals=[], neuter=False, model='lr')
-ticket, exposures, stacks = fanduel_ticket(entries=200, max_exposure=70, removals=[], neuter=False, model='rf')
-user = os.getlogin()
-path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+ticket, exposures, stacks = fanduel_ticket(entries=150, max_exposure=75, removals=['82292-56248','82292-25011'], neuter=False, model='lr')
+ticket, exposures, stacks = fanduel_ticket(entries=300, max_exposure=150, removals=['82292-56248','82292-25011'], neuter=False, model='rf')
+
 
 '''qickly remove injuries from ticket'''
 easy_remove(ids = [], neuter=False, model='rf')

@@ -409,7 +409,7 @@ def pull_stats_live(weeks=[], strdates=[]):
 
                 '''NEW'''
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace('st. ', ''))
-
+                fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace('-', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
                 fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))

@@ -5,18 +5,24 @@ import os
 
 from selenium.webdriver.common.keys import Keys
 
-from fd_mainline._historical.player_stats import helpers
+from dk_show._historical.player_stats import helpers
 
-from fd_mainline.config import rbcolumns_hist, wrcolumns_hist, tecolumns_hist, qbcolumns_hist, defcolumns_hist, shift, \
+from dk_show.config import rbcolumns_hist, wrcolumns_hist, tecolumns_hist, qbcolumns_hist, defcolumns_hist, shift, \
     rbcolumns_hist_shift, wrcolumns_hist_shift, tecolumns_hist_shift, qbcolumns_hist_shift, defcolumns_hist_shift
+
+
+
+
+test = driver.find_elements('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[1]/div[2]/div/div[1]/div[1]')[0].text
+test = driver.find_elements('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[1]/div[2]/div/div[6]/div[1]')[0].text
 
 
 def pull_stats(weeks=[], strdates=[]):
     
         driver = helpers.load_window_fanduel()
         time.sleep(10)
-        #we = 37
-        #strdates = ['10202021']
+        we = 1
+        strdates = ['10122022']
   
         for date, we in zip(strdates[0:], weeks):
 
@@ -28,11 +34,11 @@ def pull_stats(weeks=[], strdates=[]):
                 time.sleep(5)
                 
                 #%%
-                driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[2]/a').click()
-                                             #/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[2]/a
+                # driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[2]/a').click()
+                #                              #/html/body/article/section[2]/section/div[4]/section/div[1]/div/nav/ul/li[2]/a
                 time.sleep(5)
                 
-                name = 'RB'
+                name = 'CAPT'
                 
                 if shift==False:
                     rbcolumns =  rbcolumns_hist
@@ -46,7 +52,7 @@ def pull_stats(weeks=[], strdates=[]):
                 #this loop gets the first 4 columns, starting at column 3 as you can see in
                 #np.arange(3,7) below
                 columns = []
-                column_names = ['rating', 'name', 'salary', 'team', 'opp']
+                column_names = ['rating', 'name', 'pos', 'salary', 'team']
                 for n, t in zip(column_names, np.arange(2,7)):
                     column = pd.DataFrame([driver.find_element('xpath','/html/body/article/section[2]/section/div[4]/section/div[2]/div[1]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[1]/div/div[{0}]/div[{1}]'.format(i,t)).text for i in np.arange(1,num_players+1)], columns =[n]) #uses last 2 divs (row then column, for examplle its row 1 column)
                     columns.append(column) 
@@ -420,7 +426,7 @@ def pull_stats(weeks=[], strdates=[]):
 
                 master = master.copy()
 
-                master.to_csv(os.getcwd() + r"\fd_mainline\_historical\player_stats\by_week\{0}.csv".format(format(we)))
+                master.to_csv(os.getcwd() + r"\dk_show\_historical\player_stats\by_week\{0}.csv".format(format(we)))
             
             except Exception as ex:
                 print(ex)

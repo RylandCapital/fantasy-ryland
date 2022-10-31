@@ -61,11 +61,12 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False, model=''):
+def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, model=''):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
   path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+  path3 = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
 
   preds = pd.read_csv(path + 'predictions_{0}.csv'.format(model))
   preds=preds.sort_values(by='lineup',ascending=False).drop_duplicates('proba_1',keep='first')
@@ -73,6 +74,12 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False, mod
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
+
+  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(gameday_week)) 
+  stats = stats.set_index('RylandID_master')
+
+  teams = teams[teams['lineup'].isin(preds['lineup'].unique())]
+  teams = teams.set_index('name').join(stats, how='outer', lsuffix='_ot').reset_index()
 
   if neuter==True:
     nps = neuterPredictions(1)[['lineup','proba_1_neutralized']].set_index('lineup')
@@ -101,7 +108,7 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False, mod
       ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
       df = ticket.loc[i][['pos','Id','whose_in_flex','name','proba_1',
         'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
-         'numberofgamestacks', 'numberofteamstacks','num_games_represented']].sort_values('Id')
+         'numberofgamestacks', 'numberofteamstacks','num_games_represented', 'proj']].sort_values('Id')
       id2 = sorted(df['Id'].values)
       id2_names = sorted(df['name'].values)
       id2_stacks = pd.concat([df['team_stack1'], df['team_stack2'], df['team_stack3'], df['team_stack4']]).unique()
@@ -125,7 +132,7 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False, mod
       df['numberteamstacks'] = numberteamstacks
       df['numbergamestacks'] = numbergamestacks
       df['games_represented '] = games_represented 
-      if maxex<=max_exposure:
+      if (maxex<=max_exposure) & (removal==0):
         update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]
         update_stacks = [stacks.update({i:float(stacks[i])+1}) for i in id2_stacks]
         print('Loop:{2} - Count:{1} - Proba_1:{0}'.format(proj,count,n))
@@ -136,7 +143,12 @@ def fanduel_ticket(entries=300, max_exposure=150, removals=[], neuter=False, mod
 
   upload = pd.concat(selections)
   upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
-  exposuresdf = pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)
+  exposuresdf = (pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)/entries*100).round(1)
+  exposuresdf = exposuresdf.join(
+    ticket[['name','proj_own']].set_index('name'), how='inner'
+    ).drop_duplicates().sort_values(by=0, ascending=False)
+  exposuresdf.columns = ['my_ownership', 'projected_ownership']
+  exposuresdf['diff'] = exposuresdf['my_ownership'] - exposuresdf['projected_ownership']
   if neuter==True:
     upload.drop('id2', axis=1).iloc[:entries,:].to_csv(path+'ticket_neutered_{0}.csv'.format(model))
     exposuresdf.to_csv(path+'exposures_neutered_{0}.csv'.format(model))
