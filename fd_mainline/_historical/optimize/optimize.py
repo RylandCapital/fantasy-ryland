@@ -17,6 +17,8 @@ class Player:
     self.salary = int(float((opts['salary'])))
     self.theo_actual = float(np.random.randint(-30,30)) 
     self.actual = float(opts['act_pts'])
+    self.plusminus = float(opts['proj+-'])
+    self.proj = float(opts['proj'])
     self.team = str(opts['team'])
     self.opp = str(opts['opp'])
     self.lock = False
@@ -160,13 +162,15 @@ def fantasyze(ws):
     i = 0
     while i < 501:
         
-        team = run(60000, 60000, w, milly*.99, 500).players
+        team = run(60000, 59800, w, milly*.99, 500).players
         #######
           
         names = [i.name for i in team]
         actual = [i.actual for i in team]
         position = [i.position for i in team]
         salary = [i.salary for i in team]
+        pm = [i.plusminus for i in team]
+        proj = [i.proj for i in team]
         
         actual_sum = sum(actual)
 
@@ -179,7 +183,7 @@ def fantasyze(ws):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_959'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>99) & (sum(pm)>-10):
           dupdf.loc[i,'id'] = ''.join(sorted(''.join(names)))
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
@@ -190,13 +194,15 @@ def fantasyze(ws):
     #############################
     i = 0
     while i < 1001:
-        team = run(60000, 60000, w, milly*.9, milly*.989).players
+        team = run(60000, 59800, w, milly*.9, milly*.989).players
         #######
           
         names = [i.name for i in team]
         actual = [i.actual for i in team]
         position = [i.position for i in team]
         salary = [i.salary for i in team]
+        pm = [i.plusminus for i in team]
+        proj = [i.proj for i in team]
 
         actual_sum = sum(actual)
         
@@ -209,7 +215,7 @@ def fantasyze(ws):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_9'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>99) & (sum(pm)>-10):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
@@ -218,13 +224,15 @@ def fantasyze(ws):
     #############################
     i = 0
     while i < 2001:
-        team = run(60000, 60000, w, milly*.8, milly*.9).players
+        team = run(60000, 59800, w, milly*.8, milly*.9).players
         #######
           
         names = [i.name for i in team]
         actual = [i.actual for i in team]
         position = [i.position for i in team]
         salary = [i.salary for i in team]
+        pm = [i.plusminus for i in team]
+        proj = [i.proj for i in team]
         
         actual_sum = sum(actual)
         
@@ -237,7 +245,7 @@ def fantasyze(ws):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_8'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>99) & (sum(pm)>-10):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
@@ -246,13 +254,15 @@ def fantasyze(ws):
     #############################
     i = 0
     while i < 3001:
-        team = run(60000, 60000, w, milly*.6, milly*.8).players
+        team = run(60000, 59800, w, milly*.6, milly*.8).players
         #######
           
         names = [i.name for i in team]
         actual = [i.actual for i in team]
         position = [i.position for i in team]
         salary = [i.salary for i in team]
+        pm = [i.plusminus for i in team]
+        proj = [i.proj for i in team]
         
         actual_sum = sum(actual)
         
@@ -265,7 +275,7 @@ def fantasyze(ws):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_6'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>99) & (sum(pm)>-10):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
@@ -274,13 +284,15 @@ def fantasyze(ws):
     #############################
     i = 0
     while i < 4001:
-        team = run(60000, 60000, w, milly*.6, milly*.8).players
+        team = run(60000, 59800, w, milly*.6, milly*.8).players
         #######
           
         names = [i.name for i in team]
         actual = [i.actual for i in team]
         position = [i.position for i in team]
         salary = [i.salary for i in team]
+        pm = [i.plusminus for i in team]
+        proj = [i.proj for i in team]
         
         actual_sum = sum(actual)
         
@@ -293,7 +305,7 @@ def fantasyze(ws):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_62'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>99) & (sum(pm)>-10):
           print('{0}-{1}'.format(w,i)) 
           df.drop('teamz', inplace=True, axis=1) 
           dfs.append(df)
@@ -302,13 +314,15 @@ def fantasyze(ws):
     #############################
     i = 0
     while i < 4501:
-        team = run(60000, 60000, w, milly*.5 , milly*.7).players
+        team = run(60000, 59800, w, milly*.5 , milly*.7).players
         #######
           
         names = [i.name for i in team]
         actual = [i.actual for i in team]
         position = [i.position for i in team]
         salary = [i.salary for i in team]
+        pm = [i.plusminus for i in team]
+        proj = [i.proj for i in team]
         
         actual_sum = sum(actual)
         
@@ -321,7 +335,7 @@ def fantasyze(ws):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_5'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>99) & (sum(pm)>-10):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)

@@ -52,6 +52,7 @@ historical_winning_scores = {
 '50':228, #week 5 2022 FL: 10/5/22
 '51':198, #week 6 2022 FL: 10/12/22  
 '52':215, #week 7 2022 FL: 10/19/22 
+'53':246, #week 8 2022 FL: 10/26/22
 }
 
 master_historical_weeks = [
@@ -59,21 +60,21 @@ master_historical_weeks = [
           [13,14],[15,16],[17,18],[19,20],[21,22],[23,24],
           [25,26],[27,28],[29,30],[31,32], [33,34],[35,36],
           [37,38],[39,40],[41,42],[43,44],[45,46],[47,48],
-          [49,50],[51,52]
+          [49,50],[51,52],[53]
         ]
 
 curr_historical_optimize_weeks = [
-    [51]
+    [53]
     ]
 
 mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
           24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,
-          44,45,46,47,48,49,50,51,52] 
+          44,45,46,47,48,49,50,51,52,53] 
 
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '10.26.22'
+gameday_week = '11.2.22'
 
 rbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
                    'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',
