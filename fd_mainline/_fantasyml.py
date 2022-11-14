@@ -23,10 +23,10 @@ def normalize_and_neutralize(df, columns, by, proportion=1.0):
     df[columns] = _neutralize(df, columns, by, proportion)
     return df[columns]
 
-def neuterPredictions(proportion):
+def neuterPredictions(proportion, model=''):
     user = os.getlogin()
     path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-    preds = pd.read_csv(path+'predictions.csv')
+    preds = pd.read_csv(path+'predictions_{0}.csv'.format(model))
     removals = ['col_0', 'is_playing_d', 'game_stack1', 'game_stack2', 'game_stack3', 'game_stack4',
       'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',  'head_to_head_stacks', 'comeback',
       'whose_in_flex', 'team_stack1salary', 'team_stack2salary', 'team_stack3salary', 'team_stack4salary', 'team_stack1ou', 'team_stack2ou',

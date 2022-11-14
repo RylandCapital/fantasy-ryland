@@ -310,7 +310,7 @@ def pull_stats(weeks=[], strdates=[]):
                 master['proj_own'] = master['proj_own'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna('0').apply(lambda x: float(x))
                 master['impld_pts'] = master['impld_pts'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
                 master['lev_rank'] = master['lev_rank'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
-                master['leverage'] = master['leverage'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x[:-1])/100)
+                master['leverage'] = master['leverage'].apply(lambda x: x.replace('','50%') if len(x)==0 else x).apply(lambda x: x.replace(' ','50%') if len(x)==1 else x).fillna(0).apply(lambda x: float(x[:-1])/100)
                 master['sr'] = master['sr'].apply(lambda x: x.replace('','0') if (len(x)==0) | (len(x)==1) else x).fillna(0).apply(lambda x: float(x[:-1])/100)
                 master['buzz'] = master['buzz'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))
                 master['pro'] = master['pro'].apply(lambda x: x.replace('','0') if len(x)==0 else x).fillna(0).apply(lambda x: float(x))

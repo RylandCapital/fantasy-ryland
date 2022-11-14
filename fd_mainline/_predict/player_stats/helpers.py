@@ -83,7 +83,7 @@ def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_
   teams = teams.set_index('name').join(stats, how='outer', lsuffix='_ot').reset_index()
 
   if neuter==True:
-    nps = neuterPredictions(1)[['lineup','proba_1_neutralized']].set_index('lineup')
+    nps = neuterPredictions(1, model=model)[['lineup','proba_1_neutralized']].set_index('lineup')
     preds = preds.set_index('lineup').join(nps)
     preds.reset_index(inplace=True)
     preds['proba_1'] = preds['proba_1_neutralized']

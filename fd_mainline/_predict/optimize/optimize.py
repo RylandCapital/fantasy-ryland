@@ -153,7 +153,7 @@ def fantasyze_live(ws, week, teamstacks_only=True):
     for w in ws:
             dfs = [] 
             count=0
-            while count < 125000:
+            while count < 150000:
                 
                 team = run(60000, 59800, week, 1, 5000).players
                 #######
@@ -180,7 +180,7 @@ def fantasyze_live(ws, week, teamstacks_only=True):
                   print('{0}-{1}'.format(w, count))
                   dfs.append(df)
                 elif teamstacks_only == True:
-                  if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(actual)>99) & (sum(pm)>-10): # & (min_own>.1)
+                  if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(actual)>99) & (sum(pm)>-10)  & (pd.Series(team_exposures).value_counts().max()<4): # & (min_own>.1)
                     count+=1
                     df.drop('teamz', inplace=True, axis=1)
                     dfs.append(df)

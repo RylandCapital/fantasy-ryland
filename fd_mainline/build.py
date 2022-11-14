@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[53], strdates=['10/26/22'])         
+pull_stats(weeks=[54], strdates=['11/2/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -114,7 +114,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['11/2/22'], strdates=['11/2/22'])    
+pull_stats_live(weeks=['11/9/22'], strdates=['11/9/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -127,7 +127,7 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(us
 if os.path.exists(path) == False:
   os.mkdir(path+'optimized_teams_by_week_live\\')
 
-workers = [[i] for i in np.arange(1,39)]
+workers = [[i] for i in np.arange(1,35)]
 
 pool = Pool(processes=len(workers))
 pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
@@ -182,10 +182,19 @@ this block creates upload ticket'''
 ################################################
 ################################################
 ticket, exposures, stacks = fanduel_ticket(
-entries=600,
-max_exposure=300,
-removals=['82608-25011', '82608-56809', '82608-64576', '82608-62628', '82608-130288'], 
+entries=150,
+max_exposure=75,
+removals=['82959-63484', '82959-6654', '82959-54608', '82959-38791'], 
 neuter=False, 
+own_min=.1, 
+model='ensemble'
+)
+
+ticketn, exposuresn, stacksn = fanduel_ticket(
+entries=150,
+max_exposure=75,
+removals=['82959-63484', '82959-6654', '82959-54608', '82959-38791'], 
+neuter=True, 
 own_min=.1, 
 model='ensemble'
 )
@@ -196,18 +205,21 @@ easy_remove(ids = [], neuter=False, model='rf')
 
 '''review'''
 df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores = analyze_gameday_pool(
-  historical_id = 53,
-  week='10.26.22',
+  historical_id = 54,
+  week='11.2.22',
   neuter=False,
-  model='ensembleMAX'
+  model='ensemble'
   )
+ticket_scores.sort_values('act_pts')
+ticket_scores['act_pts'].describe()
 dfn, team_scoresn, act_describen, player_pctsn, top, corrn, duplicatesn, ticket_scoresn = analyze_gameday_pool(
-  historical_id = 53,
-  week='10.26.22',
+  historical_id = 54,
+  week='11.2.22',
   neuter=True,
-  model='ensembleMAX'
+  model='ensemble'
   )
-
+ticket_scoresn.sort_values('act_pts')
+ticket_scoresn['act_pts'].describe()
 
 
 # df = pd.read_csv(r'C:\Users\rmathews\Downloads\mlupload_scored.csv')

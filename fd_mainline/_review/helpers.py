@@ -12,7 +12,7 @@ def analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False, model
     predictions = pd.read_csv(path+'predictions_{0}.csv'.format(model))
 
     if neuter==True:
-        nps = neuterPredictions(1)[['lineup','proba_1_neutralized']].set_index('lineup')
+        nps = neuterPredictions(1, model)[['lineup','proba_1_neutralized']].set_index('lineup')
         predictions = predictions.set_index('lineup').join(nps)
         predictions.reset_index(inplace=True)
         predictions['proba_1'] = predictions['proba_1_neutralized']
