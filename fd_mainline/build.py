@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[54], strdates=['11/2/22'])         
+pull_stats(weeks=[56], strdates=['11/16/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -52,7 +52,7 @@ if os.path.exists(path) == False:
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = master_historical_weeks
+weeks = curr_historical_optimize_weeks
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -72,7 +72,7 @@ if os.path.exists(path) == False:
 
 '''pull all hisotrical teams from the database created from the optimizer'''
 
-ranges = master_historical_weeks
+ranges = curr_historical_optimize_weeks
 
 pool = Pool(processes=len(ranges))
 results = pool.map(buildml, ranges)
@@ -114,7 +114,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['11/9/22'], strdates=['11/9/22'])    
+pull_stats_live(weeks=['11/23/22'], strdates=['11/23/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -127,7 +127,7 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(us
 if os.path.exists(path) == False:
   os.mkdir(path+'optimized_teams_by_week_live\\')
 
-workers = [[i] for i in np.arange(1,35)]
+workers = [[i] for i in np.arange(1,38)]
 
 pool = Pool(processes=len(workers))
 pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
@@ -182,21 +182,23 @@ this block creates upload ticket'''
 ################################################
 ################################################
 ticket, exposures, stacks = fanduel_ticket(
-entries=150,
-max_exposure=75,
-removals=['82959-63484', '82959-6654', '82959-54608', '82959-38791'], 
+entries=300,
+max_exposure=150,
+removals=['83704-28643', '83704-69558'], 
 neuter=False, 
 own_min=.1, 
-model='ensemble'
+model='ensemble',
+custom_expos={}
 )
 
 ticketn, exposuresn, stacksn = fanduel_ticket(
 entries=150,
 max_exposure=75,
-removals=['82959-63484', '82959-6654', '82959-54608', '82959-38791'], 
+removals=['83704-28643', '83704-69558'], 
 neuter=True, 
 own_min=.1, 
-model='ensemble'
+model='ensemble',
+custom_expos={}
 )
 
 '''qickly remove injuries from ticket'''
@@ -204,22 +206,22 @@ easy_remove(ids = [], neuter=False, model='rf')
 
 
 '''review'''
-df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores = analyze_gameday_pool(
-  historical_id = 54,
-  week='11.2.22',
+df, team_scores, act_describe, player_pcts, top, corr, duplicates, top_proba_scores = analyze_gameday_pool(
+  historical_id = 56,
+  week='11.16.22',
   neuter=False,
   model='ensemble'
   )
-ticket_scores.sort_values('act_pts')
-ticket_scores['act_pts'].describe()
-dfn, team_scoresn, act_describen, player_pctsn, top, corrn, duplicatesn, ticket_scoresn = analyze_gameday_pool(
-  historical_id = 54,
-  week='11.2.22',
+top_proba_scores.sort_values('act_pts')
+top_proba_scores['act_pts'].describe()
+dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool(
+  historical_id = 56,
+  week='11.16.22',
   neuter=True,
   model='ensemble'
   )
-ticket_scoresn.sort_values('act_pts')
-ticket_scoresn['act_pts'].describe()
+top_proba_scoresn.sort_values('act_pts')
+top_proba_scoresn['act_pts'].describe()
 
 
 # df = pd.read_csv(r'C:\Users\rmathews\Downloads\mlupload_scored.csv')

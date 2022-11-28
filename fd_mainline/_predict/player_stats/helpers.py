@@ -61,7 +61,7 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_min=0, model=''):
+def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_min=0, model='', custom_expos={}):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
@@ -136,7 +136,12 @@ def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_
       df['numberteamstacks'] = numberteamstacks
       df['numbergamestacks'] = numbergamestacks
       df['games_represented '] = games_represented 
-      if (maxex<=max_exposure) & (removal==0) & (bands==0) & (min_projected>own_min):
+
+      is_custom_player_on_team = True #max([df['name'].tolist()[0].count(i) for i in list(custom_expos.keys())])
+      custom_expos_check = True #= [float(exposures[i])<float(custom_expos[i]) for i in list(custom_expos.keys())].count(False)
+      ok_add = True #((custom_expos_check==0)  |  (is_custom_player_on_team==0))
+
+      if (maxex<=max_exposure) & (removal==0) & (bands==0) & (min_projected>own_min) & (ok_add==True) :
         update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]
         update_stacks = [stacks.update({i:float(stacks[i])+1}) for i in id2_stacks]
         print('Loop:{2} - Count:{1} - Proba_1:{0}'.format(proj,count,n))
