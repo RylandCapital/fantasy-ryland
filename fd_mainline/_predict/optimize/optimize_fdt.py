@@ -6,36 +6,76 @@ import csv
 
 from ortools.linear_solver import pywraplp
 
+from fd_mainline._fantasyml import neuterPredictions
 
+
+
+
+def prepare(model='ensemble', neuter=False):
+
+  user = os.getlogin()
+  path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+  path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+
+  predictions = pd.read_csv(path+'predictions_{0}.csv'.format(model))
+  if neuter==True:
+      nps = neuterPredictions(1, model)[['lineup','proba_1_neutralized']].set_index('lineup')
+      predictions = predictions.set_index('lineup').join(nps)
+      predictions.reset_index(inplace=True)
+      predictions['proba_1'] = predictions['proba_1_neutralized']
+      predictions.drop(['proba_1_neutralized'], axis=1, inplace=True)
+
+  onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
+  teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
+
+  picks = predictions[['lineup', 'whose_in_flex', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks['proba_rank'] = picks['proba_1'].rank(method='max', ascending=False)/9
+
+
+  picks.sort_values(by='proba_1', ascending=False, inplace=True)
+
+  return picks 
+
+
+picks = prepare()
+player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['name'].tolist()))
+player_list[1] = player_list[0].apply(lambda x: x[0])
+player_list[2] = player_list[0].apply(lambda x: x[1])
+player_list[3] = player_list[0].apply(lambda x: x[2])
+player_list[4] = player_list[0].apply(lambda x: x[3])
+player_list[5] = player_list[0].apply(lambda x: x[4])
+player_list[6] = player_list[0].apply(lambda x: x[5])
+player_list[7] = player_list[0].apply(lambda x: x[6])
+player_list[8] = player_list[0].apply(lambda x: x[7])
+player_list[9] = player_list[0].apply(lambda x: x[8])
+player_list.drop(0,axis=1, inplace=True)
+picks = picks.join(player_list)
+
+
+user = os.getlogin()
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+teams = picks.groupby(level=0).first()
+teams.sort_values(by='proba_1', ascending=False).iloc[:200000].to_csv(path+'optimize_pred_file.csv')
 
 
 class Player:
   def __init__(self, opts):
-    self.name = opts['RylandID_master']
-    self.position = opts['pos'].upper()
-    self.salary = int(float((opts['salary'])))
-    self.theo_actual = float(np.random.randint(0,30)) ##+ float(opts['proj'])
-    self.team = str(opts['team'])
-    self.opp = str(opts['opp'])
-    self.actual = float(opts['proj'])
-    self.plusminus = float(opts['proj+-'])
-    self.projown = float(opts['proj_own'])
+    self.proba1 = round(float(opts['proba_1']),4)
+    self.rank = int(float(opts['proba_rank']))
+    self.lineup = str(opts['lineup'])
+    self._1 = opts
+    self.pred_owns = []
     self.lock = False
     self.ban = False
+    
 
   def __repr__(self):
-    return "[{0: <2}] {1: <20}(${2}, {3}) {4}".format(self.position, \
-                                    self.name, \
-                                    self.salary,
-                                    self.actual,
-                                    "LOCK" if self.lock else "")
+    return "{0},{1},{2}".format(self.proba1,self.rank,self.lineup)
+                                    
 class Roster:
+
   POSITION_ORDER = {
-    "QB": 0,
-    "RB": 1,
-    "WR": 2,
-    "TE": 3,
-    "D": 4,
+    "TEAM": 1,
   }
 
   def __init__(self):
@@ -44,87 +84,81 @@ class Roster:
   def add_player(self, player):
     self.players.append(player)
 
-  def spent(self):
-    return sum(map(lambda x: x.salary, self.players)) 
-
   def projected(self):
-    return sum(map(lambda x: x.projected, self.players))
+    return sum(map(lambda x: x.proba1, self.players))
   
   def actual(self):
-     return sum(map(lambda x: x.actual, self.players))
+     return sum(map(lambda x: x.proba1, self.players))
 
   def position_order(self, player):
-    return self.POSITION_ORDER[player.position]
+    return self.POSITION_ORDER['TEAM']
 
   def sorted_players(self):
     return sorted(self.players, key=self.position_order)
 
   def __repr__(self):
     s = '\n'.join(str(x) for x in self.sorted_players())
-    s += "\n\nActual Score: %s" % self.actual()
-    s += "\tCost: $%s" % self.spent()
+    s += "\n\nActual Proba1: %s" % self.actual()
     return s
 
 
 POSITION_LIMITS = [
-      ["QB", 1, 1], 
-      ["RB", 2, 3],
-      ["WR", 3, 4],
-      ["TE", 1, 2],
-      ["D", 1, 1]
+      ["TEAM", 150, 150], 
     ]
 
-ROSTER_SIZE = 9
+ROSTER_SIZE = 150
 
-def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
+def run():
+
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
-  with open(os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
+  user = os.getlogin()
+  path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+
+  with open(path+ r'optimize_pred_file.csv', 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
-   
     for row in csvdata:
-        test = Player(row)
-        if (test.actual > -5):
-            all_players.append(Player(row))
+      all_players.append(Player(row))
 
   variables = []
   all_players = np.random.choice(all_players, size=int(len(all_players))
       , replace=False)
   for player in all_players:
     if player.lock:
-      variables.append(solver.IntVar(1, 1, player.name))
+      variables.append(solver.IntVar(1, 1, player.lineup))
     elif player.ban:
-      variables.append(solver.IntVar(0, 0, player.name))
+      variables.append(solver.IntVar(0, 0, player.lineup))
     else:      
-      variables.append(solver.IntVar(0, 1, player.name))
+      variables.append(solver.IntVar(0, 1, player.lineup))
     
   objective = solver.Objective()
   objective.SetMaximization()
   
   for i, player in enumerate(all_players):
-    objective.SetCoefficient(variables[i], player.theo_actual)
+    variables[i]
+    objective.SetCoefficient(variables[i], player.proba1)
     
-  
-  salary_cap = solver.Constraint(SALARY_MIN, SALARY_CAP)
-  for i, player in enumerate(all_players):
-    salary_cap.SetCoefficient(variables[i], player.salary)
+  # salary_cap = solver.Constraint(SALARY_MIN, SALARY_CAP)
+  # for i, player in enumerate(all_players):
+  #   salary_cap.SetCoefficient(variables[i], player.salary)
     
   #
-  limit = solver.Constraint(LIMLOW, LIMHIGH)
-  for i, player in enumerate(all_players):
-    limit.SetCoefficient(variables[i], player.actual)
+  # limit = solver.Constraint(LIMLOW, LIMHIGH)
+  # for i, player in enumerate(all_players):
+  #   limit.SetCoefficient(variables[i], player.proba1)
     
-    
+  size_cap = solver.Constraint(ROSTER_SIZE, ROSTER_SIZE)
+  for variable in variables:
+    size_cap.SetCoefficient(variable, 1)
+
   for position, min_limit, max_limit in POSITION_LIMITS:
     position_cap = solver.Constraint(min_limit, max_limit)
 
     for i, player in enumerate(all_players):
-      if position == player.position:
+      if position == "TEAM":
         position_cap.SetCoefficient(variables[i], 1)
 
-  size_cap = solver.Constraint(ROSTER_SIZE, ROSTER_SIZE)
-  for variable in variables:
-    size_cap.SetCoefficient(variable, 1)
+  
 
   solution = solver.Solve()
 
@@ -149,83 +183,17 @@ start_time = time.time()
 print('initiating dfs calculations''')  
     
 def fantasyze_live(ws, week, teamstacks_only=True):
-  try:
-    for w in ws:
-            dfs = [] 
-            count=0
-            while count < 150000:
+  team = run().players
                 
-                team = run(60000, 59800, week, 1, 5000).players
-                #######
-                names = [i.name for i in team]
-                actual = [i.actual for i in team]
-                position = [i.position for i in team]
-                salary = [i.salary for i in team]
-                pm = [i.plusminus for i in team]
-                #po = [i.projown for i in team]
-                
-                #settings
-                team_exposures = [i.team for i in team]
-                opps = [i.opp.replace('@','') for i in team]
-                isteamstack = len([x for x in team_exposures if team_exposures.count(x) >= 2])
-                
-                df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
-                                    'actual', 'position', 'salary','teamz']).T
-                df['team_salary'] = sum(actual)
-                df['lineup'] = 'lineup_' + str(count) + '_' + str(w)   
+  print("--- %s seconds ---" % (time.time() - start_time))
 
-                #min_own = min([float(i) for i in po])
-          
-                if teamstacks_only == False:
-                  print('{0}-{1}'.format(w, count))
-                  dfs.append(df)
-                elif teamstacks_only == True:
-                  if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)): #& (sum(actual)>99) & (sum(pm)>-10)  & (pd.Series(team_exposures).value_counts().max()<4): # & (min_own>.1)
-                    count+=1
-                    df.drop('teamz', inplace=True, axis=1)
-                    dfs.append(df)
-                    if count%100==0:
-                      print('{0}-{1}-TS'.format(w,count))
-                  else:
-                    pass
+  # user = os.getlogin()
+  # # Specify path
+  # path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
 
-            masterf = pd.concat(dfs)
-            masterf = masterf.set_index('name')
-
-            # mypath = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
-            # stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(week)) 
-            # stats = stats.set_index('RylandID_master')
-            
-            # masterf = masterf.join(stats, how='outer', lsuffix='_ot')
-
-            print("--- %s seconds ---" % (time.time() - start_time))
-
-            user = os.getlogin()
-            # Specify path
-            path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
-
-            masterf.to_csv(path+'{0}_{1}.csv.gz'.format(week,w),compression='gzip', index=True)
-            
-            print("--- %s seconds ---" % (time.time() - start_time))
-  except:
-    masterf = pd.concat(dfs)
-    masterf = masterf.set_index('name')
-
-    # mypath = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
-    # stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(week)) 
-    # stats = stats.set_index('RylandID_master')
-    
-    # masterf = masterf.join(stats, how='outer', lsuffix='_ot')
-
-    print("--- %s seconds ---" % (time.time() - start_time))
-
-    user = os.getlogin()
-    # Specify path
-    path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
-
-    masterf.to_csv(path+'{0}_{1}.csv.gz'.format(week,w),compression='gzip', index=True)
-    
-    print("--- %s seconds ---" % (time.time() - start_time))
+  # # masterf.to_csv(path+'{0}_{1}.csv.gz'.format(week,w),compression='gzip', index=True)
+  
+  # print("--- %s seconds ---" % (time.time() - start_time))
 
 
 

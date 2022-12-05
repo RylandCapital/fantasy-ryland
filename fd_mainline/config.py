@@ -54,8 +54,9 @@ historical_winning_scores = {
 '52':215, #week 7 2022 FL: 10/19/22 
 '53':246, #week 8 2022 FL: 10/26/22
 '54':230, #week 9 2022 FL: 11/2/22
-'55':219, #week 10 2022 FL: 11/9/22
-'56':188, #week 11 2022 FL: 11/16/22
+'55':219, #week 10 2022 FL: 11/9/22 #pool had milly winners
+'56':188, #week 11 2022 FL: 11/16/22 #pool had milly winners
+'57':199, #week 12 2022 FL: 11/23/22 #pool DID NOT have milly winners
 }
 
 master_historical_weeks = [
@@ -63,21 +64,21 @@ master_historical_weeks = [
           [13,14],[15,16],[17,18],[19,20],[21,22],[23,24],
           [25,26],[27,28],[29,30],[31,32], [33,34],[35,36],
           [37,38],[39,40],[41,42],[43,44],[45,46],[47,48],
-          [49,50],[51,52],[53,54],[55,56]
+          [49,50],[51,52],[53,54],[55,56],[57]
         ]
 
 curr_historical_optimize_weeks = [
-    [56]
+    [57]
     ]
 
 mlweeks = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,
           24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,
-          44,45,46,47,48,49,50,51,52,53,54,55,56] 
+          44,45,46,47,48,49,50,51,52,53,54,55,56,57] 
 
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '11.23.22'
+gameday_week = '11.30.22'
 
 rbcolumns_hist =  ['', ' ', 'proj', 'ceil', 'floor', 'proj+-', 'pts/sal', 'proj_own',
                    'act_pts', 'impld_pts', 'lev_rank', 'leverage', 'sr', 'buzz',

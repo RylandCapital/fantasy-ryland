@@ -61,7 +61,7 @@ def load_window_fanduel():
     return driver
 
 
-def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_min=0, model='', custom_expos={}):
+def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_min=0, model='', multiple_cap=2, raw_expos={}):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
@@ -70,7 +70,6 @@ def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_
 
   preds = pd.read_csv(path + 'predictions_{0}.csv'.format(model))
   preds=preds.sort_values(by='lineup',ascending=False) 
-  #.drop_duplicates('proba_1',keep='first')
 
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
@@ -94,13 +93,15 @@ def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_
    'numberofgamestacks', 'numberofteamstacks','num_games_represented']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
-  ticket = picks.iloc[:(entries*100*9)]
+  ticket = picks.iloc[:(entries*100*27)]
   all_stacks = ticket['team_stack1'].unique().tolist() + \
      ticket['team_stack2'].unique().tolist() + \
       ticket['team_stack3'].unique().tolist() + \
         ticket['team_stack4'].unique().tolist()
 
+
   selections = []
+
   exposures = dict(zip(ticket['name'].unique().tolist(),'0'*len(ticket['name'].unique().tolist())))
   own_projections = ticket.set_index('name')['proj_own'].astype(float).to_dict()
   stacks = dict(zip(all_stacks, '0'*len(all_stacks)))
@@ -137,9 +138,9 @@ def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_
       df['numbergamestacks'] = numbergamestacks
       df['games_represented '] = games_represented 
 
-      is_custom_player_on_team = True #max([df['name'].tolist()[0].count(i) for i in list(custom_expos.keys())])
-      custom_expos_check = True #= [float(exposures[i])<float(custom_expos[i]) for i in list(custom_expos.keys())].count(False)
-      ok_add = True #((custom_expos_check==0)  |  (is_custom_player_on_team==0))
+      is_custom_player_on_team = max([df['name'].tolist()[0].count(i) for i in list(raw_expos.keys())])
+      custom_expos_check = [float(exposures[i])<float(raw_expos[i]) for i in list(raw_expos.keys())].count(False)
+      ok_add = ((custom_expos_check==0)  |  (is_custom_player_on_team==0))
 
       if (maxex<=max_exposure) & (removal==0) & (bands==0) & (min_projected>own_min) & (ok_add==True) :
         update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]

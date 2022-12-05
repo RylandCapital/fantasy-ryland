@@ -74,7 +74,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalrb = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalrb['pos'] = name
                 finalrb['week'] = we
-                #finalrb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalrb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
                 
 
                 rbdf = finalrb.copy()
@@ -128,7 +128,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalwr = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalwr['pos'] = name
                 finalwr['week'] = we
-                #finalwr.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalwr.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
             
                     
                 wrdf = finalwr.copy()
@@ -182,7 +182,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalte = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalte['pos'] = name
                 finalte['week'] = we
-                #finalte.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalte.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
                 tedf = finalte.copy()
                 
@@ -236,7 +236,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finalqb = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finalqb['pos'] = name
                 finalqb['week'] = we
-                #finalqb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finalqb.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
                 qbdf = finalqb.copy()  
             
@@ -289,7 +289,7 @@ def pull_stats(weeks=[], strdates=[]):
                 finaldef = pd.concat([left.reset_index(drop=True), right.reset_index(drop=True)], axis=1)
                 finaldef['pos'] = name
                 finaldef['week'] = we
-                #finaldef.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
+                finaldef.to_excel(r'C:\Users\rmathews\Downloads\{0}.xlsx'.format(name))
 
 
                 
