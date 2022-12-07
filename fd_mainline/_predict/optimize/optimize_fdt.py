@@ -8,7 +8,7 @@ from ortools.linear_solver import pywraplp
 
 from fd_mainline._fantasyml import neuterPredictions
 
-
+from fd_mainline.config import gameday_week
 
 
 def prepare(model='ensemble', neuter=False):
@@ -16,6 +16,7 @@ def prepare(model='ensemble', neuter=False):
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
   path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+  path3 = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
 
   predictions = pd.read_csv(path+'predictions_{0}.csv'.format(model))
   if neuter==True:
@@ -28,16 +29,24 @@ def prepare(model='ensemble', neuter=False):
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
 
+
+  ##
+  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(gameday_week)) 
+  stats = stats.set_index('RylandID_master')
+  ##
+
   picks = predictions[['lineup', 'whose_in_flex', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
   picks['proba_rank'] = picks['proba_1'].rank(method='max', ascending=False)/9
 
 
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
-  return picks 
+  return picks, stats
 
 
-picks = prepare()
+prepared = prepare()
+picks = prepared[0]
+stats = prepared[1]
 player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['name'].tolist()))
 player_list[1] = player_list[0].apply(lambda x: x[0])
 player_list[2] = player_list[0].apply(lambda x: x[1])
@@ -57,13 +66,32 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 teams = picks.groupby(level=0).first()
 teams.sort_values(by='proba_1', ascending=False).iloc[:200000].to_csv(path+'optimize_pred_file.csv')
 
+owndict = stats['proj_own'].to_dict()
+own_limits = []
+for i in owndict.keys():
+  entry = ["{0}".format(i), int(((owndict[i]/100)-.05)*150), int(((owndict[i]/100)+.05)*150)]
+  entry = ["{0}".format(i), int(((owndict[i]/100)/2)*150)-1, int(((owndict[i]/100)*2)*150)]
+  own_limits.append(entry)
+
+POSITION_LIMITS = own_limits
+
+ROSTER_SIZE = 150
+
 
 class Player:
   def __init__(self, opts):
     self.proba1 = round(float(opts['proba_1']),4)
     self.rank = int(float(opts['proba_rank']))
     self.lineup = str(opts['lineup'])
-    self._1 = opts
+    self._1 = str(opts['1'])
+    self._2 = str(opts['2'])
+    self._3 = str(opts['3'])
+    self._4 = str(opts['4'])
+    self._5 = str(opts['5'])
+    self._6 = str(opts['6'])
+    self._7 = str(opts['7'])
+    self._8 = str(opts['8'])
+    self._9 = str(opts['9'])
     self.pred_owns = []
     self.lock = False
     self.ban = False
@@ -102,11 +130,6 @@ class Roster:
     return s
 
 
-POSITION_LIMITS = [
-      ["TEAM", 150, 150], 
-    ]
-
-ROSTER_SIZE = 150
 
 def run():
 
@@ -135,7 +158,6 @@ def run():
   objective.SetMaximization()
   
   for i, player in enumerate(all_players):
-    variables[i]
     objective.SetCoefficient(variables[i], player.proba1)
     
   # salary_cap = solver.Constraint(SALARY_MIN, SALARY_CAP)
@@ -155,10 +177,24 @@ def run():
     position_cap = solver.Constraint(min_limit, max_limit)
 
     for i, player in enumerate(all_players):
-      if position == "TEAM":
+      if position == player._1:
         position_cap.SetCoefficient(variables[i], 1)
-
-  
+      if position == player._2:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._3:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._4:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._5:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._6:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._7:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._8:
+        position_cap.SetCoefficient(variables[i], 1)
+      if position == player._9:
+        position_cap.SetCoefficient(variables[i], 1)
 
   solution = solver.Solve()
 
@@ -166,11 +202,9 @@ def run():
     roster = Roster()
 
     for i, player in enumerate(all_players):
+      # print(variables[i].solution_value())
       if variables[i].solution_value() == 1:
         roster.add_player(player)
-
-#    print("Optimal roster for: $%s\n" % SALARY_CAP)
-#    print(roster)
 
   else:
     print("No solution :(")
@@ -184,6 +218,7 @@ print('initiating dfs calculations''')
     
 def fantasyze_live(ws, week, teamstacks_only=True):
   team = run().players
+  ids = [i[0] ]
                 
   print("--- %s seconds ---" % (time.time() - start_time))
 
