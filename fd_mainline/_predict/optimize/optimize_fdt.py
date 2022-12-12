@@ -10,6 +10,15 @@ from fd_mainline._fantasyml import neuterPredictions
 
 from fd_mainline.config import gameday_week
 
+from fd_mainline._predict.player_stats.helpers import fanduel_ticket_optimized
+
+import statistics
+
+'''dont forget to add times to stats file'''
+ROSTER_SIZE = 150
+AVERAGE_TIME = 2.3 #2.3 or higher is atleast 4/9 players starting at 4PM
+NUMBER_TEAMS_TO_OPTIMIZE_SLATE_WITH = int(50000)
+
 
 def prepare(model='ensemble', neuter=False):
 
@@ -44,6 +53,7 @@ def prepare(model='ensemble', neuter=False):
   return picks, stats
 
 
+#prepare ticket optimization file
 prepared = prepare()
 picks = prepared[0]
 stats = prepared[1]
@@ -60,22 +70,30 @@ player_list[9] = player_list[0].apply(lambda x: x[8])
 player_list.drop(0,axis=1, inplace=True)
 picks = picks.join(player_list)
 
+picks = picks.reset_index().set_index('name').join(stats['time']).reset_index(drop=True).sort_values(by='lineup').set_index('lineup')
+times = picks.groupby(level=0)['time'].mean()
 
+#add average start times for optimizer
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-teams = picks.groupby(level=0).first()
-teams.sort_values(by='proba_1', ascending=False).iloc[:200000].to_csv(path+'optimize_pred_file.csv')
+teams = picks.drop('time', axis=1).groupby(level=0).first().join(times)
 
+#toggle average starting time for teams if you want 4PM heavy
+teams = teams[teams['time']>AVERAGE_TIME]
+
+#add any ban MASTER IDS
+#teams['ban'] = teams.apply(lambda x: x.isin(BANS))
+
+
+#write file to folder
+teams.sort_values(by='proba_1', ascending=False).iloc[:NUMBER_TEAMS_TO_OPTIMIZE_SLATE_WITH].to_csv(path+'optimize_pred_file.csv')
+
+#prepare ownership parameters
 owndict = stats['proj_own'].to_dict()
 own_limits = []
 for i in owndict.keys():
-  entry = ["{0}".format(i), int(((owndict[i]/100)-.05)*150), int(((owndict[i]/100)+.05)*150)]
-  entry = ["{0}".format(i), int(((owndict[i]/100)/2)*150)-1, int(((owndict[i]/100)*2)*150)]
+  entry = ["{0}".format(i), int(((owndict[i]/100)/2)*ROSTER_SIZE)-1, int(((owndict[i]/100)*2)*ROSTER_SIZE)]
   own_limits.append(entry)
-
-POSITION_LIMITS = own_limits
-
-ROSTER_SIZE = 150
 
 
 class Player:
@@ -93,12 +111,13 @@ class Player:
     self._8 = str(opts['8'])
     self._9 = str(opts['9'])
     self.pred_owns = []
+    self.time = round(float(opts['time']),4)
     self.lock = False
     self.ban = False
     
 
   def __repr__(self):
-    return "{0},{1},{2}".format(self.proba1,self.rank,self.lineup)
+    return "[{0},{1},{2}]".format(self.proba1,self.rank,self.lineup)
                                     
 class Roster:
 
@@ -111,22 +130,24 @@ class Roster:
 
   def add_player(self, player):
     self.players.append(player)
-
-  def projected(self):
-    return sum(map(lambda x: x.proba1, self.players))
   
   def actual(self):
      return sum(map(lambda x: x.proba1, self.players))
+    
+  def mean_actual(self):
+     return statistics.mean(map(lambda x: x.proba1, self.players))
 
-  def position_order(self, player):
-    return self.POSITION_ORDER['TEAM']
-
-  def sorted_players(self):
-    return sorted(self.players, key=self.position_order)
+  def time(self):
+     return sum(map(lambda x: x.time, self.players))
+  
+  def mean_time(self):
+     return statistics.mean(map(lambda x: x.time, self.players))
 
   def __repr__(self):
-    s = '\n'.join(str(x) for x in self.sorted_players())
-    s += "\n\nActual Proba1: %s" % self.actual()
+    s = "Actual Proba1: %s" % self.actual()
+    s += "\nMean Proba1: %s" % self.mean_actual()
+    s += "\n\nTime Total: %s" % self.time()
+    s += "\nMean Time: %s" % self.mean_time()
     return s
 
 
@@ -159,21 +180,12 @@ def run():
   
   for i, player in enumerate(all_players):
     objective.SetCoefficient(variables[i], player.proba1)
-    
-  # salary_cap = solver.Constraint(SALARY_MIN, SALARY_CAP)
-  # for i, player in enumerate(all_players):
-  #   salary_cap.SetCoefficient(variables[i], player.salary)
-    
-  #
-  # limit = solver.Constraint(LIMLOW, LIMHIGH)
-  # for i, player in enumerate(all_players):
-  #   limit.SetCoefficient(variables[i], player.proba1)
-    
+     
   size_cap = solver.Constraint(ROSTER_SIZE, ROSTER_SIZE)
   for variable in variables:
     size_cap.SetCoefficient(variable, 1)
 
-  for position, min_limit, max_limit in POSITION_LIMITS:
+  for position, min_limit, max_limit in own_limits:
     position_cap = solver.Constraint(min_limit, max_limit)
 
     for i, player in enumerate(all_players):
@@ -202,7 +214,6 @@ def run():
     roster = Roster()
 
     for i, player in enumerate(all_players):
-      # print(variables[i].solution_value())
       if variables[i].solution_value() == 1:
         roster.add_player(player)
 
@@ -216,11 +227,16 @@ def run():
 start_time = time.time()
 print('initiating dfs calculations''')  
     
-def fantasyze_live(ws, week, teamstacks_only=True):
-  team = run().players
-  ids = [i[0] ]
-                
-  print("--- %s seconds ---" % (time.time() - start_time))
+# def fantasyze_live(ws, week, teamstacks_only=True):
+team = run()
+players = team.players
+ids = [i.lineup for i in players]
+probas = [i.proba1 for i in players]
+ranks = [i.rank for i in players]
+
+fanduel_ticket_optimized(ids=ids, removals=[], neuter=False, model='ensemble')
+     
+print("--- %s seconds ---" % (time.time() - start_time))
 
   # user = os.getlogin()
   # # Specify path

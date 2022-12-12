@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[57], strdates=['11/23/22'])         
+pull_stats(weeks=[58], strdates=['11/30/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -114,7 +114,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['11/30/22'], strdates=['11/30/22'])    
+pull_stats_live(weeks=['12/7/22'], strdates=['12/7/22'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -211,16 +211,16 @@ easy_remove(ids = [], neuter=False, model='rf')
 
 '''review'''
 df, team_scores, act_describe, player_pcts, top, corr, duplicates, top_proba_scores = analyze_gameday_pool(
-  historical_id = 57,
-  week='11.23.22',
+  historical_id = 58,
+  week='11.30.22',
   neuter=False,
   model='ensemble'
   )
 top_proba_scores.sort_values('act_pts')
 top_proba_scores['act_pts'].describe()
 dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool(
-  historical_id = 57,
-  week='11.23.22',
+  historical_id = 58,
+  week='11.30.22',
   neuter=True,
   model='ensemble'
   )

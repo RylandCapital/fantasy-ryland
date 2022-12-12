@@ -15,8 +15,8 @@ def pull_stats(weeks=[], strdates=[]):
     
         driver = helpers.load_window_fanduel()
         time.sleep(10)
-        #we = 37
-        #strdates = ['10202021']
+        # we = 58
+        # date = '11302022'
   
         for date, we in zip(strdates[0:], weeks):
 
@@ -401,6 +401,10 @@ def pull_stats(weeks=[], strdates=[]):
                 master['name'] = master['name'].apply(lambda x: x.replace(' Defense', ''))
                 master['Last Name_master'] = master['name'].apply(lambda x: x.lower())
                 master['City Name_master'] = master['name'].apply(lambda x: x.lower())
+                '''NEW'''
+                master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace('st. ', ''))
+                master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace('-', ''))
+                
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iii', ''))
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' ii', ''))
                 master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iv', ''))

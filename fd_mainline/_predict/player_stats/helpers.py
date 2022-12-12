@@ -16,7 +16,6 @@ from dotenv import load_dotenv
 
 
 
-
 load_dotenv()
 #fantasy labs username
 FLUSER = os.getenv("FLUSER")
@@ -59,7 +58,6 @@ def load_window_fanduel():
     driver.set_context("content")
 
     return driver
-
 
 def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_min=0, model='', multiple_cap=2, raw_expos={}):
 
@@ -169,7 +167,105 @@ def fanduel_ticket(entries=150, max_exposure=75, removals=[], neuter=False, own_
 
   return upload, exposuresdf, pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
 
+def fanduel_ticket_optimized(ids=[], removals=[], neuter=False, model=''):
 
+  user = os.getlogin()
+  path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
+  path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+  path3 = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
+
+  preds = pd.read_csv(path + 'predictions_{0}.csv'.format(model))
+  preds=preds.sort_values(by='lineup',ascending=False) 
+
+  onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
+  onlyfiles = [f for f in onlyfiles if f.split('_')[0] == gameday_week]
+  teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
+
+  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(gameday_week)) 
+  stats = stats.set_index('RylandID_master')
+
+  teams = teams[teams['lineup'].isin(preds['lineup'].unique())]
+  teams = teams.set_index('name').join(stats, how='outer', lsuffix='_ot').reset_index()
+
+  if neuter==True:
+    nps = neuterPredictions(1, model=model)[['lineup','proba_1_neutralized']].set_index('lineup')
+    preds = preds.set_index('lineup').join(nps)
+    preds.reset_index(inplace=True)
+    preds['proba_1'] = preds['proba_1_neutralized']
+    preds.drop(['proba_1_neutralized'], axis=1, inplace=True)
+
+  picks = preds[['lineup', 'whose_in_flex', 'proba_1', 
+   'game_stack4', 'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
+   'numberofgamestacks', 'numberofteamstacks','num_games_represented']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks.sort_values(by='proba_1', ascending=False, inplace=True)
+
+  ticket = picks.loc[ids]
+  all_stacks = ticket['team_stack1'].unique().tolist() + \
+     ticket['team_stack2'].unique().tolist() + \
+      ticket['team_stack3'].unique().tolist() + \
+        ticket['team_stack4'].unique().tolist()
+
+
+  selections = []
+
+  exposures = dict(zip(ticket['name'].unique().tolist(),'0'*len(ticket['name'].unique().tolist())))
+  stacks = dict(zip(all_stacks, '0'*len(all_stacks)))
+
+  for i,n in zip(ticket.index.unique(), np.arange(len(ticket.index.unique()))):
+      ticket_cols = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF']
+      df = ticket.loc[i][['pos','Id','whose_in_flex','name','proba_1',
+        'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
+         'numberofgamestacks', 'numberofteamstacks','num_games_represented', 'proj', 'proj_own']].sort_values('Id')
+      id2 = sorted(df['Id'].values)
+      id2_names = sorted(df['name'].values)
+      id2_stacks = pd.concat([df['team_stack1'], df['team_stack2'], df['team_stack3'], df['team_stack4']]).unique()
+      removal = len(list(set(id2).intersection(set(removals))))
+      proj = df['proba_1'].iloc[0]
+      flex = df['whose_in_flex'].iloc[0]
+      ts1 = df['team_stack1'].iloc[0]
+      ts2 = df['team_stack2'].iloc[0]
+      ts3 = df['team_stack3'].iloc[0]
+      ts4 = df['team_stack4'].iloc[0]
+      df = df[['pos','Id']].sort_values('pos')
+      df.set_index('pos', inplace=True)
+      df.index = np.where(df.index=='D', 'DEF', df.index)
+      flex_pull = df[df.index==flex].iloc[0,0]
+      df.index = np.where(df['Id']==flex_pull, 'FLEX', df.index)
+      df = df.loc[ticket_cols].drop_duplicates('Id').T
+      df['id2'] = str(id2)
+      df['name'] = str(id2_names)
+      df['proba_1'] = proj
+      df['removals'] = removal
+      df['team_stack1'] = ts1
+      df['team_stack2'] = ts2
+      df['team_stack3'] = ts3
+      df['team_stack4'] = ts4
+
+
+      if (removal==0) :
+        update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]
+        update_stacks = [stacks.update({i:float(stacks[i])+1}) for i in id2_stacks]
+        selections.append(df)
+
+        
+
+  upload = pd.concat(selections)
+  upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
+  exposuresdf = (pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)/len(selections)*100).round(1)
+  exposuresdf = exposuresdf.join(
+    ticket[['name','proj_own']].set_index('name'), how='inner'
+    ).drop_duplicates().sort_values(by=0, ascending=False)
+  exposuresdf.columns = ['my_ownership', 'projected_ownership']
+  exposuresdf['diff'] = exposuresdf['my_ownership'] - exposuresdf['projected_ownership']
+  if neuter==True:
+    upload.drop('id2', axis=1).iloc.to_csv(path+'ticket_neutered_{0}.csv'.format(model))
+    exposuresdf.to_csv(path+'exposures_neutered_{0}.csv'.format(model))
+  else:
+    upload.drop('id2', axis=1).to_csv(path+'ticket_{0}.csv'.format(model))
+    exposuresdf.to_csv(path+'exposures_{0}.csv'.format(model))
+
+
+  return upload, exposuresdf, pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
 
 def easy_remove(ids = [], neuter=False, model=''):
 
