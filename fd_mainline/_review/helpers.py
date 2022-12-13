@@ -49,8 +49,6 @@ def analyze_gameday_pool(historical_id = 50, week='10.5.22', neuter=False, model
 
     return df, team_scores, act_describe, player_pcts, top, corr, duplicates, ticket_scores
 
-
-
 def analyze_gameday_pool_with_ids(ids=[], historical_id = 50, week='10.5.22', neuter=False, model=''):
 
     user = os.getlogin()

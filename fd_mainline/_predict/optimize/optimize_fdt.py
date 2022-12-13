@@ -15,8 +15,8 @@ from fd_mainline._predict.player_stats.helpers import fanduel_ticket_optimized
 import statistics
 
 '''dont forget to add times to stats file'''
-ROSTER_SIZE = 150
-AVERAGE_TIME = 2.3 #2.3 or higher is atleast 4/9 players starting at 4PM
+ROSTER_SIZE = 800
+AVERAGE_TIME = 0 #2.3 or higher is atleast 4/9 players starting at 4PM
 NUMBER_TEAMS_TO_OPTIMIZE_SLATE_WITH = int(50000)
 
 

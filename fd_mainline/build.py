@@ -13,7 +13,7 @@ from fd_mainline._historical.feature_generation.frv1 import buildml
 from fd_mainline._predict.feature_generation.frv1 import buildml_live
 
 from fd_mainline._predict.player_stats.helpers import fanduel_ticket, easy_remove
-from fd_mainline._review.helpers import analyze_gameday_pool
+from fd_mainline._review.helpers import analyze_gameday_pool, analyze_gameday_pool_with_ids
 
 from multiprocessing import Pool
 from itertools import repeat
@@ -32,7 +32,7 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 
 '''pull historical week'''
-pull_stats(weeks=[58], strdates=['11/30/22'])         
+pull_stats(weeks=[59], strdates=['12/7/22'])         
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -174,54 +174,28 @@ file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineu
 file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_live.csv'.format(user))
 ################################################
 
-
-'''after live teams have been uploaded to dataiku and 
-predictions.csv a file has been dropped into 
-'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user).
-this block creates upload ticket'''
-################################################
-################################################
-ticket, exposures, stacks = fanduel_ticket(
-entries=300,
-max_exposure=150,
-removals=['84056-94370', '84056-52442'], 
-neuter=False, 
-own_min=.5, 
-model='ensemble',
-raw_expos={'Josh Jacobs':15, 'Deebo Samuel':20, 'D. Peoples-Jones':50, 'Hayden Hurst':15,
-'Mike White':15, 'Justin Herbert':36, 'Saquon Barkley':30, 'Tyler Conklin':30, 'Raheem Mostert':15, 
-'Tyler Higbee':30, 'C.J. Uzomah':7, 'Benny Snell Jr.':2, 'Jaylen Warren':6, 'Quez Watkins':6}
-)
-
-ticketn, exposuresn, stacksn = fanduel_ticket(
-entries=150,
-max_exposure=75,
-removals=['84056-94370', '84056-52442'], 
-neuter=True, 
-own_min=.5, 
-model='ensemble',
-custom_expos={'Josh Jacobs':8, 'Deebo Samuel':10, 'D. Peoples-Jones':25, 'Hayden Hurst':7,
-'Mike White':7, 'Justin Herbert':18, 'Saquon Barkley':15, 'Tyler Conklin':15, 'Raheem Mostert':4, 
-'Tyler Higbee':15, 'C.J. Uzomah':3, 'Benny Snell Jr.':2, 'Jaylen Warren':3, 'Quez Watkins':3}
-)
-
-'''qickly remove injuries from ticket'''
-easy_remove(ids = [], neuter=False, model='rf')
-
-
 '''review'''
+#shows top proba mode1 performance
 df, team_scores, act_describe, player_pcts, top, corr, duplicates, top_proba_scores = analyze_gameday_pool(
-  historical_id = 58,
-  week='11.30.22',
+  historical_id = 59,
+  week='12.7.22',
   neuter=False,
   model='ensemble'
   )
 top_proba_scores.sort_values('act_pts')
 top_proba_scores['act_pts'].describe()
-dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool(
-  historical_id = 58,
-  week='11.30.22',
-  neuter=True,
+corr['act_pts'].corr(corr['proba_1'])
+
+#showes actual used ticker from optimize_fdt
+user = os.getlogin()
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+model = 'ensemble'
+ids_file = pd.read_csv(path+'ids_{0}.csv'.format(model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
+dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
+  ids=ids_file['lineup'].tolist(),
+  historical_id = 59,
+  week='12.7.22',
+  neuter=False,
   model='ensemble'
   )
 top_proba_scoresn.sort_values('act_pts')

@@ -200,6 +200,7 @@ def fanduel_ticket_optimized(ids=[], removals=[], neuter=False, model=''):
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
   ticket = picks.loc[ids]
+  ticket.to_csv(path+'ids_{0}.csv'.format(model))
   all_stacks = ticket['team_stack1'].unique().tolist() + \
      ticket['team_stack2'].unique().tolist() + \
       ticket['team_stack3'].unique().tolist() + \
