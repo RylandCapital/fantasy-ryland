@@ -12,15 +12,13 @@ from fd_mainline._predict.player_stats.pull_stats import pull_stats_live
 from fd_mainline._historical.feature_generation.frv1 import buildml
 from fd_mainline._predict.feature_generation.frv1 import buildml_live
 
-from fd_mainline._predict.player_stats.helpers import fanduel_ticket, easy_remove
-from fd_mainline._review.helpers import analyze_gameday_pool, analyze_gameday_pool_with_ids
+from fd_mainline._review.helpers import analyze_gameday_pool_with_ids
+from fd_mainline._predict.optimize.optimize_fdt import slate_optimization
 
 from multiprocessing import Pool
 from itertools import repeat
 
 from fd_mainline.config import curr_historical_optimize_weeks, master_historical_weeks, gameday_week
-
-
 
 
 ################################################
@@ -174,28 +172,38 @@ file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineu
 file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_live.csv'.format(user))
 ################################################
 
-'''review'''
-#shows top proba mode1 performance
-df, team_scores, act_describe, player_pcts, top, corr, duplicates, top_proba_scores = analyze_gameday_pool(
-  historical_id = 59,
-  week='12.7.22',
-  neuter=False,
-  model='ensemble'
-  )
-top_proba_scores.sort_values('act_pts')
-top_proba_scores['act_pts'].describe()
-corr['act_pts'].corr(corr['proba_1'])
 
-#showes actual used ticker from optimize_fdt
+
+
+
+
+
+
+'''Optimize Your Slate Using ML Results that you downloaded or saved'''
+################################################
+################################################
+slate_optimization(
+  slate_date='12.7.22',
+  model='ensemble',
+  roster_size=150, 
+  average_time=0, 
+  optimization_pool=int(50000), 
+  neuter=False
+  )
+
+
+'''Review'''
+################################################
+################################################
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 model = 'ensemble'
-ids_file = pd.read_csv(path+'ids_{0}.csv'.format(model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
+slate = '12.7.22'
+ids_file = pd.read_csv(path+'model_tracking\\predictions\\{0}_{1}_ids.csv'.format(slate,model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
 dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
   ids=ids_file['lineup'].tolist(),
   historical_id = 59,
   week='12.7.22',
-  neuter=False,
   model='ensemble'
   )
 top_proba_scoresn.sort_values('act_pts')

@@ -5,7 +5,7 @@ import time
 import csv
 
 from ortools.linear_solver import pywraplp
-
+from fd_mainline._review.helpers import analyze_gameday_pool, analyze_gameday_pool_with_ids
 
 USER = os.getlogin()
 
@@ -146,7 +146,7 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 
 #%%
 
-def fantasyze_bench(hist_week, live_date='11.30.22', ticket_name=''):
+def fantasyze_bench(hist_week, live_date='12.7.22', model='ensemble'):
             dfs = [] 
             count=0
             limit=500
@@ -174,19 +174,22 @@ def fantasyze_bench(hist_week, live_date='11.30.22', ticket_name=''):
                 count+=1
                 print('{0}-{1}'.format(count,limit))
                 
-            
-
             masterf = pd.concat(dfs)
             masterf = masterf.set_index('lineup')
-            benchmark150 = masterf.groupby(level=0)['actual']
+            benchmark150 = masterf.groupby(level=0)['actual'].sum()
 
 
-            user = os.getlogin()
-            path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-            model = 'ensemble'
+            path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(USER)
             ids_file = pd.read_csv(path+'ids_{0}.csv'.format(model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False)
 
-            model_entry_ids = pd.read_csv('C:\\Users\\{0}\\.fantasy-ryland\\{1}.csv'.format(USER, ticket_name))
+            dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
+            ids=ids_file['lineup'].tolist(),
+            historical_id = hist_week,
+            week= live_date,
+            model='ensemble'
+            )
+            top_proba_scoresn.sort_values('act_pts')
+            top_proba_scoresn['act_pts'].describe()
 
 
             # user = os.getlogin()
