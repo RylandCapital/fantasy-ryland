@@ -5,7 +5,9 @@ import time
 import csv
 
 from ortools.linear_solver import pywraplp
-from fd_mainline._review.helpers import analyze_gameday_pool, analyze_gameday_pool_with_ids
+
+from fd_mainline._predict.optimize.optimize_fdt import slate_optimization
+from fd_mainline._review.helpers import analyze_gameday_pool_with_ids
 
 USER = os.getlogin()
 
@@ -146,11 +148,11 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 
 #%%
 
-def fantasyze_bench(hist_week, live_date='12.7.22', model='ensemble'):
+def fantasyze_bench(hist_week, live_date='12.14.22', number_entries=300, minimum_player_projown=-1, neuter=False, average_time=0, model='ensemble'):
             dfs = [] 
             count=0
             limit=500
-            while count < 150:
+            while count < number_entries:
                 
                 team = run(60000, 56000, hist_week, 1, limit).players
                 #######
@@ -176,27 +178,34 @@ def fantasyze_bench(hist_week, live_date='12.7.22', model='ensemble'):
                 
             masterf = pd.concat(dfs)
             masterf = masterf.set_index('lineup')
-            benchmark150 = masterf.groupby(level=0)['actual'].sum()
+            masterf['actual'] = masterf['actual'].astype(float)
+            benchmark150 = masterf.groupby(level=0)['actual'].sum().describe()
 
-
-            path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(USER)
-            ids_file = pd.read_csv(path+'ids_{0}.csv'.format(model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False)
-
+            slate_optimization(
+              slate_date=live_date,
+              model=model,
+              roster_size=number_entries, 
+              average_time=average_time, 
+              small_slate=False,
+              minimum_player_projown=minimum_player_projown,
+              optimization_pool=int(50000), 
+              neuter=neuter
+              )
+            
+            user = os.getlogin()
+            path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+            ids_file = pd.read_csv(path+'model_tracking\\predictions\\{0}_{1}_ids.csv'.format(live_date,model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:number_entries]
             dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
             ids=ids_file['lineup'].tolist(),
             historical_id = hist_week,
             week= live_date,
-            model='ensemble'
+            model=model
             )
-            top_proba_scoresn.sort_values('act_pts')
-            top_proba_scoresn['act_pts'].describe()
+            model150 = top_proba_scoresn['act_pts'].describe()
+
+            return benchmark150, model150
 
 
-            # user = os.getlogin()
-            # # Specify path
-            # path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-            # masterf.to_csv(path+'{0}_{1}.csv'.format(week,w), index=True)
-            
 
 
     

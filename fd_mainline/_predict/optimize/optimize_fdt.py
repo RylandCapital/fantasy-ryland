@@ -184,7 +184,7 @@ def run(roster_size=150, own_limits=''):
     
   return roster
 
-def slate_optimization(slate_date='12.7.22', model='ensemble', roster_size=150, average_time=0, optimization_pool=int(50000), neuter=False):
+def slate_optimization(slate_date='12.7.22', model='ensemble', roster_size=150, average_time=0, minimum_player_projown=-1, small_slate=False, optimization_pool=int(50000), neuter=False):
 
   start_time = time.time()
   print('initiating dfs calculations''')
@@ -224,9 +224,22 @@ def slate_optimization(slate_date='12.7.22', model='ensemble', roster_size=150, 
   #prepare ownership parameters
   owndict = stats['proj_own'].to_dict()
   own_limits = []
-  for i in owndict.keys():
-    entry = ["{0}".format(i), int(((owndict[i]/100)/2)*roster_size)-1, int(((owndict[i]/100)*2)*roster_size)]
-    own_limits.append(entry)
+  if small_slate==False:
+    for i in owndict.keys():
+      if (owndict[i]/100)<minimum_player_projown:
+        entry = ["{0}".format(i), int(-1), int(0)]
+      else:
+        entry = ["{0}".format(i), int(((owndict[i]/100)/2)*roster_size)-1, int(((owndict[i]/100)*2)*roster_size)]
+      own_limits.append(entry)
+  if small_slate==True:
+    for i in owndict.keys():
+      print(owndict[i]/100)
+      if (owndict[i]/100)<minimum_player_projown:
+        entry = ["{0}".format(i), int(-1), int(0)]
+      else:
+        entry = ["{0}".format(i), int(-1), int(roster_size)]
+      own_limits.append(entry)
+    
       
   team = run(roster_size=roster_size, own_limits=own_limits)
   players = team.players
