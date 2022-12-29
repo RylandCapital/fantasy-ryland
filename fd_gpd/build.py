@@ -3,22 +3,12 @@ import math
 import numpy as np
 import pandas as pd
 
-from fd_mainline._historical.optimize.optimize import fantasyze
-from fd_mainline._predict.optimize.optimize import fantasyze_live
-
-from fd_mainline._historical.player_stats.pull_stats import pull_stats
-from fd_mainline._predict.player_stats.pull_stats import pull_stats_live
-
-from fd_mainline._historical.feature_generation.frv1 import buildml
-from fd_mainline._predict.feature_generation.frv1 import buildml_live
-
-from fd_mainline._review.helpers import analyze_gameday_pool_with_ids
-from fd_mainline._predict.optimize.optimize_fdt import slate_optimization
+from fd_gpd._historical.player_stats.pull_stats import pull_stats
 
 from multiprocessing import Pool
 from itertools import repeat
 
-from fd_mainline.config import curr_historical_optimize_weeks, master_historical_weeks, gameday_week
+from fd_gpd.config import historical_winning_scores, curr_historical_optimize_weeks, master_historical_weeks, gameday_week
 
 
 ################################################
@@ -28,9 +18,10 @@ from fd_mainline.config import curr_historical_optimize_weeks, master_historical
 ################################################
 ################################################
 ################################################
-
+dates = list(historical_winning_scores.keys())[35:]
+ids = [historical_winning_scores[i]['slate_id'] for i in dates]
 '''pull historical week'''
-pull_stats(weeks=[60], strdates=['12/14/22'])         
+pull_stats(slate_ids=ids, strdates=dates)         
 
 
 '''Optimize New Training Teams from Raw Data'''

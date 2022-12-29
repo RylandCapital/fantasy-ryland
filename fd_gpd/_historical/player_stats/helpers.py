@@ -29,15 +29,15 @@ def load_window_fanduel():
     time.sleep(2)
     driver.find_element('xpath', '/html/body/div[3]/form[1]/div[4]/button').click()
     time.sleep(2)
-    driver.find_element('xpath', '//*[@id="menu-item-14874"]').click()
+    driver.find_element('xpath', '//*[@id="menu-item-37607"]').click()
     time.sleep(2)
-    driver.find_element('xpath', '/html/body/div[1]/nav/div/div[3]/div[1]/ul/li[2]/ul/li[2]/a').click()
-    time.sleep(2)
-    driver.set_window_size(3000, 2000)
+    driver.find_element('xpath', '/html/body/div[1]/nav/div/div[3]/div[1]/ul/li[8]/ul/li[1]/a').click()
     time.sleep(2)
     driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[1]/a[1]').click()
     time.sleep(2)
-    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[2]/div[3]').click()
+    driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[2]/div[4]').click()
+    time.sleep(2)
+    driver.set_window_size(3000, 2000)
     driver.set_context("chrome")
     win = driver.find_element('tag name', "html")
     win.send_keys(Keys.CONTROL + "-")
@@ -46,8 +46,9 @@ def load_window_fanduel():
     win.send_keys(Keys.CONTROL + "-")
     win.send_keys(Keys.CONTROL + "-")
     win.send_keys(Keys.CONTROL + "-")
+    win.send_keys(Keys.CONTROL + "-")
+    win.send_keys(Keys.CONTROL + "-")
+    win.send_keys(Keys.CONTROL + "-")
     driver.set_context("content")
-
-    
 
     return driver
