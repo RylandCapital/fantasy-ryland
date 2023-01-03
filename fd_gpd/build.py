@@ -4,6 +4,9 @@ import numpy as np
 import pandas as pd
 
 from fd_gpd._historical.player_stats.pull_stats import pull_stats
+from fd_gpd._predict.player_stats.pull_stats import pull_stats_live
+from fd_gpd._historical.optimize.optimize import fantasyze
+from fd_gpd._historical.feature_generation.frv1 import buildml
 
 from multiprocessing import Pool
 from itertools import repeat
@@ -18,10 +21,10 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 ################################################
 ################################################
-dates = list(historical_winning_scores.keys())[35:]
-ids = [historical_winning_scores[i]['slate_id'] for i in dates]
+# dates = list(historical_winning_scores.keys())[35:]
+# ids = [historical_winning_scores[i]['slate_id'] for i in dates]
 '''pull historical week'''
-pull_stats(slate_ids=ids, strdates=dates)         
+pull_stats(slate_ids=[], strdates=[])          
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -31,17 +34,25 @@ pull_stats(slate_ids=ids, strdates=dates)
 user = os.getlogin()
 # Specify path
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_gpd\\'.format(user)
 if os.path.exists(path) == False:
   os.mkdir(path)
-  os.mkdir(path+'optimized_teams_by_week\\')
-  os.mkdir(path+'optimized_teams_by_week_live\\')
-  os.mkdir(path+'optimized_ml_by_week\\')
+  os.mkdir(path+'optimized_teams_by_week_gpd\\')
+  os.mkdir(path+'optimized_teams_by_week_live_gpd\\')
+  os.mkdir(path+'optimized_ml_by_week_gpd\\')
+  os.mkdir(path+'optimized_ml_by_week_live_gpd\\')
+
+if os.path.exists(path2) == False:
+  os.mkdir(path2)
+  os.mkdir(path+'optimized_teams_by_week_live_gpd\\')
+  os.mkdir(path+'optimized_ml_by_week_gpd\\')
+  os.mkdir(path+'optimized_ml_by_week_live_gpd\\')
 
 '''Optimize New Histoical Teams'''
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = curr_historical_optimize_weeks
+weeks = master_historical_weeks
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -55,13 +66,13 @@ pool.close()
 '''Create Local Export Env'''
 user = os.getlogin()
 # Specify path
-path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week'.format(user)
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_gpd'.format(user)
 if os.path.exists(path) == False:
   os.mkdir(path)
 
 '''pull all hisotrical teams from the database created from the optimizer'''
 
-ranges = curr_historical_optimize_weeks
+ranges = master_historical_weeks
 
 pool = Pool(processes=len(ranges))
 results = pool.map(buildml, ranges)
@@ -70,10 +81,10 @@ pool.join()
 
 
 '''concat all ml files to create master training set'''
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week\\'.format(user)
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_gpd\\'.format(user)
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineup') for f in onlyfiles])
-file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload.csv'.format(user))
+file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mluploadgpd.csv'.format(user))
 ################################################
 
 #%%
@@ -103,7 +114,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(weeks=['12/14/22'], strdates=['12/14/22'])    
+pull_stats_live(slate_ids=['1/3/23'], strdates=['1/3/23'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''

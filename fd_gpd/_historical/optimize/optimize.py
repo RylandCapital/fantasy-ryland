@@ -15,7 +15,7 @@ class Player:
     self.name = opts['RylandID_master']
     self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
-    self.theo_actual = float(np.random.randint(-30,30)) 
+    self.theo_actual = float(np.random.randint(-100,100)) 
     self.actual = float(opts['proj_actpts'])
     self.plusminus = float(opts['proj_proj+/-'])
     self.proj = float(opts['proj_proj'])
@@ -150,8 +150,9 @@ print('initiating dfs calculations''')
 milly_winners_dict = historical_winning_scores
 # print('{0}-{1}'.format(w,i))
 def fantasyze(strdates):
-  for w in strdates:
-    milly = milly_winners_dict[str((w))]  
+  for date in strdates:
+    milly = float(milly_winners_dict[date]['winning_score'])
+    w = milly_winners_dict[date]['slate_id']
     dupdf = pd.DataFrame([], columns = ['id'])
     dfs = [] 
 

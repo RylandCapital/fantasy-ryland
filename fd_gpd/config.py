@@ -29,14 +29,10 @@ historical_winning_scores = {
  '4/9/22': {'day':'saturday', 'slate_id':24, 'winning_score':268.90},
  '4/14/22': {'day':'thursday', 'slate_id':25, 'winning_score':287.20},
  '4/16/22': {'day':'saturday', 'slate_id':26, 'winning_score':238.40},
- '10/13/22': {'day':'thursday', 'slate_id':27, 'winning_score':260.90}, 
- '10/15/22': {'day':'saturday', 'slate_id':28, 'winning_score':255.80},
  '10/20/22': {'day':'thursday', 'slate_id':29, 'winning_score':242.20}, 
  '10/22/22': {'day':'saturday', 'slate_id':30, 'winning_score':242.20}, 
  '10/27/22': {'day':'thursday', 'slate_id':31, 'winning_score':280.20}, 
  '10/29/22': {'day':'saturday', 'slate_id':32, 'winning_score':235.90}, 
- '11/3/22': {'day':'thursday', 'slate_id':33, 'winning_score':287.10}, 
- '11/5/22': {'day':'saturday', 'slate_id':34, 'winning_score':247.10},
  '11/10/22': {'day':'thursday', 'slate_id':35, 'winning_score':281.80}, 
  '11/12/22': {'day':'saturday', 'slate_id':36, 'winning_score':196.70},
  '11/17/22': {'day':'thursday', 'slate_id':37, 'winning_score':279.60}, 
@@ -51,11 +47,20 @@ historical_winning_scores = {
 }
 
 master_historical_weeks = [
-          [1,2],
+          ['1/6/22','1/8/22'],['1/13/22','1/15/22'],['1/20/22','1/22/22'],
+          ['1/27/22','1/29/22'],['2/10/22','2/12/22'],['2/17/22','2/19/22'],
+          ['2/24/22','2/26/22'],['3/3/22','3/5/22'],['3/10/22','3/12/22'],
+
+          ['3/17/22','3/19/22'],['3/24/22','3/26/22'],['3/31/22','4/2/22'],
+          ['4/9/22','4/14/22'],['4/16/22'],['10/20/22'],
+          ['10/22/22','10/27/22'],['10/29/22'],['11/10/22'],
+
+          ['11/12/22','11/17/22'],['11/19/22','12/1/22'],['12/3/22','12/8/22'],
+          ['12/10/22','12/15/22'],['12/17/22','12/22/22']
         ]
 
 curr_historical_optimize_weeks = [
-    [1]
+    ['1/6/22']
     ]
 
 mlweeks = [1,2] 
