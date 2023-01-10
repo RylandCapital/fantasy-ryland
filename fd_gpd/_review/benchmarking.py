@@ -16,12 +16,12 @@ class Player:
     self.name = opts['RylandID_master']
     self.position = opts['pos'].upper()
     self.salary = int(float((opts['salary'])))
-    self.team = str(opts['team'])
+    self.theo_actual = float(np.random.randint(-100,100)) 
+    self.actual = float(opts['proj_actpts'])
+    self.plusminus = float(opts['proj_proj+/-'])
+    self.proj = float(opts['proj_proj'])
+    self.team = str(opts['team_team'])
     self.opp = str(opts['opp'])
-    self.proj = float(opts['proj'])
-    self.act_pts = float(opts['act_pts'])
-    self.plusminus = float(opts['proj+-'])
-    self.projown = float(opts['proj_own'])
     self.lock = False
     self.ban = False
 
@@ -33,11 +33,10 @@ class Player:
                                     "LOCK" if self.lock else "")
 class Roster:
   POSITION_ORDER = {
-    "QB": 0,
-    "RB": 1,
-    "WR": 2,
-    "TE": 3,
-    "D": 4,
+    "C": 0,
+    "W": 1,
+    "D": 2,
+    "G": 3,
   }
 
   def __init__(self):
@@ -69,11 +68,10 @@ class Roster:
 
 
 POSITION_LIMITS = [
-      ["QB", 1, 1], 
-      ["RB", 2, 3],
-      ["WR", 3, 4],
-      ["TE", 1, 2],
-      ["D", 1, 1]
+      ["C", 2, 4], 
+      ["W", 2, 4],
+      ["D", 2, 4],
+      ["G", 1, 1],
     ]
 
 ROSTER_SIZE = 9
@@ -81,7 +79,7 @@ ROSTER_SIZE = 9
 def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
-  with open(os.getcwd() + r"\fd_mainline\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
+  with open(os.getcwd() + r"\fd_gpd\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
    
     for row in csvdata:
@@ -148,7 +146,7 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
 
 #%%
 
-def fantasyze_bench(hist_week, live_date='12.14.22', number_entries=300, minimum_player_projown=-1, neuter=False, average_time=0, model='ensemble'):
+def fantasyze_bench(hist_week, live_date='1.10.22', number_entries=150, neuter=False, model='ensemble'):
             dfs = [] 
             count=0
             limit=500
@@ -185,9 +183,7 @@ def fantasyze_bench(hist_week, live_date='12.14.22', number_entries=300, minimum
               slate_date=live_date,
               model=model,
               roster_size=number_entries, 
-              average_time=average_time, 
               small_slate=False,
-              minimum_player_projown=minimum_player_projown,
               optimization_pool=int(50000), 
               neuter=neuter
               )

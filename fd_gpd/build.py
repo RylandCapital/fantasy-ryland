@@ -218,13 +218,15 @@ slate_optimization(
 user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 model = 'ensemble'
-slate = '12.7.22'
-ids_file = pd.read_csv(path+'model_tracking\\predictions\\{0}_{1}_ids.csv'.format(slate,model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
+slate = '1.10.23'
+historical_id = 46
+#how many top model teams do you want to benchmark
+ids_file = pd.read_csv(path+'model_tracking\\predictions_gpd\\{0}_{1}_ids.csv'.format(slate,model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
 dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
   ids=ids_file['lineup'].tolist(),
-  historical_id = 60,
-  week='12.14.22',
-  model='ensemble'
+  historical_id =historical_id,
+  week=slate,
+  model=model
   )
 top_proba_scoresn.sort_values('act_pts')
 top_proba_scoresn['act_pts'].describe()
