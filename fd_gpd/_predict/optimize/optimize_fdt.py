@@ -6,11 +6,11 @@ import csv
 
 from ortools.linear_solver import pywraplp
 
-from fd_mainline._fantasyml import neuterPredictions
+from fd_gpd._fantasyml import neuterPredictions
 
-from fd_mainline.config import gameday_week
+from fd_gpd.config import gameday_week
 
-from fd_mainline._predict.player_stats.helpers import fanduel_ticket_optimized
+from fd_gpd._predict.player_stats.helpers import fanduel_ticket_optimized
 
 import statistics
 
@@ -21,11 +21,12 @@ def prepare(model='ensemble', neuter=False, slate_date=''):
 
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
-  path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\model_tracking\\teams\\{1}\\'.format(user,slate_date)
-  path3 = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
+  path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\model_tracking\\teams_gpd\\{1}\\'.format(user,slate_date)
+  path3 = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
 
-  predictions = pd.read_csv(path+'model_tracking\\predictions\\{0}_{1}.csv'.format(slate_date, model))
+  predictions = pd.read_csv(path+'model_tracking\\predictions_gpd\\{0}_{1}.csv'.format(slate_date, model))
   predictions = predictions.sort_values(by='lineup',ascending=False) 
+  predictions.rename(columns={'proba_1.0':'proba_1'}, inplace=True)
 
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
@@ -43,18 +44,8 @@ def prepare(model='ensemble', neuter=False, slate_date=''):
       predictions['proba_1'] = predictions['proba_1_neutralized']
       predictions.drop(['proba_1_neutralized'], axis=1, inplace=True)
 
-  onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
-  teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
-
-
-  ##
-  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(gameday_week)) 
-  stats = stats.set_index('RylandID_master')
-  ##
-
-  picks = predictions[['lineup', 'whose_in_flex', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks = predictions[['lineup', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
   picks['proba_rank'] = picks['proba_1'].rank(method='max', ascending=False)/9
-
 
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
@@ -75,7 +66,6 @@ class Player:
     self._8 = str(opts['8'])
     self._9 = str(opts['9'])
     self.pred_owns = []
-    self.time = round(float(opts['time']),4)
     self.lock = False
     self.ban = False
     
@@ -101,17 +91,9 @@ class Roster:
   def mean_actual(self):
      return statistics.mean(map(lambda x: x.proba1, self.players))
 
-  def time(self):
-     return sum(map(lambda x: x.time, self.players))
-  
-  def mean_time(self):
-     return statistics.mean(map(lambda x: x.time, self.players))
-
   def __repr__(self):
     s = "Actual Proba1: %s" % self.actual()
     s += "\nMean Proba1: %s" % self.mean_actual()
-    s += "\n\nTime Total: %s" % self.time()
-    s += "\nMean Time: %s" % self.mean_time()
     return s
 
 def run(roster_size=150, own_limits=''):
@@ -121,7 +103,7 @@ def run(roster_size=150, own_limits=''):
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 
-  with open(path+ r'optimize_pred_file.csv', 'r') as csvfile:
+  with open(path+ r'optimize_pred_file_gpd.csv', 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
     for row in csvdata:
       all_players.append(Player(row))
@@ -184,7 +166,7 @@ def run(roster_size=150, own_limits=''):
     
   return roster
 
-def slate_optimization(slate_date='12.7.22', model='ensemble', roster_size=150, average_time=0, minimum_player_projown=-1, small_slate=False, optimization_pool=int(50000), neuter=False):
+def slate_optimization(slate_date='1.9.23', model='ensemble', roster_size=150, removals=[], small_slate=False, optimization_pool=int(50000), neuter=False):
 
   start_time = time.time()
   print('initiating dfs calculations''')
@@ -206,38 +188,25 @@ def slate_optimization(slate_date='12.7.22', model='ensemble', roster_size=150, 
   player_list.drop(0,axis=1, inplace=True)
   picks = picks.join(player_list)
 
-  picks = picks.reset_index().set_index('name').join(stats['time']).reset_index(drop=True).sort_values(by='lineup').set_index('lineup')
-  times = picks.groupby(level=0)['time'].mean()
+  picks = picks.reset_index().set_index('name').reset_index(drop=True).sort_values(by='lineup').set_index('lineup')
 
-  #add average start times for optimizer
   user = os.getlogin()
   path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-  teams = picks.drop('time', axis=1).groupby(level=0).first().join(times)
-
-  #toggle average starting time for teams if you want 4PM heavy
-  #2.3 or higher is atleast 4/9 players starting at 4PM - 2.0 would be three or more 
-  teams = teams[teams['time']>average_time]
+  teams = picks.groupby(level=0).first()
 
   #write file to folder
-  teams.sort_values(by='proba_1', ascending=False).iloc[:optimization_pool].to_csv(path+'optimize_pred_file.csv')
+  teams.sort_values(by='proba_1', ascending=False).iloc[:optimization_pool].to_csv(path+'optimize_pred_file_gpd.csv')
 
   #prepare ownership parameters
-  owndict = stats['proj_own'].to_dict()
+  owndict = stats['proj_proj+/-'].to_dict()
   own_limits = []
   if small_slate==False:
     for i in owndict.keys():
-      if (owndict[i]/100)<minimum_player_projown:
-        entry = ["{0}".format(i), int(-1), int(0)]
-      else:
-        entry = ["{0}".format(i), int(((owndict[i]/100)/2)*roster_size)-1, int(((owndict[i]/100)*2)*roster_size)]
+      entry = ["{0}".format(i), int(-1), int(roster_size/2)]
       own_limits.append(entry)
   if small_slate==True:
     for i in owndict.keys():
-      print(owndict[i]/100)
-      if (owndict[i]/100)<minimum_player_projown:
-        entry = ["{0}".format(i), int(-1), int(0)]
-      else:
-        entry = ["{0}".format(i), int(-1), int(roster_size)]
+      entry = ["{0}".format(i), int(-1), int(roster_size/2)]
       own_limits.append(entry)
     
       
@@ -247,7 +216,7 @@ def slate_optimization(slate_date='12.7.22', model='ensemble', roster_size=150, 
   probas = [i.proba1 for i in players]
   ranks = [i.rank for i in players]
 
-  fanduel_ticket_optimized(slate_date=slate_date, ids=ids, removals=[], model='ensemble')
+  fanduel_ticket_optimized(slate_date=slate_date, ids=ids, removals=removals, model=model)
       
   print("--- %s seconds ---" % (time.time() - start_time))
 

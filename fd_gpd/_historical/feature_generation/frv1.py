@@ -58,54 +58,21 @@ def buildml(strdates):
                     method='max',ascending=False)
             file['slot'] = file['Position'] + file['slot'].astype(int).astype(str)
 
-            #file[file['lineup']=='00_5'][['position', 'salary', 'slot']].sort_values(by=['position', 'salary'], ascending=False)
             
         
             lineups = file.groupby('lineup')
-            deflineups = file[file['Position'] == 'D'].groupby('lineup')
-            noglineups = file[file['Position'] != 'G'].groupby('lineup')
             teamstackgroup = file.groupby(['lineup', 'team_team'])
             
             lencheck = lineups.apply(lambda x: len(x)).value_counts()
             if (lencheck.index[0]==9) & (len(lencheck)==9):
                 raise NameError('Team Lengths Not All 9')
                 
-            team_sums = lineups[
-                'actual',
-                'proj_proj',
-                'proj_proj+/-', 
-                'vegas_pts', 
-                'vegas_o/u',
-                'trends_opp+/-', 
-                'vegas_ml',
-                'vegas_opppts', 
-                'fantasymonth_ppg',
-                'lines_full',
-                'lines_pp',
-                'time_rest',
-                'fantasymonth_consistency',
-                'stats-15_corsifor',
-                'stats-15_s+blk',
-                'stats-15_s',
-                'stats-15_blk',
-                'stats-15_satt',
-                'stats-15_ppsatt',
-                'stats-15_toi',
-                'stats-15_pptoi',
-                'stats-15_ppg',
-                'stats-15_ppa', 
-                'teamstats-month_oppg',
-                'teamstats-month_opps',
-                'teamstats-month_pks',
-                'teamstats-month_pk%',
-                'teamstats-month_opppps',
-                'teamstats-month_opppp%'          
-                ].sum()
-            team_sums.columns = [i+'_sum' for i in team_sums.columns]
-
+            
             team_means = lineups[
-                'actual',
                 'proj_proj',
+                'proj_ceiling',
+                'proj_floor',
+                'proj_pts/sal',
                 'proj_proj+/-', 
                 'vegas_pts', 
                 'vegas_o/u',
@@ -116,7 +83,11 @@ def buildml(strdates):
                 'lines_full',
                 'lines_pp',
                 'time_rest',
+                'time_b2b',
                 'fantasymonth_consistency',
+                'stats-month_corsifor',
+                'stats-month_s+blk',
+                'stats-month_s',
                 'stats-15_corsifor',
                 'stats-15_s+blk',
                 'stats-15_s',
@@ -137,8 +108,10 @@ def buildml(strdates):
             team_means.columns = [i+'_mean' for i in team_means.columns]
 
             team_stds = lineups[
-                'actual',
                 'proj_proj',
+                'proj_ceiling',
+                'proj_floor',
+                'proj_pts/sal',
                 'proj_proj+/-', 
                 'vegas_pts', 
                 'vegas_o/u',
@@ -149,7 +122,11 @@ def buildml(strdates):
                 'lines_full',
                 'lines_pp',
                 'time_rest',
+                'time_b2b',
                 'fantasymonth_consistency',
+                'stats-month_corsifor',
+                'stats-month_s+blk',
+                'stats-month_s',
                 'stats-15_corsifor',
                 'stats-15_s+blk',
                 'stats-15_s',
@@ -190,14 +167,7 @@ def buildml(strdates):
                     lambda x: x['team_team'].value_counts().iloc[0])
             num_games_represented = lineups.apply(
                     lambda x: len(x['games'].unique()))
-            opponents = noglineups.apply(
-                    lambda x: x['opp'].tolist())
-            defense = deflineups.apply(
-                    lambda x: x['team_team'].tolist())
-            off_def_df = pd.DataFrame(opponents, columns=['opp']).join(
-                    pd.DataFrame(defense, columns=['team_team']))
-            is_playing_d = off_def_df.apply(lambda row: bool(set(row['team_team']) & \
-                                                             set(row['opp'])), axis=1)
+           
         
             #part 1 (agg the game stack stat)
             numberofgamestacks = lineups.apply(lambda x: len(x['games'].value_counts()[
@@ -310,10 +280,23 @@ def buildml(strdates):
                                                     if len(x)>=3 else 0)
             team_stack4ml = team_stack_ml2.apply(lambda x: x[3]
                                                     if len(x)==4 else 0)
-     
+
+
+            position_numbers = lineups['Position'].value_counts()
+            cnumbers = position_numbers.loc[:,'C',:]
+            wnumbers = position_numbers.loc[:,'W',:]
+            defnumbers = position_numbers.loc[:,'D',:]
+
+            min_salary = lineups['salary'].min()
+            min_proj = lineups['proj_proj'].min()
+            min_ptssal = lineups['proj_pts/sal'].min()
+
+            max_salary = lineups['salary'].max()
+            max_proj = lineups['proj_proj'].max() 
+            max_ptssal = lineups['proj_pts/sal'].max()
+
             
             analysis = pd.concat([
-                                  team_sums,
                                   team_means,
                                   team_stds,
                                   sal_std,
@@ -327,13 +310,8 @@ def buildml(strdates):
                                   plyrs_eq_1, 
                                   maxplayersfrom1team,
                                   num_games_represented,
-                                  is_playing_d,
                                   numberofgamestacks,
                                   numberofteamstacks,
-                                  team_stack1,
-                                  team_stack2,
-                                  team_stack3,
-                                  team_stack4,
                                   team_stack1salary,
                                   team_stack2salary,
                                   team_stack3salary, 
@@ -350,11 +328,23 @@ def buildml(strdates):
                                   team_stack2ml,
                                   team_stack3ml,
                                   team_stack4ml,
-                                  
+                                  cnumbers,
+                                  wnumbers,
+                                  defnumbers,
+                                  min_salary,
+                                  min_proj,
+                                  min_ptssal,
+                                  max_salary,
+                                  max_proj,
+                                  max_ptssal,
+                                  team_stack1,
+                                  team_stack2,
+                                  team_stack3,
+                                  team_stack4,
+                                                             
                                 ], axis=1)
              
             analysis.columns =  \
-                        team_sums.columns.tolist() + \
                         team_means.columns.tolist() + \
                         team_stds.columns.tolist() + \
                         ['salary_std',
@@ -368,13 +358,8 @@ def buildml(strdates):
                         'plyrs_eq_1',
                         'maxplayersfrom1team',
                         'num_games_represented',
-                        'is_playing_d',
                         'numberofgamestacks',
                         'numberofteamstacks',
-                        'team_stack1',
-                        'team_stack2',
-                        'team_stack3',
-                        'team_stack4',
                         'team_stack1salary',
                         'team_stack2salary',
                         'team_stack3salary', 
@@ -391,8 +376,24 @@ def buildml(strdates):
                         'team_stack2ml',
                         'team_stack3ml',
                         'team_stack4ml',
+                        'numberofcenters',
+                        'numberofwingers',
+                        'numberofdefensemen',
+                        'min_salary',
+                        'min_proj',
+                        'min_ptssal',
+                        'max_salary',
+                        'max_proj',
+                        'max_ptssal',
+                        'team_stack1',
+                        'team_stack2',
+                        'team_stack3',
+                        'team_stack4',
+                        
                         ]
+            analysis.loc[:,'proj_proj_mean':'max_ptssal'] = analysis.loc[:,'proj_proj_mean':'max_ptssal'].rank(pct=True)
             analysis['number_teams_on_slate'] = int(len(file['team_team'].unique())/2)
+            analysis['actual_sum'] = lineups['actual'].sum() 
             analysis = analysis.reset_index()
             analysis['week'] = onlyf
             analysis['id'] = analysis['week'].astype(str) + \

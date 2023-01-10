@@ -6,7 +6,15 @@ import pandas as pd
 from fd_gpd._historical.player_stats.pull_stats import pull_stats
 from fd_gpd._predict.player_stats.pull_stats import pull_stats_live
 from fd_gpd._historical.optimize.optimize import fantasyze
+from fd_gpd._predict.optimize.optimize import fantasyze_live
 from fd_gpd._historical.feature_generation.frv1 import buildml
+from fd_gpd._predict.feature_generation.frv1 import buildml_live
+
+from fd_gpd._predict.optimize.optimize_fdt import slate_optimization
+
+from fd_gpd._review.helpers import analyze_gameday_pool_with_ids
+
+
 
 from multiprocessing import Pool
 from itertools import repeat
@@ -84,6 +92,11 @@ pool.join()
 mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_gpd\\'.format(user)
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineup') for f in onlyfiles])
+for i in file.columns:
+  try:
+    file[i] = file[i].round(4)
+  except:
+    pass
 file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mluploadgpd.csv'.format(user))
 ################################################
 
@@ -114,7 +127,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['1/3/23'], strdates=['1/3/23'])    
+pull_stats_live(slate_ids=['1/9/23'], strdates=['1/9/23'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -123,11 +136,11 @@ pull_stats_live(slate_ids=['1/3/23'], strdates=['1/3/23'])
 '''Create Local Export Env'''
 user = os.getlogin()
 # Specify path
-path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live'.format(user)
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd'.format(user)
 if os.path.exists(path) == False:
-  os.mkdir(path+'optimized_teams_by_week_live\\')
+  os.mkdir(path+'optimized_teams_by_week_live_gpd\\')
 
-workers = [[i] for i in np.arange(1,38)]
+workers = [[i] for i in np.arange(1,30)]
 
 pool = Pool(processes=len(workers))
 pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
@@ -141,14 +154,14 @@ pool.close()
 '''Create Local Export Env'''
 user = os.getlogin()
 # Specify path
-path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live'.format(user)
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live_gpd'.format(user)
 if os.path.exists(path) == False:
   os.mkdir(path)
 
 '''pull all hisotrical teams from the database created from the optimizer'''
 user = os.getlogin()
           # Specify path
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live\\'.format(user)
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd\\'.format(user)
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     
 
@@ -168,14 +181,16 @@ pool.join()
 
 
 '''concat all ml files to create master team pool'''
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live\\'.format(user)
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live_gpd\\'.format(user)
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 file = pd.concat([pd.read_csv(mypath + f, compression='gzip').sort_values('lineup') for f in onlyfiles])
-file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_live.csv'.format(user))
+for i in file.columns:
+  try:
+    file[i] = file[i].round(4)
+  except:
+    pass
+file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_livegpd.csv'.format(user))
 ################################################
-
-
-
 
 
 
@@ -185,15 +200,16 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_live.csv'.format(user))
 ################################################
 ################################################
 slate_optimization(
-  slate_date='12.14.22',
+  slate_date='1.9.23',
   model='ensemble',
-  roster_size=10, 
-  average_time=0, 
+  roster_size=180, 
   small_slate=False,
-  minimum_player_projown=-1,
+  removals = ['85767-9112', '85767-82041',  '85767-97029'],
   optimization_pool=int(50000), 
   neuter=False
   )
+
+
 
 
 '''Review'''

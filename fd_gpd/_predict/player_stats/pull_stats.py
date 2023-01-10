@@ -362,26 +362,52 @@ def pull_stats_live(slate_ids=[], strdates=[]):
             master['time_b2b'] = master['time_b2b'].apply(lambda x: x[0] if len(x)>0 else x)
 
             master.to_excel(r'C:\Users\rmathews\Downloads\master.xlsx')
+            master = pd.read_excel(r'C:\Users\rmathews\Downloads\master.xlsx').iloc[:,1:]
+
+            fd = pd.read_csv(os.getcwd() + r'\fd_gpd\_predict\player_stats\fanduel_files\{0}.csv'.format(sid.replace('/','.')), header=6, index_col=13).iloc[:,13:]
+            fd['Last Name'] = np.where(fd['Last Name']=='Stuetzle','Stutzle',fd['Last Name'])
+
+            fd['First Name'] = fd['First Name'].apply(lambda x: x.replace('-', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.lower())
+
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace('st. ', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace('-', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iii', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ii', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' iv', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' jr.', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' sr.', ''))
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.split(' ')[1] if len(x.split(' '))>1 else x.split(' ')[0])
+            fd['Last Name'] = fd['Last Name'].apply(lambda x: x.replace(' ', ''))
+            fd['First Name'] = fd['First Name'].str.lower().apply(lambda x: x.replace(' ', '')[0])
+            fd['RylandID'] = fd['Last Name'] + fd['Salary'].astype(str) + fd['Position'].str.lower() + fd['First Name']
+
+           
             
             master['Last Name_master'] = master['name'].apply(lambda x: x.lower())
-            master['City Name_master'] = master['name'].apply(lambda x: x.lower())
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace('st. ', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace('-', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iii', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' ii', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' iv', ''))
-            master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' v', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' jr.', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' sr.', ''))
             master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' sr.', ''))
-            master['First Name_master'] = master['Last Name_master'].apply(lambda x: x.split(' ')[0])
-            master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.split(' ')[1] if len(x.split(' '))>1 else x.split(' ')[0])
-            master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' ', ''))
-            master['First Name_master'] = master['First Name_master'].str.lower().apply(lambda x: x.replace(' ', '')[0])
-            master['RylandID_master'] =  master['Last Name_master'] + master['salary'].astype(str) + master['pos'].str.lower() + master['First Name_master']
-            master.index = master['RylandID_master']
 
-            master.to_csv(os.getcwd() + r"\fd_gpd\_historical\player_stats\by_week\{0}.csv".format(format(sid)))
+            master['First Name_master'] = master['Last Name_master'].apply(lambda x: x.split(' ')[0])
+            master['First Name_master'] = master['First Name_master'].str.lower().apply(lambda x: x.replace(' ', '')[0])
+
+            master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.split(' ')[2] if len(x.split(' '))>2 else x.split(' ')[1])
+            master['Last Name_master'] = master['Last Name_master'].apply(lambda x: x.replace(' ', ''))
+            
+            master['RylandID_master'] =  master['Last Name_master'] + master['salary'].astype(str) + master['pos'].str.lower() + master['First Name_master']
+            
+            fd.index = fd['RylandID']
+            master.index = master['RylandID_master']
+            master = master.join(fd)
+
+            master.to_csv(os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week\{0}.csv".format(format(sid.replace('/','.'))))
 
 
     

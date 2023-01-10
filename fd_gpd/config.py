@@ -68,5 +68,5 @@ mlweeks = [1,2]
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '12.14.22'
+gameday_week = '1.9.23'
 
