@@ -39,7 +39,7 @@ def load_window_fanduel():
     time.sleep(2)
     driver.find_element('xpath', '//*[@id="menu-item-37607"]').click()
     time.sleep(2)
-    driver.find_element('xpath', '/html/body/div[1]/nav/div/div[3]/div[1]/ul/li[8]/ul/li[1]/a').click()
+    driver.find_element('xpath', '/html/body/div[1]/nav/div/div[3]/div[1]/ul/li[7]/ul/li[1]/a').click()
     time.sleep(2)
     driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[1]/a[1]').click()
     time.sleep(2)
@@ -109,6 +109,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], removals=[], model='en
       id2_stacks = pd.concat([df['team_stack1'], df['team_stack2'], df['team_stack3'], df['team_stack4']]).unique()
       removal = len(list(set(id2).intersection(set(removals))))
       proj = df['proba_1'].iloc[0]
+      proj_pts = df['proj_proj'].sum()
       ts1 = df['team_stack1'].iloc[0]
       ts2 = df['team_stack2'].iloc[0]
       ts3 = df['team_stack3'].iloc[0]
@@ -131,6 +132,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], removals=[], model='en
       df['id2'] = str(id2)
       df['name'] = str(id2_names)
       df['proba_1'] = proj
+      df['projected'] = proj_pts
       df['removals'] = removal
       df['team_stack1'] = ts1
       df['team_stack2'] = ts2
@@ -148,8 +150,8 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], removals=[], model='en
   upload = pd.concat(selections)
   upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
   exposuresdf = (pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)/len(selections)*100).round(1)
-  exposuresdf = exposuresdf.sort_values(by=0, ascending=False)
-  exposuresdf.columns = ['my_ownership']
+  exposuresdf = exposuresdf.join(ticket[['name', 'Team', 'pos']].set_index('name')).drop_duplicates().sort_values(by=0, ascending=False)
+  exposuresdf.columns = ['my_ownership', 'Team', 'Position']
   upload.drop('id2', axis=1).to_csv(path+'ticket_{0}_gpd.csv'.format(model))
   exposuresdf.to_csv(path+'exposures_{0}_gpd.csv'.format(model))
 

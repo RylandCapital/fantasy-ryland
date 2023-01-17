@@ -32,7 +32,7 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 # dates = list(historical_winning_scores.keys())[35:]
 # ids = [historical_winning_scores[i]['slate_id'] for i in dates]
 '''pull historical week'''
-pull_stats(slate_ids=[], strdates=[])          
+pull_stats(slate_ids=[50], strdates=['1/14/23'])          
 
 
 '''Optimize New Training Teams from Raw Data'''
@@ -60,7 +60,7 @@ if os.path.exists(path2) == False:
 #optimize teams using optimizer. this creates teams from the 
 #fantasylabs scrape script. If you want to add an old week to the 
 #dataset you have to use scraper on fantasy labs 
-weeks = master_historical_weeks
+weeks = curr_historical_optimize_weeks
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -80,7 +80,7 @@ if os.path.exists(path) == False:
 
 '''pull all hisotrical teams from the database created from the optimizer'''
 
-ranges = master_historical_weeks
+ranges = curr_historical_optimize_weeks
 
 pool = Pool(processes=len(ranges))
 results = pool.map(buildml, ranges)
@@ -127,7 +127,7 @@ CLEAR OUT THESE FOLDERS BEFORE EACH NEW WEEK
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['1/9/23'], strdates=['1/9/23'])    
+pull_stats_live(slate_ids=['1/17/23'], strdates=['1/17/23'])    
 
 
 '''Optimize Live Theoretical Teams for Gameday'''
@@ -140,7 +140,7 @@ path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd'.forma
 if os.path.exists(path) == False:
   os.mkdir(path+'optimized_teams_by_week_live_gpd\\')
 
-workers = [[i] for i in np.arange(1,30)]
+workers = [[i] for i in np.arange(1,35)]
 
 pool = Pool(processes=len(workers))
 pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
@@ -165,7 +165,7 @@ mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd\\'.f
 onlyfiles = [f for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
     
 
-cores = 30
+cores = 35
 names = [f[:-7] for f in os.listdir(mypath) if os.path.isfile(os.path.join(mypath, f))]
 weeks_available = len(names)
 weeks_core = math.ceil(len(names)/cores)
@@ -193,21 +193,26 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\mlupload_livegpd.csv'.format(user)
 ################################################
 
 
-
-
-
 '''Optimize Your Slate Using ML Results that you downloaded or saved'''
 ################################################
 ################################################
-slate_optimization(
-  slate_date='1.9.23',
+roster = slate_optimization(
+  slate_date='1.17.23',
   model='ensemble',
-  roster_size=180, 
+  roster_size=75, 
+  opt_proj=151.2,
+  pct_from_opt_proj=.85,
   small_slate=False,
-  removals = ['85767-9112', '85767-82041',  '85767-97029'],
+  removals = [],
   optimization_pool=int(50000), 
   neuter=False
   )
+
+
+
+
+
+
 
 
 
@@ -219,7 +224,7 @@ user = os.getlogin()
 path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
 model = 'ensemble'
 slate = '1.10.23'
-historical_id = 46
+historical_id = 48
 #how many top model teams do you want to benchmark
 ids_file = pd.read_csv(path+'model_tracking\\predictions_gpd\\{0}_{1}_ids.csv'.format(slate,model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
 dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
@@ -228,9 +233,24 @@ dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_pr
   week=slate,
   model=model
   )
-top_proba_scoresn.sort_values('act_pts')
-top_proba_scoresn['act_pts'].describe()
+top_proba_scoresn.sort_values('proj_actpts')
+top_proba_scoresn['proj_actpts'].describe()
 
+
+#ways to improve team quality when constructing slate
+#['plyrs_<_0']<0.4798
+#['proj_proj+/-_mean']>0.5
+
+#need to figure out 4 player per team max (test and train pool)
+
+
+mluploadgpd = pd.read_csv('C:\\Users\\{0}\\.fantasy-ryland\\mluploadgpd.csv'.format(user))
+d1 = mluploadgpd.groupby('proj_proj+/-_mean')['ismilly'].sum()
+d2 = mluploadgpd.groupby('proj_proj+/-_mean')['ismilly'].apply(lambda x: len(x))
+pd.concat([d1,d2],axis=1).to_csv(r'C:\Users\rmathews\Downloads\explore.csv')
+
+mluploadgpd.groupby('trends_opp+/-_mean')['ismilly'].apply(lambda x: x)
+mluploadgpd[mluploadgpd['proj_proj+/-_mean']>0.5]
 
 # df = pd.read_csv(r'C:\Users\rmathews\Downloads\mlupload_scored.csv')
 # df = df[df['week']>41]

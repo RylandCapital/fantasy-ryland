@@ -31,7 +31,7 @@ def load_window_fanduel():
     time.sleep(2)
     driver.find_element('xpath', '//*[@id="menu-item-37607"]').click()
     time.sleep(2)
-    driver.find_element('xpath', '/html/body/div[1]/nav/div/div[3]/div[1]/ul/li[8]/ul/li[1]/a').click()
+    driver.find_element('xpath', '/html/body/div[1]/nav/div/div[3]/div[1]/ul/li[7]/ul/li[1]/a').click()
     time.sleep(2)
     driver.find_element('xpath', '/html/body/article/section[1]/div[1]/div[5]/div[1]/a[1]').click()
     time.sleep(2)

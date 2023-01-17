@@ -8,7 +8,7 @@ def analyze_gameday_pool_with_ids(ids=[], historical_id = 46, week='1.10.23', ne
 
     user = os.getlogin()
     path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)  
-    path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\model_tracking\\teams_gdp\\{1}\\'.format(user,week)
+    path2 = 'C:\\Users\\{0}\\.fantasy-ryland\\model_tracking\\teams_gpd\\{1}\\'.format(user,week)
 
     predictions = pd.read_csv(path+'model_tracking\\predictions_gpd\\{0}_{1}.csv'.format(week, model))
     predictions = predictions.sort_values(by='lineup',ascending=False) 
@@ -38,7 +38,7 @@ def analyze_gameday_pool_with_ids(ids=[], historical_id = 46, week='1.10.23', ne
     dflineup = df.groupby(['lineup'])
     df.index = df['lineup']
     team_scores = dflineup['proj_actpts'].sum().sort_values()
-    ticket_scores = dflineup[['proj_actpts']].sum().join(dflineup['proba_1'].first()).sort_values(by='proba_1', ascending=False).loc[ids]
+    ticket_scores = dflineup[['proj_actpts']].sum().join(dflineup[['proj_proj']].sum()).join(dflineup['proba_1'].first()).sort_values(by='proba_1', ascending=False).loc[ids]
     act_describe = team_scores.describe().round(2)
     player_pcts =  (df['index'].value_counts()/(df['index'].value_counts().sum()/9)).round(5)
 

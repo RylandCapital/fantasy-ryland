@@ -8,14 +8,20 @@ from ortools.linear_solver import pywraplp
 
 from fd_gpd._fantasyml import neuterPredictions
 
-from fd_gpd.config import gameday_week
-
 from fd_gpd._predict.player_stats.helpers import fanduel_ticket_optimized
 
 import statistics
 
-'''dont forget to add times to stats file'''
+def salary_arb(slate_date):
+  
+  path = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
+  stats = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
+  stats = stats.set_index('RylandID_master')
 
+  path = os.getcwd() + r"\fd_gpd\_predict\player_stats\dk_files"
+  dk = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
+
+  return dk
 
 def prepare(model='ensemble', neuter=False, slate_date=''):
 
@@ -31,7 +37,7 @@ def prepare(model='ensemble', neuter=False, slate_date=''):
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
 
-  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(gameday_week)) 
+  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
   stats = stats.set_index('RylandID_master')
 
   teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]
@@ -56,6 +62,8 @@ class Player:
     self.proba1 = round(float(opts['proba_1']),4)
     self.rank = int(float(opts['proba_rank']))
     self.lineup = str(opts['lineup'])
+    self.team_proj = round(float(opts['team_proj']),4)
+    self.team_pm = round(float(opts['team_+/-']),4)
     self._1 = str(opts['1'])
     self._2 = str(opts['2'])
     self._3 = str(opts['3'])
@@ -71,7 +79,7 @@ class Player:
     
 
   def __repr__(self):
-    return "[{0},{1},{2}]".format(self.proba1,self.rank,self.lineup)
+    return "[{0},{1},{2},{3}]".format(self.proba1,self.rank,self.lineup,self.team_proj)
                                     
 class Roster:
 
@@ -85,18 +93,52 @@ class Roster:
   def add_player(self, player):
     self.players.append(player)
   
-  def actual(self):
-     return sum(map(lambda x: x.proba1, self.players))
-    
+  def sum_actual(self):
+     return round(sum(map(lambda x: x.proba1, self.players)),2)
+  
   def mean_actual(self):
-     return statistics.mean(map(lambda x: x.proba1, self.players))
+     return round(statistics.mean(map(lambda x: x.proba1, self.players)),4)
+
+  def min_actual(self):
+     return min(map(lambda x: x.proba1, self.players))
+
+  def max_actual(self):
+     return max(map(lambda x: x.proba1, self.players))
+  
+  def min_proj(self):
+     return min(map(lambda x: x.team_proj, self.players))
+  
+  def max_proj(self):
+     return max(map(lambda x: x.team_proj, self.players))
+  
+  def mean_proj(self):
+     return round(statistics.mean(map(lambda x: x.team_proj, self.players)),2)
+
+  def min_pm(self):
+     return min(map(lambda x: x.team_pm, self.players))
+  
+  def max_pm(self):
+     return max(map(lambda x: x.team_pm, self.players))
+  
+  def mean_pm(self):
+     return round(statistics.mean(map(lambda x: x.team_pm, self.players)),2)
+    
+  
 
   def __repr__(self):
-    s = "Actual Proba1: %s" % self.actual()
+    s = "Sum Proba1: %s" % self.sum_actual()
+    s += "\nMin Proba1: %s" % self.min_actual()
+    s += "\nMax Proba1: %s" % self.max_actual()
     s += "\nMean Proba1: %s" % self.mean_actual()
+    s += "\nMin Proj: %s" % self.min_proj()
+    s += "\nMax Proj: %s" % self.max_proj()
+    s += "\nMean Proj: %s" % self.mean_proj()
+    s += "\nMin Plus/Minus: %s" % self.min_pm()
+    s += "\nMax Plus/Minus: %s" % self.max_pm()
+    s += "\nMean Plus/Minus: %s" % self.mean_pm()
     return s
 
-def run(roster_size=150, own_limits=''):
+def run(roster_size=150, own_limits='', opt_proj=151, pct_from_opt_proj=.82):
 
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
@@ -106,7 +148,7 @@ def run(roster_size=150, own_limits=''):
   with open(path+ r'optimize_pred_file_gpd.csv', 'r') as csvfile:
     csvdata = csv.DictReader(csvfile, skipinitialspace=True)
     for row in csvdata:
-      all_players.append(Player(row))
+      all_players.append(Player(row)) #this is adding a TEAM, each row is a TEAM at this level
 
   variables = []
   all_players = np.random.choice(all_players, size=int(len(all_players))
@@ -128,6 +170,10 @@ def run(roster_size=150, own_limits=''):
   size_cap = solver.Constraint(roster_size, roster_size)
   for variable in variables:
     size_cap.SetCoefficient(variable, 1)
+
+  proj_limit = solver.Constraint(int((opt_proj*pct_from_opt_proj*roster_size)), int((10000*roster_size)))
+  for i, player in enumerate(all_players):
+    proj_limit.SetCoefficient(variables[i], player.team_proj)
 
   for position, min_limit, max_limit in own_limits:
     position_cap = solver.Constraint(min_limit, max_limit)
@@ -166,7 +212,7 @@ def run(roster_size=150, own_limits=''):
     
   return roster
 
-def slate_optimization(slate_date='1.9.23', model='ensemble', roster_size=150, removals=[], small_slate=False, optimization_pool=int(50000), neuter=False):
+def slate_optimization(slate_date='1.14.23', model='ensemble', roster_size=150, removals=[], opt_proj=151, pct_from_opt_proj=.82, small_slate=False, optimization_pool=int(50000), neuter=False):
 
   start_time = time.time()
   print('initiating dfs calculations''')
@@ -174,6 +220,8 @@ def slate_optimization(slate_date='1.9.23', model='ensemble', roster_size=150, r
   #prepare ticket optimization file
   prepared = prepare(neuter=neuter, model=model, slate_date=slate_date)
   picks = prepared[0]
+  picks['team_proj'] = picks.groupby(level=0)['actual'].sum()
+  picks['team_+/-'] = picks.groupby(level=0)['proj_proj+/-'].sum()
   stats = prepared[1]
   player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['name'].tolist()))
   player_list[1] = player_list[0].apply(lambda x: x[0])
@@ -198,7 +246,7 @@ def slate_optimization(slate_date='1.9.23', model='ensemble', roster_size=150, r
   teams.sort_values(by='proba_1', ascending=False).iloc[:optimization_pool].to_csv(path+'optimize_pred_file_gpd.csv')
 
   #prepare ownership parameters
-  owndict = stats['proj_proj+/-'].to_dict()
+  owndict = stats['proj_proj+/-'].to_dict() #right now this is just to get all players names 
   own_limits = []
   if small_slate==False:
     for i in owndict.keys():
@@ -210,7 +258,7 @@ def slate_optimization(slate_date='1.9.23', model='ensemble', roster_size=150, r
       own_limits.append(entry)
     
       
-  team = run(roster_size=roster_size, own_limits=own_limits)
+  team = run(roster_size=roster_size, own_limits=own_limits, opt_proj=opt_proj, pct_from_opt_proj=pct_from_opt_proj)
   players = team.players
   ids = [i.lineup for i in players]
   probas = [i.proba1 for i in players]
@@ -219,6 +267,8 @@ def slate_optimization(slate_date='1.9.23', model='ensemble', roster_size=150, r
   fanduel_ticket_optimized(slate_date=slate_date, ids=ids, removals=removals, model=model)
       
   print("--- %s seconds ---" % (time.time() - start_time))
+
+  return team.__repr__
 
 
 

@@ -44,23 +44,19 @@ historical_winning_scores = {
  '12/15/22': {'day':'thursday', 'slate_id':43, 'winning_score':232.50}, 
  '12/17/22': {'day':'saturday', 'slate_id':44, 'winning_score':222.70},
  '12/22/22': {'day':'thursday', 'slate_id':45, 'winning_score':211.10},
+ '1/5/23': {'day':'thursday', 'slate_id':46, 'winning_score':245.60},
+ '1/7/23': {'day':'saturday', 'slate_id':47, 'winning_score':238.30},
+ '1/10/23': {'day':'tuesday', 'slate_id':48, 'winning_score':241.00},
+ '1/12/23': {'day':'thursday', 'slate_id':49, 'winning_score':212.25},
+ '1/14/23': {'day':'saturday', 'slate_id':50, 'winning_score':217.70}
 }
 
 master_historical_weeks = [
-          ['1/6/22','1/8/22'],['1/13/22','1/15/22'],['1/20/22','1/22/22'],
-          ['1/27/22','1/29/22'],['2/10/22','2/12/22'],['2/17/22','2/19/22'],
-          ['2/24/22','2/26/22'],['3/3/22','3/5/22'],['3/10/22','3/12/22'],
-
-          ['3/17/22','3/19/22'],['3/24/22','3/26/22'],['3/31/22','4/2/22'],
-          ['4/9/22','4/14/22'],['4/16/22'],['10/20/22'],
-          ['10/22/22','10/27/22'],['10/29/22'],['11/10/22'],
-
-          ['11/12/22','11/17/22'],['11/19/22','12/1/22'],['12/3/22','12/8/22'],
-          ['12/10/22','12/15/22'],['12/17/22','12/22/22']
+          
         ]
 
 curr_historical_optimize_weeks = [
-    ['1/6/22']
+    ['1/14/23'],
     ]
 
 mlweeks = [1,2] 
@@ -68,5 +64,5 @@ mlweeks = [1,2]
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '1.9.23'
+gameday_week = '1.17.23'
 

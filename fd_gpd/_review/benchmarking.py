@@ -184,6 +184,7 @@ def fantasyze_bench(hist_week, live_date='1.10.22', number_entries=150, neuter=F
               model=model,
               roster_size=number_entries, 
               small_slate=False,
+              removals = [],
               optimization_pool=int(50000), 
               neuter=neuter
               )
