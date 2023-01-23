@@ -6,10 +6,16 @@ import os
 
 from fd_gpd.config import gameday_week
 
-'''1) pull all hisotrical teams from the database created from the optimizer'''
+
+
 user = os.getlogin()
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd\\'.format(user)
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\optmized_team_pools\\{1}\\'.format(user,gameday_week)
 mypath2 = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
+
+path_check = 'C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\ml_predictions\\{1}\\'.format(user,gameday_week)
+if os.path.exists(path_check) == False:
+        os.mkdir(path_check)
+
 
 def buildml_live(strdates):
 
@@ -400,8 +406,7 @@ def buildml_live(strdates):
             analysis['id'] = analysis['week'].astype(str) + \
             analysis['lineup'].astype(str) 
 
-
-            analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_live_gpd\\{1}.csv.gz'.format(user, datee),
+            analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\ml_predictions\\{1}\\{2}.csv.gz'.format(user,gameday_week,datee),
                                compression='gzip', index=False)
         except Exception as e:
             print('Caught exception in worker thread (x = {0}):'.format(datee))

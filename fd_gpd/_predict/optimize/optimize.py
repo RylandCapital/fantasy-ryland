@@ -6,7 +6,7 @@ import csv
 
 from ortools.linear_solver import pywraplp
 
-
+from fd_gpd.config import  gameday_week
 
 
 class Player:
@@ -192,18 +192,12 @@ def fantasyze_live(ws, week, teamstacks_only=True):
             masterf = pd.concat(dfs)
             masterf = masterf.set_index('name')
 
-            # mypath = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
-            # stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(week)) 
-            # stats = stats.set_index('RylandID_master')
-            
-            # masterf = masterf.join(stats, how='outer', lsuffix='_ot')
-
-            # print("--- %s seconds ---" % (time.time() - start_time))
-
             user = os.getlogin()
-            # Specify path
-            path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd\\'.format(user)
+            path_check = 'C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\optmized_team_pools\\{1}\\'.format(user,gameday_week)
+            if os.path.exists(path_check) == False:
+              os.mkdir(path_check)
 
+            path = 'C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\optmized_team_pools\\{1}\\'.format(user,gameday_week)
             masterf.to_csv(path+'{0}_{1}.csv.gz'.format(week,w),compression='gzip', index=True)
             
             # print("--- %s seconds ---" % (time.time() - start_time))
@@ -211,18 +205,12 @@ def fantasyze_live(ws, week, teamstacks_only=True):
     masterf = pd.concat(dfs)
     masterf = masterf.set_index('name')
 
-    # mypath = os.getcwd() + r"\fd_mainline\_predict\player_stats\by_week"
-    # stats = pd.read_csv(mypath + "\\" + '{0}.csv'.format(week)) 
-    # stats = stats.set_index('RylandID_master')
-    
-    # masterf = masterf.join(stats, how='outer', lsuffix='_ot')
-
-    print("--- %s seconds ---" % (time.time() - start_time))
-
     user = os.getlogin()
-    # Specify path
-    path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_live_gpd\\'.format(user)
+    path_check = 'C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\optmized_team_pools\\{1}\\'.format(user,gameday_week)
+    if os.path.exists(path_check) == False:
+      os.mkdir(path_check)
 
+    path = 'C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\optmized_team_pools\\{1}\\'.format(user,gameday_week)
     masterf.to_csv(path+'{0}_{1}.csv.gz'.format(week,w),compression='gzip', index=True)
     
     print("--- %s seconds ---" % (time.time() - start_time))

@@ -12,6 +12,7 @@ from fd_gpd._predict.player_stats.helpers import fanduel_ticket_optimized
 
 import statistics
 
+#not ready yet, work on this.
 def salary_arb(slate_date):
   
   path = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
@@ -23,6 +24,10 @@ def salary_arb(slate_date):
 
   return dk
 
+#creates a master file with all information needed 
+#in order ot properly optimize a selected amount of teams
+#i.e. create an upload ticket for a given contest
+#using the machine learning models predicted probas.
 def prepare(model='ensemble', neuter=False, slate_date=''):
 
   user = os.getlogin()
@@ -52,11 +57,14 @@ def prepare(model='ensemble', neuter=False, slate_date=''):
 
   picks = predictions[['lineup', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
   picks['proba_rank'] = picks['proba_1'].rank(method='max', ascending=False)/9
-
+  picks['check4max'] = picks.groupby(level=0)['team_team'].value_counts().max(level=0)
+  picks = picks[picks['check4max']<4]
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
   return picks, stats
 
+
+#customized NHL ticket optimizer 
 class Player:
   def __init__(self, opts):
     self.proba1 = round(float(opts['proba_1']),4)

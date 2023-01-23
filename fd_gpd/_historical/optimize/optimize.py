@@ -354,7 +354,7 @@ def fantasyze(strdates):
 
     user = os.getlogin()
     # Specify path
-    path = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_gpd\\'.format(user)
+    path = 'C:\\Users\\{0}\\.fantasy-ryland\\_historical\\gpd\\optimized_team_pools\\'.format(user)
 
     masterf.to_csv(path+'{0}.csv.gz'.format(w),compression='gzip', index=True)
     

@@ -10,7 +10,7 @@ from fd_gpd.config import historical_winning_scores
 
 '''1) pull all hisotrical teams from the database created from the optimizer'''
 user = os.getlogin()
-mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\optimized_teams_by_week_gpd\\'.format(user)
+mypath = 'C:\\Users\\{0}\\.fantasy-ryland\\_historical\\gpd\\optimized_team_pools\\'.format(user)
 
     
 def buildml(strdates):
@@ -401,7 +401,7 @@ def buildml(strdates):
 
             analysis['ismilly'] = np.where(analysis['actual_sum']>(historical_winning_scores[str(datee)]['winning_score']*.99), 1,0)
 
-            analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\optimized_ml_by_week_gpd\\{1}.csv.gz'.format(user, onlyf),
+            analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_historical\\gpd\\ml_datasets\\{1}.csv.gz'.format(user, onlyf),
                                compression='gzip', index=False)
         except Exception as e:
             print('Caught exception in worker thread (x = {0}):'.format(onlyf))

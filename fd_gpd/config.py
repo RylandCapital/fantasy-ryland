@@ -1,5 +1,25 @@
 
-#2022 season started october 12
+import os
+
+
+
+#set up environment filepaths for gpd
+user = os.getlogin()
+path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
+if os.path.exists(path) == False:
+  os.mkdir(path)
+  os.mkdir(path+'_historical\\')
+  os.mkdir(path+'_historical\\gpd\\')
+  os.mkdir(path+'_historical\\gpd\\optimized_team_pools')
+  os.mkdir(path+'_historical\\gpd\\ml_datasets')
+  os.mkdir(path+'_predict\\')
+  os.mkdir(path+'_predict\\gpd\\')
+  os.mkdir(path+'_predict\\gpd\\optmized_team_pools\\')
+  os.mkdir(path+'_predict\\gpd\\ml_predictions\\')
+  os.mkdir(path+'_predict\\gpd\\uploaded_gameday_tickets\\')
+  os.mkdir(path+'_backtesting\\')
+
+cores = 35
 
 historical_winning_scores = {  
  '1/6/22': {'day':'thursday', 'slate_id':0, 'winning_score':273.90},
@@ -48,7 +68,10 @@ historical_winning_scores = {
  '1/7/23': {'day':'saturday', 'slate_id':47, 'winning_score':238.30},
  '1/10/23': {'day':'tuesday', 'slate_id':48, 'winning_score':241.00},
  '1/12/23': {'day':'thursday', 'slate_id':49, 'winning_score':212.25},
- '1/14/23': {'day':'saturday', 'slate_id':50, 'winning_score':217.70}
+ '1/14/23': {'day':'saturday', 'slate_id':50, 'winning_score':217.70},
+ '1/17/23': {'day':'tuesday', 'slate_id':51, 'winning_score':207.10},
+ '1/19/23': {'day':'thursday', 'slate_id':52, 'winning_score':227.00}
+ #slates to be added: 1/17/23, 1/19/23
 }
 
 master_historical_weeks = [
@@ -56,7 +79,7 @@ master_historical_weeks = [
         ]
 
 curr_historical_optimize_weeks = [
-    ['1/14/23'],
+    ['1/17/23'],['1/19/23']
     ]
 
 mlweeks = [1,2] 
@@ -64,5 +87,5 @@ mlweeks = [1,2]
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '1.17.23'
+gameday_week = '1.18.23'
 

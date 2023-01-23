@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 
 
 
-
 load_dotenv()
 #fantasy labs username
 FLUSER = os.getenv("FLUSER")
@@ -87,8 +86,6 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], removals=[], model='en
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
   ticket = picks.loc[ids]
-  #must make this path for someone else to use!
-  ticket.to_csv(path+'model_tracking//predictions_gpd//{0}_{1}_ids.csv'.format(slate_date, model))
   all_stacks = ticket['team_stack1'].unique().tolist() + \
      ticket['team_stack2'].unique().tolist() + \
       ticket['team_stack3'].unique().tolist() + \
@@ -148,7 +145,11 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], removals=[], model='en
         
 
   upload = pd.concat(selections)
+  #remove duplicate teams (id2)
   upload = upload.sort_values(by='proba_1', ascending=False).drop_duplicates('id2',keep='first')
+  #download final ticket ids for backtesting historically 
+  #must make this path for someone else to use!
+  upload.drop('id2', axis=1).to_csv(path+'model_tracking//gameday_tickets_gpd//{0}_{1}_ids.csv'.format(slate_date, model))
   exposuresdf = (pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)/len(selections)*100).round(1)
   exposuresdf = exposuresdf.join(ticket[['name', 'Team', 'pos']].set_index('name')).drop_duplicates().sort_values(by=0, ascending=False)
   exposuresdf.columns = ['my_ownership', 'Team', 'Position']
