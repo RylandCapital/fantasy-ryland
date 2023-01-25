@@ -20,6 +20,7 @@ if os.path.exists(path) == False:
   os.mkdir(path+'_backtesting\\')
 
 cores = 35
+gameday_week = '1.24.23'
 
 historical_winning_scores = {  
  '1/6/22': {'day':'thursday', 'slate_id':0, 'winning_score':273.90},
@@ -70,8 +71,10 @@ historical_winning_scores = {
  '1/12/23': {'day':'thursday', 'slate_id':49, 'winning_score':212.25},
  '1/14/23': {'day':'saturday', 'slate_id':50, 'winning_score':217.70},
  '1/17/23': {'day':'tuesday', 'slate_id':51, 'winning_score':207.10},
- '1/19/23': {'day':'thursday', 'slate_id':52, 'winning_score':227.00}
- #slates to be added: 1/17/23, 1/19/23
+ '1/19/23': {'day':'thursday', 'slate_id':52, 'winning_score':227.00},
+ '1/21/23': {'day':'saturday', 'slate_id':53, 'winning_score':193.00},
+ '1/24/23': {'day':'tuesday', 'slate_id':54, 'winning_score':243.00},
+ #slates to be added: 1/21/23 1/24/23
 }
 
 master_historical_weeks = [
@@ -79,7 +82,7 @@ master_historical_weeks = [
         ]
 
 curr_historical_optimize_weeks = [
-    ['1/17/23'],['1/19/23']
+    ['1/21/23'],['1/24/23']
     ]
 
 mlweeks = [1,2] 
@@ -87,5 +90,5 @@ mlweeks = [1,2]
 #if shift == Trus, FantasyLabs scraper will use shifted columns to ensure accuracy
 shift = False
 
-gameday_week = '1.18.23'
+
 

@@ -75,7 +75,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['1/18/23'], strdates=['1/18/23'])    
+pull_stats_live(slate_ids=['1/24/23'], strdates=['1/24/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -107,8 +107,11 @@ for i in file.columns:
     file[i] = file[i].round(4)
   except:
     pass
-file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\dataiku_upload.csv'.format(user))
+file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\ml_predictions\\{1}\\dataiku_upload.csv'.format(user,gameday_week))
+#del old individual files
+[os.remove(mypath + "\\" + i) for i in onlyfiles]
 ################################################
+
 
 
 #%%
@@ -116,9 +119,11 @@ file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\dataiku_upload.csv'
 ################################################
 ################################################
 '''
-CONSTRUCT OPTIMAL USING MODEL PROBAS TICKET TO UPLOAD
+CONSTRUCT OPTIMAL TICKET TO UPLOAD USING MODEL PROBAS
 
-chose # of teams (roster_size)
+Based on your contest set:
+
+  chose # of teams (roster_size)
 ban players, 
 set offered parameters 
 
@@ -127,13 +132,14 @@ set offered parameters
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='1.18.23',
+  slate_date='1.24.23',
   model='ensemble',
-  roster_size=250, 
-  opt_proj=130.8,
-  pct_from_opt_proj=.80,
+  roster_size=10, 
+  opt_proj=139.5,
+  pct_from_opt_proj=.90,
   small_slate=False,
-  removals = ['86125-54565', '86125-103523', '86125-58891', '86125-97152'],
+  removals = ['86352-103523', '86352-149734', '86352-42643', '86352-66611',
+  '86352-58332', '86352-43041', '86352-73972'],
   optimization_pool=int(50000), 
   neuter=False
   )
