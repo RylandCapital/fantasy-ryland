@@ -34,7 +34,7 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[52], strdates=['1/19/23'])          
+pull_stats(slate_ids=[53,54], strdates=['1/21/23','1/24/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -75,7 +75,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['1/24/23'], strdates=['1/24/23'])    
+pull_stats_live(slate_ids=['1/26/23'], strdates=['1/26/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -124,22 +124,21 @@ CONSTRUCT OPTIMAL TICKET TO UPLOAD USING MODEL PROBAS
 Based on your contest set:
 
   chose # of teams (roster_size)
-ban players, 
-set offered parameters 
+  ban players by fanduel ID, 
+  set offered parameters (pct away from optimal projected points, max_pct_own)
 
 ''' 
 ################################################
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='1.24.23',
+  slate_date='1.26.23',
   model='ensemble',
-  roster_size=10, 
-  opt_proj=139.5,
-  pct_from_opt_proj=.90,
-  small_slate=False,
-  removals = ['86352-103523', '86352-149734', '86352-42643', '86352-66611',
-  '86352-58332', '86352-43041', '86352-73972'],
+  roster_size=114, 
+  pct_from_opt_proj=.85,
+  max_pct_own=.382,
+  removals = ['86412-11365', '86412-41392', '86412-54521',
+  '86412-15400', '86412-82094','86412-15339'],
   optimization_pool=int(50000), 
   neuter=False
   )

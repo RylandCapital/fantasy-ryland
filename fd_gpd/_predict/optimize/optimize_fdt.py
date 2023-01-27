@@ -8,6 +8,7 @@ from ortools.linear_solver import pywraplp
 
 from fd_gpd._fantasyml import neuterPredictions
 from fd_gpd._predict.player_stats.helpers import fanduel_ticket_optimized
+from fd_gpd._predict.optimize.optimize_proj import fantasyze_proj
 
 import statistics
 
@@ -45,7 +46,10 @@ def prepare(model='ensemble', neuter=False, slate_date='', removals=[]):
   stats = stats.set_index('RylandID_master')
 
   teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]
-  teams = teams.set_index('name').join(stats, how='outer', lsuffix='_ot').reset_index()
+  teams = teams.set_index('name').join(stats, how='inner', lsuffix='_ot').reset_index()
+  nine_confirm = teams.groupby('lineup').apply(lambda x: len(x))
+  teams = teams.set_index('lineup').loc[nine_confirm[nine_confirm==9].index.tolist()].reset_index()
+  
 
   removedf = pd.DataFrame(teams.groupby('lineup').apply(lambda x: sorted(x['Id'].tolist())))
   removedf['isremove'] = removedf[0].apply(lambda x: len(list(set(x).intersection(set(removals)))))
@@ -191,7 +195,9 @@ def run(roster_size=150, own_limits='', opt_proj=151, pct_from_opt_proj=.82, sla
   for position, min_limit, max_limit in own_limits:
     position_cap = solver.Constraint(min_limit, max_limit)
 
+    #variables[i] (i is integer) returns lineup_46259_28
     for i, player in enumerate(all_players):
+      #position = 
       if position == player._1:
         position_cap.SetCoefficient(variables[i], 1)
       if position == player._2:
@@ -225,7 +231,7 @@ def run(roster_size=150, own_limits='', opt_proj=151, pct_from_opt_proj=.82, sla
     
   return roster
 
-def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, removals=[], opt_proj=151, pct_from_opt_proj=.82, small_slate=False, optimization_pool=int(50000), neuter=False):
+def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, removals=[], pct_from_opt_proj=.82, max_pct_own=.50, optimization_pool=int(50000), neuter=False):
 
   start_time = time.time()
   print('initiating dfs calculations''')
@@ -236,7 +242,7 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
   picks['team_proj'] = picks.groupby(level=0)['actual'].sum()
   picks['team_+/-'] = picks.groupby(level=0)['proj_proj+/-'].sum()
   stats = prepared[1]
-  player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['name'].tolist()))
+  player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['RylandID'].tolist()))
   player_list[1] = player_list[0].apply(lambda x: x[0])
   player_list[2] = player_list[0].apply(lambda x: x[1])
   player_list[3] = player_list[0].apply(lambda x: x[2])
@@ -261,17 +267,12 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
   #prepare ownership parameters
   owndict = stats['proj_proj+/-'].to_dict() #right now this is just to get all players names 
   own_limits = []
-  if small_slate==False:
-    for i in owndict.keys():
-      entry = ["{0}".format(i), int(-1), int(roster_size/2)]
-      own_limits.append(entry)
-  if small_slate==True:
-    for i in owndict.keys():
-      entry = ["{0}".format(i), int(-1), int(roster_size/2)]
-      own_limits.append(entry)
-    
-      
-  team = run(roster_size=roster_size, own_limits=own_limits, opt_proj=opt_proj, pct_from_opt_proj=pct_from_opt_proj, slate_date=slate_date)
+  for i in owndict.keys():
+    entry = ["{0}".format(i), int(-1), int(roster_size*max_pct_own)]
+    own_limits.append(entry)
+
+  optimaldf = fantasyze_proj(slate_date=slate_date)   
+  team = run(roster_size=roster_size, own_limits=own_limits, pct_from_opt_proj=pct_from_opt_proj, opt_proj=optimaldf['actual'].sum(), slate_date=slate_date)
   players = team.players
   ids = [i.lineup for i in players]
   probas = [i.proba1 for i in players]

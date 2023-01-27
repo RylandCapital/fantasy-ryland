@@ -77,7 +77,9 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   stats = stats.set_index('RylandID_master')
 
   teams = teams[teams['lineup'].isin(preds['lineup'].unique())]
-  teams = teams.set_index('name').join(stats, how='outer', lsuffix='_ot').reset_index()
+  teams = teams.set_index('name').join(stats, how='inner', lsuffix='_ot').reset_index()
+  nine_confirm = teams.groupby('lineup').apply(lambda x: len(x))
+  teams = teams.set_index('lineup').loc[nine_confirm[nine_confirm==9].index.tolist()].reset_index()
 
   picks = preds[['lineup', 'proba_1', 
    'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
