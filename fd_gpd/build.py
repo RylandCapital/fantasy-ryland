@@ -34,7 +34,7 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[53,54], strdates=['1/21/23','1/24/23'])          
+pull_stats(slate_ids=[55,56,57], strdates=['1/26/23','2/7/23','2/9/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -75,7 +75,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['1/28/23'], strdates=['1/28/23'])    
+pull_stats_live(slate_ids=['2/17/23'], strdates=['2/17/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -132,23 +132,15 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='1.28.23',
+  slate_date='2.17.23',
   model='ensemble',
   roster_size=150, 
-  pct_from_opt_proj=.80,
-  max_pct_own= .382,
-  removals = ['86475-113279', '86475-149734', '86475-82122'],
+  pct_from_opt_proj=0,
+  max_pct_own= .34,
+  removals = [],
   optimization_pool=int(50000), 
   neuter=False
   )
-
-
-
-
-
-
-
-
 
 
 
