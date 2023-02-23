@@ -20,7 +20,7 @@ if os.path.exists(path) == False:
   os.mkdir(path+'_backtesting\\')
 
 cores = 40
-gameday_week = '2.18.23'
+gameday_week = '2.23.23'
 
 historical_winning_scores = {  
  '1/6/22': {'day':'thursday', 'slate_id':0, 'winning_score':273.90},
@@ -79,6 +79,7 @@ historical_winning_scores = {
  '2/9/23': {'day':'saturday', 'slate_id':57, 'winning_score':231.00},
  '2/17/23': {'day':'thursday', 'slate_id':58, 'winning_score':237.00},
  '2/19/23': {'day':'saturday', 'slate_id':59, 'winning_score':255.00},
+ '2/21/23': {'day':'tuesday', 'slate_id':60, 'winning_score':251.00},
 }
 
 
@@ -87,7 +88,7 @@ master_historical_weeks = [
         ]
 
 curr_historical_optimize_weeks = [
-   ['2/17/23'],['2/19/23']
+   ['2/17/22']
     ]
 
 mlweeks = [1,2] 

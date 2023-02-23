@@ -5,6 +5,7 @@ import traceback
 import os
 
 from fd_gpd.config import gameday_week
+from fd_gpd._predict.optimize.optimize_proj import fantasyze_proj
 
 
 
@@ -27,6 +28,10 @@ def buildml_live(strdates):
             start_time = time.time()
             
             print('initiating dfs calculations''')   
+
+            opt_team = fantasyze_proj(slate_date=datee)
+            opt_team_score = opt_team['actual'].sum()/9
+            opt_team_std = opt_team['actual'].std()
             
             #read in compressed file
             file = pd.read_csv(mypath + str(datee) + '.csv.gz',
@@ -399,7 +404,13 @@ def buildml_live(strdates):
                         'team_stack4',
                         
                         ]
+            
+            analysis['proj_from_opt_proj'] = (opt_team_score - analysis['proj_proj_mean'])
+            analysis['proj_from_opt_per_games'] = (analysis['proj_from_opt_proj']/int(len(file['team_team'].unique())/2))
+            analysis['proj_from_opt_proj'] = analysis['proj_from_opt_proj'].rank(pct=True)
+
             analysis.loc[:,'proj_proj_mean':'max_ptssal'] = analysis.loc[:,'proj_proj_mean':'max_ptssal'].rank(pct=True)
+            analysis['opt_team_projpts_std'] = opt_team_std
             analysis['number_teams_on_slate'] = int(len(file['team_team'].unique())/2) 
             analysis = analysis.reset_index()
             analysis['week'] = datee

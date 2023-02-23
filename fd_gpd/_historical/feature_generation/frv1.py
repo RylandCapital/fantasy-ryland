@@ -5,6 +5,8 @@ import traceback
 import os
 
 from fd_gpd.config import historical_winning_scores
+#new for opt proj
+from fd_gpd._historical.optimize.optimize_proj import fantasyze_proj_historical
 
 
 
@@ -25,6 +27,11 @@ def buildml(strdates):
             start_time = time.time()
             
             print('initiating dfs calculations''')   
+
+            #new for optimized proj features
+            opt_team = fantasyze_proj_historical(slate_number=onlyf)
+            opt_team_score = opt_team['actual'].sum()/9
+            opt_team_std = opt_team['actual'].std()
             
             #read in compressed file
             file = pd.read_csv(mypath + str(onlyf) + '.csv.gz',
@@ -391,7 +398,14 @@ def buildml(strdates):
                         'team_stack4',
                         
                         ]
+            
+
+            analysis['proj_from_opt_proj'] = (opt_team_score - analysis['proj_proj_mean'])
+            analysis['proj_from_opt_per_games'] = (analysis['proj_from_opt_proj']/int(len(file['team_team'].unique())/2))
+            analysis['proj_from_opt_proj'] = analysis['proj_from_opt_proj'].rank(pct=True)
+
             analysis.loc[:,'proj_proj_mean':'max_ptssal'] = analysis.loc[:,'proj_proj_mean':'max_ptssal'].rank(pct=True)
+            analysis['opt_team_projpts_std'] = opt_team_std
             analysis['number_teams_on_slate'] = int(len(file['team_team'].unique())/2)
             analysis['actual_sum'] = lineups['actual'].sum() 
             analysis = analysis.reset_index()
@@ -405,6 +419,12 @@ def buildml(strdates):
                                compression='gzip', index=False)
         except Exception as e:
             print('Caught exception in worker thread (x = {0}):'.format(onlyf))
+            print(onlyf)
+            print(onlyf)
+            print(onlyf)
+            print(onlyf)
+            print(onlyf)
+            print(onlyf)
         
             # This prints the type, value, and stack trace of the
             # current exception being handled.

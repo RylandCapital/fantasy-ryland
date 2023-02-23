@@ -1,0 +1,871 @@
+entry_id,contest_id,contest_name,C,C,W,W,D,D,UTIL,UTIL,G,"","Instructions"
+"3072953383","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","","1) Edit your lineup by inserting any player from this list into their appropriate position columns"
+"3072953386","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","","2) You can paste either the Player ID + Name OR ID from their respective columns"
+"3072953389","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","","3) Any information to the right of the last position column will be ignored in the upload. Don't leave blank rows. Any entries after a blank row will not be edited"
+"3072953391","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","","4) You can not use this form to create new entries"
+"3072953393","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","",""
+"3072953395","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",Player ID + Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Played,Salary,Game,Team,Opponent,Injury Indicator,Injury Details,Tier,,,Roster Position
+"3072953396","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-64102:Connor McDavid,87247-64102,C,Connor,Connor McDavid,McDavid,25.9293107657597,58,10500,EDM@PIT,EDM,PIT,,,,,,C/UTIL
+"3072953399","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-59218:David Pastrnak,87247-59218,W,David,David Pastrnak,Pastrnak,22.558929443359375,56,10200,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"3072953401","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-111493:Jack Hughes,87247-111493,C,Jack,Jack Hughes,Hughes,21.23396272479363,53,10100,LA@NJ,NJ,LA,,,,,,C/UTIL
+"3072953403","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70924:Tage Thompson,87247-70924,C,Tage,Tage Thompson,Thompson,20.20909090909091,55,10000,BUF@TB,BUF,TB,,,,,,C/UTIL
+"3072953404","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-58331:Leon Draisaitl,87247-58331,C,Leon,Leon Draisaitl,Draisaitl,20.78214372907366,56,9900,EDM@PIT,EDM,PIT,,,,,,C/UTIL
+"3072953406","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-84409:Elias Pettersson,87247-84409,C,Elias,Elias Pettersson,Pettersson,19.805455433238638,55,9700,VAN@STL,VAN,STL,,,,,,C/UTIL
+"3072953409","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-43214:Nikita Kucherov,87247-43214,W,Nikita,Nikita Kucherov,Kucherov,19.166072300502233,56,9600,BUF@TB,TB,BUF,,,,,,W/UTIL
+"3072953414","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-135875:Kirill Kaprizov,87247-135875,W,Kirill,Kirill Kaprizov,Kaprizov,18.635086862664473,57,8900,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"3072953416","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-54809:Linus Ullmark,87247-54809,G,Linus,Linus Ullmark,Ullmark,24.02162129170186,37,8900,BOS@SEA,BOS,SEA,,,,,,G
+"3072953417","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-120415:Jeremy Swayman,87247-120415,G,Jeremy,Jeremy Swayman,Swayman,15.87199951171875,25,8900,BOS@SEA,BOS,SEA,,,,,,G
+"3072953419","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12262:Roman Josi,87247-12262,D,Roman,Roman Josi,Josi,18.930908203125,55,8800,NSH@SJ,NSH,SJ,,,,,,D/UTIL
+"3072953421","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12609:Zach Hyman,87247-12609,W,Zach,Zach Hyman,Hyman,17.99473598547149,57,8700,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"3072953423","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8553:Brian Elliott,87247-8553,G,Brian,Brian Elliott,Elliott,16.350000381469727,16,8700,BUF@TB,TB,BUF,,,,,,G
+"3072953428","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-54565:Andrei Vasilevskiy,87247-54565,G,Andrei,Andrei Vasilevskiy,Vasilevskiy,20.223255246184593,43,8700,BUF@TB,TB,BUF,,,,,,G
+"3072953431","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-14565:Mika Zibanejad,87247-14565,C,Mika,Mika Zibanejad,Zibanejad,17.24561403508772,57,8600,NYR@DET,NYR,DET,,,,,,C/UTIL
+"3072953432","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-74064:Casey DeSmith,87247-74064,G,Casey,Casey DeSmith,DeSmith,13.759999593098959,30,8600,EDM@PIT,PIT,EDM,,,,,,G
+"3072953434","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66690:Timo Meier,87247-66690,W,Timo,Timo Meier,Meier,17.51929781729715,57,8600,NSH@SJ,SJ,NSH,DTD,Upper body,,,,W/UTIL
+"3072953436","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-42868:Tristan Jarry,87247-42868,G,Tristan,Tristan Jarry,Jarry,19.440000406901042,30,8600,EDM@PIT,PIT,EDM,,,,,,G
+"3072953437","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8551:Erik Karlsson,87247-8551,D,Erik,Erik Karlsson,Karlsson,17.653448696794182,58,8500,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"3072953439","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8594:Sidney Crosby,87247-8594,C,Sidney,Sidney Crosby,Crosby,17.10892813546317,56,8500,EDM@PIT,PIT,EDM,,,,,,C/UTIL
+"3072953442","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-84395:Kevin Lankinen,87247-84395,G,Kevin,Kevin Lankinen,Lankinen,15.300000190734863,16,8500,NSH@SJ,NSH,SJ,,,,,,G
+"3072953443","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8718:Alex Ovechkin,87247-8718,W,Alex,Alex Ovechkin,Ovechkin,17.766667118778937,54,8500,ANH@WSH,WSH,ANH,O,Personal,,,,W/UTIL
+"3072953445","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66411:Juuse Saros,87247-66411,G,Juuse,Juuse Saros,Saros,19.37142799014137,42,8500,NSH@SJ,NSH,SJ,,,,,,G
+"3072953448","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8612:Marc-Andre Fleury,87247-8612,G,Marc-Andre,Marc-Andre Fleury,Fleury,14.742857142857142,35,8400,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953451","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8655:Steven Stamkos,87247-8655,C,Steven,Steven Stamkos,Stamkos,16.848214285714285,56,8400,BUF@TB,TB,BUF,,,,,,C/UTIL
+"3072953453","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-82752:Filip Gustavsson,87247-82752,G,Filip,Filip Gustavsson,Gustavsson,18.06896551724138,29,8400,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953455","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-85132:Rasmus Dahlin,87247-85132,D,Rasmus,Rasmus Dahlin,Dahlin,17.603703251591437,54,8400,BUF@TB,BUF,TB,,,,,,D/UTIL
+"3072953457","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66744:MacKenzie Blackwood,87247-66744,G,MacKenzie,MacKenzie Blackwood,Blackwood,12.2,20,8300,LA@NJ,NJ,LA,DTD,Lower body,,,,G
+"3072953459","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-58926:Brayden Point,87247-58926,C,Brayden,Brayden Point,Point,16.735714503696986,56,8300,BUF@TB,TB,BUF,,,,,,C/UTIL
+"3072953460","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-58988:Vitek Vanecek,87247-58988,G,Vitek,Vitek Vanecek,Vanecek,17.68421052631579,38,8300,LA@NJ,NJ,LA,,,,,,G
+"3072953462","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-14563:Ryan Nugent-Hopkins,87247-14563,W,Ryan,Ryan Nugent-Hopkins,Nugent-Hopkins,16.355171992860992,58,8200,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"3072953463","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8453:Jaroslav Halak,87247-8453,G,Jaroslav,Jaroslav Halak,Halak,13.431578786749588,19,8200,NYR@DET,NYR,DET,,,,,,G
+"3072953466","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-104015:Igor Shesterkin,87247-104015,G,Igor,Igor Shesterkin,Shesterkin,17.8046505950218,43,8200,NYR@DET,NYR,DET,,,,,,G
+"3072953468","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-73940:Jordan Kyrou,87247-73940,W,Jordan,Jordan Kyrou,Kyrou,16.396296748408563,54,8100,VAN@STL,STL,VAN,,,,,,W/UTIL
+"3072953470","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8412:Jonathan Quick,87247-8412,G,Jonathan,Jonathan Quick,Quick,9.522581038936492,31,8100,LA@NJ,LA,NJ,,,,,,G
+"3072953472","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-54028:Pheonix Copley,87247-54028,G,Pheonix,Pheonix Copley,Copley,17.633333841959637,24,8100,LA@NJ,LA,NJ,,,,,,G
+"3072953475","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70168:Alex Tuch,87247-70168,W,Alex,Alex Tuch,Tuch,16.54909113103693,55,8000,BUF@TB,BUF,TB,,,,,,W/UTIL
+"3072953477","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-14466:Darcy Kuemper,87247-14466,G,Darcy,Darcy Kuemper,Kuemper,16.214633848608994,41,7900,ANH@WSH,WSH,ANH,,,,,,G
+"3072953480","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-68647:Charlie Lindgren,87247-68647,G,Charlie,Charlie Lindgren,Lindgren,14.246153611403246,26,7900,ANH@WSH,WSH,ANH,,,,,,G
+"3072953482","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-82115:Stuart Skinner,87247-82115,G,Stuart,Stuart Skinner,Skinner,16.16470516429228,34,7800,EDM@PIT,EDM,PIT,,,,,,G
+"3072953484","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12619:Jack Campbell,87247-12619,G,Jack,Jack Campbell,Campbell,13.125,32,7800,EDM@PIT,EDM,PIT,,,,,,G
+"3072953486","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-64100:Jack Eichel,87247-64100,C,Jack,Jack Eichel,Eichel,15.993182095614346,44,7800,CGY@VGK,VGK,CGY,,,,,,C/UTIL
+"3072953488","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15356:Dougie Hamilton,87247-15356,D,Dougie,Dougie Hamilton,Hamilton,16.49122807017544,57,7800,LA@NJ,NJ,LA,,,,,,D/UTIL
+"3072953490","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8292:Craig Anderson,87247-8292,G,Craig,Craig Anderson,Anderson,15.345454822887074,22,7700,BUF@TB,BUF,TB,,,,,,G
+"3072953492","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-97029:Ukko-Pekka Luukkonen,87247-97029,G,Ukko-Pekka,Ukko-Pekka Luukkonen,Luukkonen,16.266666412353516,24,7700,BUF@TB,BUF,TB,,,,,,G
+"3072953494","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-62788:Dylan Larkin,87247-62788,C,Dylan,Dylan Larkin,Larkin,15.645454545454545,55,7700,NYR@DET,DET,NYR,,,,,,C/UTIL
+"3072953496","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-9015:John Carlson,87247-9015,D,John,John Carlson,Carlson,15.454838906565021,31,7600,ANH@WSH,WSH,ANH,IR,Face,,,,D/UTIL
+"3072953498","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70509:Ville Husso,87247-70509,G,Ville,Ville Husso,Husso,16.48372064634811,43,7600,NYR@DET,DET,NYR,,,,,,G
+"3072953500","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-80991:Nico Hischier,87247-80991,C,Nico,Nico Hischier,Hischier,15.512500217982701,56,7600,LA@NJ,NJ,LA,,,,,,C/UTIL
+"3072953502","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-42710:Magnus Hellberg,87247-42710,G,Magnus,Magnus Hellberg,Hellberg,10.461538461538462,13,7600,NYR@DET,DET,NYR,,,,,,G
+"3072953504","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-59208:Kevin Fiala,87247-59208,W,Kevin,Kevin Fiala,Fiala,15.505172203327048,58,7600,LA@NJ,LA,NJ,,,,,,W/UTIL
+"3072953506","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-103103:Elvis Merzlikins,87247-103103,G,Elvis,Elvis Merzlikins,Merzlikins,8.32,25,7500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953508","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-54065:Joonas Korpisalo,87247-54065,G,Joonas,Joonas Korpisalo,Korpisalo,16.414815266927082,27,7500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953510","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-97093:Logan Thompson,87247-97093,G,Logan,Logan Thompson,Thompson,18.35675708667652,37,7500,CGY@VGK,VGK,CGY,O,Lower body,,,,G
+"3072953512","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-9092:Evander Kane,87247-9092,W,Evander,Evander Kane,Kane,14.574999491373697,24,7500,EDM@PIT,EDM,PIT,O,Upper body,,,,W/UTIL
+"3072953514","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15271:Laurent Brossoit,87247-15271,G,Laurent,Laurent Brossoit,Brossoit,21.600000381469727,1,7500,CGY@VGK,VGK,CGY,,,,,,G
+"3072953515","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-11294:Michael Hutchinson,87247-11294,G,Michael,Michael Hutchinson,Hutchinson,2.4000000953674316,2,7500,CGY@VGK,VGK,CGY,,,,,,G
+"3072953517","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66612:Adin Hill,87247-66612,G,Adin,Adin Hill,Hill,14.461538461538462,26,7500,CGY@VGK,VGK,CGY,DTD,Undisclosed,,,,G
+"3072953520","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12253:Mats Zuccarello,87247-12253,W,Mats,Mats Zuccarello,Zuccarello,15.296363414417614,55,7500,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"3072953523","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12439:Jeff Skinner,87247-12439,W,Jeff,Jeff Skinner,Skinner,15.190385084885817,52,7400,BUF@TB,BUF,TB,,,,,,W/UTIL
+"3072953525","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-39253:Filip Forsberg,87247-39253,W,Filip,Filip Forsberg,Forsberg,14.034000244140625,50,7400,NSH@SJ,NSH,SJ,DTD,Upper body,,,,W/UTIL
+"3072953527","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8595:Evgeni Malkin,87247-8595,C,Evgeni,Evgeni Malkin,Malkin,14.894642421177455,56,7400,EDM@PIT,PIT,EDM,,,,,,C/UTIL
+"3072953530","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8651:Alex Pietrangelo,87247-8651,D,Alex,Alex Pietrangelo,Pietrangelo,14.564582824707031,48,7400,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"3072953533","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-73949:Joel Eriksson Ek,87247-73949,C,Joel,Joel Eriksson Ek,Eriksson Ek,14.422806589226974,57,7300,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"3072953536","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12628:Mark Stone,87247-12628,W,Mark,Mark Stone,Stone,13.9093017578125,43,7300,CGY@VGK,VGK,CGY,IR,Back,,,,W/UTIL
+"3072953537","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12697:Philipp Grubauer,87247-12697,G,Philipp,Philipp Grubauer,Grubauer,12.034782077955162,23,7300,BOS@SEA,SEA,BOS,,,,,,G
+"3072953539","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-62493:Artemi Panarin,87247-62493,W,Artemi,Artemi Panarin,Panarin,14.91052674410636,57,7300,NYR@DET,NYR,DET,,,,,,W/UTIL
+"3072953541","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-9278:Martin Jones,87247-9278,G,Martin,Martin Jones,Jones,14.821052952816611,38,7300,BOS@SEA,SEA,BOS,,,,,,G
+"3072953545","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-103940:Adam Fox,87247-103940,D,Adam,Adam Fox,Fox,13.982456140350877,57,7300,NYR@DET,NYR,DET,,,,,,D/UTIL
+"3072953547","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-43093:Shea Theodore,87247-43093,D,Shea,Shea Theodore,Theodore,13.559459789379224,37,7200,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"3072953549","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15251:Boone Jenner,87247-15251,C,Boone,Boone Jenner,Jenner,14.15652200450068,46,7200,MIN@CBJ,CBJ,MIN,,,,,,C/UTIL
+"3072953551","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70571:Jake Guentzel,87247-70571,W,Jake,Jake Guentzel,Guentzel,14.827778003833911,54,7200,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"3072953553","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66610:Dan Vladar,87247-66610,G,Dan,Dan Vladar,Vladar,13.947825556216033,23,7200,CGY@VGK,CGY,VGK,,,,,,G
+"3072953555","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-54514:Johnny Gaudreau,87247-54514,W,Johnny,Johnny Gaudreau,Gaudreau,13.42545498934659,55,7200,MIN@CBJ,CBJ,MIN,DTD,Lower body,,,,W/UTIL
+"3072953557","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12283:Jacob Markstrom,87247-12283,G,Jacob,Jacob Markstrom,Markstrom,11.343589587089342,39,7200,CGY@VGK,CGY,VGK,,,,,,G
+"3072953561","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8633:Thomas Greiss,87247-8633,G,Thomas,Thomas Greiss,Greiss,12.799999660915798,18,7100,VAN@STL,STL,VAN,,,,,,G
+"3072953563","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-101277:Quinn Hughes,87247-101277,D,Quinn,Quinn Hughes,Hughes,13.220754947302476,53,7100,VAN@STL,VAN,STL,,,,,,D/UTIL
+"3072953564","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15339:Jordan Binnington,87247-15339,G,Jordan,Jordan Binnington,Binnington,13.91304347826087,46,7100,VAN@STL,STL,VAN,,,,,,G
+"3072953566","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15360:J.T. Miller,87247-15360,C,J.T.,J.T. Miller,Miller,14.357895165158991,57,7100,VAN@STL,VAN,STL,,,,,,C/UTIL
+"3072953568","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70900:Patrik Laine,87247-70900,W,Patrik,Patrik Laine,Laine,14.569048200334821,42,7100,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"3072953570","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8763:Brad Marchand,87247-8763,W,Brad,Brad Marchand,Marchand,14.302040567203443,49,7000,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"3072953572","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-97102:Lukas Dostal,87247-97102,G,Lukas,Lukas Dostal,Dostal,13.866667005750868,9,7000,ANH@WSH,ANH,WSH,,,,,,G
+"3072953574","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15268:John Gibson,87247-15268,G,John,John Gibson,Gibson,14.810255784254808,39,7000,ANH@WSH,ANH,WSH,,,,,,G
+"3072953576","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66601:Jake DeBrusk,87247-66601,W,Jake,Jake DeBrusk,DeBrusk,14.56842041015625,38,7000,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"3072953578","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70912:Charlie McAvoy,87247-70912,D,Charlie,Charlie McAvoy,McAvoy,13.395348837209303,43,7000,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"3072953580","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-38243:Anthony Stolarz,87247-38243,G,Anthony,Anthony Stolarz,Stolarz,9.563636086203836,22,7000,ANH@WSH,ANH,WSH,O,Lower body,,,,G
+"3072953582","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8175:Patrice Bergeron,87247-8175,C,Patrice,Patrice Bergeron,Bergeron,13.95357186453683,56,7000,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"3072953584","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8394:Anze Kopitar,87247-8394,C,Anze,Anze Kopitar,Kopitar,13.658620900121228,58,6900,LA@NJ,LA,NJ,,,,,,C/UTIL
+"3072953586","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-12624:Tyler Toffoli,87247-12624,W,Tyler,Tyler Toffoli,Toffoli,14.141379520810883,58,6900,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"3072953589","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-84324:Kaapo Kahkonen,87247-84324,G,Kaapo,Kaapo Kahkonen,Kahkonen,10.577778003833911,27,6900,NSH@SJ,SJ,NSH,,,,,,G
+"3072953591","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-80369:Jesper Bratt,87247-80369,W,Jesper,Jesper Bratt,Bratt,14.047368635211075,57,6900,LA@NJ,NJ,LA,,,,,,W/UTIL
+"3072953593","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-9052:James Reimer,87247-9052,G,James,James Reimer,Reimer,13.493332926432291,30,6900,NSH@SJ,SJ,NSH,,,,,,G
+"3072953595","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70513:Pavel Buchnevich,87247-70513,W,Pavel,Pavel Buchnevich,Buchnevich,13.072092455486919,43,6900,VAN@STL,STL,VAN,DTD,Lower body,,,,W/UTIL
+"3072953596","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70907:Mikhail Sergachev,87247-70907,D,Mikhail,Mikhail Sergachev,Sergachev,12.881481029369214,54,6900,BUF@TB,TB,BUF,,,,,,D/UTIL
+"3072953598","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8669:Victor Hedman,87247-8669,D,Victor,Victor Hedman,Hedman,12.296296296296296,54,6800,BUF@TB,TB,BUF,,,,,,D/UTIL
+"3072953599","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-113279:Dylan Cozens,87247-113279,C,Dylan,Dylan Cozens,Cozens,13.405556007667824,54,6800,BUF@TB,BUF,TB,,,,,,C/UTIL
+"3072953600","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-62429:Adrian Kempe,87247-62429,W,Adrian,Adrian Kempe,Kempe,13.734482337688577,58,6800,LA@NJ,LA,NJ,,,,,,W/UTIL
+"3072953602","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-21927:Chris Kreider,87247-21927,W,Chris,Chris Kreider,Kreider,13.425925925925926,54,6800,NYR@DET,NYR,DET,,,,,,W/UTIL
+"3072953603","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-82001:Collin Delia,87247-82001,G,Collin,Collin Delia,Delia,10.986666870117187,15,6700,VAN@STL,VAN,STL,,,,,,G
+"3072953605","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-73894:Brandon Hagel,87247-73894,W,Brandon,Brandon Hagel,Hagel,13.228571210588727,56,6700,BUF@TB,TB,BUF,,,,,,W/UTIL
+"3072953607","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-70251:Thatcher Demko,87247-70251,G,Thatcher,Thatcher Demko,Demko,9.399999618530273,16,6700,VAN@STL,VAN,STL,IR,Groin,,,,G
+"3072953609","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-9269:Logan Couture,87247-9269,C,Logan,Logan Couture,Couture,13.424137510102371,58,6700,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"3072953611","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-66688:Rasmus Andersson,87247-66688,D,Rasmus,Rasmus Andersson,Andersson,12.35636319247159,55,6700,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"3072953613","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-42643:Spencer Martin,87247-42643,G,Spencer,Spencer Martin,Martin,8.824999809265137,32,6700,VAN@STL,VAN,STL,,,,,,G
+"3072953615","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-8608:Kris Letang,87247-8608,D,Kris,Kris Letang,Letang,11.551282051282051,39,6600,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"3072953618","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-15269:Rickard Rakell,87247-15269,W,Rickard,Rickard Rakell,Rakell,13.301786150251116,56,6600,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"3072953620","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-40036:Tomas Hertl,87247-40036,C,Tomas,Tomas Hertl,Hertl,12.912727494673295,55,6600,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"3072953621","87247-262981043","$800 Thu NHL Deflection (0.25 To Enter)","","","","","","","","","","",87247-180228:Daniel Mannella,87247-180228,G,Daniel,Daniel Mannella,Mannella,,,6500,ANH@WSH,ANH,WSH,,,,,,G
+"3072953771","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-43045:Michael Houser,87247-43045,G,Michael,Michael Houser,Houser,33.20000076293945,2,6500,BUF@TB,BUF,TB,,,,,,G
+"3072953772","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180271:Brad Arvanitis,87247-180271,G,Brad,Brad Arvanitis,Arvanitis,,,6500,CGY@VGK,CGY,VGK,,,,,,G
+"3072953773","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180268:Daniil Chechelev,87247-180268,G,Daniil,Daniil Chechelev,Chechelev,,,6500,CGY@VGK,CGY,VGK,,,,,,G
+"3072953775","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161836:Tommy Nappier,87247-161836,G,Tommy,Tommy Nappier,Nappier,,,6500,EDM@PIT,PIT,EDM,,,,,,G
+"3072953776","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-159805:Sebastian Cossa,87247-159805,G,Sebastian,Sebastian Cossa,Cossa,,,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953777","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161867:Jet Greaves,87247-161867,G,Jet,Jet Greaves,Greaves,,,6500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953778","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180303:Thomas Milic,87247-180303,G,Thomas,Thomas Milic,Milic,,,6500,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953780","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82007:Jiri Patera,87247-82007,G,Jiri,Jiri Patera,Patera,,,6500,CGY@VGK,VGK,CGY,,,,,,G
+"3072953781","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161891:Dylan Garand,87247-161891,G,Dylan,Dylan Garand,Garand,,,6500,NYR@DET,NYR,DET,,,,,,G
+"3072953782","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161892:Talyn Boyko,87247-161892,G,Talyn,Talyn Boyko,Boyko,,,6500,NYR@DET,NYR,DET,,,,,,G
+"3072953783","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82035:Cal Petersen,87247-82035,G,Cal,Cal Petersen,Petersen,8.533333460489908,12,6500,LA@NJ,LA,NJ,,,,,,G
+"3072953784","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82036:Matt Villalta,87247-82036,G,Matt,Matt Villalta,Villalta,,,6500,LA@NJ,LA,NJ,,,,,,G
+"3072953785","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161908:Garin Bjorklund,87247-161908,G,Garin,Garin Bjorklund,Bjorklund,,,6500,ANH@WSH,WSH,ANH,,,,,,G
+"3072953786","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-43131:Malcolm Subban,87247-43131,G,Malcolm,Malcolm Subban,Subban,6,4,6500,BUF@TB,BUF,TB,,,,,,G
+"3072953787","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180359:Isaac Poulter,87247-180359,G,Isaac,Isaac Poulter,Poulter,,,6500,LA@NJ,NJ,LA,,,,,,G
+"3072953788","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-145546:Yaroslav Askarov,87247-145546,G,Yaroslav,Yaroslav Askarov,Askarov,8.800000190734863,1,6500,NSH@SJ,NSH,SJ,,,,,,G
+"3072953790","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180363:Tyler Brennan,87247-180363,G,Tyler,Tyler Brennan,Brennan,,,6500,LA@NJ,NJ,LA,,,,,,G
+"3072953791","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-166031:Taylor Gauthier,87247-166031,G,Taylor,Taylor Gauthier,Gauthier,,,6500,EDM@PIT,PIT,EDM,,,,,,G
+"3072953793","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161936:Jesper Vikman,87247-161936,G,Jesper,Jesper Vikman,Vikman,,,6500,CGY@VGK,VGK,CGY,,,,,,G
+"3072953794","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-116882:Colten Ellis,87247-116882,G,Colten,Colten Ellis,Ellis,,,6500,VAN@STL,STL,VAN,,,,,,G
+"3072953795","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-14483:Louis Domingue,87247-14483,G,Louis,Louis Domingue,Domingue,19.200000762939453,8,6500,NYR@DET,NYR,DET,,,,,,G
+"3072953796","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161955:Jan Bednar,87247-161955,G,Jan,Jan Bednar,Bednar,,,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953797","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180393:Mason Beaupit,87247-180393,G,Mason,Mason Beaupit,Beaupit,,,6500,NSH@SJ,SJ,NSH,,,,,,G
+"3072953798","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-168114:Ryan Fanti,87247-168114,G,Ryan,Ryan Fanti,Fanti,,,6500,EDM@PIT,EDM,PIT,,,,,,G
+"3072953799","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-168113:Clay Stevenson,87247-168113,G,Clay,Clay Stevenson,Stevenson,,,6500,ANH@WSH,WSH,ANH,,,,,,G
+"3072953800","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82098:Michael DiPietro,87247-82098,G,Michael,Michael DiPietro,DiPietro,-0.800000011920929,1,6500,BOS@SEA,BOS,SEA,,,,,,G
+"3072953801","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-168116:David Hrenak,87247-168116,G,David,David Hrenak,Hrenak,,,6500,LA@NJ,LA,NJ,,,,,,G
+"3072953803","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180410:Ty Young,87247-180410,G,Ty,Ty Young,Young,,,6500,VAN@STL,VAN,STL,,,,,,G
+"3072953804","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-149699:Eetu Makiniemi,87247-149699,G,Eetu,Eetu Makiniemi,Makiniemi,11.600000381469727,2,6500,NSH@SJ,SJ,NSH,,,,,,G
+"3072953805","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180420:Jordan Papirny,87247-180420,G,Jordan,Jordan Papirny,Papirny,,,6500,CGY@VGK,VGK,CGY,,,,,,G
+"3072953806","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-161995:Gage Alexander,87247-161995,G,Gage,Gage Alexander,Alexander,,,6500,ANH@WSH,ANH,WSH,,,,,,G
+"3072953807","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-149709:Hugo Alnefelt,87247-149709,G,Hugo,Hugo Alnefelt,Alnefelt,-6.400000095367432,1,6500,BUF@TB,TB,BUF,,,,,,G
+"3072953808","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-116948:Arturs Silovs,87247-116948,G,Arturs,Arturs Silovs,Silovs,14.800000190734863,2,6500,VAN@STL,VAN,STL,,,,,,G
+"3072953809","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-149739:Nico Daws,87247-149739,G,Nico,Nico Daws,Daws,11.87199951171875,25,6500,LA@NJ,NJ,LA,,,,,,G
+"3072953810","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82163:Olle Eriksson Ek,87247-82163,G,Olle,Olle Eriksson Ek,Eriksson Ek,,,6500,ANH@WSH,ANH,WSH,,,,,,G
+"3072953812","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-170240:Olof Lindbom,87247-170240,G,Olof,Olof Lindbom,Lindbom,,,6500,NYR@DET,NYR,DET,,,,,,G
+"3072953813","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82178:Kyle Keyser,87247-82178,G,Kyle,Kyle Keyser,Keyser,,,6500,BOS@SEA,BOS,SEA,,,,,,G
+"3072953814","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-117021:Hunter Jones,87247-117021,G,Hunter,Hunter Jones,Jones,,,6500,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953815","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-164127:Jack Lafontaine,87247-164127,G,Jack,Jack Lafontaine,Lafontaine,-5.199999809265137,2,6500,BUF@TB,TB,BUF,,,,,,G
+"3072953818","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82204:Parker Gahagen,87247-82204,G,Parker,Parker Gahagen,Gahagen,,,6500,NYR@DET,NYR,DET,,,,,,G
+"3072953819","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-170275:Jesper Wallstedt,87247-170275,G,Jesper,Jesper Wallstedt,Wallstedt,,,6500,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953820","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-117041:Beck Warm,87247-117041,G,Beck,Beck Warm,Warm,,,6500,BUF@TB,BUF,TB,,,,,,G
+"3072953821","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-117055:Dustin Wolf,87247-117055,G,Dustin,Dustin Wolf,Wolf,,,6500,CGY@VGK,CGY,VGK,,,,,,G
+"3072953823","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-162119:Will Cranley,87247-162119,G,Will,Will Cranley,Cranley,,,6500,VAN@STL,STL,VAN,,,,,,G
+"3072953824","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-170326:Vadim Zherenko,87247-170326,G,Vadim,Vadim Zherenko,Zherenko,,,6500,VAN@STL,STL,VAN,,,,,,G
+"3072953825","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-117081:Hayden Stewart,87247-117081,G,Hayden,Hayden Stewart,Stewart,,,6500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953826","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-39268:Jussi Olkinuora,87247-39268,G,Jussi,Jussi Olkinuora,Olkinuora,,,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953828","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-12654:Calvin Pickard,87247-12654,G,Calvin,Calvin Pickard,Pickard,8.799999872843424,3,6500,EDM@PIT,EDM,PIT,,,,,,G
+"3072953829","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-168320:Brandon Bussi,87247-168320,G,Brandon,Brandon Bussi,Bussi,,,6500,BOS@SEA,BOS,SEA,,,,,,G
+"3072953830","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-160183:Hunter Shepard,87247-160183,G,Hunter,Hunter Shepard,Shepard,,,6500,ANH@WSH,WSH,ANH,,,,,,G
+"3072953831","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8672:Mike Smith,87247-8672,G,Mike,Mike Smith,Smith,19.9272724498402,44,6500,EDM@PIT,EDM,PIT,IR,Undisclosed,,,,G
+"3072953832","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-162281:John Lethemon,87247-162281,G,John,John Lethemon,Lethemon,,,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953833","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-162300:Benjamin Gaudreau,87247-162300,G,Benjamin,Benjamin Gaudreau,Gaudreau,,,6500,NSH@SJ,SJ,NSH,,,,,,G
+"3072953834","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-135685:Victor Brattstrom,87247-135685,G,Victor,Victor Brattstrom,Brattstrom,,,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953835","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-96790:Joel Hofer,87247-96790,G,Joel,Joel Hofer,Hofer,11.600000381469727,2,6500,VAN@STL,STL,VAN,,,,,,G
+"3072953836","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8741:Nazem Kadri,87247-8741,C,Nazem,Nazem Kadri,Kadri,13.475861648033405,58,6500,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"3072953837","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8780:Jonathan Bernier,87247-8780,G,Jonathan,Jonathan Bernier,Bernier,13.439999389648438,10,6500,LA@NJ,NJ,LA,IR,Hip,,,,G
+"3072953838","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-113276:Moritz Seider,87247-113276,D,Moritz,Moritz Seider,Seider,11.067856924874443,56,6500,NYR@DET,DET,NYR,,,,,,D/UTIL
+"3072953839","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8864:Robin Lehner,87247-8864,G,Robin,Robin Lehner,Lehner,16.78181873668324,44,6500,CGY@VGK,VGK,CGY,IR,Hip,,,,G
+"3072953840","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8883:Ben Bishop,87247-8883,G,Ben,Ben Bishop,Bishop,,,6500,BUF@TB,BUF,TB,IR,Knee,,,,G
+"3072953842","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-103263:Joey Daccord,87247-103263,G,Joey,Joey Daccord,Daccord,6.199999809265137,4,6500,BOS@SEA,SEA,BOS,,,,,,G
+"3072953843","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-97134:Olivier Rodrigue,87247-97134,G,Olivier,Olivier Rodrigue,Rodrigue,,,6500,EDM@PIT,EDM,PIT,,,,,,G
+"3072953844","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-97161:Jacob Ingham,87247-97161,G,Jacob,Jacob Ingham,Ingham,,,6500,LA@NJ,LA,NJ,O,Back,,,,G
+"3072953846","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-97204:Zachary Emond,87247-97204,G,Zachary,Zachary Emond,Emond,,,6500,NSH@SJ,SJ,NSH,,,,,,G
+"3072953847","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-146375:Devin Cooley,87247-146375,G,Devin,Devin Cooley,Cooley,,,6500,NSH@SJ,NSH,SJ,,,,,,G
+"3072953848","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-97247:Akira Schmid,87247-97247,G,Akira,Akira Schmid,Schmid,16.177778455946182,9,6500,LA@NJ,NJ,LA,,,,,,G
+"3072953849","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82912:Troy Terry,87247-82912,W,Troy,Troy Terry,Terry,12.829411525352329,51,6500,ANH@WSH,ANH,WSH,IR,Upper body,,,,W/UTIL
+"3072953851","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-15366:Christopher Gibson,87247-15366,G,Christopher,Christopher Gibson,Gibson,0,1,6500,BOS@SEA,SEA,BOS,,,,,,G
+"3072953852","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66586:C.J. Motte,87247-66586,G,C.J.,C.J. Motte,Motte,,,6500,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953853","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66599:Zane McIntyre,87247-66599,G,Zane,Zane McIntyre,McIntyre,,,6500,MIN@CBJ,MIN,CBJ,,,,,,G
+"3072953854","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-148544:Tomas Vomacka,87247-148544,G,Tomas,Tomas Vomacka,Vomacka,,,6500,NSH@SJ,NSH,SJ,,,,,,G
+"3072953855","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-37968:Jonathan Marchessault,87247-37968,W,Jonathan,Jonathan Marchessault,Marchessault,12.786274031096815,51,6500,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"3072953856","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-9366:Dustin Tokarski,87247-9366,G,Dustin,Dustin Tokarski,Tokarski,12,4,6500,EDM@PIT,PIT,EDM,,,,,,G
+"3072953857","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-167127:Isaiah Saville,87247-167127,G,Isaiah,Isaiah Saville,Saville,,,6500,CGY@VGK,VGK,CGY,,,,,,G
+"3072953858","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66796:Callum Booth,87247-66796,G,Callum,Callum Booth,Booth,,,6500,BOS@SEA,SEA,BOS,,,,,,G
+"3072953859","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-167289:Calle Clang,87247-167289,G,Calle,Calle Clang,Clang,,,6500,ANH@WSH,ANH,WSH,,,,,,G
+"3072953861","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-58904:Aaron Dell,87247-58904,G,Aaron,Aaron Dell,Dell,9.800000190734863,4,6500,NSH@SJ,SJ,NSH,,,,,,G
+"3072953862","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-169533:Strauss Mann,87247-169533,G,Strauss,Strauss Mann,Mann,,,6500,NSH@SJ,SJ,NSH,,,,,,G
+"3072953863","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-104028:Daniil Tarasov,87247-104028,G,Daniil,Daniil Tarasov,Tarasov,12.057143075125557,14,6500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953864","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-58975:Maxime Lagace,87247-58975,G,Maxime,Maxime Lagace,Lagace,5.199999809265137,2,6500,BUF@TB,TB,BUF,,,,,,G
+"3072953865","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-169657:Matthew Berlin,87247-169657,G,Matthew,Matthew Berlin,Berlin,0.800000011920929,1,6500,EDM@PIT,EDM,PIT,,,,,,G
+"3072953866","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42782:Oscar Dansk,87247-42782,G,Oscar,Oscar Dansk,Dansk,,,6500,CGY@VGK,CGY,VGK,,,,,,G
+"3072953868","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42800:Zach Fucale,87247-42800,G,Zach,Zach Fucale,Fucale,12.199999809265137,4,6500,ANH@WSH,WSH,ANH,,,,,,G
+"3072953869","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180027:Nolan Lalonde,87247-180027,G,Nolan,Nolan Lalonde,Lalonde,,,6500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953870","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180028:Pavel Cajan,87247-180028,G,Pavel,Pavel Cajan,Cajan,,,6500,MIN@CBJ,CBJ,MIN,,,,,,G
+"3072953871","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-59226:Alex Nedeljkovic,87247-59226,G,Alex,Alex Nedeljkovic,Nedeljkovic,7.466666539510091,12,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953872","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180060:Brad Barone,87247-180060,G,Brad,Brad Barone,Barone,,,6500,BUF@TB,TB,BUF,,,,,,G
+"3072953874","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42852:Francois Brassard,87247-42852,G,Francois,Francois Brassard,Brassard,,,6500,BOS@SEA,BOS,SEA,,,,,,G
+"3072953875","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42853:Chris Driedger,87247-42853,G,Chris,Chris Driedger,Driedger,12.71111156322338,27,6500,BOS@SEA,SEA,BOS,IR,Knee,,,,G
+"3072953876","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-14183:Keith Kinkaid,87247-14183,G,Keith,Keith Kinkaid,Kinkaid,32,1,6500,BOS@SEA,BOS,SEA,,,,,,G
+"3072953877","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-157597:Filip Lindberg,87247-157597,G,Filip,Filip Lindberg,Lindberg,,,6500,EDM@PIT,PIT,EDM,,,,,,G
+"3072953878","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42982:Eric Comrie,87247-42982,G,Eric,Eric Comrie,Comrie,11.146666463216146,15,6500,BUF@TB,BUF,TB,,,,,,G
+"3072953884","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-180201:Andrew Oke,87247-180201,G,Andrew,Andrew Oke,Oke,,,6500,NYR@DET,DET,NYR,,,,,,G
+"3072953887","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-15283:Vincent Trocheck,87247-15283,C,Vincent,Vincent Trocheck,Trocheck,12.903508771929825,57,6400,NYR@DET,NYR,DET,,,,,,C/UTIL
+"3072953889","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-171491:Andrei Kuzmenko,87247-171491,W,Andrei,Andrei Kuzmenko,Kuzmenko,12.44107164655413,56,6400,VAN@STL,VAN,STL,,,,,,W/UTIL
+"3072953891","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42910:Darnell Nurse,87247-42910,D,Darnell,Darnell Nurse,Nurse,11.415516820447198,58,6400,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"3072953893","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-41390:Elias Lindholm,87247-41390,C,Elias,Elias Lindholm,Lindholm,13,56,6300,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"3072953896","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-39464:Hampus Lindholm,87247-39464,D,Hampus,Hampus Lindholm,Lindholm,11.117856706891741,56,6300,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"3072953898","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-59207:Viktor Arvidsson,87247-59207,W,Viktor,Viktor Arvidsson,Arvidsson,12.28490519973467,53,6300,LA@NJ,LA,NJ,,,,,,W/UTIL
+"3072953901","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-12812:Jared Spurgeon,87247-12812,D,Jared,Jared Spurgeon,Spurgeon,11.078947368421053,57,6200,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"3072953904","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-148097:Matt Boldy,87247-148097,W,Matt,Matt Boldy,Boldy,12.366667094983553,57,6200,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"3072953906","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-128506:Trevor Zegras,87247-128506,C,Trevor,Trevor Zegras,Zegras,12.52068986563847,58,6200,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"3072953909","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8275:Matt Duchene,87247-8275,W,Matt,Matt Duchene,Duchene,12.098147922092014,54,6100,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"3072953911","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-14178:Justin Faulk,87247-14178,D,Justin,Justin Faulk,Faulk,11.135087933456688,57,6100,VAN@STL,STL,VAN,,,,,,D/UTIL
+"3072953913","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8176:David Krejci,87247-8176,C,David,David Krejci,Krejci,11.203845684344952,52,6100,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"3072953916","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-39245:Jacob Trouba,87247-39245,D,Jacob,Jacob Trouba,Trouba,10.987719084087171,57,6000,NYR@DET,NYR,DET,,,,,,D/UTIL
+"3072953917","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-23071:Vladimir Tarasenko,87247-23071,W,Vladimir,Vladimir Tarasenko,Tarasenko,12.07499972256747,44,6000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"3072953919","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-9189:Mikael Backlund,87247-9189,C,Mikael,Mikael Backlund,Backlund,11.98620710701778,58,6000,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"3072953922","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-21648:Torey Krug,87247-21648,D,Torey,Torey Krug,Krug,10.797499847412109,40,6000,VAN@STL,STL,VAN,DTD,Lower body,,,,D/UTIL
+"3072953926","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-13981:Tyson Barrie,87247-13981,D,Tyson,Tyson Barrie,Barrie,11.001723716998923,58,6000,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"3072953929","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82087:Filip Chytil,87247-82087,C,Filip,Filip Chytil,Chytil,11.020754256338444,53,5900,NYR@DET,NYR,DET,,,,,,C/UTIL
+"3072953931","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66515:Vince Dunn,87247-66515,D,Vince,Vince Dunn,Dunn,10.88947389836897,57,5900,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"3072953941","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66709:Jared McCann,87247-66709,W,Jared,Jared McCann,McCann,11.842592592592593,54,5900,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"3072953942","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-74016:Filip Hronek,87247-74016,D,Filip,Filip Hronek,Hronek,10.724999564034599,56,5800,NYR@DET,DET,NYR,,,,,,D/UTIL
+"3072953944","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-169115:Matty Beniers,87247-169115,C,Matty,Matty Beniers,Beniers,11.301817737926136,55,5800,BOS@SEA,SEA,BOS,,,,,,C/UTIL
+"3072953945","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-21689:Reilly Smith,87247-21689,W,Reilly,Reilly Smith,Smith,11.359649122807017,57,5800,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"3072953946","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42833:Andre Burakovsky,87247-42833,W,Andre,Andre Burakovsky,Burakovsky,11.489795918367347,49,5800,BOS@SEA,SEA,BOS,IR,Lower body,,,,W/UTIL
+"3072953948","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-12410:Taylor Hall,87247-12410,W,Taylor,Taylor Hall,Hall,11.119643075125557,56,5700,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"3072953949","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8406:Drew Doughty,87247-8406,D,Drew,Drew Doughty,Doughty,10.82807038959704,57,5700,LA@NJ,LA,NJ,,,,,,D/UTIL
+"3072953951","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-64101:Noah Hanifin,87247-64101,D,Noah,Noah Hanifin,Hanifin,10.240351091351425,57,5700,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"3072953954","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42839:Chandler Stephenson,87247-42839,C,Chandler,Chandler Stephenson,Stephenson,11.326315361156798,57,5700,CGY@VGK,VGK,CGY,,,,,,C/UTIL
+"3072953956","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-79857:Brock Boeser,87247-79857,W,Brock,Brock Boeser,Boeser,11.034000244140625,50,5700,VAN@STL,VAN,STL,,,,,,W/UTIL
+"3072953957","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-81983:Robert Thomas,87247-81983,C,Robert,Robert Thomas,Thomas,11.155556007667824,54,5600,VAN@STL,STL,VAN,,,,,,C/UTIL
+"3072953960","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-61549:Frank Vatrano,87247-61549,W,Frank,Frank Vatrano,Vatrano,11.22931013436153,58,5600,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"3072953963","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-9025:Jordan Eberle,87247-9025,W,Jordan,Jordan Eberle,Eberle,11.198245399876646,57,5600,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"3072953966","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-11201:Jeff Petry,87247-11201,D,Jeff,Jeff Petry,Petry,10.14749984741211,40,5600,EDM@PIT,PIT,EDM,DTD,Illness,,,,D/UTIL
+"3072953969","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-12843:Adam Henrique,87247-12843,W,Adam,Adam Henrique,Henrique,10.703508343612938,57,5500,ANH@WSH,ANH,WSH,O,Lower body,,,,W/UTIL
+"3072953971","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-97173:Sean Durzi,87247-97173,D,Sean,Sean Durzi,Durzi,10.36727294921875,55,5500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"3072953972","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-9266:Brayden Schenn,87247-9266,C,Brayden,Brayden Schenn,Schenn,10.771929824561404,57,5500,VAN@STL,STL,VAN,,,,,,C/UTIL
+"3072953974","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-52475:Evgeny Kuznetsov,87247-52475,C,Evgeny,Evgeny Kuznetsov,Kuznetsov,11.13965475148168,58,5500,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"3072953976","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-42922:Dominik Kubalik,87247-42922,W,Dominik,Dominik Kubalik,Kubalik,10.754545454545454,55,5500,NYR@DET,DET,NYR,,,,,,W/UTIL
+"3072953978","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-79935:Alex Iafallo,87247-79935,W,Alex,Alex Iafallo,Iafallo,10.662857491629465,35,5400,LA@NJ,LA,NJ,,,,,,W/UTIL
+"3072953980","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-14564:Adam Larsson,87247-14564,D,Adam,Adam Larsson,Larsson,9.873683996367873,57,5400,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"3072953983","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-15277:Phillip Danault,87247-15277,C,Phillip,Phillip Danault,Danault,11.205172834725216,58,5400,LA@NJ,LA,NJ,,,,,,C/UTIL
+"3072953984","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-54477:Bryan Rust,87247-54477,W,Bryan,Bryan Rust,Rust,10.730357578822545,56,5400,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"3072953986","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-8640:David Perron,87247-8640,W,David,David Perron,Perron,10.476785932268415,56,5300,NYR@DET,DET,NYR,,,,,,W/UTIL
+"3072953988","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-62492:Erik Gustafsson,87247-62492,D,Erik,Erik Gustafsson,Gustafsson,9.774138351966595,58,5300,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"3072953990","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-39990:William Karlsson,87247-39990,C,William,William Karlsson,Karlsson,10.29473662794682,57,5300,CGY@VGK,VGK,CGY,,,,,,C/UTIL
+"3072953991","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-21686:Jason Zucker,87247-21686,W,Jason,Jason Zucker,Zucker,10.475471928434551,53,5300,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"3072953993","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-117104:Tommy Novak,87247-117104,C,Tommy,Tommy Novak,Novak,10.450000127156576,24,5200,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"3072953995","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-135668:Alexander Barabanov,87247-135668,W,Alexander,Alexander Barabanov,Barabanov,10.262264611586085,53,5200,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"3072953997","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-97213:Ty Smith,87247-97213,D,Ty,Ty Smith,Smith,9.677777608235678,9,5200,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"3072953998","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-83057:Victor Olofsson,87247-83057,W,Victor,Victor Olofsson,Olofsson,10.327272727272728,55,5200,BUF@TB,BUF,TB,,,,,,W/UTIL
+"3072953999","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-43122:Ryan Graves,87247-43122,D,Ryan,Ryan Graves,Graves,9.429629855685764,54,5100,LA@NJ,NJ,LA,,,,,,D/UTIL
+"3072954000","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-12460:Cam Fowler,87247-12460,D,Cam,Cam Fowler,Fowler,9.303447854929956,58,5100,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"3072954003","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-21523:Alex Killorn,87247-21523,W,Alex,Alex Killorn,Killorn,10.101785932268415,56,5100,BUF@TB,TB,BUF,,,,,,W/UTIL
+"3072954004","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66675:Daniel Sprong,87247-66675,W,Daniel,Daniel Sprong,Sprong,10.1875,48,5100,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"3072954005","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-66713:Anthony Cirelli,87247-66713,C,Anthony,Anthony Cirelli,Cirelli,10.187879157788826,33,5100,BUF@TB,TB,BUF,,,,,,C/UTIL
+"3072954007","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-79877:Jake Walman,87247-79877,D,Jake,Jake Walman,Walman,9.375675510715794,37,5000,NYR@DET,DET,NYR,,,,,,D/UTIL
+"3072954008","87247-262981041","$500 Thu NHL Five Hole (150 Entries Max)","","","","","","","","","","",87247-82024:Gabriel Vilardi,87247-82024,W,Gabriel,Gabriel Vilardi,Vilardi,10.59999974568685,48,5000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"3072955076","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-43176:Ryan Hartman,87247-43176,C,Ryan,Ryan Hartman,Hartman,10.313888549804688,36,5000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"3072955077","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-146124:Dawson Mercer,87247-146124,C,Dawson,Dawson Mercer,Mercer,10.303508557771382,57,5000,LA@NJ,NJ,LA,,,,,,C/UTIL
+"3072955078","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-119830:K'Andre Miller,87247-119830,D,K'Andre,K'Andre Miller,Miller,9.163157680578399,57,5000,NYR@DET,NYR,DET,,,,,,D/UTIL
+"3072955079","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-58883:Robby Fabbri,87247-58883,W,Robby,Robby Fabbri,Fabbri,10.21500015258789,20,5000,NYR@DET,DET,NYR,DTD,Lower body,,,,W/UTIL
+"3072955080","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-42773:Oliver Bjorkstrand,87247-42773,W,Oliver,Oliver Bjorkstrand,Bjorkstrand,9.73333311917489,57,5000,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"3072955081","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-74112:Trevor Moore,87247-74112,W,Trevor,Trevor Moore,Moore,9.776190621512276,42,4900,LA@NJ,LA,NJ,,,,,,W/UTIL
+"3072955082","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-65969:Dylan Strome,87247-65969,C,Dylan,Dylan Strome,Strome,9.803447854929956,58,4900,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"3072955083","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-142018:Lucas Raymond,87247-142018,W,Lucas,Lucas Raymond,Raymond,9.884000244140625,50,4900,NYR@DET,DET,NYR,IR,Lower body,,,,W/UTIL
+"3072955084","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-82925:Eeli Tolvanen,87247-82925,W,Eeli,Eeli Tolvanen,Tolvanen,9.765789634303042,38,4900,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"3072955085","87247-262981049","$1K Thu NHL Wrister (10 Entries Max)","","","","","","","","","","",87247-13472:Dmitry Orlov,87247-13472,D,Dmitry,Dmitry Orlov,Orlov,9.03255799759266,43,4900,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"3072955729","87247-262981076","$5K Thu NHL Goal ($1K to 1st)","","","","","","","","","","",87247-159629:Mason McTavish,87247-159629,C,Mason,Mason McTavish,McTavish,9.831579375685306,57,4900,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"3072955730","87247-262981076","$5K Thu NHL Goal ($1K to 1st)","","","","","","","","","","",87247-79865:Matt Roy,87247-79865,D,Matt,Matt Roy,Roy,9.00689697265625,58,4900,LA@NJ,LA,NJ,,,,,,D/UTIL
+"3072955731","87247-262981076","$5K Thu NHL Goal ($1K to 1st)","","","","","","","","","","",87247-14457:John Klingberg,87247-14457,D,John,John Klingberg,Klingberg,8.802083333333334,48,4800,ANH@WSH,ANH,WSH,DTD,Lower body,,,,D/UTIL
+"3072955732","87247-262981076","$5K Thu NHL Goal ($1K to 1st)","","","","","","","","","","",87247-65970:Pavel Zacha,87247-65970,C,Pavel,Pavel Zacha,Zacha,9.333928789411273,56,4800,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"3072955734","87247-262981076","$5K Thu NHL Goal ($1K to 1st)","","","","","","","","","","",87247-8635:T.J. Oshie,87247-8635,W,T.J.,T.J. Oshie,Oshie,9.588095528738839,42,4800,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-23228:Justin Schultz,87247-23228,D,Justin,Justin Schultz,Schultz,8.624489920479911,49,4800,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-15217:Jonathan Huberdeau,87247-15217,W,Jonathan,Jonathan Huberdeau,Huberdeau,9.54363680752841,55,4800,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-104140:Ilya Mikheyev,87247-104140,W,Ilya,Ilya Mikheyev,Mikheyev,9.684782608695652,46,4800,VAN@STL,VAN,STL,IR,Knee,,,,W/UTIL
+"","","","","","","","","","","","","",87247-61246:Colton Parayko,87247-61246,D,Colton,Colton Parayko,Parayko,8.959259033203125,54,4800,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74086:Dillon Dube,87247-74086,W,Dillon,Dillon Dube,Dube,9.620689655172415,58,4700,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-16969:Charlie Coyle,87247-16969,C,Charlie,Charlie Coyle,Coyle,9.092857360839844,56,4700,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-21122:Jaden Schwartz,87247-21122,W,Jaden,Jaden Schwartz,Schwartz,9.46250025431315,48,4700,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97024:Adam Boqvist,87247-97024,D,Adam,Adam Boqvist,Boqvist,8.669230534480167,26,4700,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-11365:Kevin Shattenkirk,87247-11365,D,Kevin,Kevin Shattenkirk,Shattenkirk,8.447058584175858,51,4700,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-13742:Ben Chiarot,87247-13742,D,Ben,Ben Chiarot,Chiarot,8.62857164655413,56,4700,NYR@DET,DET,NYR,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-169861:Kirill Marchenko,87247-169861,W,Kirill,Kirill Marchenko,Marchenko,9.452940996955423,34,4700,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-147769:Daniil Miromanov,87247-147769,D,Daniil,Daniil Miromanov,Miromanov,8.107142857142858,14,4600,CGY@VGK,VGK,CGY,IR,Lower body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117093:Arthur Kaliyev,87247-117093,W,Arthur,Arthur Kaliyev,Kaliyev,9.31052599455181,38,4600,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-53606:Yanni Gourde,87247-53606,C,Yanni,Yanni Gourde,Gourde,9.35892813546317,56,4600,BOS@SEA,SEA,BOS,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-12728:Nino Niederreiter,87247-12728,W,Nino,Nino Niederreiter,Niederreiter,9.345454545454546,55,4600,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-170455:Marcus Bjork,87247-170455,D,Marcus,Marcus Bjork,Bjork,8.022222448278356,27,4600,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66622:Conor Garland,87247-66622,W,Conor,Conor Garland,Garland,9.176786150251116,56,4600,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66756:Andrew Mangiapane,87247-66756,W,Andrew,Andrew Mangiapane,Mangiapane,9.58965538287985,58,4600,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-14456:Mattias Ekholm,87247-14456,D,Mattias,Mattias Ekholm,Ekholm,7.8090909090909095,55,4500,NSH@SJ,NSH,SJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-23226:Tom Wilson,87247-23226,W,Tom,Tom Wilson,Wilson,9.219999694824219,10,4500,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8967:Alec Martinez,87247-8967,D,Alec,Alec Martinez,Martinez,7.833962494472288,53,4500,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-15315:Ondrej Palat,87247-15315,W,Ondrej,Ondrej Palat,Palat,9.103703816731771,27,4500,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66600:Blake Coleman,87247-66600,W,Blake,Blake Coleman,Coleman,9.055172624259159,58,4500,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-169056:Owen Power,87247-169056,D,Owen,Owen Power,Power,7.953846271221455,52,4500,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-169061:Nick Blankenburg,87247-169061,D,Nick,Nick Blankenburg,Blankenburg,7.91739156971807,23,4500,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-59261:Nicholas Paul,87247-59261,C,Nicholas,Nicholas Paul,Paul,9.007407294379341,54,4500,BUF@TB,TB,BUF,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-43014:William Carrier,87247-43014,W,William,William Carrier,Carrier,8.862745098039216,51,4400,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-43135:Tyler Bertuzzi,87247-43135,W,Tyler,Tyler Bertuzzi,Bertuzzi,8.9,25,4400,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-39269:Erik Haula,87247-39269,C,Erik,Erik Haula,Haula,8.608772143983005,57,4400,LA@NJ,NJ,LA,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-12793:Brayden McNabb,87247-12793,D,Brayden,Brayden McNabb,McNabb,7.635087933456688,57,4400,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-39710:Nick Jensen,87247-39710,D,Nick,Nick Jensen,Jensen,7.830508474576271,59,4400,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97129:Evan Bouchard,87247-97129,D,Evan,Evan Bouchard,Bouchard,7.7879312449488145,58,4400,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-23438:Jonas Brodin,87247-23438,D,Jonas,Jonas Brodin,Brodin,7.877551020408164,49,4400,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82850:Casey Mittelstadt,87247-82850,C,Casey,Casey Mittelstadt,Mittelstadt,8.547272838245739,55,4400,BUF@TB,BUF,TB,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-68655:Matt Grzelcyk,87247-68655,D,Matt,Matt Grzelcyk,Grzelcyk,7.523077157827524,52,4400,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-9321:Tomas Tatar,87247-9321,W,Tomas,Tomas Tatar,Tatar,8.868421052631579,57,4400,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66686:Anthony Beauvillier,87247-66686,W,Anthony,Anthony Beauvillier,Beauvillier,8.894828007139008,58,4400,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-58877:Conor Sheary,87247-58877,W,Conor,Conor Sheary,Sheary,8.85932224079714,59,4400,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-13982:Gustav Nyquist,87247-13982,W,Gustav,Gustav Nyquist,Nyquist,8.75,48,4400,MIN@CBJ,CBJ,MIN,IR,Upper body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-43042:MacKenzie Weegar,87247-43042,D,MacKenzie,MacKenzie Weegar,Weegar,7.636841891104715,57,4300,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82051:Michael Rasmussen,87247-82051,C,Michael,Michael Rasmussen,Rasmussen,8.30892835344587,56,4300,NYR@DET,DET,NYR,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-23041:Mikael Granlund,87247-23041,C,Mikael,Mikael Granlund,Granlund,8.309090909090909,55,4300,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-8714:Nicklas Backstrom,87247-8714,C,Nicklas,Nicklas Backstrom,Backstrom,8.675000190734863,16,4300,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97055:Calen Addison,87247-97055,D,Calen,Calen Addison,Addison,7.542307927058293,52,4300,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97212:Yegor Sharangovich,87247-97212,W,Yegor,Yegor Sharangovich,Sharangovich,8.280701754385966,57,4300,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-11254:Ian Cole,87247-11254,D,Ian,Ian Cole,Cole,7.230188909566627,53,4300,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-68646:Brandon Tanev,87247-68646,W,Brandon,Brandon Tanev,Tanev,8.364912066543312,57,4300,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-58891:Kevin Labanc,87247-58891,W,Kevin,Kevin Labanc,Labanc,8.585714534837372,49,4300,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-12244:Oliver Ekman-Larsson,87247-12244,D,Oliver,Oliver Ekman-Larsson,Ekman-Larsson,7.422221996166088,54,4300,VAN@STL,VAN,STL,IR,Ankle,,,,D/UTIL
+"","","","","","","","","","","","","",87247-12447:Erik Gudbranson,87247-12447,D,Erik,Erik Gudbranson,Gudbranson,6.899999891008649,56,4200,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82177:Connor Clifton,87247-82177,D,Connor,Connor Clifton,Clifton,6.971428462437221,56,4200,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-12592:Ryan Johansen,87247-12592,C,Ryan,Ryan Johansen,Johansen,8.090909090909092,55,4200,NSH@SJ,NSH,SJ,O,Leg,,,,C/UTIL
+"","","","","","","","","","","","","",87247-8502:Kyle Okposo,87247-8502,W,Kyle,Kyle Okposo,Okposo,8.066666920979818,48,4200,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74047:Jack Roslovic,87247-74047,C,Jack,Jack Roslovic,Roslovic,8.2166668927228,54,4200,MIN@CBJ,CBJ,MIN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-168326:Nick Perbix,87247-168326,D,Nick,Nick Perbix,Perbix,7.715555826822917,45,4200,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8878:Dmitry Kulikov,87247-8878,D,Dmitry,Dmitry Kulikov,Kulikov,6.882758831155711,58,4200,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-142015:Alexis Lafreniere,87247-142015,W,Alexis,Alexis Lafreniere,Lafreniere,8.132142748151507,56,4200,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8956:Michael Stone,87247-8956,D,Michael,Michael Stone,Stone,7.100000132685122,46,4200,CGY@VGK,CGY,VGK,IR,Lower body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-111471:Kaapo Kakko,87247-111471,W,Kaapo,Kaapo Kakko,Kakko,8.04035066303454,57,4200,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-151490:Jonatan Berggren,87247-151490,W,Jonatan,Jonatan Berggren,Berggren,8,43,4200,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-12411:Ryan McDonagh,87247-12411,D,Ryan,Ryan McDonagh,McDonagh,7.450000127156575,48,4100,NSH@SJ,NSH,SJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-43152:Damon Severson,87247-43152,D,Damon,Damon Severson,Severson,7.160714285714286,56,4100,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8555:Jeff Carter,87247-8555,C,Jeff,Jeff Carter,Carter,7.430909312855114,55,4100,EDM@PIT,PIT,EDM,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-8682:Phil Kessel,87247-8682,W,Phil,Phil Kessel,Kessel,7.842105263157895,57,4100,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8688:Luke Schenn,87247-8688,D,Luke,Luke Schenn,Schenn,7.6799998890269885,55,4100,VAN@STL,VAN,STL,O,Not injury related,,,,D/UTIL
+"","","","","","","","","","","","","",87247-62157:Andrew Copp,87247-62157,C,Andrew,Andrew Copp,Copp,7.403571537562779,56,4100,NYR@DET,DET,NYR,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97069:Ross Colton,87247-97069,W,Ross,Ross Colton,Colton,7.810909201882103,55,4100,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54126:Trevor van Riemsdyk,87247-54126,D,Trevor,Trevor van Riemsdyk,van Riemsdyk,7.628813662771451,59,4100,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-15280:Brandon Saad,87247-15280,W,Brandon,Brandon Saad,Saad,7.978431252872243,51,4100,VAN@STL,STL,VAN,IR,Upper body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-169054:Kent Johnson,87247-169054,C,Kent,Kent Johnson,Johnson,7.87777766474971,54,4100,MIN@CBJ,CBJ,MIN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66678:Nicolas Roy,87247-66678,C,Nicolas,Nicolas Roy,Roy,7.911111337167245,54,4100,CGY@VGK,VGK,CGY,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-70927:Trent Frederic,87247-70927,C,Trent,Trent Frederic,Frederic,7.569811551076062,53,4100,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-58686:Kasperi Kapanen,87247-58686,W,Kasperi,Kasperi Kapanen,Kapanen,7.633333478655134,42,4100,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-62923:Marcus Pettersson,87247-62923,D,Marcus,Marcus Pettersson,Pettersson,7.525925812897859,54,4100,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-54743:Alex Wennberg,87247-54743,C,Alex,Alex Wennberg,Wennberg,7.828070389597039,57,4100,BOS@SEA,SEA,BOS,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-58880:Ivan Barbashev,87247-58880,W,Ivan,Ivan Barbashev,Barbashev,7.829824347245066,57,4100,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59209:Frederick Gaudreau,87247-59209,W,Frederick,Frederick Gaudreau,Gaudreau,7.847368206894188,57,4100,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-12220:Marcus Johansson,87247-12220,W,Marcus,Marcus Johansson,Johansson,7.777965998245498,59,4100,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-79812:John Hayden,87247-79812,W,John,John Hayden,Hayden,8,5,4100,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-104448:Emil Bemstrom,87247-104448,W,Emil,Emil Bemstrom,Bemstrom,7.196666463216146,30,4000,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-12291:Chris Tanev,87247-12291,D,Chris,Chris Tanev,Tanev,6.860416412353516,48,4000,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82005:Nicolas Hague,87247-82005,D,Nicolas,Nicolas Hague,Hague,6.657142639160156,56,4000,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-73826:Jimmy Vesey,87247-73826,W,Jimmy,Jimmy Vesey,Vesey,7.235087612219024,57,4000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-43134:Anthony Mantha,87247-43134,W,Anthony,Anthony Mantha,Mantha,7.796296296296297,54,4000,ANH@WSH,WSH,ANH,DTD,Upper body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-116885:John Marino,87247-116885,D,John,John Marino,Marino,6.6,40,4000,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-149723:Yegor Chinakhov,87247-149723,W,Yegor,Yegor Chinakhov,Chinakhov,7.2866668701171875,30,4000,MIN@CBJ,CBJ,MIN,IR,Ankle,,,,W/UTIL
+"","","","","","","","","","","","","",87247-149725:Justin Danforth,87247-149725,W,Justin,Justin Danforth,Danforth,7.085714067731585,7,4000,MIN@CBJ,CBJ,MIN,IR,Shoulder,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8539:Nick Foligno,87247-8539,W,Nick,Nick Foligno,Foligno,7.001785823277065,56,4000,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74076:Warren Foegele,87247-74076,W,Warren,Warren Foegele,Foegele,7.395348837209302,43,4000,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74127:Matt Benning,87247-74127,D,Matt,Matt Benning,Benning,6.766071319580078,56,4000,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-151978:Juuso Parssinen,87247-151978,C,Juuso,Juuso Parssinen,Parssinen,7.492683224561738,41,4000,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-70118:Miles Wood,87247-70118,W,Miles,Miles Wood,Wood,7.566071646554129,56,4000,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-80398:Calle Rosen,87247-80398,D,Calle,Calle Rosen,Rosen,6.96585380740282,41,4000,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-142022:Jack Quinn,87247-142022,W,Jack,Jack Quinn,Quinn,7.479166666666667,48,4000,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97091:Martin Fehervary,87247-97091,D,Martin,Martin Fehervary,Fehervary,6.944680721201795,47,4000,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82755:Ryan Lindgren,87247-82755,D,Ryan,Ryan Lindgren,Lindgren,7.0981817072088065,55,4000,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103261:Andrew Peeke,87247-103261,D,Andrew,Andrew Peeke,Peeke,6.916363525390625,55,4000,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103262:Nico Sturm,87247-103262,C,Nico,Nico Sturm,Sturm,7.344000244140625,50,4000,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-103276:Blake Lizotte,87247-103276,C,Blake,Blake Lizotte,Lizotte,7.365517451845366,58,4000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-11122:Nick Bonino,87247-11122,W,Nick,Nick Bonino,Bonino,7.321052417420504,57,4000,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82812:Ryan Donato,87247-82812,W,Ryan,Ryan Donato,Donato,7.131372788373162,51,4000,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97240:Fabian Zetterlund,87247-97240,W,Fabian,Fabian Zetterlund,Zetterlund,7.357777913411458,45,4000,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15386:Ryan Strome,87247-15386,C,Ryan,Ryan Strome,Strome,7.625861858499461,58,4000,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66635:Ethan Bear,87247-66635,D,Ethan,Ethan Bear,Bear,6.773913176163383,46,4000,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66671:Jonas Siegenthaler,87247-66671,D,Jonas,Jonas Siegenthaler,Siegenthaler,6.9803570338657925,56,4000,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-58977:Sonny Milano,87247-58977,W,Sonny,Sonny Milano,Milano,7.278260604194973,46,4000,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-42862:Olli Maatta,87247-42862,D,Olli,Olli Maatta,Maatta,7,52,4000,NYR@DET,DET,NYR,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8142:Corey Perry,87247-8142,W,Corey,Corey Perry,Perry,7.4500002179827005,56,4000,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8211:Tyler Myers,87247-8211,D,Tyler,Tyler Myers,Myers,6.118518405490452,54,3900,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-147529:Braden Schneider,87247-147529,D,Braden,Braden Schneider,Schneider,6.470175224438048,57,3900,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-81999:Henri Jokiharju,87247-81999,D,Henri,Henri Jokiharju,Jokiharju,6.278787786310369,33,3900,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82004:Cody Glass,87247-82004,C,Cody,Cody Glass,Glass,7.180434517238451,46,3900,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82029:Sean Walker,87247-82029,D,Sean,Sean Walker,Walker,6.292307927058293,52,3900,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-43140:Barclay Goodrow,87247-43140,C,Barclay,Barclay Goodrow,Goodrow,6.859649122807017,57,3900,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-14473:Jakob Silfverberg,87247-14473,W,Jakob,Jakob Silfverberg,Silfverberg,6.510526422868695,57,3900,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-73951:Tanner Jeannot,87247-73951,W,Tanner,Tanner Jeannot,Jeannot,6.414545232599432,55,3900,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82167:Sheldon Dries,87247-82167,C,Sheldon,Sheldon Dries,Dries,6.831579107987253,38,3900,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-70128:Danton Heinen,87247-70128,W,Danton,Danton Heinen,Heinen,6.176190330868676,42,3900,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8966:Trevor Lewis,87247-8966,W,Trevor,Trevor Lewis,Lewis,6.525862068965517,58,3900,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97128:Ryan McLeod,87247-97128,C,Ryan,Ryan McLeod,McLeod,6.924444580078125,45,3900,EDM@PIT,EDM,PIT,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66408:Yakov Trenin,87247-66408,W,Yakov,Yakov Trenin,Trenin,6.52,50,3900,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82800:Zach Whitecloud,87247-82800,D,Zach,Zach Whitecloud,Whitecloud,6.111111111111111,36,3900,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-15255:Josh Leivo,87247-15255,W,Josh,Josh Leivo,Leivo,6.5560972632431405,41,3900,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-11170:Nick Leddy,87247-11170,D,Nick,Nick Leddy,Leddy,6.188679245283019,53,3900,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-54193:Phillip Di Giuseppe,87247-54193,W,Phillip,Phillip Di Giuseppe,Di Giuseppe,8.533333672417534,9,3900,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15293:Jamie Oleksiak,87247-15293,D,Jamie,Jamie Oleksiak,Oleksiak,6.72,50,3900,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82926:Michael Eyssimont,87247-82926,C,Michael,Michael Eyssimont,Eyssimont,7.333333333333333,36,3900,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-68667:Tyler Motte,87247-68667,W,Tyler,Tyler Motte,Motte,6.717948717948718,39,3900,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54478:Nic Dowd,87247-54478,C,Nic,Nic Dowd,Dowd,7.262221950954861,45,3900,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-60686:Mattias Janmark,87247-60686,W,Mattias,Mattias Janmark,Janmark,6.466666811988468,42,3900,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-58985:Jakub Vrana,87247-58985,W,Jakub,Jakub Vrana,Vrana,10.933333079020182,3,3900,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59127:Garnet Hathaway,87247-59127,W,Garnet,Garnet Hathaway,Hathaway,6.440677966101695,59,3900,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59142:Michael Amadio,87247-59142,W,Michael,Michael Amadio,Amadio,6.616279069767442,43,3900,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-79822:Gavin Bayreuther,87247-79822,D,Gavin,Gavin Bayreuther,Bayreuther,6.571428571428571,28,3900,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-81981:Klim Kostin,87247-81981,W,Klim,Klim Kostin,Kostin,6.126315869783101,38,3800,EDM@PIT,EDM,PIT,DTD,Illness,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82114:Adam Ruzicka,87247-82114,C,Adam,Adam Ruzicka,Ruzicka,6.928571428571429,42,3800,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82120:Kailer Yamamoto,87247-82120,W,Kailer,Kailer Yamamoto,Yamamoto,6.1294115851907165,34,3800,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-43212:Adam Erne,87247-43212,W,Adam,Adam Erne,Erne,6.223255955895712,43,3800,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-73972:Noah Gregor,87247-73972,W,Noah,Noah Gregor,Gregor,6.125714111328125,35,3800,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-39252:Brock McGinn,87247-39252,W,Brock,Brock McGinn,McGinn,6.0428570338657925,56,3800,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74071:Nathan Bastian,87247-74071,W,Nathan,Nathan Bastian,Bastian,6.32258064516129,31,3800,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-39264:Derek Forbort,87247-39264,D,Derek,Derek Forbort,Forbort,6.4711113823784725,45,3800,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-153985:JJ Peterka,87247-153985,W,JJ,JJ Peterka,Peterka,6.167307927058293,52,3800,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-23225:Matt Dumba,87247-23225,D,Matt,Matt Dumba,Dumba,6.545454545454546,55,3800,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66409:Alexandre Carrier,87247-66409,D,Alexandre,Alexandre Carrier,Carrier,6.1200000762939455,40,3800,NSH@SJ,NSH,SJ,O,Upper body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-68648:Sean Kuraly,87247-68648,C,Sean,Sean Kuraly,Kuraly,6.472727272727273,55,3800,MIN@CBJ,CBJ,MIN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66606:Brandon Carlo,87247-66606,D,Brandon,Brandon Carlo,Carlo,6.376923194298377,52,3800,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70928:Sam Steel,87247-70928,C,Sam,Sam Steel,Steel,6.458490335716392,53,3800,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-103753:Mikey Anderson,87247-103753,D,Mikey,Mikey Anderson,Anderson,6.351724032698007,58,3800,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-58878:Oskar Sundqvist,87247-58878,C,Oskar,Oskar Sundqvist,Sundqvist,6.197999877929687,50,3800,NYR@DET,DET,NYR,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-103936:Mario Ferraro,87247-103936,D,Mario,Mario Ferraro,Ferraro,6.227083206176758,48,3800,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-101993:Paul Cotter,87247-101993,C,Paul,Paul Cotter,Cotter,6.381395206894985,43,3800,CGY@VGK,VGK,CGY,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-42705:Colton Sissons,87247-42705,C,Colton,Colton Sissons,Sissons,6.414545232599432,55,3800,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-9990:Lars Eller,87247-9990,C,Lars,Lars Eller,Eller,6.329824347245066,57,3800,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-59269:Robert Hagg,87247-59269,D,Robert,Robert Hagg,Hagg,6.266666836208767,18,3800,NYR@DET,DET,NYR,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-81968:Pierre-Olivier Joseph,87247-81968,D,Pierre-Olivier,Pierre-Olivier Joseph,Joseph,5.998076805701623,52,3700,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-79965:Carl Grundstrom,87247-79965,W,Carl,Carl Grundstrom,Grundstrom,5.505405322925465,37,3700,LA@NJ,LA,NJ,IR,Lower body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82026:Jaret Anderson-Dolan,87247-82026,C,Jaret,Jaret Anderson-Dolan,Anderson-Dolan,5.611627977947856,43,3700,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82041:Morgan Geekie,87247-82041,C,Morgan,Morgan Geekie,Geekie,5.6000002597240695,47,3700,BOS@SEA,SEA,BOS,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82122:Mason Shaw,87247-82122,C,Mason,Mason Shaw,Shaw,5.9,40,3700,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-73969:Rudolfs Balcers,87247-73969,W,Rudolfs,Rudolfs Balcers,Balcers,5.694117826573989,17,3700,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82193:Pius Suter,87247-82193,C,Pius,Pius Suter,Suter,6.218868039688974,53,3700,NYR@DET,DET,NYR,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-61860:Ben Hutton,87247-61860,D,Ben,Ben Hutton,Hutton,5.065384498009315,26,3700,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8628:Marc-Edouard Vlasic,87247-8628,D,Marc-Edouard,Marc-Edouard Vlasic,Vlasic,5.8807019685444075,57,3700,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-135666:Nils Hoglander,87247-135666,W,Nils,Nils Hoglander,Hoglander,5.727999877929688,25,3700,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-142016:Quinton Byfield,87247-142016,C,Quinton,Quinton Byfield,Byfield,5.542424057469224,33,3700,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97098:Simon Benoit,87247-97098,D,Simon,Simon Benoit,Benoit,5.658182040127841,55,3700,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-11150:Marcus Foligno,87247-11150,W,Marcus,Marcus Foligno,Foligno,5.888888888888889,45,3700,MIN@CBJ,MIN,CBJ,IR,Lower body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82841:Will Borgen,87247-82841,D,Will,Will Borgen,Borgen,5.445613928008497,57,3700,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82852:Eric Robinson,87247-82852,W,Eric,Eric Robinson,Robinson,5.647058823529412,51,3700,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-37883:Cody Ceci,87247-37883,D,Cody,Cody Ceci,Ceci,5.420689549939386,58,3700,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-68644:Mark Jankowski,87247-68644,C,Mark,Mark Jankowski,Jankowski,5.738461421086238,26,3700,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66608:Jeremy Lauzon,87247-66608,D,Jeremy,Jeremy Lauzon,Lauzon,5.391666412353516,48,3700,NSH@SJ,NSH,SJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66643:Erik Cernak,87247-66643,D,Erik,Erik Cernak,Cernak,5.904000244140625,50,3700,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70908:Tyson Jost,87247-70908,W,Tyson,Tyson Jost,Jost,5.97647034888174,51,3700,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70910:Michael McLeod,87247-70910,C,Michael,Michael McLeod,McLeod,6.098245721114309,57,3700,LA@NJ,NJ,LA,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-70915:Dante Fabbro,87247-70915,D,Dante,Dante Fabbro,Fabbro,5.615384615384615,52,3700,NSH@SJ,NSH,SJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-13657:Derek Grant,87247-13657,W,Derek,Derek Grant,Grant,5.890909368341619,22,3700,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-62927:Derek Ryan,87247-62927,C,Derek,Derek Ryan,Ryan,5.721428462437221,56,3700,EDM@PIT,EDM,PIT,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-79924:Carson Soucy,87247-79924,D,Carson,Carson Soucy,Soucy,5.228571210588727,56,3600,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-81984:Alexey Toropchenko,87247-81984,W,Alexey,Alexey Toropchenko,Toropchenko,4.509090770374645,44,3600,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82073:Cal Foote,87247-82073,D,Cal,Cal Foote,Foote,3.5384615384615383,26,3600,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82076:Jacob MacDonald,87247-82076,D,Jacob,Jacob MacDonald,MacDonald,3.274418675622275,43,3600,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-73902:Mathieu Olivier,87247-73902,W,Mathieu,Mathieu Olivier,Olivier,5.252830073518573,53,3600,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82156:Max Comtois,87247-82156,W,Max,Max Comtois,Comtois,5.145454406738281,44,3600,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-73987:Riley Stillman,87247-73987,D,Riley,Riley Stillman,Stillman,4.266666759144176,33,3600,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74035:Beck Malenstyn,87247-74035,W,Beck,Beck Malenstyn,Malenstyn,5.920000076293945,5,3600,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-117048:Peyton Krebs,87247-117048,C,Peyton,Peyton Krebs,Krebs,5.465957316946476,47,3600,BUF@TB,BUF,TB,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-117050:Kaedan Korczak,87247-117050,D,Kaedan,Kaedan Korczak,Korczak,5.44000015258789,10,3600,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117058:Jakob Pelletier,87247-117058,W,Jakob,Jakob Pelletier,Pelletier,7.016666412353516,12,3600,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74092:Kale Clague,87247-74092,D,Kale,Kale Clague,Clague,3.3920001220703124,25,3600,BUF@TB,BUF,TB,DTD,Lower body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117109:Nikita Okhotiuk,87247-117109,D,Nikita,Nikita Okhotiuk,Okhotiuk,3.6,10,3600,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-39309:Chad Ruhwedel,87247-39309,D,Chad,Chad Ruhwedel,Ruhwedel,3.4,40,3600,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8611:Alex Goligoski,87247-8611,D,Alex,Alex Goligoski,Goligoski,5.120689655172414,29,3600,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-84404:Ilya Lyubushkin,87247-84404,D,Ilya,Ilya Lyubushkin,Lyubushkin,4.190908952192827,44,3600,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-84410:Gustav Lindstrom,87247-84410,D,Gustav,Gustav Lindstrom,Lindstrom,3.7666667302449546,24,3600,NYR@DET,DET,NYR,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-12744:Mark Pysyk,87247-12744,D,Mark,Mark Pysyk,Pysyk,5.0941175573012405,68,3600,NYR@DET,DET,NYR,IR,Achilles,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70117:Steven Santini,87247-70117,D,Steven,Steven Santini,Santini,8,4,3600,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8709:Alexander Edler,87247-8709,D,Alexander,Alexander Edler,Edler,5.436734569316008,49,3600,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-96789:Tyler Tucker,87247-96789,D,Tyler,Tyler Tucker,Tucker,3.6705883250517,17,3600,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-96800:Urho Vaakanainen,87247-96800,D,Urho,Urho Vaakanainen,Vaakanainen,4.521739130434782,23,3600,ANH@WSH,ANH,WSH,IR,Lower body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-80444:Radim Simek,87247-80444,D,Radim,Radim Simek,Simek,4.9290323565083165,31,3600,NSH@SJ,SJ,NSH,IR,Upper body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-80475:Oskar Lindblom,87247-80475,W,Oskar,Oskar Lindblom,Lindblom,4.108928680419922,56,3600,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-113270:Philip Broberg,87247-113270,D,Philip,Philip Broberg,Broberg,4.300000190734863,32,3600,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-41591:Jon Merrill,87247-41591,D,Jon,Jon Merrill,Merrill,4.769811378335053,53,3600,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-113287:Dakota Joshua,87247-113287,W,Dakota,Dakota Joshua,Joshua,4.542592649106626,54,3600,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8847:Robert Bortuzzo,87247-8847,D,Robert,Robert Bortuzzo,Bortuzzo,2.8470589132869946,34,3600,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-80561:Jan Rutta,87247-80561,D,Jan,Jan Rutta,Rutta,5.809523809523809,42,3600,EDM@PIT,PIT,EDM,IR,Upper body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-23222:Zemgus Girgensons,87247-23222,W,Zemgus,Zemgus Girgensons,Girgensons,5.192453060510023,53,3600,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8903:Marco Scandella,87247-8903,D,Marco,Marco Scandella,Scandella,3.200000047683716,1,3600,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97056:Connor Dewar,87247-97056,W,Connor,Connor Dewar,Dewar,4.928571428571429,56,3600,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97096:Isac Lundestrom,87247-97096,C,Isac,Isac Lundestrom,Lundestrom,5.416216051256335,37,3600,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97107:Kevin Bahl,87247-97107,D,Kevin,Kevin Bahl,Bahl,3.1039999389648436,25,3600,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-62295:Jonny Brodzinski,87247-62295,W,Jonny,Jonny Brodzinski,Brodzinski,4.150000095367432,16,3600,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97140:Joe Veleno,87247-97140,C,Joe,Joe Veleno,Veleno,5.356363747336648,55,3600,NYR@DET,DET,NYR,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82828:Christian Wolanin,87247-82828,D,Christian,Christian Wolanin,Wolanin,4,2,3600,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82851:Jordan Greenway,87247-82851,W,Jordan,Jordan Greenway,Greenway,4.920000076293945,40,3600,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97188:Jake Christiansen,87247-97188,D,Jake,Jake Christiansen,Christiansen,4.444444444444445,18,3600,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-148401:Walker Duehr,87247-148401,W,Walker,Walker Duehr,Duehr,7.91111077202691,9,3600,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-148412:Zac Jones,87247-148412,D,Zac,Zac Jones,Jones,4.0941175573012405,17,3600,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-39870:Tanner Pearson,87247-39870,W,Tanner,Tanner Pearson,Pearson,5.464285714285714,14,3600,VAN@STL,VAN,STL,IR,Hand,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15302:Nathan Beaulieu,87247-15302,D,Nathan,Nathan Beaulieu,Beaulieu,4.586666870117187,30,3600,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97233:Jesper Boqvist,87247-97233,W,Jesper,Jesper Boqvist,Boqvist,4,49,3600,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15313:Vladislav Namestnikov,87247-15313,W,Vladislav,Vladislav Namestnikov,Namestnikov,5.351851851851852,54,3600,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66516:Niko Mikkola,87247-66516,D,Niko,Niko Mikkola,Mikkola,3.621052524499726,57,3600,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-62443:Jaycob Megna,87247-62443,D,Jaycob,Jaycob Megna,Megna,5.655999755859375,50,3600,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66553:Lane Pederson,87247-66553,C,Lane,Lane Pederson,Pederson,5.107692425067608,13,3600,MIN@CBJ,CBJ,MIN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-15374:Scott Harrington,87247-15374,D,Scott,Scott Harrington,Harrington,5.489655067180765,29,3600,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103445:Vladislav Gavrikov,87247-103445,D,Vladislav,Vladislav Gavrikov,Gavrikov,6.423076923076923,52,3600,MIN@CBJ,CBJ,MIN,DTD,Not injury related,,,,D/UTIL
+"","","","","","","","","","","","","",87247-15395:Brett Ritchie,87247-15395,W,Brett,Brett Ritchie,Ritchie,4.9882354736328125,34,3600,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66598:Jakub Zboril,87247-66598,D,Jakub,Jakub Zboril,Zboril,2.588235294117647,17,3600,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66625:Keegan Kolesar,87247-66625,W,Keegan,Keegan Kolesar,Kolesar,4.5473686352110745,57,3600,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66682:Travis Dermott,87247-66682,D,Travis,Travis Dermott,Dermott,3.5636364329944956,11,3600,VAN@STL,VAN,STL,IR,Undisclosed,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103573:Jacob Bryson,87247-103573,D,Jacob,Jacob Bryson,Bryson,4.318181818181818,44,3600,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66726:Colton White,87247-66726,D,Colton,Colton White,White,3.085714340209961,28,3600,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-54457:Jordan Oesterle,87247-54457,D,Jordan,Jordan Oesterle,Oesterle,4.571428571428571,42,3600,NYR@DET,DET,NYR,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103624:Brandon Duhaime,87247-103624,W,Brandon,Brandon Duhaime,Duhaime,4.929411944221048,34,3600,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-148701:Dylan Holloway,87247-148701,W,Dylan,Dylan Holloway,Holloway,3.3962264150943398,53,3600,EDM@PIT,EDM,PIT,O,Undisclosed,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70911:Jake Bean,87247-70911,D,Jake,Jake Bean,Bean,7.446666463216146,15,3600,MIN@CBJ,CBJ,MIN,IR,Shoulder,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70925:Brett Howden,87247-70925,W,Brett,Brett Howden,Howden,4.720000203450521,30,3600,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-113932:Nikita Alexandrov,87247-113932,C,Nikita,Nikita Alexandrov,Alexandrov,5.159999847412109,20,3600,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-70926:Lucas Johansen,87247-70926,D,Lucas,Lucas Johansen,Johansen,4.800000190734863,2,3600,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-58685:Josh Archibald,87247-58685,W,Josh,Josh Archibald,Archibald,4.627026944547086,37,3600,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-21926:Brian Dumoulin,87247-21926,D,Brian,Brian Dumoulin,Dumoulin,5.871428353445871,56,3600,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-128488:Connor Mackey,87247-128488,D,Connor,Connor Mackey,Mackey,4.399999936421712,12,3600,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-128490:Cole Smith,87247-128490,W,Cole,Cole Smith,Smith,4.628571490852201,49,3600,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-128502:Scott Perunovich,87247-128502,D,Scott,Scott Perunovich,Perunovich,5.161538344163161,26,3600,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-128509:Mattias Samuelsson,87247-128509,D,Mattias,Mattias Samuelsson,Samuelsson,5.909999847412109,40,3600,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-85571:Filip Zadina,87247-85571,W,Filip,Filip Zadina,Zadina,4.6399998982747395,15,3600,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54951:Pierre-Edouard Bellemare,87247-54951,C,Pierre-Edouard,Pierre-Edouard Bellemare,Bellemare,4.037037037037037,54,3600,BUF@TB,TB,BUF,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-59147:Jake Middleton,87247-59147,D,Jake,Jake Middleton,Middleton,5.921428680419922,56,3600,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-42795:Michael McCarron,87247-42795,W,Michael,Michael McCarron,McCarron,4.96000010172526,15,3600,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59220:Haydn Fleury,87247-59220,D,Haydn,Haydn Fleury,Fleury,3.199999933657439,23,3600,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-42855:Ben Harpur,87247-42855,D,Ben,Ben Harpur,Harpur,5.447619120279948,21,3600,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-59256:Kyle Burroughs,87247-59256,D,Kyle,Kyle Burroughs,Burroughs,5.200000127156575,24,3600,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-59263:Nicolas Aube-Kubel,87247-59263,W,Nicolas,Nicolas Aube-Kubel,Aube-Kubel,4,36,3600,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-42962:Brett Kulak,87247-42962,D,Brett,Brett Kulak,Kulak,6.634482548154634,58,3600,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-12259:Brendan Smith,87247-12259,D,Brendan,Brendan Smith,Smith,4.130769289456881,52,3600,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-79846:Mark Friedman,87247-79846,D,Mark,Mark Friedman,Friedman,5.01818188753995,11,3600,EDM@PIT,PIT,EDM,DTD,Upper body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8169:Zach Bogosian,87247-8169,D,Zach,Zach Bogosian,Bogosian,4.324999809265137,32,3600,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-42994:Nikita Zadorov,87247-42994,D,Nikita,Nikita Zadorov,Zadorov,6.546551934603987,58,3600,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8178:Milan Lucic,87247-8178,W,Milan,Milan Lucic,Lucic,4.378181873668324,55,3600,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-79881:Tucker Poolman,87247-79881,D,Tucker,Tucker Poolman,Poolman,5.333333333333333,3,3500,VAN@STL,VAN,STL,IR,Undisclosed,,,,D/UTIL
+"","","","","","","","","","","","","",87247-43022:Connor Brown,87247-43022,W,Connor,Connor Brown,Brown,1.2000000476837158,4,3500,ANH@WSH,WSH,ANH,IR,Knee,,,,W/UTIL
+"","","","","","","","","","","","","",87247-38933:Slater Koekkoek,87247-38933,D,Slater,Slater Koekkoek,Koekkoek,3.9200000762939453,20,3500,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-38947:Andrej Sustr,87247-38947,D,Andrej,Andrej Sustr,Sustr,4.06315773411801,38,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180301:David Spacek,87247-180301,D,David,David Spacek,Spacek,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180305:Benjamin Finkelstein,87247-180305,D,Benjamin,Benjamin Finkelstein,Finkelstein,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-161890:Zach Giuttari,87247-161890,D,Zach,Zach Giuttari,Giuttari,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180352:Angus Booth,87247-180352,D,Angus,Angus Booth,Booth,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180353:Marc Lajoie,87247-180353,D,Marc,Marc Lajoie,Lajoie,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-161940:Kyle Masters,87247-161940,D,Kyle,Kyle Masters,Masters,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-168103:Matthew Kessel,87247-168103,D,Matthew,Matthew Kessel,Kessel,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-73907:Frederic Allard,87247-73907,D,Frederic,Frederic Allard,Allard,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180407:Kirill Kudryavtsev,87247-180407,D,Kirill,Kirill Kudryavtsev,Kudryavtsev,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180408:Matt Anderson,87247-180408,D,Matt,Matt Anderson,Anderson,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180409:Chad Nychuk,87247-180409,D,Chad,Chad Nychuk,Nychuk,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-159932:Cole Sillinger,87247-159932,C,Cole,Cole Sillinger,Sillinger,4.686538402850811,52,3500,MIN@CBJ,CBJ,MIN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82116:Dmitri Samorukov,87247-82116,D,Dmitri,Dmitri Samorukov,Samorukov,0,1,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-161993:Louka Henault,87247-161993,D,Louka,Louka Henault,Henault,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8411:Thomas Hickey,87247-8411,D,Thomas,Thomas Hickey,Hickey,2.4000000953674316,2,3500,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-39145:Danny DeKeyser,87247-39145,D,Danny,Danny DeKeyser,DeKeyser,5.8033897270590575,59,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-73963:A.J. Greer,87247-73963,W,A.J.,A.J. Greer,Greer,4.514285859607515,42,3500,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82161:Brady Lyle,87247-82161,D,Brady,Brady Lyle,Lyle,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82162:Turner Ottenbreit,87247-82162,D,Turner,Turner Ottenbreit,Ottenbreit,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74015:Dan Renouf,87247-74015,D,Dan,Dan Renouf,Renouf,11.199999809265137,1,3500,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-162081:Tobie Bisson,87247-162081,D,Tobie,Tobie Bisson,Bisson,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8490:Andy Greene,87247-8490,D,Andy,Andy Greene,Greene,5.402898373811142,69,3500,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117039:Hunter Skinner,87247-117039,D,Hunter,Hunter Skinner,Skinner,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117038:Matthew Robertson,87247-117038,D,Matthew,Matthew Robertson,Robertson,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74030:Sean Day,87247-74030,D,Sean,Sean Day,Day,3.200000047683716,2,3500,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117046:Quinn Schmiemann,87247-117046,D,Quinn,Quinn Schmiemann,Schmiemann,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82236:Chase Priskie,87247-82236,D,Chase,Chase Priskie,Priskie,2.799999952316284,4,3500,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-84289:Lawrence Pilut,87247-84289,D,Lawrence,Lawrence Pilut,Pilut,4.470588235294118,17,3500,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-162118:Griffin Luce,87247-162118,D,Griffin,Griffin Luce,Luce,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-149830:Daemon Hunt,87247-149830,D,Daemon,Daemon Hunt,Hunt,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-149831:Ryan O'Rourke,87247-149831,D,Ryan,Ryan O'Rourke,O'Rourke,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-162117:Tyson Galloway,87247-162117,D,Tyson,Tyson Galloway,Galloway,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8531:Michael Del Zotto,87247-8531,D,Michael,Michael Del Zotto,Del Zotto,8.12142835344587,28,3500,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117092:Jordan Spence,87247-117092,D,Jordan,Jordan Spence,Spence,3.7333332697550454,3,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74096:Jacob Moverare,87247-74096,D,Jacob,Jacob Moverare,Moverare,8,2,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-149873:Santeri Hatakka,87247-149873,D,Santeri,Santeri Hatakka,Hatakka,3.2,10,3500,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-168321:Kim Nousiainen,87247-168321,D,Kim,Kim Nousiainen,Nousiainen,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74126:Markus Niemelainen,87247-74126,D,Markus,Markus Niemelainen,Niemelainen,2.2260869896930195,23,3500,EDM@PIT,EDM,PIT,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-74148:Libor Hajek,87247-74148,D,Libor,Libor Hajek,Hajek,3.2400001525878905,20,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-12718:Tyler Pitlick,87247-12718,W,Tyler,Tyler Pitlick,Pitlick,4.057142711821056,42,3500,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82375:Austin Strand,87247-82375,D,Austin,Austin Strand,Strand,2.8799999237060545,5,3500,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-162278:Landon Kosior,87247-162278,D,Landon,Landon Kosior,Kosior,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-162277:Cameron Supryka,87247-162277,D,Cameron,Cameron Supryka,Supryka,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-117248:Jon Lizotte,87247-117248,D,Jon,Jon Lizotte,Lizotte,8,1,3500,EDM@PIT,PIT,EDM,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70225:Gabriel Carlsson,87247-70225,D,Gabriel,Gabriel Carlsson,Carlsson,4.2526317395662,38,3500,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-113273:Tobias Bjornfot,87247-113273,D,Tobias,Tobias Bjornfot,Bjornfot,4.571428571428571,7,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103033:Jett Woo,87247-103033,D,Jett,Jett Woo,Woo,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-113281:Artemi Kniazev,87247-113281,D,Artemi,Artemi Kniazev,Kniazev,1.600000023841858,2,3500,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-113286:Brett Leason,87247-113286,W,Brett,Brett Leason,Leason,3.2666667302449546,48,3500,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8860:John Moore,87247-8860,D,John,John Moore,Moore,5.5428570338657925,7,3500,ANH@WSH,ANH,WSH,O,Undisclosed,,,,D/UTIL
+"","","","","","","","","","","","","",87247-103079:Brady Keeper,87247-103079,D,Brady,Brady Keeper,Keeper,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-142020:Jamie Drysdale,87247-142020,D,Jamie,Jamie Drysdale,Drysdale,2.4888888465033636,9,3500,ANH@WSH,ANH,WSH,IR,Shoulder,,,,D/UTIL
+"","","","","","","","","","","","","",87247-8918:Anton Stralman,87247-8918,D,Anton,Anton Stralman,Stralman,2.0799999237060547,10,3500,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-23286:Ryan Murray,87247-23286,D,Ryan,Ryan Murray,Murray,3.5,16,3500,EDM@PIT,EDM,PIT,IR,Back,,,,D/UTIL
+"","","","","","","","","","","","","",87247-148220:Ty Emberson,87247-148220,D,Ty,Ty Emberson,Emberson,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70416:Markus Nutivaara,87247-70416,D,Markus,Markus Nutivaara,Nutivaara,8,1,3500,NSH@SJ,SJ,NSH,IR,Lower body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-135978:Jack Rathbone,87247-135978,D,Jack,Jack Rathbone,Rathbone,3.4285714285714284,7,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97090:Alexander Alexeyev,87247-97090,D,Alexander,Alexander Alexeyev,Alexeyev,4.533333460489909,12,3500,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-62276:Austin Czarnik,87247-62276,W,Austin,Austin Czarnik,Czarnik,5.200000127156575,12,3500,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97092:Alex Kannok-Leipert,87247-97092,D,Alex,Alex Kannok-Leipert,Kannok-Leipert,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97099:Hunter Drew,87247-97099,D,Hunter,Hunter Drew,Drew,0,2,3500,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-170839:Nils Aman,87247-170839,C,Nils,Nils Aman,Aman,3.6837207882903344,43,3500,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97120:Cale Fleury,87247-97120,D,Cale,Cale Fleury,Fleury,2.9866666158040363,15,3500,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66407:Philippe Myers,87247-66407,D,Philippe,Philippe Myers,Myers,5.476922842172476,13,3500,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-15239:Craig Smith,87247-15239,W,Craig,Craig Smith,Smith,4.439534741778706,43,3500,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97181:Dylan MacPherson,87247-97181,D,Dylan,Dylan MacPherson,MacPherson,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97190:Brayden Pachal,87247-97190,D,Brayden,Brayden Pachal,Pachal,6.222222222222222,9,3500,CGY@VGK,VGK,CGY,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70579:Michal Kempny,87247-70579,D,Michal,Michal Kempny,Kempny,4.426666768391927,15,3500,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97243:Reilly Walsh,87247-97243,D,Reilly,Reilly Walsh,Walsh,14.399999618530273,1,3500,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-97242:Jeremy Davies,87247-97242,D,Jeremy,Jeremy Davies,Davies,1.0666666825612385,3,3500,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82913:Blake Hillman,87247-82913,D,Blake,Blake Hillman,Hillman,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-136184:Wyatt Kalynuk,87247-136184,D,Wyatt,Wyatt Kalynuk,Kalynuk,0.3200000047683716,5,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-171018:Filip Johansson,87247-171018,D,Filip,Filip Johansson,Johansson,,,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-9230:Cameron Gaunce,87247-9230,D,Cameron,Cameron Gaunce,Gaunce,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-68640:Zach Werenski,87247-68640,D,Zach,Zach Werenski,Werenski,13.923076923076923,13,3500,MIN@CBJ,CBJ,MIN,IR,Shoulder,,,,D/UTIL
+"","","","","","","","","","","","","",87247-68642:Ethan Prow,87247-68642,D,Ethan,Ethan Prow,Prow,5,4,3500,BUF@TB,BUF,TB,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82985:Jordan Gross,87247-82985,D,Jordan,Jordan Gross,Gross,7.972726995294744,11,3500,NSH@SJ,NSH,SJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-68663:Andy Welinski,87247-68663,D,Andy,Andy Welinski,Welinski,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66616:Dakota Mermis,87247-66616,D,Dakota,Dakota Mermis,Mermis,1.600000023841858,2,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66656:Mike Reilly,87247-66656,D,Mike,Mike Reilly,Reilly,3.6000000635782876,12,3500,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66677:Steven Lorentz,87247-66677,W,Steven,Steven Lorentz,Lorentz,4.7000002179827005,56,3500,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-11387:Matt Irwin,87247-11387,D,Matt,Matt Irwin,Irwin,3.7688890245225695,45,3500,ANH@WSH,WSH,ANH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66689:Oliver Kylington,87247-66689,D,Oliver,Oliver Kylington,Kylington,8.394117647058824,85,3500,CGY@VGK,CGY,VGK,IR,Personal,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66712:Noah Juulsen,87247-66712,D,Noah,Noah Juulsen,Juulsen,1.2800000190734864,5,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66741:Nicolas Meloche,87247-66741,D,Nicolas,Nicolas Meloche,Meloche,4.2,50,3500,CGY@VGK,CGY,VGK,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-160964:Carson Lambos,87247-160964,D,Carson,Carson Lambos,Lambos,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-21735:Matt Tennyson,87247-21735,D,Matt,Matt Tennyson,Tennyson,4.800000190734863,8,3500,BOS@SEA,SEA,BOS,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-152815:Helge Grans,87247-152815,D,Helge,Helge Grans,Grans,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-66798:Guillaume Brisebois,87247-66798,D,Guillaume,Guillaume Brisebois,Brisebois,6.400000254313151,3,3500,VAN@STL,VAN,STL,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70903:Olli Juolevi,87247-70903,D,Olli,Olli Juolevi,Juolevi,2.4888888465033636,18,3500,ANH@WSH,ANH,WSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-70902:Jesse Puljujarvi,87247-70902,W,Jesse,Jesse Puljujarvi,Puljujarvi,5.2509088689630685,55,3500,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70922:Max Jones,87247-70922,W,Max,Max Jones,Jones,4.408888753255209,45,3500,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-167202:Brandon Scanlin,87247-167202,D,Brandon,Brandon Scanlin,Scanlin,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-62783:Joonas Donskoi,87247-62783,W,Joonas,Joonas Donskoi,Donskoi,5.06,75,3500,BOS@SEA,SEA,BOS,IR,Concussion,,,,W/UTIL
+"","","","","","","","","","","","","",87247-173424:David Jiricek,87247-173424,D,David,David Jiricek,Jiricek,6.400000095367432,2,3500,MIN@CBJ,CBJ,MIN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-159098:Brandt Clarke,87247-159098,D,Brandt,Brandt Clarke,Clarke,5.136363636363637,11,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-167291:Tyler Inamoto,87247-167291,D,Tyler,Tyler Inamoto,Inamoto,,,3500,LA@NJ,LA,NJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-13743:Mark Borowiecki,87247-13743,D,Mark,Mark Borowiecki,Borowiecki,0.5333333412806193,6,3500,NSH@SJ,NSH,SJ,IR,Upper body,,,,D/UTIL
+"","","","","","","","","","","","","",87247-128500:Jack Ahcan,87247-128500,D,Jack,Jack Ahcan,Ahcan,4.75,6,3500,BOS@SEA,BOS,SEA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-58881:Sammy Blais,87247-58881,W,Sammy,Sammy Blais,Blais,3.5478260206139605,46,3500,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-42637:Mason Geertsen,87247-42637,D,Mason,Mason Geertsen,Geertsen,1.1259259117974176,27,3500,LA@NJ,NJ,LA,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-59139:Darren Raddysh,87247-59139,D,Darren,Darren Raddysh,Raddysh,3.200000047683716,4,3500,BUF@TB,TB,BUF,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-169736:Simon Johansson,87247-169736,D,Simon,Simon Johansson,Johansson,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-12120:Matt Bartkowski,87247-12120,D,Matt,Matt Bartkowski,Bartkowski,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-42841:Nathan Walker,87247-42841,W,Nathan,Nathan Walker,Walker,3.451428658621652,35,3500,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180067:Marc-Andre Gaudet,87247-180067,D,Marc-Andre,Marc-Andre Gaudet,Gaudet,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180065:Michael Buchinger,87247-180065,D,Michael,Michael Buchinger,Buchinger,,,3500,VAN@STL,STL,VAN,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-59239:Joe Hicketts,87247-59239,D,Joe,Joe Hicketts,Hicketts,,,3500,MIN@CBJ,MIN,CBJ,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-42863:Derrick Pouliot,87247-42863,D,Derrick,Derrick Pouliot,Pouliot,6.109090631658381,11,3500,NSH@SJ,SJ,NSH,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-180085:Luke Martin,87247-180085,D,Luke,Luke Martin,Martin,,,3500,NYR@DET,NYR,DET,,,,,,D/UTIL
+"","","","","","","","","","","","","",87247-42912:Oscar Klefbom,87247-42912,D,Oscar,Oscar Klefbom,Klefbom,,,3500,EDM@PIT,EDM,PIT,IR,Shoulder,,,,D/UTIL
+"","","","","","","","","","","","","",87247-82095:Jonah Gadjovich,87247-82095,W,Jonah,Jonah Gadjovich,Gadjovich,3.437837755357897,37,3400,NSH@SJ,SJ,NSH,IR,Upper body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82176:Jack Studnicka,87247-82176,C,Jack,Jack Studnicka,Studnicka,4.488889058430989,36,3400,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-113285:Aliaksei Protas,87247-113285,C,Aliaksei,Aliaksei Protas,Protas,4.5209300906159156,43,3400,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-142021:Alexander Holtz,87247-142021,W,Alexander,Alexander Holtz,Holtz,3.6956521739130435,23,3400,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-103240:Ryan Poehling,87247-103240,C,Ryan,Ryan Poehling,Poehling,5.989473844829359,38,3400,EDM@PIT,PIT,EDM,DTD,Upper body,,,,C/UTIL
+"","","","","","","","","","","","","",87247-170867:Elmer Soderblom,87247-170867,W,Elmer,Elmer Soderblom,Soderblom,7.123809814453125,21,3400,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82834:Kiefer Sherwood,87247-82834,W,Kiefer,Kiefer Sherwood,Sherwood,3.7714285169328963,7,3400,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-148411:Cole Koepke,87247-148411,W,Cole,Cole Koepke,Koepke,2.3058823978199676,17,3400,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-173464:Shane Wright,87247-173464,C,Shane,Shane Wright,Wright,3.272727272727273,11,3400,BOS@SEA,SEA,BOS,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-59235:Tomas Nosek,87247-59235,C,Tomas,Tomas Nosek,Nosek,4.295237949916294,42,3400,BOS@SEA,BOS,SEA,IR,Foot,,,,C/UTIL
+"","","","","","","","","","","","","",87247-42860:Curtis Lazar,87247-42860,W,Curtis,Curtis Lazar,Lazar,4.817777845594618,45,3400,VAN@STL,VAN,STL,O,Lower body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8319:James Neal,87247-8319,W,James,James Neal,Neal,5.021052711888363,19,3300,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74041:Zach Sanford,87247-74041,W,Zach,Zach Sanford,Sanford,4.888888888888889,9,3300,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-12670:Sam Carrick,87247-12670,C,Sam,Sam Carrick,Carrick,3.7268293427258,41,3300,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-84403:Rasmus Asplund,87247-84403,C,Rasmus,Rasmus Asplund,Asplund,4.813793313914332,29,3300,BUF@TB,BUF,TB,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-62032:Vinnie Hinostroza,87247-62032,W,Vinnie,Vinnie Hinostroza,Hinostroza,5.276190621512277,21,3300,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-113289:Rasmus Kupari,87247-113289,C,Rasmus,Rasmus Kupari,Kupari,3.990476335797991,42,3300,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97048:Trey Fix-Wolansky,87247-97048,W,Trey,Trey Fix-Wolansky,Fix-Wolansky,4,4,3300,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66561:Evgeny Svechnikov,87247-66561,W,Evgeny,Evgeny Svechnikov,Svechnikov,5.580952235630581,42,3300,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-37894:Jayson Megna,87247-37894,W,Jayson,Jayson Megna,Megna,2.6844445122612846,45,3300,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-68623:Teddy Blueger,87247-68623,C,Teddy,Teddy Blueger,Blueger,5.297560901176639,41,3300,EDM@PIT,PIT,EDM,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-9354:Pat Maroon,87247-9354,W,Pat,Pat Maroon,Maroon,3.2089285169328963,56,3300,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-104016:Vitali Kravtsov,87247-104016,W,Vitali,Vitali Kravtsov,Kravtsov,3.7064516621251262,31,3300,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82008:Jake Leschyshyn,87247-82008,C,Jake,Jake Leschyshyn,Leschyshyn,1.8162161337362754,37,3200,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-145545:Jake Neighbours,87247-145545,W,Jake,Jake Neighbours,Neighbours,5.26000010172526,30,3200,VAN@STL,STL,VAN,IR,Upper body,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82096:Kole Lind,87247-82096,W,Kole,Kole Lind,Lind,5.982608961022419,23,3200,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-113284:Connor McMichael,87247-113284,W,Connor,Connor McMichael,McMichael,0.8,10,3200,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-119693:Drew O'Connor,87247-119693,W,Drew,Drew O'Connor,O'Connor,4.98181811246005,22,3200,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70909:Logan Brown,87247-70909,C,Logan,Logan Brown,Brown,2.6352940727682674,17,3200,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-103077:Joe Snively,87247-103077,W,Joe,Joe Snively,Snively,5.01818188753995,11,3100,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8887:Ryan Reaves,87247-8887,W,Ryan,Ryan Reaves,Reaves,2.271999969482422,50,3100,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97047:Liam Foudy,87247-97047,W,Liam,Liam Foudy,Foudy,2.5473685013620475,38,3100,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97152:Martin Kaut,87247-97152,W,Martin,Martin Kaut,Kaut,2.7142857142857144,28,3100,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-146741:Pavel Dorofeyev,87247-146741,W,Pavel,Pavel Dorofeyev,Dorofeyev,3.2000001271565757,3,3100,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54850:Gemel Smith,87247-54850,W,Gemel,Gemel Smith,Smith,3.7333332697550454,3,3100,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-61245:Devin Shore,87247-61245,W,Devin,Devin Shore,Shore,2.8903225314232612,31,3100,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-149375:Carson Meyer,87247-149375,W,Carson,Carson Meyer,Meyer,2.707692366379958,13,3100,MIN@CBJ,CBJ,MIN,IR,Oblique,,,,W/UTIL
+"","","","","","","","","","","","","",87247-43015:Jacob Doty,87247-43015,C,Jacob,Jacob Doty,Doty,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-79880:C.J. Smith,87247-79880,W,C.J.,C.J. Smith,Smith,0,1,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-79887:Mike Vecchione,87247-79887,C,Mike,Mike Vecchione,Vecchione,4.800000190734863,1,3000,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-170039:Adam Edstrom,87247-170039,C,Adam,Adam Edstrom,Edstrom,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-159803:William Eklund,87247-159803,W,William,William Eklund,Eklund,5.855555640326606,9,3000,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-161853:Zac Jordan,87247-161853,W,Zac,Zac Jordan,Jordan,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-161858:Kaleb Lawrence,87247-161858,C,Kaleb,Kaleb Lawrence,Lawrence,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-149574:Karl Henriksson,87247-149574,C,Karl,Karl Henriksson,Henriksson,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-180299:Hunter Haight,87247-180299,C,Hunter,Hunter Haight,Haight,,,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-180302:Josh Pillar,87247-180302,C,Josh,Josh Pillar,Pillar,,,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-180306:Michael Milne,87247-180306,W,Michael,Michael Milne,Milne,,,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180304:Servac Petrovsky,87247-180304,C,Servac,Servac Petrovsky,Petrovsky,,,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-161883:Ryder Korczak,87247-161883,C,Ryder,Ryder Korczak,Korczak,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82011:Ben Jones,87247-82011,C,Ben,Ben Jones,Jones,1.600000023841858,2,3000,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82010:Alex Barre-Boulet,87247-82010,W,Alex,Alex Barre-Boulet,Barre-Boulet,1.600000023841858,1,3000,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-161884:Mike O'Leary,87247-161884,W,Mike,Mike O'Leary,O'Leary,,,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-161885:Matt Rempe,87247-161885,C,Matt,Matt Rempe,Rempe,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-161888:Alex Whelan,87247-161888,W,Alex,Alex Whelan,Whelan,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8303:Jakub Voracek,87247-8303,W,Jakub,Jakub Voracek,Voracek,8.263636502352627,11,3000,MIN@CBJ,CBJ,MIN,IR,Concussion,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180347:James Stefan,87247-180347,W,James,James Stefan,Stefan,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180350:Riley Fiddler-Schultz,87247-180350,C,Riley,Riley Fiddler-Schultz,Fiddler-Schultz,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-43132:Martin Frk,87247-43132,W,Martin,Martin Frk,Frk,8.166666666666666,6,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180349:Eric Alarie,87247-180349,W,Eric,Eric Alarie,Alarie,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-145542:Hendrix Lapierre,87247-145542,C,Hendrix,Hendrix Lapierre,Lapierre,3.7714285169328963,7,3000,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-161938:Caedan Bankier,87247-161938,C,Caedan,Caedan Bankier,Bankier,,,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-116881:Keean Washkurak,87247-116881,C,Keean,Keean Washkurak,Washkurak,,,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-161939:Pavel Novak,87247-161939,W,Pavel,Pavel Novak,Novak,,,3000,MIN@CBJ,MIN,CBJ,O,Illness,,,,W/UTIL
+"","","","","","","","","","","","","",87247-116887:Sam Poulin,87247-116887,W,Sam,Sam Poulin,Poulin,1.9000000272478377,7,3000,EDM@PIT,PIT,EDM,O,Not injury related,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82083:Lias Andersson,87247-82083,W,Lias,Lias Andersson,Andersson,1.600000023841858,1,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180402:Matt Alfaro,87247-180402,W,Matt,Matt Alfaro,Alfaro,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180403:Cole Shepard,87247-180403,W,Cole,Cole Shepard,Shepard,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180406:Yushiro Hirano,87247-180406,W,Yushiro,Yushiro Hirano,Hirano,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180404:Michael Regush,87247-180404,W,Michael,Michael Regush,Regush,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180405:Marc Gatcomb,87247-180405,W,Marc,Marc Gatcomb,Gatcomb,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-43196:Alan Quine,87247-43196,W,Alan,Alan Quine,Quine,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-149697:Lauri Pajuniemi,87247-149697,W,Lauri,Lauri Pajuniemi,Pajuniemi,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-116947:Nolan Foote,87247-116947,W,Nolan,Nolan Foote,Foote,1.0666666825612385,3,3000,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-73941:Tanner Kaspick,87247-73941,C,Tanner,Tanner Kaspick,Kaspick,,,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-73966:Jeffrey Viel,87247-73966,W,Jeffrey,Jeffrey Viel,Viel,3.200000047683716,1,3000,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-168188:Sam Hentges,87247-168188,C,Sam,Sam Hentges,Hentges,,,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-168192:Andre Lee,87247-168192,W,Andre,Andre Lee,Lee,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-117013:Adam Beckman,87247-117013,W,Adam,Adam Beckman,Beckman,2.4888888465033636,9,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74007:Kyle Criscuolo,87247-74007,C,Kyle,Kyle Criscuolo,Criscuolo,4.266666730244954,6,3000,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82202:Alexander True,87247-82202,C,Alexander,Alexander True,True,1.600000023841858,8,3000,BOS@SEA,SEA,BOS,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-102690:Linus Karlsson,87247-102690,W,Linus,Linus Karlsson,Karlsson,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74025:Tim Gettinger,87247-74025,W,Tim,Tim Gettinger,Gettinger,1.600000023841858,8,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74029:Ty Ronning,87247-74029,W,Ty,Ty Ronning,Ronning,,,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74039:Garrett Pilon,87247-74039,C,Garrett,Garrett Pilon,Pilon,6.800000190734863,2,3000,ANH@WSH,WSH,ANH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82232:Chase Pearson,87247-82232,W,Chase,Chase Pearson,Pearson,1.0666666825612385,3,3000,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-170302:Gustav Rydahl,87247-170302,C,Gustav,Gustav Rydahl,Rydahl,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-117052:Dylan McLaughlin,87247-117052,C,Dylan,Dylan McLaughlin,McLaughlin,,,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-149828:Valtteri Puustinen,87247-149828,W,Valtteri,Valtteri Puustinen,Puustinen,9.600000381469727,1,3000,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-39240:Luke Witkowski,87247-39240,W,Luke,Luke Witkowski,Witkowski,0,1,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74067:Kevin Rooney,87247-74067,C,Kevin,Kevin Rooney,Rooney,2.577777862548828,18,3000,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-117087:Cole Schwindt,87247-117087,W,Cole,Cole Schwindt,Schwindt,2.6666666666666665,3,3000,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82276:Oskar Steen,87247-82276,C,Oskar,Oskar Steen,Steen,5.44000015258789,20,3000,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-39271:Seth Griffith,87247-39271,W,Seth,Seth Griffith,Griffith,0,1,3000,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-117103:Philip Tomasino,87247-117103,W,Philip,Philip Tomasino,Tomasino,7.719999694824219,5,3000,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74099:Matt Luff,87247-74099,W,Matt,Matt Luff,Luff,3.5428570338657925,7,3000,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-74100:Tanner Fritz,87247-74100,C,Tanner,Tanner Fritz,Fritz,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-162171:Connor Lockhart,87247-162171,W,Connor,Connor Lockhart,Lockhart,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-117116:Nathan Todd,87247-117116,C,Nathan,Nathan Todd,Todd,,,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-162172:Tristen Nielsen,87247-162172,C,Tristen,Tristen Nielsen,Nielsen,,,3000,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-12672:Greg McKegg,87247-12672,C,Greg,Greg McKegg,McKegg,2.9116278360056325,43,3000,EDM@PIT,EDM,PIT,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-149888:Adam Raska,87247-149888,W,Adam,Adam Raska,Raska,0.6400000095367432,5,3000,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-117161:Carson Focht,87247-117161,C,Carson,Carson Focht,Focht,,,3000,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-84407:Alexandre Texier,87247-84407,C,Alexandre,Alexandre Texier,Texier,8.933333502875435,36,3000,MIN@CBJ,CBJ,MIN,O,Personal,,,,C/UTIL
+"","","","","","","","","","","","","",87247-12732:Michael Sgarbossa,87247-12732,W,Michael,Michael Sgarbossa,Sgarbossa,6.079999923706055,10,3000,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-117182:Brayden Tracey,87247-117182,W,Brayden,Brayden Tracey,Tracey,1.600000023841858,1,3000,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-162267:Justin Nachbaur,87247-162267,W,Justin,Justin Nachbaur,Nachbaur,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-162270:Martin Chromiak,87247-162270,W,Martin,Martin Chromiak,Chromiak,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-162271:Brett Kemp,87247-162271,C,Brett,Brett Kemp,Kemp,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-162269:Francesco Pinelli,87247-162269,C,Francesco,Francesco Pinelli,Pinelli,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-135675:Radim Zohorna,87247-135675,C,Radim,Radim Zohorna,Zohorna,0.800000011920929,8,3000,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-147968:Tyce Thompson,87247-147968,W,Tyce,Tyce Thompson,Thompson,2.4000000953674316,2,3000,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-154119:Jesper Froden,87247-154119,W,Jesper,Jesper Froden,Froden,5.142857142857143,7,3000,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-96785:Mathias Laferriere,87247-96785,W,Mathias,Mathias Laferriere,Laferriere,,,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-96801:Jakub Lauko,87247-96801,W,Jakub,Jakub Lauko,Lauko,4,11,3000,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-170579:Pavol Regenda,87247-170579,W,Pavol,Pavol Regenda,Regenda,4.470588235294118,17,3000,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-102997:Taro Hirose,87247-102997,W,Taro,Taro Hirose,Hirose,3.7466667175292967,15,3000,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-152162:Vasily Podkolzin,87247-152162,W,Vasily,Vasily Podkolzin,Podkolzin,3.9666665395100913,24,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-80481:Anders Bjork,87247-80481,W,Anders,Anders Bjork,Bjork,1.600000023841858,1,3000,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-113274:Samuel Fagemo,87247-113274,W,Samuel,Samuel Fagemo,Fagemo,5.511110941569011,9,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-8829:Nate Thompson,87247-8829,C,Nate,Nate Thompson,Thompson,2.9333334258108428,33,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-152238:Karel Plasek,87247-152238,W,Karel,Karel Plasek,Plasek,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-142023:Marco Rossi,87247-142023,C,Marco,Marco Rossi,Rossi,2.299999952316284,16,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-103129:Ryan Lohin,87247-103129,C,Ryan,Ryan Lohin,Lohin,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-148191:Scott Reedy,87247-148191,C,Scott,Scott Reedy,Reedy,5.597142682756696,35,3000,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-146162:William Lockwood,87247-146162,W,William,William Lockwood,Lockwood,3.4285714285714284,14,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-119549:Tyler Madden,87247-119549,C,Tyler,Tyler Madden,Madden,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-39677:Brendan Gaunce,87247-39677,W,Brendan,Brendan Gaunce,Gaunce,5.1200000762939455,5,3000,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97057:Damien Giroux,87247-97057,C,Damien,Damien Giroux,Giroux,,,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-119594:Bryce Kindopp,87247-119594,W,Bryce,Bryce Kindopp,Kindopp,3.200000047683716,1,3000,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97070:Gabriel Fortier,87247-97070,W,Gabriel,Gabriel Fortier,Fortier,0,1,3000,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-97073:Chase Wouters,87247-97073,C,Chase,Chase Wouters,Wouters,,,3000,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97095:Benoit-Olivier Groulx,87247-97095,C,Benoit-Olivier,Benoit-Olivier Groulx,Groulx,3.600000169542101,18,3000,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-70472:Drake Caggiula,87247-70472,W,Drake,Drake Caggiula,Caggiula,1.2000000476837158,4,3000,EDM@PIT,PIT,EDM,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-62293:Matthew Peca,87247-62293,C,Matthew,Matthew Peca,Peca,2.8799999237060545,5,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82799:Will Bitten,87247-82799,C,Will,Will Bitten,Bitten,2,4,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97159:Akil Thomas,87247-97159,C,Akil,Akil Thomas,Thomas,,,3000,LA@NJ,LA,NJ,O,Shoulder,,,,C/UTIL
+"","","","","","","","","","","","","",87247-97160:Aidan Dudas,87247-97160,C,Aidan,Aidan Dudas,Dudas,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-119692:Patrick Khodorenko,87247-119692,C,Patrick,Patrick Khodorenko,Khodorenko,,,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-101263:C.J. Suess,87247-101263,W,C.J.,C.J. Suess,Suess,0,1,3000,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15247:Victor Rask,87247-15247,W,Victor,Victor Rask,Rask,6.360416412353516,48,3000,MIN@CBJ,CBJ,MIN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82844:Austin Poganski,87247-82844,W,Austin,Austin Poganski,Poganski,1.399999976158142,16,3000,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82849:Adam Gaudette,87247-82849,W,Adam,Adam Gaudette,Gaudette,4.98999989827474,60,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15267:Joseph Cramarossa,87247-15267,C,Joseph,Joseph Cramarossa,Cramarossa,3.799999952316284,4,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-15272:Micheal Ferland,87247-15272,W,Micheal,Micheal Ferland,Ferland,,,3000,VAN@STL,VAN,STL,IR,Head,,,,W/UTIL
+"","","","","","","","","","","","","",87247-148400:Nick Swaney,87247-148400,W,Nick,Nick Swaney,Swaney,,,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54200:Ryan Carpenter,87247-54200,C,Ryan,Ryan Carpenter,Carpenter,3.466666811988467,21,3000,NYR@DET,NYR,DET,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-119745:Alex Turcotte,87247-119745,C,Alex,Alex Turcotte,Turcotte,0.800000011920929,4,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66513:Glenn Gawdin,87247-66513,C,Glenn,Glenn Gawdin,Gawdin,3.2000001271565757,3,3000,ANH@WSH,ANH,WSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-15329:Turner Elson,87247-15329,W,Turner,Turner Elson,Elson,1.600000023841858,2,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-82929:Sheldon Rempal,87247-82929,W,Sheldon,Sheldon Rempal,Rempal,0,1,3000,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-15357:Carl Hagelin,87247-15357,W,Carl,Carl Hagelin,Hagelin,4.883018637603184,53,3000,ANH@WSH,WSH,ANH,IR,Hip,,,,W/UTIL
+"","","","","","","","","","","","","",87247-68607:Andrew Poturalski,87247-68607,C,Andrew,Andrew Poturalski,Poturalski,12.5,2,3000,BOS@SEA,SEA,BOS,O,Lower body,,,,C/UTIL
+"","","","","","","","","","","","","",87247-82958:Anthony Angello,87247-82958,W,Anthony,Anthony Angello,Angello,0.800000011920929,4,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-11284:Cody Eakin,87247-11284,C,Cody,Cody Eakin,Eakin,3.9971426827566963,70,3000,CGY@VGK,CGY,VGK,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-117783:Brett Murray,87247-117783,W,Brett,Brett Murray,Murray,4.104999923706055,20,3000,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-168988:Bobby Trivigno,87247-168988,W,Bobby,Bobby Trivigno,Trivigno,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-68639:Steven Fogarty,87247-68639,W,Steven,Steven Fogarty,Fogarty,0,2,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-66605:Zach Senyshyn,87247-66605,W,Zach,Zach Senyshyn,Senyshyn,0,2,3000,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-68658:Danny O'Regan,87247-68658,C,Danny,Danny O'Regan,O'Regan,3.5200000762939454,5,3000,NYR@DET,DET,NYR,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-66642:Austin Wagner,87247-66642,W,Austin,Austin Wagner,Wagner,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-167004:Marc McLaughlin,87247-167004,C,Marc,Marc McLaughlin,McLaughlin,2.4000000953674316,2,3000,BOS@SEA,BOS,SEA,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-80992:Nolan Patrick,87247-80992,C,Nolan,Nolan Patrick,Patrick,4.947999877929687,25,3000,CGY@VGK,VGK,CGY,IR,Upper body,,,,C/UTIL
+"","","","","","","","","","","","","",87247-54479:T.J. Tynan,87247-54479,W,T.J.,T.J. Tynan,Tynan,4,2,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-167128:Taylor Ward,87247-167128,W,Taylor,Taylor Ward,Ward,,,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70913:Luke Kunin,87247-70913,W,Luke,Luke Kunin,Kunin,8.451612903225806,31,3000,NSH@SJ,SJ,NSH,IR,Knee,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70921:Henrik Borgstrom,87247-70921,W,Henrik,Henrik Borgstrom,Borgstrom,3.0636363636363635,55,3000,ANH@WSH,WSH,ANH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-70930:Tyler Benson,87247-70930,W,Tyler,Tyler Benson,Benson,0,2,3000,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54576:Rocco Grimaldi,87247-54576,W,Rocco,Rocco Grimaldi,Grimaldi,1.8285714558192663,7,3000,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-58678:Brendan Lemieux,87247-58678,W,Brendan,Brendan Lemieux,Lemieux,2.5714285714285716,28,3000,LA@NJ,LA,NJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-21895:Chris Wagner,87247-21895,W,Chris,Chris Wagner,Wagner,1.600000023841858,1,3000,BOS@SEA,BOS,SEA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-62869:Andreas Johnsson,87247-62869,W,Andreas,Andreas Johnsson,Johnsson,0.4000000059604645,4,3000,LA@NJ,NJ,LA,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-21921:Riley Sheahan,87247-21921,C,Riley,Riley Sheahan,Sheahan,0.4000000059604645,4,3000,BUF@TB,BUF,TB,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-161188:Zack Bolduc,87247-161188,C,Zack,Zack Bolduc,Bolduc,,,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-161189:Jasper Weatherby,87247-161189,W,Jasper,Jasper Weatherby,Weatherby,4.387999877929688,50,3000,NYR@DET,DET,NYR,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-169397:Thomas Bordeleau,87247-169397,C,Thomas,Thomas Bordeleau,Bordeleau,8.462499618530273,8,3000,NSH@SJ,SJ,NSH,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-107991:Jonas Rondbjerg,87247-107991,W,Jonas,Jonas Rondbjerg,Rondbjerg,3.323076981764573,13,3000,CGY@VGK,VGK,CGY,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-128485:John Leonard,87247-128485,W,John,John Leonard,Leonard,5.235714503696987,14,3000,NSH@SJ,NSH,SJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-128491:Mitchell Chaffee,87247-128491,W,Mitchell,Mitchell Chaffee,Chaffee,0.800000011920929,2,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-128499:Austin Rueschhoff,87247-128499,W,Austin,Austin Rueschhoff,Rueschhoff,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-128503:Hugh McGing,87247-128503,W,Hugh,Hugh McGing,McGing,,,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-128508:Brandon Biro,87247-128508,W,Brandon,Brandon Biro,Biro,0,1,3000,BUF@TB,BUF,TB,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-103935:Filip Hallander,87247-103935,C,Filip,Filip Hallander,Hallander,2.4000000953674316,2,3000,EDM@PIT,PIT,EDM,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-173587:Adam Sykora,87247-173587,W,Adam,Adam Sykora,Sykora,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-181787:Nolan Burke,87247-181787,C,Nolan,Nolan Burke,Burke,,,3000,NSH@SJ,NSH,SJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-58906:Chase De Leo,87247-58906,W,Chase,Chase De Leo,De Leo,1.600000023841858,2,3000,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-54816:Max McCormick,87247-54816,W,Max,Max McCormick,McCormick,1.7600000381469727,10,3000,BOS@SEA,SEA,BOS,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-58925:Cristiano DiGiacinto,87247-58925,W,Cristiano,Cristiano DiGiacinto,DiGiacinto,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-173639:Liam Ohgren,87247-173639,W,Liam,Liam Ohgren,Ohgren,,,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-167499:Arshdeep Bains,87247-167499,W,Arshdeep,Arshdeep Bains,Bains,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-42628:Andrew Agozzino,87247-42628,W,Andrew,Andrew Agozzino,Agozzino,1.600000023841858,1,3000,NSH@SJ,SJ,NSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-161421:Tanner Dickinson,87247-161421,C,Tanner,Tanner Dickinson,Dickinson,,,3000,VAN@STL,STL,VAN,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-179889:Andrei Bakanov,87247-179889,W,Andrei,Andrei Bakanov,Bakanov,,,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-167639:Vladislav Firstov,87247-167639,W,Vladislav,Vladislav Firstov,Firstov,,,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59143:Vincent Arseneau,87247-59143,W,Vincent,Vincent Arseneau,Arseneau,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-42786:Justin Dowling,87247-42786,W,Justin,Justin Dowling,Dowling,3.709090839732777,22,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-145202:Jacob Perreault,87247-145202,W,Jacob,Jacob Perreault,Perreault,1.600000023841858,1,3000,ANH@WSH,ANH,WSH,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59222:Clark Bishop,87247-59222,W,Clark,Clark Bishop,Bishop,2.8444444868299694,9,3000,CGY@VGK,CGY,VGK,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-12122:Gabriel Dumont,87247-12122,W,Gabriel,Gabriel Dumont,Dumont,0,1,3000,BUF@TB,TB,BUF,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-14177:Brad Malone,87247-14177,C,Brad,Brad Malone,Malone,1.7600000381469727,10,3000,EDM@PIT,EDM,PIT,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-180071:Landon Sim,87247-180071,W,Landon,Landon Sim,Sim,,,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180072:Brayden Guy,87247-180072,W,Brayden,Brayden Guy,Guy,,,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-59245:Brandon Baddock,87247-59245,W,Brandon,Brandon Baddock,Baddock,0,1,3000,MIN@CBJ,MIN,CBJ,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-180087:Easton Brodzinski,87247-180087,W,Easton,Easton Brodzinski,Brodzinski,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-159627:Brennan Othmann,87247-159627,W,Brennan,Brennan Othmann,Othmann,,,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-159628:Samuel Helenius,87247-159628,C,Samuel,Samuel Helenius,Helenius,,,3000,LA@NJ,LA,NJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-157595:Danila Klimovich,87247-157595,W,Danila,Danila Klimovich,Klimovich,,,3000,VAN@STL,VAN,STL,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-79790:Matthew Highmore,87247-79790,W,Matthew,Matthew Highmore,Highmore,1.600000023841858,2,3000,VAN@STL,STL,VAN,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-149440:Will Cuylle,87247-149440,W,Will,Will Cuylle,Cuylle,0.4000000059604645,4,3000,NYR@DET,NYR,DET,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-42977:Nic Petan,87247-42977,C,Nic,Nic Petan,Petan,3.799999952316284,8,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-42984:Justin Bailey,87247-42984,W,Justin,Justin Bailey,Bailey,2.5142857687813893,14,3000,EDM@PIT,EDM,PIT,,,,,,W/UTIL
+"","","","","","","","","","","","","",87247-178156:Sammy Walker,87247-178156,C,Sammy,Sammy Walker,Walker,3.6000000635782876,6,3000,MIN@CBJ,MIN,CBJ,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-79861:John Stevens,87247-79861,C,John,John Stevens,Stevens,,,3000,VAN@STL,VAN,STL,,,,,,C/UTIL
+"","","","","","","","","","","","","",87247-79866:Vinni Lettieri,87247-79866,W,Vinni,Vinni Lettieri,Lettieri,6.7645160305884575,31,3000,BOS@SEA,BOS,SEA,IR,Lower body,,,,W/UTIL

@@ -151,8 +151,8 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   #download final ticket ids for backtesting historically 
   upload.drop('id2', axis=1).to_csv(path+'_predict\\gpd\\uploaded_gameday_tickets\\{0}_{1}_ticket.csv'.format(slate_date, model))
   exposuresdf = (pd.DataFrame.from_dict(exposures,orient='index').astype(float).sort_values(by=0, ascending=False)/len(selections)*100).round(1)
-  exposuresdf = exposuresdf.join(ticket[['name', 'Team', 'pos']].set_index('name')).drop_duplicates().sort_values(by=0, ascending=False)
-  exposuresdf.columns = ['my_ownership', 'Team', 'Position']
+  exposuresdf = exposuresdf.join(ticket[['name', 'Team', 'pos', 'Salary', 'proj_proj']].set_index('name')).drop_duplicates().sort_values(by=0, ascending=False)
+  exposuresdf.columns = ['my_ownership', 'Team', 'Position', 'Salary', 'Projected Points']
   exposuresdf.to_csv(path+'_predict\\gpd\\uploaded_gameday_tickets\\{0}_{1}_exposures.csv'.format(slate_date, model))
 
 

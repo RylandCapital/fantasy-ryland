@@ -22,7 +22,20 @@ def salary_arb(slate_date):
   path = os.getcwd() + r"\fd_gpd\_predict\player_stats\dk_files"
   dk = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
 
-  return dk
+  dk['combo_id'] = dk['Name'].str.lower().str.replace(' ','')+\
+                  dk['TeamAbbrev']
+  stats['combo_id'] = stats['Nickname'].str.lower().str.replace(' ','')+\
+                       stats['Team']
+  
+  dk.set_index('combo_id', inplace=True)
+  stats.reset_index(inplace=True)
+  stats.set_index('combo_id', inplace=True)
+  dk = dk[['Salary']].rename(columns={'Salary':'dkSalary'})
+
+  df = stats.join(dk,how='left')
+  df.to_csv(r'C:\Users\rmathews\Downloads\dkcheck.csv')
+
+  return df
 
 #creates a master file with all information needed 
 #in order ot properly optimize a selected amount of teams
@@ -42,11 +55,15 @@ def prepare(model='ensemble', neuter=False, slate_date='', removals=[]):
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
 
-  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
+  ##stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
+  stats = salary_arb(slate_date=slate_date)
   stats = stats.set_index('RylandID_master')
 
   teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]
   teams = teams.set_index('name').join(stats, how='inner', lsuffix='_ot').reset_index()
+
+  teams['proj_proj'].describe().to_csv(r'C:\Users\rmathews\Downloads\teamsfirstpull.csv')
+  
   nine_confirm = teams.groupby('lineup').apply(lambda x: len(x))
   teams = teams.set_index('lineup').loc[nine_confirm[nine_confirm==9].index.tolist()].reset_index()
   
@@ -155,7 +172,7 @@ class Roster:
     s += "\nMean Plus/Minus: %s" % self.mean_pm()
     return s
 
-def run(roster_size=150, own_limits='', opt_proj=151, pct_from_opt_proj=.82, slate_date=''):
+def run(roster_size=150, own_limits='', slate_date=''):
 
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
@@ -187,10 +204,6 @@ def run(roster_size=150, own_limits='', opt_proj=151, pct_from_opt_proj=.82, sla
   size_cap = solver.Constraint(roster_size, roster_size)
   for variable in variables:
     size_cap.SetCoefficient(variable, 1)
-
-  proj_limit = solver.Constraint(int((opt_proj*pct_from_opt_proj*roster_size)), int((10000*roster_size)))
-  for i, player in enumerate(all_players):
-    proj_limit.SetCoefficient(variables[i], player.team_proj)
 
   for position, min_limit, max_limit in own_limits:
     position_cap = solver.Constraint(min_limit, max_limit)
@@ -231,7 +244,7 @@ def run(roster_size=150, own_limits='', opt_proj=151, pct_from_opt_proj=.82, sla
     
   return roster
 
-def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, removals=[], pct_from_opt_proj=.82, max_pct_own=.50, optimization_pool=int(50000), neuter=False):
+def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, removals=[], pct_from_opt_proj=.82, max_pct_own=.34, dksalary_min=50000, optimization_pool=int(100000), neuter=False):
 
   start_time = time.time()
   print('initiating dfs calculations''')
@@ -241,6 +254,10 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
   picks = prepared[0]
   picks['team_proj'] = picks.groupby(level=0)['actual'].sum()
   picks['team_+/-'] = picks.groupby(level=0)['proj_proj+/-'].sum()
+  #trying to identify salary arbitrage against dkz
+  picks['team_dk_salary'] = picks.groupby(level=0)['dkSalary'].sum()
+  picks[['name','dkSalary','salary', 'proba_1']].to_csv(r'C:\Users\rmathews\Downloads\dksalaryfull.csv')
+  picks['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\dksalary.csv')
   stats = prepared[1]
   player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['RylandID'].tolist()))
   player_list[1] = player_list[0].apply(lambda x: x[0])
@@ -260,10 +277,15 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
   user = os.getlogin()
   path = "C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\ml_predictions\\{1}\\".format(user, slate_date)
   teams = picks.groupby(level=0).first()
-
-  #write file to folder
-  teams.sort_values(by='proba_1', ascending=False).iloc[:optimization_pool].to_csv(path+'optimtkttemp.csv')
-
+  teams = teams.sort_values(by='proba_1', ascending=False).iloc[:optimization_pool]
+  teams['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\teams_after_poolcut.csv')
+  optimaldf = fantasyze_proj(slate_date=slate_date) 
+  teams=teams[teams['team_proj']>=optimaldf['actual'].sum()*pct_from_opt_proj]
+  teams['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\teams_after_optimalcut.csv')
+  teams=teams[teams['team_dk_salary']>=dksalary_min]
+  teams['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\teams_afterdk_cut.csv')
+  teams.sort_values(by='proba_1', ascending=False).to_csv(path+'optimtkttemp.csv')
+  
   #prepare ownership parameters
   owndict = stats['proj_proj+/-'].to_dict() #right now this is just to get all players names 
   own_limits = []
@@ -271,12 +293,9 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
     entry = ["{0}".format(i), int(-1), int(roster_size*max_pct_own)]
     own_limits.append(entry)
 
-  optimaldf = fantasyze_proj(slate_date=slate_date)   
-  team = run(roster_size=roster_size, own_limits=own_limits, pct_from_opt_proj=pct_from_opt_proj, opt_proj=optimaldf['actual'].sum(), slate_date=slate_date)
+  team = run(roster_size=roster_size, own_limits=own_limits, slate_date=slate_date)
   players = team.players
   ids = [i.lineup for i in players]
-  probas = [i.proba1 for i in players]
-  ranks = [i.rank for i in players]
 
   fanduel_ticket_optimized(slate_date=slate_date, ids=ids, model=model)
       

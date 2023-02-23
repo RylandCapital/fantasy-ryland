@@ -34,10 +34,21 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[58, 59], strdates=['2/17/23','2/19/23'])          
+pull_stats(slate_ids=[60], strdates=['2/21/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
+
+'''
+code for ALL weeks
+
+dates = list(historical_winning_scores.keys())
+weeks = []
+for i in np.arange(0,57,2)[:-1]:
+  weeks.append([dates[i],dates[i+1]])
+
+
+'''
 
 pool = Pool(processes=len(weeks))
 pool.map(fantasyze, weeks)
@@ -75,7 +86,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['2/18/23'], strdates=['2/18/23'])    
+pull_stats_live(slate_ids=['2/21/23'], strdates=['2/21/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -132,75 +143,14 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='2.18.23',
+  slate_date='2.23.23',
   model='ensemble',
-  roster_size=300, 
-  pct_from_opt_proj=0,
-  max_pct_own= .34,
-  removals = [
-  '87145-12220',
-
-  ],
-  optimization_pool=int(50000), 
+  roster_size=279, 
+  pct_from_opt_proj=.75,
+  max_pct_own=.382,
+  dksalary_min=30000,
+  removals = [],
+  optimization_pool=int(100000), 
   neuter=False
   )
-
-
-
-# '''Review'''
-# ################################################
-# ################################################
-# user = os.getlogin()
-# path = 'C:\\Users\\{0}\\.fantasy-ryland\\'.format(user)
-# model = 'ensemble'
-# slate = '1.10.23'
-# historical_id = 48
-# #how many top model teams do you want to benchmark
-# ids_file = pd.read_csv(path+'model_tracking\\predictions_gpd\\{0}_{1}_ids.csv'.format(slate,model)).drop_duplicates('lineup').sort_values(by='proba_1', ascending=False).iloc[:150]
-# dfn, team_scoresn, act_describen, player_pctsn, topn, corrn, duplicatesn, top_proba_scoresn = analyze_gameday_pool_with_ids(
-#   ids=ids_file['lineup'].tolist(),
-#   historical_id =historical_id,
-#   week=slate,
-#   model=model
-#   )
-# top_proba_scoresn.sort_values('proj_actpts')
-# top_proba_scoresn['proj_actpts'].describe()
-
-
-# #ways to improve team quality when constructing slate
-# #['plyrs_<_0']<0.4798
-# #['proj_proj+/-_mean']>0.5
-
-# #need to figure out 4 player per team max (test and train pool)
-
-
-# mluploadgpd = pd.read_csv('C:\\Users\\{0}\\.fantasy-ryland\\mluploadgpd.csv'.format(user))
-# d1 = mluploadgpd.groupby('proj_proj+/-_mean')['ismilly'].sum()
-# d2 = mluploadgpd.groupby('proj_proj+/-_mean')['ismilly'].apply(lambda x: len(x))
-# pd.concat([d1,d2],axis=1).to_csv(r'C:\Users\rmathews\Downloads\explore.csv')
-
-# mluploadgpd.groupby('trends_opp+/-_mean')['ismilly'].apply(lambda x: x)
-# mluploadgpd[mluploadgpd['proj_proj+/-_mean']>0.5]
-
-# # df = pd.read_csv(r'C:\Users\rmathews\Downloads\mlupload_scored.csv')
-# # df = df[df['week']>41]
-# # df['prediction'] = np.where(df['proba_1']>.45,1,0)
-# # df['correct'] = np.where((df['prediction']==1) & (df['ismilly']==1),1,0)
-# # df.groupby('week')['correct'].value_counts()
-
-# # xdf = pd.DataFrame([], columns=['week', 'corrects', 'top_correct_proba', 'ticket_spot'])
-# # for i in df['week'].unique():
-# #   temp = df[df['week']==i].sort_values(by='proba_1', ascending=False)
-# #   temp.reset_index(drop=True, inplace=True)
-# #   posdf = temp[temp['correct']==1]
-# #   xdf.loc[i,'week'] = i
-# #   xdf.loc[i,'correct'] = len(posdf)
-# #   try:
-# #     xdf.loc[i,'top_correct_proba'] = posdf.iloc[0]['proba_1']
-# #     xdf.loc[i,'ticket_spot'] = posdf.index[0]
-# #   except:
-# #     xdf.loc[i,'top_correct_proba'] = -1
-# #     xdf.loc[i,'ticket_spot'] = -1
-
-# # xdf.to_csv(r'C:\Users\rmathews\Downloads\analysis.csv')
 
