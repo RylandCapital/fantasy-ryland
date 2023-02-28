@@ -29,7 +29,7 @@ def buildml_live(strdates):
             
             print('initiating dfs calculations''')   
 
-            opt_team = fantasyze_proj(slate_date=datee)
+            opt_team = fantasyze_proj(slate_date=datee.split('_')[0])
             opt_team_score = opt_team['actual'].sum()/9
             opt_team_std = opt_team['actual'].std()
             

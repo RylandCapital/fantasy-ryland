@@ -6,6 +6,7 @@ import pandas as pd
 from fd_gpd._historical.player_stats.pull_stats import pull_stats
 from fd_gpd._predict.player_stats.pull_stats import pull_stats_live
 from fd_gpd._historical.optimize.optimize import fantasyze
+from fd_gpd._historical.optimize.optimize_balanced import fantasyze_balanced
 from fd_gpd._predict.optimize.optimize import fantasyze_live
 from fd_gpd._historical.feature_generation.frv1 import buildml
 from fd_gpd._predict.feature_generation.frv1 import buildml_live
@@ -34,7 +35,7 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[60], strdates=['2/21/23'])          
+pull_stats(slate_ids=[61,62], strdates=['2/23/23','2/25/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -51,7 +52,7 @@ for i in np.arange(0,57,2)[:-1]:
 '''
 
 pool = Pool(processes=len(weeks))
-pool.map(fantasyze, weeks)
+pool.map(fantasyze_balanced, weeks)
 pool.close()
 
 '''3. create machine learning dataset for dataiku'''
@@ -86,7 +87,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['2/21/23'], strdates=['2/21/23'])    
+pull_stats_live(slate_ids=['2/28/23'], strdates=['2/28/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -143,12 +144,26 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='2.23.23',
+  slate_date='2.28.23',
   model='ensemble',
-  roster_size=279, 
-  pct_from_opt_proj=.75,
-  max_pct_own=.382,
-  dksalary_min=30000,
+  roster_size=1,
+
+  #pct from opt: 
+    # can change allocations significantly even at .786 form .01 
+    # increases average dk salaries as well when moved up
+    # can very get rid of top proba team/s
+  pct_from_opt_proj=.85, #.786
+
+  #max pct own:
+    # higher field GPPs you want to make more diverse
+    # smaller take more of a stand with high pct from optimal
+  max_pct_own=1,
+
+  #dkSalary min 
+    #
+    #
+  dksalary_min=50000,
+
   removals = [],
   optimization_pool=int(100000), 
   neuter=False
