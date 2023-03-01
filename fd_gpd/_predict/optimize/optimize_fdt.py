@@ -55,8 +55,8 @@ def prepare(model='ensemble', neuter=False, slate_date='', removals=[]):
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
 
-  ##stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
-  stats = salary_arb(slate_date=slate_date)
+  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
+  ##stats = salary_arb(slate_date=slate_date)
   stats = stats.set_index('RylandID_master')
 
   teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]

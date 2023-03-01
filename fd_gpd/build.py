@@ -146,7 +146,7 @@ Based on your contest set:
 roster = slate_optimization(
   slate_date='2.28.23',
   model='ensemble',
-  roster_size=1,
+  roster_size=143,
 
   #pct from opt: 
     # can change allocations significantly even at .786 form .01 
@@ -157,14 +157,14 @@ roster = slate_optimization(
   #max pct own:
     # higher field GPPs you want to make more diverse
     # smaller take more of a stand with high pct from optimal
-  max_pct_own=1,
+  max_pct_own=.382,
 
   #dkSalary min 
     #
     #
-  dksalary_min=50000,
+  dksalary_min=0,
 
-  removals = [],
+  removals = ['87439-70901', '87439-41393', '87439-70168', ],
   optimization_pool=int(100000), 
   neuter=False
   )
