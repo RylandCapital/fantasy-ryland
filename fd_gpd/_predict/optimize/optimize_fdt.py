@@ -16,12 +16,13 @@ import statistics
 def salary_arb(slate_date):
   
   path = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
+  path2 = os.getcwd() + r"\fd_gpd\_predict\player_stats"
   stats = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
   stats = stats.set_index('RylandID_master')
 
-  path = os.getcwd() + r"\fd_gpd\_predict\player_stats\dk_files"
-  dk = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
-
+  path3 = os.getcwd() + r"\fd_gpd\_predict\player_stats\dk_files"
+  dk = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
+  dk['TeamAbbrev'] = np.where(dk['TeamAbbrev']=='WAS', 'WSH', dk['TeamAbbrev'])
   dk['combo_id'] = dk['Name'].str.lower().str.replace(' ','')+\
                   dk['TeamAbbrev']
   stats['combo_id'] = stats['Nickname'].str.lower().str.replace(' ','')+\
@@ -33,7 +34,9 @@ def salary_arb(slate_date):
   dk = dk[['Salary']].rename(columns={'Salary':'dkSalary'})
 
   df = stats.join(dk,how='left')
-  df.to_csv(r'C:\Users\rmathews\Downloads\dkcheck.csv')
+  df.to_csv(path2 + "\\" + 'dkcheck.csv')
+
+  df.set_index('RylandID_master').to_csv(path + "\\" + '{0}.csv'.format(slate_date))
 
   return df
 
@@ -62,7 +65,6 @@ def prepare(model='ensemble', neuter=False, slate_date='', removals=[]):
   teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]
   teams = teams.set_index('name').join(stats, how='inner', lsuffix='_ot').reset_index()
 
-  teams['proj_proj'].describe().to_csv(r'C:\Users\rmathews\Downloads\teamsfirstpull.csv')
   
   nine_confirm = teams.groupby('lineup').apply(lambda x: len(x))
   teams = teams.set_index('lineup').loc[nine_confirm[nine_confirm==9].index.tolist()].reset_index()
@@ -256,8 +258,6 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
   picks['team_+/-'] = picks.groupby(level=0)['proj_proj+/-'].sum()
   #trying to identify salary arbitrage against dkz
   picks['team_dk_salary'] = picks.groupby(level=0)['dkSalary'].sum()
-  picks[['name','dkSalary','salary', 'proba_1']].to_csv(r'C:\Users\rmathews\Downloads\dksalaryfull.csv')
-  picks['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\dksalary.csv')
   stats = prepared[1]
   player_list = pd.DataFrame(picks.groupby(level=0).apply(lambda x: x['RylandID'].tolist()))
   player_list[1] = player_list[0].apply(lambda x: x[0])
@@ -278,12 +278,9 @@ def slate_optimization(slate_date='1.18.23', model='ensemble', roster_size=150, 
   path = "C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\ml_predictions\\{1}\\".format(user, slate_date)
   teams = picks.groupby(level=0).first()
   teams = teams.sort_values(by='proba_1', ascending=False).iloc[:optimization_pool]
-  teams['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\teams_after_poolcut.csv')
   optimaldf = fantasyze_proj(slate_date=slate_date) 
   teams=teams[teams['team_proj']>=optimaldf['actual'].sum()*pct_from_opt_proj]
-  teams['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\teams_after_optimalcut.csv')
   teams=teams[teams['team_dk_salary']>=dksalary_min]
-  teams['team_dk_salary'].describe().to_csv(r'C:\Users\rmathews\Downloads\teams_afterdk_cut.csv')
   teams.sort_values(by='proba_1', ascending=False).to_csv(path+'optimtkttemp.csv')
   
   #prepare ownership parameters

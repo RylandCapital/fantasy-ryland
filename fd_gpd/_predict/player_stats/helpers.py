@@ -103,7 +103,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   for i,n in zip(ticket.index.unique(), np.arange(len(ticket.index.unique()))):
       ticket_cols = ['C','C','W','W','D','D','FLEX','FLEX','G']
       df = ticket.loc[i][['pos','Id','name','proba_1',
-        'dkSalary', 'numberofgamestacks', 'numberofteamstacks',
+        'dkSalary', 'Salary', 'numberofgamestacks', 'numberofteamstacks',
         'num_games_represented', 'proj_proj']].sort_values('Id')
       id2 = sorted(df['Id'].values)
       id2_names = sorted(df['name'].values)
@@ -112,6 +112,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
       proj = df['proba_1'].iloc[0]
       proj_pts = df['proj_proj'].sum()
       dksalary = df['dkSalary'].sum()
+      salary = df['Salary'].sum()
       # ts1 = df['team_stack1'].iloc[0]
       # ts2 = df['team_stack2'].iloc[0]
       # ts3 = df['team_stack3'].iloc[0]
@@ -136,6 +137,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
       df['proba_1'] = proj
       df['projected'] = proj_pts
       df['pct_optimal'] = round(proj_pts/opt_team_score,2)
+      df['Salary'] = salary
       df['dkSalary'] = dksalary
       #df['removals'] = removal
       # df['team_stack1'] = ts1

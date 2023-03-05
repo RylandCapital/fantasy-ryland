@@ -35,7 +35,7 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[61,62], strdates=['2/23/23','2/25/23'])          
+pull_stats(slate_ids=[63,64], strdates=['2/28/23','3/2/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -87,7 +87,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['2/28/23'], strdates=['2/28/23'])    
+pull_stats_live(slate_ids=['3/4/23'], strdates=['3/4/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -144,15 +144,15 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='2.28.23',
+  slate_date='3.4.23',
   model='ensemble',
-  roster_size=143,
+  roster_size=71,
 
   #pct from opt: 
     # can change allocations significantly even at .786 form .01 
     # increases average dk salaries as well when moved up
     # can very get rid of top proba team/s
-  pct_from_opt_proj=.85, #.786
+  pct_from_opt_proj=.84, #.786
 
   #max pct own:
     # higher field GPPs you want to make more diverse
@@ -164,7 +164,7 @@ roster = slate_optimization(
     #
   dksalary_min=0,
 
-  removals = ['87439-70901', '87439-41393', '87439-70168', ],
+  removals = [],
   optimization_pool=int(100000), 
   neuter=False
   )
