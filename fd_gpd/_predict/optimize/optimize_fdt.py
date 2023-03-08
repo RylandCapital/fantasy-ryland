@@ -19,10 +19,15 @@ def salary_arb(slate_date):
   path2 = os.getcwd() + r"\fd_gpd\_predict\player_stats"
   stats = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
   stats = stats.set_index('RylandID_master')
+  try:
+    stats = stats.drop('dkSalary', axis=1)
+  except:
+    pass
 
   path3 = os.getcwd() + r"\fd_gpd\_predict\player_stats\dk_files"
   dk = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
   dk['TeamAbbrev'] = np.where(dk['TeamAbbrev']=='WAS', 'WSH', dk['TeamAbbrev'])
+  dk['TeamAbbrev'] = np.where(dk['TeamAbbrev']=='CLS', 'CBJ', dk['TeamAbbrev'])
   dk['combo_id'] = dk['Name'].str.lower().str.replace(' ','')+\
                   dk['TeamAbbrev']
   stats['combo_id'] = stats['Nickname'].str.lower().str.replace(' ','')+\
@@ -58,8 +63,8 @@ def prepare(model='ensemble', neuter=False, slate_date='', removals=[]):
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
 
-  stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
-  ##stats = salary_arb(slate_date=slate_date)
+  ##stats = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
+  stats = salary_arb(slate_date=slate_date)
   stats = stats.set_index('RylandID_master')
 
   teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]

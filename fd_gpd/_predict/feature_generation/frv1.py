@@ -74,6 +74,7 @@ def buildml_live(strdates):
             
         
             lineups = file.groupby('lineup')
+            salaries = lineups['salary'].sum()
             teamstackgroup = file.groupby(['lineup', 'team_team'])
             
             lencheck = lineups.apply(lambda x: len(x)).value_counts()
@@ -350,6 +351,7 @@ def buildml_live(strdates):
                                   max_salary,
                                   max_proj,
                                   max_ptssal,
+                                  salaries,
                                   team_stack1,
                                   team_stack2,
                                   team_stack3,
@@ -398,6 +400,7 @@ def buildml_live(strdates):
                         'max_salary',
                         'max_proj',
                         'max_ptssal',
+                        'team_salary_raw',
                         'team_stack1',
                         'team_stack2',
                         'team_stack3',
@@ -405,7 +408,11 @@ def buildml_live(strdates):
                         
                         ]
             
-            analysis['proj_from_opt_proj'] = (opt_team_score - analysis['proj_proj_mean'])
+            analysis['proj_from_opt_proj'] = (analysis['proj_proj_mean']/opt_team_score)
+        
+            #new
+            analysis['pct_opt_proj*team_salary'] = analysis['team_salary_raw']*analysis['proj_from_opt_proj']
+
             analysis['proj_from_opt_per_games'] = (analysis['proj_from_opt_proj']/int(len(file['team_team'].unique())/2))
             analysis['proj_from_opt_proj'] = analysis['proj_from_opt_proj'].rank(pct=True)
 
