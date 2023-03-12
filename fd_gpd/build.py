@@ -13,8 +13,6 @@ from fd_gpd._predict.feature_generation.frv1 import buildml_live
 
 from fd_gpd._predict.optimize.optimize_fdt import slate_optimization
 
-from fd_gpd._backtesting.helpers import analyze_gameday_pool_with_ids
-
 from multiprocessing import Pool
 from itertools import repeat
 
@@ -69,7 +67,9 @@ for i in file.columns:
     file[i] = file[i].round(4)
   except:
     pass
-file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_historical\\gpd\\dataiku_upload.csv'.format(user))
+file.to_csv(
+  'C:\\Users\\{0}\\.fantasy-ryland\\_historical\\gpd\\dataiku_upload.csv'.format(user)
+  )
 ################################################
 
 #%%
@@ -87,7 +87,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['3/7/23'], strdates=['3/7/23'])    
+pull_stats_live(slate_ids=['3/9/23'], strdates=['3/9/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -144,7 +144,7 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='3.7.23',
+  slate_date='3.9.23',
   model='ensemble',
   roster_size=1,
 
@@ -152,7 +152,7 @@ roster = slate_optimization(
     # can change allocations significantly even at .786 form .01 
     # increases average dk salaries as well when moved up
     # can very get rid of top proba team/s
-  pct_from_opt_proj=.85, #.786
+  pct_from_opt_proj=.80, #.786
 
   #max pct own:
     # higher field GPPs you want to make more diverse
@@ -164,7 +164,8 @@ roster = slate_optimization(
     #
   dksalary_min=50000,
 
-  removals = ['87705-153985','87705-81968'],
+  removals = ['87782-8669', '87782-66515', '87782-97091', '87782-8709',
+              '87782-79965', '87782-97107', '87782-74064', '87782-82192'],
   optimization_pool=int(100000), 
   neuter=False
   )

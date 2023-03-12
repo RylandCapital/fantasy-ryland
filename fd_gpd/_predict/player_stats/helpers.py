@@ -68,8 +68,10 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   path3 = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
 
   preds = pd.read_csv(path+'_predict\\gpd\\ml_predictions\\{0}\\dataiku_download_{1}.csv'.format(slate_date, model))
-  preds = preds.sort_values(by='lineup',ascending=False) 
   preds.rename(columns={'proba_1.0':'proba_1'}, inplace=True)
+  preds = preds.sort_values(by='proba_1', ascending=False).iloc[:100000]
+  preds = preds.sort_values(by='lineup',ascending=False) 
+  
 
   onlyfiles = [f for f in os.listdir(path2) if os.path.isfile(os.path.join(path2, f))]
   teams = pd.concat([pd.read_csv(path2 + f, compression='gzip').sort_values('lineup',ascending=False) for f in onlyfiles])
@@ -82,41 +84,30 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   nine_confirm = teams.groupby('lineup').apply(lambda x: len(x))
   teams = teams.set_index('lineup').loc[nine_confirm[nine_confirm==9].index.tolist()].reset_index()
 
-  picks = preds[['lineup', 'proba_1',
-   'team_stack1', 'team_stack2', 'team_stack3', 'team_stack4',
-   'numberofgamestacks', 'numberofteamstacks','num_games_represented']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
+  picks = preds[['lineup', 'proba_1']].set_index('lineup').join(teams.set_index('lineup'), how='inner')
   picks.sort_values(by='proba_1', ascending=False, inplace=True)
 
   ticket = picks.loc[ids]
-  all_stacks = ticket['team_stack1'].unique().tolist() + \
-     ticket['team_stack2'].unique().tolist() + \
-      ticket['team_stack3'].unique().tolist() + \
-        ticket['team_stack4'].unique().tolist()
+
 
   opt_team = fantasyze_proj(slate_date=slate_date)
   opt_team_score = opt_team['actual'].sum()
 
   selections = []
   exposures = dict(zip(ticket['name'].unique().tolist(),'0'*len(ticket['name'].unique().tolist())))
-  stacks = dict(zip(all_stacks, '0'*len(all_stacks)))
 
   for i,n in zip(ticket.index.unique(), np.arange(len(ticket.index.unique()))):
       ticket_cols = ['C','C','W','W','D','D','FLEX','FLEX','G']
       df = ticket.loc[i][['pos','Id','name','proba_1',
-        'dkSalary', 'Salary', 'numberofgamestacks', 'numberofteamstacks',
-        'num_games_represented', 'proj_proj']].sort_values('Id')
+        'dkSalary', 'Salary', 'proj_proj']].sort_values('Id')
       id2 = sorted(df['Id'].values)
       id2_names = sorted(df['name'].values)
-      # id2_stacks = pd.concat([df['team_stack1'], df['team_stack2'], df['team_stack3'], df['team_stack4']]).unique()
-      # removal = len(list(set(id2).intersection(set(removals))))
+
       proj = df['proba_1'].iloc[0]
       proj_pts = df['proj_proj'].sum()
       dksalary = df['dkSalary'].sum()
       salary = df['Salary'].sum()
-      # ts1 = df['team_stack1'].iloc[0]
-      # ts2 = df['team_stack2'].iloc[0]
-      # ts3 = df['team_stack3'].iloc[0]
-      # ts4 = df['team_stack4'].iloc[0]
+
       df = df[['pos','Id']].sort_values('pos')
       df.set_index('pos', inplace=True)
 
@@ -139,14 +130,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
       df['pct_optimal'] = round(proj_pts/opt_team_score,2)
       df['Salary'] = salary
       df['dkSalary'] = dksalary
-      #df['removals'] = removal
-      # df['team_stack1'] = ts1
-      # df['team_stack2'] = ts2
-      # df['team_stack3'] = ts3
-      # df['team_stack4'] = ts4
 
-
-      #if (removal==0) :
       update = [exposures.update({i:float(exposures[i])+1}) for i in id2_names]
       selections.append(df)
 
@@ -163,7 +147,7 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   exposuresdf.to_csv(path+'_predict\\gpd\\uploaded_gameday_tickets\\{0}_{1}_exposures.csv'.format(slate_date, model))
 
 
-  return upload, exposuresdf, pd.DataFrame.from_dict(stacks,orient='index').astype(float).sort_values(by=0, ascending=False)
+  return upload, exposuresdf
 
 
 

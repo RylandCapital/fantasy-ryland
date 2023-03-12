@@ -408,13 +408,12 @@ def buildml_live(strdates):
                         
                         ]
             
-            analysis['proj_from_opt_proj'] = (analysis['proj_proj_mean']/opt_team_score)
-        
+            analysis['slate_optimal_projected'] = opt_team_score*9
+            analysis['proj_from_opt_proj'] = ((analysis['proj_proj_mean']*9)/analysis['slate_optimal_projected'])
             #new
             analysis['pct_opt_proj*team_salary'] = analysis['team_salary_raw']*analysis['proj_from_opt_proj']
 
-            analysis['proj_from_opt_per_games'] = (analysis['proj_from_opt_proj']/int(len(file['team_team'].unique())/2))
-            analysis['proj_from_opt_proj'] = analysis['proj_from_opt_proj'].rank(pct=True)
+            analysis['proj_from_opt_per_games'] = (analysis['proj_from_opt_proj']/int(len(file['team_team'].unique())))
 
             analysis.loc[:,'proj_proj_mean':'max_ptssal'] = analysis.loc[:,'proj_proj_mean':'max_ptssal'].rank(pct=True)
             analysis['opt_team_projpts_std'] = opt_team_std

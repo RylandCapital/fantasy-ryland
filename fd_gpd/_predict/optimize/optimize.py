@@ -9,6 +9,7 @@ from ortools.linear_solver import pywraplp
 from fd_gpd.config import  gameday_week
 
 
+
 class Player:
   def __init__(self, opts):
     self.name = opts['RylandID_master']
