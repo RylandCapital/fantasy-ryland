@@ -45,7 +45,7 @@ dates = list(historical_winning_scores.keys())
 weeks = []
 for i in np.arange(0,64,2)[:-1]:
   weeks.append([dates[i],dates[i+1]])
-
+weeks=weeks+[['3/7/23']]
 
 '''
 

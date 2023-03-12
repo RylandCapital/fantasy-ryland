@@ -150,8 +150,13 @@ print('initiating dfs calculations''')
 milly_winners_dict = historical_winning_scores
 # print('{0}-{1}'.format(w,i))
 def fantasyze_balanced(strdates):
+
   for date in strdates:
     milly = float(milly_winners_dict[date]['winning_score'])
+    optimal = float(milly_winners_dict[date]['optimal'])
+    ##the high end cap is to keep the training set from being built off of perfect optimals which can
+    ##give unrealistic targets for finding winners
+    high_end_cap = milly+((optimal-milly)/2)
     w = milly_winners_dict[date]['slate_id']
     dupdf = pd.DataFrame([], columns = ['id'])
     dfs = [] 
@@ -161,7 +166,7 @@ def fantasyze_balanced(strdates):
     i = 0
     while i < 1000:
         
-        team = run(55000, 54800, w, milly*.99, 500).players
+        team = run(55000, 54900, w, milly, high_end_cap).players
         #######
           
         names = [i.name for i in team]
@@ -193,7 +198,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54800, w, milly*.9, milly*.989).players
+        team = run(55000, 54900, w, milly*.9, milly*.999).players
         #######
           
         names = [i.name for i in team]
@@ -223,7 +228,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54800, w, milly*.8, milly*.9).players
+        team = run(55000, 54900, w, milly*.8, milly*.9).players
         #######
           
         names = [i.name for i in team]
@@ -253,7 +258,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54800, w, milly*.6, milly*.8).players
+        team = run(55000, 54900, w, milly*.6, milly*.8).players
         #######
           
         names = [i.name for i in team]
@@ -283,7 +288,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54800, w, milly*.6, milly*.8).players
+        team = run(55000, 54900, w, milly*.4, milly*.6).players
         #######
           
         names = [i.name for i in team]
@@ -313,7 +318,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54800, w, milly*.5 , milly*.7).players
+        team = run(55000, 54900, w, milly*.2 , milly*.4).players
         #######
           
         names = [i.name for i in team]

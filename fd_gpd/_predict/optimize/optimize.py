@@ -151,9 +151,9 @@ def fantasyze_live(ws, week, teamstacks_only=True):
     for w in ws:
             dfs = [] 
             count=0
-            while count < 100000:
+            while count < 70000:
                 
-                team = run(55000, 54800, week, 1, 5000).players
+                team = run(55000, 54900, week, 1, 5000).players
                 #######
                 names = [i.name for i in team]
                 actual = [i.actual for i in team]
