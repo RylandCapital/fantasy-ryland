@@ -148,7 +148,8 @@ def fantasyze_act(hist_slate_id=''):
   
   df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
                       'actual', 'position', 'salary','teamz']).T
-  df['team_salary'] = sum(actual)
+  df['team_actual'] = sum(actual)
+  df['team_salary'] = sum(salary)
   df['lineup'] = 'actual_opitmal' 
 
   return df

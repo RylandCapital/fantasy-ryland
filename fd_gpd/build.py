@@ -16,9 +16,9 @@ from fd_gpd._predict.optimize.optimize_fdt import slate_optimization
 from multiprocessing import Pool
 from itertools import repeat
 
-from fd_gpd.config import historical_winning_scores, curr_historical_optimize_weeks, master_historical_weeks, user, cores, gameday_week
+from fd_gpd.config import historical_winning_scores, curr_historical_optimize_weeks, master_historical_weeks, user, cores, gameday_week, gameday_optimal_proj
 
-
+from datetime import datetime
 
 ################################################
 ################################################
@@ -33,7 +33,7 @@ from fd_gpd.config import historical_winning_scores, curr_historical_optimize_we
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[65,66], strdates=['3/4/23','3/7/23'])          
+pull_stats(slate_ids=[69], strdates=['3/14/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -87,11 +87,12 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['3/9/23'], strdates=['3/9/23'])    
+pull_stats_live(slate_ids=['3/14/23'], strdates=['3/14/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
 pool = Pool(processes=len(workers))
+#ws, gameday week, teamstacks, optimal projected
 pool.starmap(fantasyze_live, zip(workers, repeat(gameday_week), repeat(True)))
 pool.close()
 ################################################
@@ -120,8 +121,11 @@ for i in file.columns:
   except:
     pass
 file.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_predict\\gpd\\ml_predictions\\{1}\\dataiku_upload.csv'.format(user,gameday_week))
+
 #del old individual files
 [os.remove(mypath + "\\" + i) for i in onlyfiles]
+
+print(datetime.now())
 ################################################
 
 
@@ -144,7 +148,7 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='3.9.23',
+  slate_date='3.14.23',
   model='ensemble',
   roster_size=1,
 
@@ -152,7 +156,7 @@ roster = slate_optimization(
     # can change allocations significantly even at .786 form .01 
     # increases average dk salaries as well when moved up
     # can very get rid of top proba team/s
-  pct_from_opt_proj=.80, #.786
+  pct_from_opt_proj=.85, #.786
 
   #max pct own:
     # higher field GPPs you want to make more diverse
@@ -164,8 +168,7 @@ roster = slate_optimization(
     #
   dksalary_min=50000,
 
-  removals = ['87782-8669', '87782-66515', '87782-97091', '87782-8709',
-              '87782-79965', '87782-97107', '87782-74064', '87782-82192'],
+  removals = ['87947-8718', '87947-66759', '87947-14217'],
   optimization_pool=int(100000), 
   neuter=False
   )

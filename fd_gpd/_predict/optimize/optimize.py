@@ -6,7 +6,7 @@ import csv
 
 from ortools.linear_solver import pywraplp
 
-from fd_gpd.config import  gameday_week
+from fd_gpd.config import  gameday_week, gameday_optimal_proj
 
 
 
@@ -151,9 +151,9 @@ def fantasyze_live(ws, week, teamstacks_only=True):
     for w in ws:
             dfs = [] 
             count=0
-            while count < 70000:
+            while count < 40000:
                 
-                team = run(55000, 54900, week, 1, 5000).players
+                team = run(55000, 54800, week, int(gameday_optimal_proj*.808), 5000).players
                 #######
                 names = [i.name for i in team]
                 actual = [i.actual for i in team]
@@ -169,7 +169,7 @@ def fantasyze_live(ws, week, teamstacks_only=True):
                 df = pd.DataFrame([names, actual, position, salary, team_exposures], index = ['name',
                                     'actual', 'position', 'salary','teamz']).T
                 df['team_salary'] = sum(actual)
-                df['lineup'] = 'lineup_' + str(count) + '_' + str(w)   
+                df['lineup'] = 'lineup_' + str(count) + '_' + str(w) + '_' + week   
 
           
                 if (teamstacks_only == False) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(actual)>80) & (sum(pm)>-20):

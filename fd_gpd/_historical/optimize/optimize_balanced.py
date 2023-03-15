@@ -5,6 +5,8 @@ import time
 import csv
 
 from ortools.linear_solver import pywraplp
+
+from fd_gpd._historical.optimize.optimize_proj import fantasyze_proj_historical
 from fd_gpd.config import historical_winning_scores
 
 
@@ -75,7 +77,7 @@ POSITION_LIMITS = [
 
 ROSTER_SIZE = 9
 
-def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
+def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH, PROJLIMLOW):
   solver = pywraplp.Solver('FD', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
   all_players = []  
   with open(os.getcwd() + r"\fd_gpd\_historical\player_stats\by_week\{0}.csv".format(str(CUR_WEEK)), 'r') as csvfile:
@@ -112,6 +114,10 @@ def run(SALARY_CAP, SALARY_MIN, CUR_WEEK, LIMLOW, LIMHIGH):
   limit = solver.Constraint(LIMLOW, LIMHIGH)
   for i, player in enumerate(all_players):
     limit.SetCoefficient(variables[i], player.actual)
+
+  limit = solver.Constraint(PROJLIMLOW, 5000)
+  for i, player in enumerate(all_players):
+    limit.SetCoefficient(variables[i], player.proj)
     
     
   for position, min_limit, max_limit in POSITION_LIMITS:
@@ -152,21 +158,19 @@ milly_winners_dict = historical_winning_scores
 def fantasyze_balanced(strdates):
 
   for date in strdates:
-    milly = float(milly_winners_dict[date]['winning_score'])
-    optimal = float(milly_winners_dict[date]['optimal'])
-    ##the high end cap is to keep the training set from being built off of perfect optimals which can
-    ##give unrealistic targets for finding winners
-    high_end_cap = milly+((optimal-milly)/2)
     w = milly_winners_dict[date]['slate_id']
+
+    milly = float(milly_winners_dict[date]['winning_score'])
+    proj_floor = int(fantasyze_proj_historical(slate_number=w)['actual'].sum()*.808)
+    
+   
     dupdf = pd.DataFrame([], columns = ['id'])
     dfs = [] 
 
-
-    
     i = 0
     while i < 1000:
         
-        team = run(55000, 54900, w, milly, high_end_cap).players
+        team = run(55000, 54800, w, milly, 5000, proj_floor).players
         #######
           
         names = [i.name for i in team]
@@ -187,7 +191,7 @@ def fantasyze_balanced(strdates):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_959'
 
-        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>80) & (sum(pm)>-20):
+        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(pm)>-20):
           dupdf.loc[i,'id'] = ''.join(sorted(''.join(names)))
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
@@ -198,7 +202,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54900, w, milly*.9, milly*.999).players
+        team = run(55000, 54800, w, milly*.9, milly*.999, proj_floor).players
         #######
           
         names = [i.name for i in team]
@@ -219,7 +223,7 @@ def fantasyze_balanced(strdates):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_9'
 
-        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>80) & (sum(pm)>-20):
+        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(pm)>-20):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
@@ -228,7 +232,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54900, w, milly*.8, milly*.9).players
+        team = run(55000, 54800, w, milly*.8, milly*.9, proj_floor).players
         #######
           
         names = [i.name for i in team]
@@ -249,7 +253,7 @@ def fantasyze_balanced(strdates):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_8'
 
-        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>80) & (sum(pm)>-20):
+        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(pm)>-20):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
@@ -258,7 +262,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54900, w, milly*.6, milly*.8).players
+        team = run(55000, 54800, w, milly*.6, milly*.8, proj_floor).players
         #######
           
         names = [i.name for i in team]
@@ -279,7 +283,7 @@ def fantasyze_balanced(strdates):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_6'
 
-        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>80) & (sum(pm)>-20):
+        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(pm)>-20):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
@@ -288,7 +292,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54900, w, milly*.4, milly*.6).players
+        team = run(55000, 54800, w, milly*.4, milly*.6, proj_floor).players
         #######
           
         names = [i.name for i in team]
@@ -309,7 +313,7 @@ def fantasyze_balanced(strdates):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_62'
 
-        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>80) & (sum(pm)>-20):
+        if (isteamstack > 0) & (((df[df['position']=='G']['teamz'].iloc[0] in opps)==False)) & (sum(pm)>-20):
           print('{0}-{1}'.format(w,i)) 
           df.drop('teamz', inplace=True, axis=1) 
           dfs.append(df)
@@ -318,7 +322,7 @@ def fantasyze_balanced(strdates):
     #############################
     i = 0
     while i < 200:
-        team = run(55000, 54900, w, milly*.2 , milly*.4).players
+        team = run(55000, 54800, w, milly*.2 , milly*.4, proj_floor).players
         #######
           
         names = [i.name for i in team]
@@ -339,7 +343,7 @@ def fantasyze_balanced(strdates):
         df['team_salary'] = actual_sum
         df['lineup'] = str(i) + str(0) +'_5'
 
-        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(proj)>80) & (sum(pm)>-20):
+        if (isteamstack > 0) & (((df[df['position']=='D']['teamz'].iloc[0] in opps)==False)) & (sum(pm)>-20):
           print('{0}-{1}'.format(w,i))  
           df.drop('teamz', inplace=True, axis=1)
           dfs.append(df)
