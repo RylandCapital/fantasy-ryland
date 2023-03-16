@@ -150,6 +150,40 @@ def fanduel_ticket_optimized(slate_date='1.9.23', ids=[], model='ensemble'):
   return upload, exposuresdf
 
 
+def salary_arb(slate_date):
+
+  '''joins dk and fanduel salaries'''
+  
+  path = os.getcwd() + r"\fd_gpd\_predict\player_stats\by_week"
+  path2 = os.getcwd() + r"\fd_gpd\_predict\player_stats"
+  stats = pd.read_csv(path + "\\" + '{0}.csv'.format(slate_date)) 
+  stats = stats.set_index('RylandID_master')
+  try:
+    stats = stats.drop('dkSalary', axis=1)
+  except:
+    pass
+
+  path3 = os.getcwd() + r"\fd_gpd\_predict\player_stats\dk_files"
+  dk = pd.read_csv(path3 + "\\" + '{0}.csv'.format(slate_date)) 
+  dk['TeamAbbrev'] = np.where(dk['TeamAbbrev']=='WAS', 'WSH', dk['TeamAbbrev'])
+  dk['TeamAbbrev'] = np.where(dk['TeamAbbrev']=='CLS', 'CBJ', dk['TeamAbbrev'])
+  dk['combo_id'] = dk['Name'].str.lower().str.replace(' ','')+\
+                  dk['TeamAbbrev']
+  stats['combo_id'] = stats['Nickname'].str.lower().str.replace(' ','')+\
+                       stats['Team']
+  
+  dk.set_index('combo_id', inplace=True)
+  stats.reset_index(inplace=True)
+  stats.set_index('combo_id', inplace=True)
+  dk = dk[['Salary']].rename(columns={'Salary':'dkSalary'})
+
+  df = stats.join(dk,how='left')
+  df.to_csv(path2 + "\\" + 'dkcheck.csv')
+
+  df.set_index('RylandID_master').to_csv(path + "\\" + '{0}.csv'.format(slate_date))
+
+  return df
+
 
 
 

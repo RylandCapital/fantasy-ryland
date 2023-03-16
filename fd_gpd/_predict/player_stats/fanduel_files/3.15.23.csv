@@ -1,361 +1,361 @@
-entry_id,contest_id,contest_name,C,C,W,W,D,D,UTIL,UTIL,G,"","Instructions"
-"3083064536","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","","1) Edit your lineup by inserting any player from this list into their appropriate position columns"
-"3083064537","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","","2) You can paste either the Player ID + Name OR ID from their respective columns"
-"3083064538","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","","3) Any information to the right of the last position column will be ignored in the upload. Don't leave blank rows. Any entries after a blank row will not be edited"
-"3083064539","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","","4) You can not use this form to create new entries"
-"3083064540","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","",""
-"3083064541","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",Player ID + Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Played,Salary,Game,Team,Opponent,Injury Indicator,Injury Details,Tier,,,Roster Position
-"3083064542","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-41391:Nathan MacKinnon,88010-41391,C,Nathan,Nathan MacKinnon,MacKinnon,23.65370460792824,54,10400,COL@TOR,COL,TOR,,,,,,C/UTIL
-"3083064543","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70899:Auston Matthews,88010-70899,C,Auston,Auston Matthews,Matthews,20.349152128575213,59,10200,COL@TOR,TOR,COL,,,,,,C/UTIL
-"3083064544","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70924:Tage Thompson,88010-70924,C,Tage,Tage Thompson,Thompson,19.9742431640625,66,9800,BUF@WSH,BUF,WSH,,,,,,C/UTIL
-"3083064545","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66737:Mikko Rantanen,88010-66737,W,Mikko,Mikko Rantanen,Rantanen,19.107692307692307,65,9200,COL@TOR,COL,TOR,,,,,,W/UTIL
-"3083064546","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-135875:Kirill Kaprizov,88010-135875,W,Kirill,Kirill Kaprizov,Kaprizov,18.58923152043269,65,9000,MIN@STL,MIN,STL,O,Lower body,,,,W/UTIL
-"3083064547","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-59276:William Nylander,88010-59276,W,William,William Nylander,Nylander,18.140909830729168,66,8800,COL@TOR,TOR,COL,,,,,,W/UTIL
-"3083064548","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-80479:Jonas Johansson,88010-80479,G,Jonas,Jonas Johansson,Johansson,5.599999904632568,1,8600,COL@TOR,COL,TOR,,,,,,G
-"3083064549","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-82094:Alexandar Georgiev,88010-82094,G,Alexandar,Alexandar Georgiev,Georgiev,19.918367346938776,49,8600,COL@TOR,COL,TOR,,,,,,G
-"3083064550","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-83213:Pavel Francouz,88010-83213,G,Pavel,Pavel Francouz,Francouz,17.850000381469727,16,8600,COL@TOR,COL,TOR,DTD,Lower body,,,,G
-"3083064551","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8718:Alex Ovechkin,88010-8718,W,Alex,Alex Ovechkin,Ovechkin,17.683871361517138,62,8400,BUF@WSH,WSH,BUF,DTD,Lower body,,,,W/UTIL
-"3083064552","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8732:Semyon Varlamov,88010-8732,G,Semyon,Semyon Varlamov,Varlamov,16.03333282470703,24,8400,NYI@ANH,NYI,ANH,,,,,,G
-"3083064553","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97232:Ilya Sorokin,88010-97232,G,Ilya,Ilya Sorokin,Sorokin,18.81538508488582,52,8400,NYI@ANH,NYI,ANH,,,,,,G
-"3083064554","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-83235:Ilya Samsonov,88010-83235,G,Ilya,Ilya Samsonov,Samsonov,18.834286063058034,35,8200,COL@TOR,TOR,COL,,,,,,G
-"3083064555","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8494:John Tavares,88010-8494,C,John,John Tavares,Tavares,16.42769305889423,65,8200,COL@TOR,TOR,COL,,,,,,C/UTIL
-"3083064556","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-42869:Matt Murray,88010-42869,G,Matt,Matt Murray,Murray,16.654545177112926,22,8200,COL@TOR,TOR,COL,,,,,,G
-"3083064557","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66683:Mitchell Marner,88010-66683,W,Mitchell,Mitchell Marner,Marner,16.96969696969697,66,8100,COL@TOR,TOR,COL,,,,,,W/UTIL
-"3083064558","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-82752:Filip Gustavsson,88010-82752,G,Filip,Filip Gustavsson,Gustavsson,18.84705846449908,34,8000,MIN@STL,MIN,STL,,,,,,G
-"3083064559","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8612:Marc-Andre Fleury,88010-8612,G,Marc-Andre,Marc-Andre Fleury,Fleury,16.980000305175782,40,8000,MIN@STL,MIN,STL,,,,,,G
-"3083064560","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70168:Alex Tuch,88010-70168,W,Alex,Alex Tuch,Tuch,16.689655172413794,58,7800,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"3083064561","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-73940:Jordan Kyrou,88010-73940,W,Jordan,Jordan Kyrou,Kyrou,16.553968641493057,63,7800,MIN@STL,STL,MIN,,,,,,W/UTIL
-"3083064562","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-42478:Bo Horvat,88010-42478,C,Bo,Bo Horvat,Horvat,15.946969696969697,66,7800,NYI@ANH,NYI,ANH,,,,,,C/UTIL
-"3083064563","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-103523:Cale Makar,88010-103523,D,Cale,Cale Makar,Makar,16.90192354642428,52,7700,COL@TOR,COL,TOR,,,,,,D/UTIL
-"3083064564","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-68647:Charlie Lindgren,88010-68647,G,Charlie,Charlie Lindgren,Lindgren,13.457142421177455,28,7600,BUF@WSH,WSH,BUF,,,,,,G
-"3083064565","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-14466:Darcy Kuemper,88010-14466,G,Darcy,Darcy Kuemper,Kuemper,16.244897959183675,49,7600,BUF@WSH,WSH,BUF,,,,,,G
-"3083064566","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-85132:Rasmus Dahlin,88010-85132,D,Rasmus,Rasmus Dahlin,Dahlin,16.406451809790827,62,7600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"3083064567","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-12439:Jeff Skinner,88010-12439,W,Jeff,Jeff Skinner,Skinner,15.503174796937005,63,7500,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"3083064568","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-9015:John Carlson,88010-9015,D,John,John Carlson,Carlson,15.454838906565021,31,7500,BUF@WSH,WSH,BUF,IR,Face,,,,D/UTIL
-"3083064569","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70513:Pavel Buchnevich,88010-70513,W,Pavel,Pavel Buchnevich,Buchnevich,14.423076923076923,52,7500,MIN@STL,STL,MIN,,,,,,W/UTIL
-"3083064570","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8292:Craig Anderson,88010-8292,G,Craig,Craig Anderson,Anderson,16.49230722280649,26,7400,BUF@WSH,BUF,WSH,,,,,,G
-"3083064571","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-42982:Eric Comrie,88010-42982,G,Eric,Eric Comrie,Comrie,11.422222561306423,18,7400,BUF@WSH,BUF,WSH,O,Lower body,,,,G
-"3083064572","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-21897:Brock Nelson,88010-21897,C,Brock,Brock Nelson,Nelson,14.399999646173008,69,7300,NYI@ANH,NYI,ANH,,,,,,C/UTIL
-"3083064573","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97102:Lukas Dostal,88010-97102,G,Lukas,Lukas Dostal,Dostal,14.618182095614346,11,7200,NYI@ANH,ANH,NYI,,,,,,G
-"3083064574","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-38243:Anthony Stolarz,88010-38243,G,Anthony,Anthony Stolarz,Stolarz,9.563636086203836,22,7200,NYI@ANH,ANH,NYI,IR,Lower body,,,,G
-"3083064576","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-15268:John Gibson,88010-15268,G,John,John Gibson,Gibson,16.24347852623981,46,7200,NYI@ANH,ANH,NYI,,,,,,G
-"3083064577","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8633:Thomas Greiss,88010-8633,G,Thomas,Thomas Greiss,Greiss,14.080000305175782,20,7000,MIN@STL,STL,MIN,,,,,,G
-"3083064578","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-12253:Mats Zuccarello,88010-12253,W,Mats,Mats Zuccarello,Zuccarello,14.452308067908653,65,7000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"3083064579","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-15339:Jordan Binnington,88010-15339,G,Jordan,Jordan Binnington,Binnington,13.69056557709316,53,7000,MIN@STL,STL,MIN,,,,,,G
-"3083064581","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-41392:Valeri Nichushkin,88010-41392,W,Valeri,Valeri Nichushkin,Nichushkin,14.263157894736842,38,6800,COL@TOR,COL,TOR,,,,,,W/UTIL
-"3083064582","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-73949:Joel Eriksson Ek,88010-73949,C,Joel,Joel Eriksson Ek,Eriksson Ek,13.626865671641792,67,6700,MIN@STL,MIN,STL,,,,,,C/UTIL
-"3083064584","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-135680:Justus Annunen,88010-135680,G,Justus,Justus Annunen,Annunen,8.399999618530273,2,6500,COL@TOR,COL,TOR,,,,,,G
-"3083064585","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-180228:Daniel Mannella,88010-180228,G,Daniel,Daniel Mannella,Mannella,,,6500,NYI@ANH,ANH,NYI,,,,,,G
-"3083064588","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-96790:Joel Hofer,88010-96790,G,Joel,Joel Hofer,Hofer,11.600000381469727,2,6500,MIN@STL,STL,MIN,,,,,,G
-"3083064589","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66586:C.J. Motte,88010-66586,G,C.J.,C.J. Motte,Motte,,,6500,MIN@STL,MIN,STL,,,,,,G
-"3083064590","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-43045:Michael Houser,88010-43045,G,Michael,Michael Houser,Houser,33.20000076293945,2,6500,BUF@WSH,BUF,WSH,,,,,,G
-"3083064591","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66599:Zane McIntyre,88010-66599,G,Zane,Zane McIntyre,McIntyre,,,6500,MIN@STL,MIN,STL,,,,,,G
-"3083064592","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-180281:Ivan Zhigalov,88010-180281,G,Ivan,Ivan Zhigalov,Zhigalov,,,6500,COL@TOR,COL,TOR,,,,,,G
-"3083064593","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-180298:Keith Petruzzelli,88010-180298,G,Keith,Keith Petruzzelli,Petruzzelli,,,6500,COL@TOR,TOR,COL,,,,,,G
-"3083064594","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-180303:Thomas Milic,88010-180303,G,Thomas,Thomas Milic,Milic,,,6500,MIN@STL,MIN,STL,,,,,,G
-"3083064595","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8781:Cory Schneider,88010-8781,G,Cory,Cory Schneider,Schneider,21.600000381469727,1,6500,NYI@ANH,NYI,ANH,,,,,,G
-"3083064596","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-161908:Garin Bjorklund,88010-161908,G,Garin,Garin Bjorklund,Bjorklund,,,6500,BUF@WSH,WSH,BUF,,,,,,G
-"3083064597","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-43131:Malcolm Subban,88010-43131,G,Malcolm,Malcolm Subban,Subban,6,4,6500,BUF@WSH,BUF,WSH,,,,,,G
-"3083064598","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66685:Mathew Barzal,88010-66685,C,Mathew,Mathew Barzal,Barzal,12.936206686085669,58,6500,NYI@ANH,NYI,ANH,O,Lower body,,,,C/UTIL
-"3083064599","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-116882:Colten Ellis,88010-116882,G,Colten,Colten Ellis,Ellis,,,6500,MIN@STL,STL,MIN,,,,,,G
-"3083064600","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-180384:Henrik Tikkanen,88010-180384,G,Henrik,Henrik Tikkanen,Tikkanen,,,6500,NYI@ANH,NYI,ANH,,,,,,G
-"3083064601","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-168113:Clay Stevenson,88010-168113,G,Clay,Clay Stevenson,Stevenson,,,6500,BUF@WSH,WSH,BUF,,,,,,G
-"3083064602","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8883:Ben Bishop,88010-8883,G,Ben,Ben Bishop,Bishop,,,6500,BUF@WSH,BUF,WSH,IR,Knee,,,,G
-"3083064603","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66743:Kenneth Appleby,88010-66743,G,Kenneth,Kenneth Appleby,Appleby,,,6500,NYI@ANH,NYI,ANH,,,,,,G
-"3083064604","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-161995:Gage Alexander,88010-161995,G,Gage,Gage Alexander,Alexander,,,6500,NYI@ANH,ANH,NYI,,,,,,G
-"3083064605","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-169679:Dryden McKay,88010-169679,G,Dryden,Dryden McKay,McKay,,,6500,COL@TOR,TOR,COL,,,,,,G
-"3083064606","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-82163:Olle Eriksson Ek,88010-82163,G,Olle,Olle Eriksson Ek,Eriksson Ek,,,6500,NYI@ANH,ANH,NYI,,,,,,G
-"3083064607","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97029:Ukko-Pekka Luukkonen,88010-97029,G,Ukko-Pekka,Ukko-Pekka Luukkonen,Luukkonen,15.82857186453683,28,6500,BUF@WSH,BUF,WSH,,,,,,G
-"3083064608","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-117021:Hunter Jones,88010-117021,G,Hunter,Hunter Jones,Jones,,,6500,MIN@STL,MIN,STL,,,,,,G
-"3083064609","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-170275:Jesper Wallstedt,88010-170275,G,Jesper,Jesper Wallstedt,Wallstedt,,,6500,MIN@STL,MIN,STL,,,,,,G
-"3083064610","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-103200:Joseph Woll,88010-103200,G,Joseph,Joseph Woll,Woll,24,3,6500,COL@TOR,TOR,COL,,,,,,G
-"3083064612","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-117041:Beck Warm,88010-117041,G,Beck,Beck Warm,Warm,,,6500,BUF@WSH,BUF,WSH,,,,,,G
-"3083064614","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-42800:Zach Fucale,88010-42800,G,Zach,Zach Fucale,Fucale,12.199999809265137,4,6500,BUF@WSH,WSH,BUF,,,,,,G
-"3083064615","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-103220:Erik Kallgren,88010-103220,G,Erik,Erik Kallgren,Kallgren,8.676923311673677,13,6500,COL@TOR,TOR,COL,,,,,,G
-"3083064616","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-162119:Will Cranley,88010-162119,G,Will,Will Cranley,Cranley,,,6500,MIN@STL,STL,MIN,,,,,,G
-"3083064617","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-117067:Trent Miner,88010-117067,G,Trent,Trent Miner,Miner,,,6500,COL@TOR,COL,TOR,,,,,,G
-"3083064618","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70483:Artturi Lehkonen,88010-70483,W,Artturi,Artturi Lehkonen,Lehkonen,12.632258261403729,62,6500,COL@TOR,COL,TOR,O,Finger,,,,W/UTIL
-"3083064619","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-170326:Vadim Zherenko,88010-170326,G,Vadim,Vadim Zherenko,Zherenko,,,6500,MIN@STL,STL,MIN,,,,,,G
-"3083064620","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-14183:Keith Kinkaid,88010-14183,G,Keith,Keith Kinkaid,Kinkaid,17.200000762939453,2,6500,COL@TOR,COL,TOR,,,,,,G
-"3083064621","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-173422:Dennis Hildeby,88010-173422,G,Dennis,Dennis Hildeby,Hildeby,,,6500,COL@TOR,TOR,COL,,,,,,G
-"3083064622","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-167289:Calle Clang,88010-167289,G,Calle,Calle Clang,Clang,,,6500,NYI@ANH,ANH,NYI,,,,,,G
-"3083064623","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-160183:Hunter Shepard,88010-160183,G,Hunter,Hunter Shepard,Shepard,,,6500,BUF@WSH,WSH,BUF,,,,,,G
-"3083064624","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97231:Jakub Skarek,88010-97231,G,Jakub,Jakub Skarek,Skarek,,,6500,NYI@ANH,NYI,ANH,,,,,,G
-"3083064625","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-162288:Tristan Lennox,88010-162288,G,Tristan,Tristan Lennox,Lennox,,,6500,NYI@ANH,NYI,ANH,,,,,,G
-"3083064626","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-128506:Trevor Zegras,88010-128506,C,Trevor,Trevor Zegras,Zegras,12.422387877506996,67,6500,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"3083064627","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-82912:Troy Terry,88010-82912,W,Troy,Troy Terry,Terry,12.771666463216146,60,6400,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"3083064628","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-39238:Anders Lee,88010-39238,W,Anders,Anders Lee,Lee,12.198550901551178,69,6300,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"3083064629","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97214:Noah Dobson,88010-97214,D,Noah,Noah Dobson,Dobson,12.216922701322115,65,6300,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"3083064630","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-113279:Dylan Cozens,88010-113279,C,Dylan,Dylan Cozens,Cozens,13.704615196814904,65,6200,BUF@WSH,BUF,WSH,,,,,,C/UTIL
-"3083064631","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-81983:Robert Thomas,88010-81983,C,Robert,Robert Thomas,Thomas,11.569841657366071,63,6000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"3083064632","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-148097:Matt Boldy,88010-148097,W,Matt,Matt Boldy,Boldy,12.235820713327891,67,6000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"3083064633","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-14178:Justin Faulk,88010-14178,D,Justin,Justin Faulk,Faulk,11.204545454545455,66,6000,MIN@STL,STL,MIN,,,,,,D/UTIL
-"3083064634","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70279:J.T. Compher,88010-70279,C,J.T.,J.T. Compher,Compher,11.227692119891827,65,5700,COL@TOR,COL,TOR,,,,,,C/UTIL
-"3083064635","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-61549:Frank Vatrano,88010-61549,W,Frank,Frank Vatrano,Vatrano,10.814925008745336,67,5600,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"3083064636","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-21648:Torey Krug,88010-21648,D,Torey,Torey Krug,Krug,10.22499974568685,48,5600,MIN@STL,STL,MIN,,,,,,D/UTIL
-"3083064638","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-52475:Evgeny Kuznetsov,88010-52475,C,Evgeny,Evgeny Kuznetsov,Kuznetsov,10.868656898612407,67,5600,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"3083064639","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-66617:Michael Bunting,88010-66617,W,Michael,Michael Bunting,Bunting,10.024242054332387,66,5500,COL@TOR,TOR,COL,,,,,,W/UTIL
-"3083064640","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8635:T.J. Oshie,88010-8635,W,T.J.,T.J. Oshie,Oshie,10.749019847196692,51,5500,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"3083064641","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-62445:Evan Rodrigues,88010-62445,C,Evan,Evan Rodrigues,Rodrigues,10.883333559389468,54,5500,COL@TOR,COL,TOR,,,,,,C/UTIL
-"3083064642","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-70199:Devon Toews,88010-70199,D,Devon,Devon Toews,Toews,10.834920247395834,63,5400,COL@TOR,COL,TOR,,,,,,D/UTIL
-"3083064643","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8478:Zach Parise,88010-8478,W,Zach,Zach Parise,Parise,9.40869582908741,69,5400,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"3083064644","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-12644:Kyle Palmieri,88010-12644,W,Kyle,Kyle Palmieri,Palmieri,8.897619338262649,42,5400,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"3083064645","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-159629:Mason McTavish,88010-159629,C,Mason,Mason McTavish,McTavish,10.037878787878787,66,5400,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"3083064646","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-12812:Jared Spurgeon,88010-12812,D,Jared,Jared Spurgeon,Spurgeon,11.347761011835354,67,5300,MIN@STL,MIN,STL,,,,,,D/UTIL
-"3083064647","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-83057:Victor Olofsson,88010-83057,W,Victor,Victor Olofsson,Olofsson,9.439999624399038,65,5300,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"3083064648","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-43176:Ryan Hartman,88010-43176,C,Ryan,Ryan Hartman,Hartman,10.604347560716713,46,5300,MIN@STL,MIN,STL,,,,,,C/UTIL
-"3083064649","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-37881:Morgan Rielly,88010-37881,D,Morgan,Morgan Rielly,Rielly,10.511764227175245,51,5300,COL@TOR,TOR,COL,,,,,,D/UTIL
-"3083064650","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-113272:Bowen Byram,88010-113272,D,Bowen,Bowen Byram,Byram,10.025926378038195,27,5200,COL@TOR,COL,TOR,,,,,,D/UTIL
-"3083064651","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-12460:Cam Fowler,88010-12460,D,Cam,Cam Fowler,Fowler,9.804477976329292,67,5200,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"3083064652","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-65969:Dylan Strome,88010-65969,C,Dylan,Dylan Strome,Strome,10.564178922283116,67,5200,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"3083064653","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-9266:Brayden Schenn,88010-9266,C,Brayden,Brayden Schenn,Schenn,10.493939024029356,66,5100,MIN@STL,STL,MIN,,,,,,C/UTIL
-"3083064654","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-73909:Samuel Girard,88010-73909,D,Samuel,Samuel Girard,Girard,9.516949152542374,59,5100,COL@TOR,COL,TOR,,,,,,D/UTIL
-"3083064655","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-62492:Erik Gustafsson,88010-62492,D,Erik,Erik Gustafsson,Gustafsson,9.54923095703125,65,5000,COL@TOR,TOR,COL,,,,,,D/UTIL
-"3083064656","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-12843:Adam Henrique,88010-12843,W,Adam,Adam Henrique,Henrique,10.703508343612938,57,5000,NYI@ANH,ANH,NYI,IR,Knee,,,,W/UTIL
-"3083064657","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-14457:John Klingberg,88010-14457,D,John,John Klingberg,Klingberg,9.023636141690341,55,5000,MIN@STL,MIN,STL,,,,,,D/UTIL
-"3083064658","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-61246:Colton Parayko,88010-61246,D,Colton,Colton Parayko,Parayko,8.784127371651786,63,4900,MIN@STL,STL,MIN,,,,,,D/UTIL
-"3083064660","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-23061:Calle Jarnkrok,88010-23061,W,Calle,Calle Jarnkrok,Jarnkrok,7.969491732322563,59,4800,COL@TOR,TOR,COL,,,,,,W/UTIL
-"3083064661","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-54126:Trevor van Riemsdyk,88010-54126,D,Trevor,Trevor van Riemsdyk,van Riemsdyk,8.513235653147978,68,4800,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"3083064662","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-82850:Casey Mittelstadt,88010-82850,C,Casey,Casey Mittelstadt,Mittelstadt,8.371212121212121,66,4800,BUF@WSH,BUF,WSH,,,,,,C/UTIL
-"3083064663","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8714:Nicklas Backstrom,88010-8714,C,Nicklas,Nicklas Backstrom,Backstrom,7.864000244140625,25,4700,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"3083064664","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-11365:Kevin Shattenkirk,88010-11365,D,Kevin,Kevin Shattenkirk,Shattenkirk,8.254999796549479,60,4700,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"3083064665","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-39710:Nick Jensen,88010-39710,D,Nick,Nick Jensen,Jensen,7.981538273737981,65,4700,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"3083064666","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8230:Mark Giordano,88010-8230,D,Mark,Mark Giordano,Giordano,8.20000018495502,66,4600,COL@TOR,TOR,COL,,,,,,D/UTIL
-"3083064667","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-23438:Jonas Brodin,88010-23438,D,Jonas,Jonas Brodin,Brodin,7.877551020408164,49,4600,MIN@STL,MIN,STL,IR,Lower body,,,,D/UTIL
-"3083064668","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97176:Rasmus Sandin,88010-97176,D,Rasmus,Rasmus Sandin,Sandin,8.121052524499726,57,4600,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"3083064670","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-15386:Ryan Strome,88010-15386,C,Ryan,Ryan Strome,Strome,7.508955314977845,67,4500,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"3083064671","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-53866:Adam Pelech,88010-53866,D,Adam,Adam Pelech,Pelech,8.058333079020182,48,4500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"3083064672","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-23226:Tom Wilson,88010-23226,W,Tom,Tom Wilson,Wilson,9.526315789473685,19,4500,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"3083064673","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97091:Martin Fehervary,88010-97091,D,Martin,Martin Fehervary,Fehervary,7.441509318801592,53,4500,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"3083064674","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-15287:Jean-Gabriel Pageau,88010-15287,C,Jean-Gabriel,Jean-Gabriel Pageau,Pageau,9.249123021175986,57,4500,NYI@ANH,NYI,ANH,,,,,,C/UTIL
-"3083064676","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-58985:Jakub Vrana,88010-58985,W,Jakub,Jakub Vrana,Vrana,9.211111280653212,9,4300,MIN@STL,STL,MIN,,,,,,W/UTIL
-"3083064677","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-148101:Alex Newhook,88010-148101,C,Alex,Alex Newhook,Newhook,7.067692213792068,65,4300,COL@TOR,COL,TOR,,,,,,C/UTIL
-"3083064678","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-43200:Ryan Pulock,88010-43200,D,Ryan,Ryan Pulock,Pulock,7.576811417289402,69,4300,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"3083064679","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-59209:Frederick Gaudreau,88010-59209,W,Frederick,Frederick Gaudreau,Gaudreau,7.925373134328358,67,4300,MIN@STL,MIN,STL,,,,,,W/UTIL
-"3083064680","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-153985:JJ Peterka,88010-153985,W,JJ,JJ Peterka,Peterka,6.535484067855343,62,4300,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"3083064681","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-58977:Sonny Milano,88010-58977,W,Sonny,Sonny Milano,Milano,7.572222109194155,54,4200,BUF@WSH,WSH,BUF,DTD,Illness,,,,W/UTIL
-"3083064682","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-169056:Owen Power,88010-169056,D,Owen,Owen Power,Power,7.901587107824901,63,4200,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"3083064683","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-54481:Jake McCabe,88010-54481,D,Jake,Jake McCabe,McCabe,7.947540783491291,61,4200,COL@TOR,TOR,COL,,,,,,D/UTIL
-"3083064684","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-82154:Sebastian Aho,88010-82154,D,Sebastian,Sebastian Aho,Aho,6.470312595367432,64,4200,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"3083064685","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8502:Kyle Okposo,88010-8502,W,Kyle,Kyle Okposo,Okposo,7.755932306839248,59,4200,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"3083064686","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-13657:Derek Grant,88010-13657,C,Derek,Derek Grant,Grant,7.3451611918787805,31,4200,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"3083064687","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-15280:Brandon Saad,88010-15280,W,Brandon,Brandon Saad,Saad,8.129999796549479,60,4200,MIN@STL,STL,MIN,,,,,,W/UTIL
-"3083064688","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-135663:Alexander Romanov,88010-135663,D,Alexander,Alexander Romanov,Romanov,7.323529411764706,68,4200,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"3083064689","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-128509:Mattias Samuelsson,88010-128509,D,Mattias,Mattias Samuelsson,Samuelsson,6.424999872843425,48,4200,BUF@WSH,BUF,WSH,O,Upper body,,,,D/UTIL
-"3083064690","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-14473:Jakob Silfverberg,88010-14473,W,Jakob,Jakob Silfverberg,Silfverberg,7.1893939393939394,66,4100,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"3083064691","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-80028:David Kampf,88010-80028,C,David,David Kampf,Kampf,6.157575665098248,66,4100,COL@TOR,TOR,COL,,,,,,C/UTIL
-"3083064692","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-58686:Kasperi Kapanen,88010-58686,W,Kasperi,Kasperi Kapanen,Kapanen,7.7,50,4100,MIN@STL,STL,MIN,,,,,,W/UTIL
-"3083064693","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-9196:Matt Martin,88010-9196,W,Matt,Matt Martin,Martin,5.089855249377265,69,4100,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"3083064694","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-8688:Luke Schenn,88010-8688,D,Luke,Luke Schenn,Schenn,7.522806803385417,57,4100,COL@TOR,TOR,COL,DTD,Personal,,,,D/UTIL
-"3083064695","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-142022:Jack Quinn,88010-142022,W,Jack,Jack Quinn,Quinn,7.793220132084216,59,4000,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"3083064696","88010-263237673","$500 Wed NHL Five Hole (150 Entries Max)","","","","","","","","","","",88010-97055:Calen Addison,88010-97055,D,Calen,Calen Addison,Addison,7.3578946297628836,57,4000,MIN@STL,MIN,STL,,,,,,D/UTIL
-"3083064871","88010-263237748","$300 Wed NHL Big $2 Double Up (Top 75 Win)","","","","","","","","","","",88010-82214:Timothy Liljegren,88010-82214,D,Timothy,Timothy Liljegren,Liljegren,7.013207777491155,53,4000,COL@TOR,TOR,COL,,,,,,D/UTIL
-"3083064872","88010-263237748","$300 Wed NHL Big $2 Double Up (Top 75 Win)","","","","","","","","","","",88010-39261:Scott Mayfield,88010-39261,D,Scott,Scott Mayfield,Mayfield,7.77970996801404,69,4000,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"3083064873","88010-263237748","$300 Wed NHL Big $2 Double Up (Top 75 Win)","","","","","","","","","","",88010-14697:Gabriel Landeskog,88010-14697,W,Gabriel,Gabriel Landeskog,Landeskog,17.509858467209508,71,4000,COL@TOR,COL,TOR,IR,Knee,,,,W/UTIL
-"3083064875","88010-263237748","$300 Wed NHL Big $2 Double Up (Top 75 Win)","","","","","","","","","","",88010-62861:Noel Acciari,88010-62861,C,Noel,Noel Acciari,Acciari,7.335384427584135,65,4000,COL@TOR,TOR,COL,,,,,,C/UTIL
-"3083064876","88010-263237748","$300 Wed NHL Big $2 Double Up (Top 75 Win)","","","","","","","","","","",88010-9124:Ryan O'Reilly,88010-9124,C,Ryan,Ryan O'Reilly,O'Reilly,9.345833460489908,48,4000,COL@TOR,TOR,COL,IR,Finger,,,,C/UTIL
-"3083064964","88010-263237753","$400 Wed NHL Big $5 Double Up (Top 40 Win)","","","","","","","","","","",88010-54194:Josh Manson,88010-54194,D,Josh,Josh Manson,Manson,8.118518405490452,27,4000,COL@TOR,COL,TOR,O,Lower body,,,,D/UTIL
-"3083064966","88010-263237753","$400 Wed NHL Big $5 Double Up (Top 40 Win)","","","","","","","","","","",88010-80398:Calle Rosen,88010-80398,D,Calle,Calle Rosen,Rosen,6.914285568963914,42,3900,MIN@STL,STL,MIN,,,,,,D/UTIL
-"3083065083","88010-263247105","H2H vs cicima6709","","","","","","","","","","",88010-43134:Anthony Mantha,88010-43134,W,Anthony,Anthony Mantha,Mantha,7.616666666666666,60,3900,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82179:Alexander Kerfoot,88010-82179,C,Alexander,Alexander Kerfoot,Kerfoot,7.343939578894413,66,3900,COL@TOR,TOR,COL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-70922:Max Jones,88010-70922,W,Max,Max Jones,Jones,4.755555329499422,54,3900,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-39252:Brock McGinn,88010-39252,W,Brock,Brock McGinn,McGinn,5.949999809265137,64,3900,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-15255:Josh Leivo,88010-15255,W,Josh,Josh Leivo,Leivo,6.260869565217392,46,3900,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-84404:Ilya Lyubushkin,88010-84404,D,Ilya,Ilya Lyubushkin,Lyubushkin,4.887272505326704,55,3900,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-58877:Conor Sheary,88010-58877,W,Conor,Conor Sheary,Sheary,8.227941176470589,68,3900,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82156:Max Comtois,88010-82156,W,Max,Max Comtois,Comtois,5.599999769678655,53,3800,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-73981:Denis Malgin,88010-73981,W,Denis,Denis Malgin,Malgin,5.625490076401654,51,3800,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-59147:Jake Middleton,88010-59147,D,Jake,Jake Middleton,Middleton,6.454545454545454,66,3800,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-97096:Isac Lundestrom,88010-97096,C,Isac,Isac Lundestrom,Lundestrom,5.608695652173913,46,3800,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-82796:Sam Lafferty,88010-82796,C,Sam,Sam Lafferty,Lafferty,7.1649121736225325,57,3800,COL@TOR,TOR,COL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-84346:Pierre Engvall,88010-84346,W,Pierre,Pierre Engvall,Engvall,6.72063482375372,63,3800,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-11158:T.J. Brodie,88010-11158,D,T.J.,T.J. Brodie,Brodie,6.663636641068892,44,3800,COL@TOR,TOR,COL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-11170:Nick Leddy,88010-11170,D,Nick,Nick Leddy,Leddy,5.883870770854335,62,3800,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-15374:Scott Harrington,88010-15374,D,Scott,Scott Harrington,Harrington,5.297297297297297,37,3700,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-96789:Tyler Tucker,88010-96789,D,Tyler,Tyler Tucker,Tucker,4.069565151048743,23,3700,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-81999:Henri Jokiharju,88010-81999,D,Henri,Henri Jokiharju,Jokiharju,5.7272727272727275,44,3700,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-62032:Vinnie Hinostroza,88010-62032,W,Vinnie,Vinnie Hinostroza,Hinostroza,6.296296296296297,27,3700,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-113275:Simon Holmstrom,88010-113275,W,Simon,Simon Holmstrom,Holmstrom,3.2400001525878905,40,3700,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-11387:Matt Irwin,88010-11387,D,Matt,Matt Irwin,Irwin,4.711110998083044,54,3700,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-23225:Matt Dumba,88010-23225,D,Matt,Matt Dumba,Dumba,6.153846153846154,65,3700,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-103624:Brandon Duhaime,88010-103624,W,Brandon,Brandon Duhaime,Duhaime,5.282051282051282,39,3700,MIN@STL,MIN,STL,DTD,Head,,,,W/UTIL
-"","","","","","","","","","","","","",88010-54478:Nic Dowd,88010-54478,C,Nic,Nic Dowd,Dowd,7.35555578161169,54,3700,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-53465:Hudson Fasching,88010-53465,W,Hudson,Hudson Fasching,Fasching,5.711111280653212,36,3700,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-59135:Justin Holl,88010-59135,D,Justin,Justin Holl,Holl,5.858461350661058,65,3700,COL@TOR,TOR,COL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-113932:Nikita Alexandrov,88010-113932,C,Nikita,Nikita Alexandrov,Alexandrov,4.888888888888889,27,3700,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-70928:Sam Steel,88010-70928,C,Sam,Sam Steel,Steel,6.341071537562779,56,3700,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-117048:Peyton Krebs,88010-117048,C,Peyton,Peyton Krebs,Krebs,5.293103448275862,58,3700,BUF@WSH,BUF,WSH,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-97090:Alexander Alexeyev,88010-97090,D,Alexander,Alexander Alexeyev,Alexeyev,5.066666497124566,18,3700,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-82851:Jordan Greenway,88010-82851,W,Jordan,Jordan Greenway,Greenway,4.752000122070313,50,3700,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-12718:Tyler Pitlick,88010-12718,W,Tyler,Tyler Pitlick,Pitlick,4.359183798030931,49,3700,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-12220:Marcus Johansson,88010-12220,W,Marcus,Marcus Johansson,Johansson,7.748484756007339,66,3700,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-58878:Oskar Sundqvist,88010-58878,C,Oskar,Oskar Sundqvist,Sundqvist,6.038982843948623,59,3700,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-58881:Sammy Blais,88010-58881,W,Sammy,Sammy Blais,Blais,4.218181818181818,55,3600,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-96800:Urho Vaakanainen,88010-96800,D,Urho,Urho Vaakanainen,Vaakanainen,4.521739130434782,23,3600,NYI@ANH,ANH,NYI,IR,Hip,,,,D/UTIL
-"","","","","","","","","","","","","",88010-39972:Kurtis MacDermid,88010-39972,D,Kurtis,Kurtis MacDermid,MacDermid,2.568421012476871,38,3600,COL@TOR,COL,TOR,DTD,Lower body,,,,D/UTIL
-"","","","","","","","","","","","","",88010-66616:Dakota Mermis,88010-66616,D,Dakota,Dakota Mermis,Mermis,3.200000047683716,2,3600,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-41591:Jon Merrill,88010-41591,D,Jon,Jon Merrill,Merrill,4.590163934426229,61,3600,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-8847:Robert Bortuzzo,88010-8847,D,Robert,Robert Bortuzzo,Bortuzzo,2.8421052631578947,38,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-103573:Jacob Bryson,88010-103573,D,Jacob,Jacob Bryson,Bryson,4.1647057626761645,51,3600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-66726:Colton White,88010-66726,D,Colton,Colton White,White,3.291428484235491,35,3600,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-8903:Marco Scandella,88010-8903,D,Marco,Marco Scandella,Scandella,4.6400001525878904,10,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-82122:Mason Shaw,88010-82122,C,Mason,Mason Shaw,Shaw,5.952000122070313,50,3600,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-8410:Jack Johnson,88010-8410,D,Jack,Jack Johnson,Johnson,4.709090724135891,66,3600,COL@TOR,COL,TOR,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-73987:Riley Stillman,88010-73987,D,Riley,Riley Stillman,Stillman,4.084210446006374,38,3600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-9990:Lars Eller,88010-9990,C,Lars,Lars Eller,Eller,5.91044776119403,67,3600,COL@TOR,COL,TOR,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-82189:Conor Timmins,88010-82189,D,Conor,Conor Timmins,Timmins,5.996428353445871,28,3600,COL@TOR,TOR,COL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-8495:Josh Bailey,88010-8495,W,Josh,Josh Bailey,Bailey,6.424590063876793,61,3600,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-39234:Matt Nieto,88010-39234,W,Matt,Matt Nieto,Nieto,6.432812690734863,64,3600,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-97098:Simon Benoit,88010-97098,D,Simon,Simon Benoit,Benoit,5.537499904632568,64,3600,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-74092:Kale Clague,88010-74092,D,Kale,Kale Clague,Clague,3.093333435058594,30,3600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-8611:Alex Goligoski,88010-8611,D,Alex,Alex Goligoski,Goligoski,5.243589743589744,39,3600,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-15302:Nathan Beaulieu,88010-15302,D,Nathan,Nathan Beaulieu,Beaulieu,4.389743511493389,39,3600,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70117:Steven Santini,88010-70117,D,Steven,Steven Santini,Santini,8,4,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-128502:Scott Perunovich,88010-128502,D,Scott,Scott Perunovich,Perunovich,5.161538344163161,26,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-37894:Jayson Megna,88010-37894,W,Jayson,Jayson Megna,Megna,2.9061223244180483,49,3500,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-15380:Jordie Benn,88010-15380,D,Jordie,Jordie Benn,Benn,7.266666412353516,12,3500,COL@TOR,TOR,COL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70170:Carl Dahlstrom,88010-70170,D,Carl,Carl Dahlstrom,Dahlstrom,8.533333460489908,3,3500,COL@TOR,TOR,COL,O,Shoulder,,,,D/UTIL
-"","","","","","","","","","","","","",88010-68642:Ethan Prow,88010-68642,D,Ethan,Ethan Prow,Prow,5,4,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-38947:Andrej Sustr,88010-38947,D,Andrej,Andrej Sustr,Sustr,4.06315773411801,38,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-81984:Alexey Toropchenko,88010-81984,W,Alexey,Alexey Toropchenko,Toropchenko,4.943396226415095,53,3500,MIN@STL,STL,MIN,DTD,Upper body,,,,W/UTIL
-"","","","","","","","","","","","","",88010-180301:David Spacek,88010-180301,D,David,David Spacek,Spacek,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70225:Gabriel Carlsson,88010-70225,D,Gabriel,Gabriel Carlsson,Carlsson,6.400000254313151,3,3500,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-180305:Benjamin Finkelstein,88010-180305,D,Benjamin,Benjamin Finkelstein,Finkelstein,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-161940:Kyle Masters,88010-161940,D,Kyle,Kyle Masters,Masters,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-8860:John Moore,88010-8860,D,John,John Moore,Moore,5.5428570338657925,7,3500,NYI@ANH,ANH,NYI,O,Undisclosed,,,,D/UTIL
-"","","","","","","","","","","","","",88010-168103:Matthew Kessel,88010-168103,D,Matthew,Matthew Kessel,Kessel,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70325:Paul LaDue,88010-70325,D,Paul,Paul LaDue,LaDue,3.200000047683716,1,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-23222:Zemgus Girgensons,88010-23222,W,Zemgus,Zemgus Girgensons,Girgensons,5.224999904632568,64,3500,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-8887:Ryan Reaves,88010-8887,W,Ryan,Ryan Reaves,Reaves,2.933333333333333,60,3500,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82116:Dmitri Samorukov,88010-82116,D,Dmitri,Dmitri Samorukov,Samorukov,0,1,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-160964:Carson Lambos,88010-160964,D,Carson,Carson Lambos,Lambos,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-142020:Jamie Drysdale,88010-142020,D,Jamie,Jamie Drysdale,Drysdale,2.4888888465033636,9,3500,NYI@ANH,ANH,NYI,IR,Shoulder,,,,D/UTIL
-"","","","","","","","","","","","","",88010-103124:Grant Hutton,88010-103124,D,Grant,Grant Hutton,Hutton,4.150000095367432,16,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-82161:Brady Lyle,88010-82161,D,Brady,Brady Lyle,Lyle,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-82162:Turner Ottenbreit,88010-82162,D,Turner,Turner Ottenbreit,Ottenbreit,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70903:Olli Juolevi,88010-70903,D,Olli,Olli Juolevi,Juolevi,2.4888888465033636,18,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70909:Logan Brown,88010-70909,C,Logan,Logan Brown,Brown,2.7478261201278023,23,3500,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-70908:Tyson Jost,88010-70908,W,Tyson,Tyson Jost,Jost,6.032786885245901,61,3500,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-70918:Dennis Cholowski,88010-70918,D,Dennis,Dennis Cholowski,Cholowski,0.800000011920929,2,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-169736:Simon Johansson,88010-169736,D,Simon,Simon Johansson,Johansson,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-70926:Lucas Johansen,88010-70926,D,Lucas,Lucas Johansen,Johansen,4.800000190734863,2,3500,BUF@WSH,WSH,BUF,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-97056:Connor Dewar,88010-97056,W,Connor,Connor Dewar,Dewar,5.042424057469224,66,3500,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-117039:Hunter Skinner,88010-117039,D,Hunter,Hunter Skinner,Skinner,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-82236:Chase Priskie,88010-82236,D,Chase,Chase Priskie,Priskie,2.799999952316284,4,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-84289:Lawrence Pilut,88010-84289,D,Lawrence,Lawrence Pilut,Pilut,4.470588235294118,17,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-162118:Griffin Luce,88010-162118,D,Griffin,Griffin Luce,Luce,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-149830:Daemon Hunt,88010-149830,D,Daemon,Daemon Hunt,Hunt,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-149831:Ryan O'Rourke,88010-149831,D,Ryan,Ryan O'Rourke,O'Rourke,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-162117:Tyson Galloway,88010-162117,D,Tyson,Tyson Galloway,Galloway,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-9033:Casey Cizikas,88010-9033,C,Casey,Casey Cizikas,Cizikas,5.664706061868107,68,3500,NYI@ANH,NYI,ANH,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-8531:Michael Del Zotto,88010-8531,D,Michael,Michael Del Zotto,Del Zotto,8.12142835344587,28,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-42841:Nathan Walker,88010-42841,W,Nathan,Nathan Walker,Walker,3.531707391506288,41,3500,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-180067:Marc-Andre Gaudet,88010-180067,D,Marc-Andre,Marc-Andre Gaudet,Gaudet,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-180065:Michael Buchinger,88010-180065,D,Michael,Michael Buchinger,Buchinger,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-59239:Joe Hicketts,88010-59239,D,Joe,Joe Hicketts,Hicketts,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-59263:Nicolas Aube-Kubel,88010-59263,W,Nicolas,Nicolas Aube-Kubel,Aube-Kubel,4.444444444444445,45,3500,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-97153:Logan O'Connor,88010-97153,W,Logan,Logan O'Connor,O'Connor,6.381538273737981,65,3500,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-183169:Anton Malmstrom,88010-183169,D,Anton,Anton Malmstrom,Malmstrom,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-11150:Marcus Foligno,88010-11150,W,Marcus,Marcus Foligno,Foligno,6.190740514684607,54,3500,MIN@STL,MIN,STL,O,Lower body,,,,W/UTIL
-"","","","","","","","","","","","","",88010-42908:Brad Hunt,88010-42908,D,Brad,Brad Hunt,Hunt,3.7684209723221627,38,3500,COL@TOR,COL,TOR,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-97203:Ryan Merkley,88010-97203,D,Ryan,Ryan Merkley,Merkley,3.7384616167117386,39,3500,COL@TOR,COL,TOR,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-11204:Jake Muzzin,88010-11204,D,Jake,Jake Muzzin,Muzzin,9.199999809265137,4,3500,COL@TOR,TOR,COL,IR,Neck,,,,D/UTIL
-"","","","","","","","","","","","","",88010-82375:Austin Strand,88010-82375,D,Austin,Austin Strand,Strand,2.8799999237060545,5,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-8647:Erik Johnson,88010-8647,D,Erik,Erik Johnson,Johnson,6.094117407705269,51,3500,COL@TOR,COL,TOR,IR,Ankle,,,,D/UTIL
-"","","","","","","","","","","","","",88010-117192:Samuel Bolduc,88010-117192,D,Samuel,Samuel Bolduc,Bolduc,4.933333396911621,6,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-97228:Robin Salo,88010-97228,D,Robin,Robin Salo,Salo,5.371428353445871,14,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-79820:Zach Aston-Reese,88010-79820,W,Zach,Zach Aston-Reese,Aston-Reese,3.7968253483847967,63,3500,COL@TOR,TOR,COL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-97242:Jeremy Davies,88010-97242,D,Jeremy,Jeremy Davies,Davies,1.0666666825612385,3,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-97261:Filip Kral,88010-97261,D,Filip,Filip Kral,Kral,0.800000011920929,4,3500,COL@TOR,TOR,COL,,,,,,D/UTIL
-"","","","","","","","","","","","","",88010-79860:Victor Mete,88010-79860,D,Victor,Victor Mete,Mete,3.1999998826246996,13,3500,COL@TOR,TOR,COL,IR,Lower body,,,,D/UTIL
-"","","","","","","","","","","","","",88010-152816:Pontus Holmberg,88010-152816,W,Pontus,Pontus Holmberg,Holmberg,5.3108108108108105,37,3400,COL@TOR,TOR,COL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-15365:Andy Andreoff,88010-15365,W,Andy,Andy Andreoff,Andreoff,3.7333332697550454,3,3300,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-113285:Aliaksei Protas,88010-113285,C,Aliaksei,Aliaksei Protas,Protas,4.709090839732777,44,3300,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-113286:Brett Leason,88010-113286,W,Brett,Brett Leason,Leason,3.426415209500295,53,3300,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-8340:Darren Helm,88010-8340,W,Darren,Darren Helm,Helm,1.2800000190734864,5,3300,COL@TOR,COL,TOR,IR,Lower body,,,,W/UTIL
-"","","","","","","","","","","","","",88010-8357:Andrew Cogliano,88010-8357,W,Andrew,Andrew Cogliano,Cogliano,5.828571622333829,63,3300,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-15239:Craig Smith,88010-15239,W,Craig,Craig Smith,Smith,4.747058943206189,51,3300,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-145545:Jake Neighbours,88010-145545,W,Jake,Jake Neighbours,Neighbours,5.26000010172526,30,3200,MIN@STL,STL,MIN,IR,Upper body,,,,W/UTIL
-"","","","","","","","","","","","","",88010-117013:Adam Beckman,88010-117013,W,Adam,Adam Beckman,Beckman,2.4888888465033636,9,3200,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-169240:Ben Meyers,88010-169240,W,Ben,Ben Meyers,Meyers,2.2060606985381157,33,3200,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-12670:Sam Carrick,88010-12670,C,Sam,Sam Carrick,Carrick,3.46086949887483,46,3200,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-178156:Sammy Walker,88010-178156,C,Sammy,Sammy Walker,Walker,3.6000000635782876,6,3200,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-113284:Connor McMichael,88010-113284,W,Connor,Connor McMichael,McMichael,0.8,10,3100,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-103077:Joe Snively,88010-103077,W,Joe,Joe Snively,Snively,4.600000063578288,12,3100,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-8404:Wayne Simmonds,88010-8404,W,Wayne,Wayne Simmonds,Simmonds,2.0266666412353516,15,3100,COL@TOR,TOR,COL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-147770:Josiah Slavin,88010-147770,W,Josiah,Josiah Slavin,Slavin,2.346666717529297,15,3100,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82825:Otto Koivula,88010-82825,C,Otto,Otto Koivula,Koivula,3.799999952316284,8,3100,NYI@ANH,NYI,ANH,O,Lower body,,,,C/UTIL
-"","","","","","","","","","","","","",88010-79887:Mike Vecchione,88010-79887,C,Mike,Mike Vecchione,Vecchione,4.800000190734863,1,3000,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-43022:Connor Brown,88010-43022,W,Connor,Connor Brown,Brown,1.2000000476837158,4,3000,BUF@WSH,WSH,BUF,IR,Knee,,,,W/UTIL
-"","","","","","","","","","","","","",88010-96785:Mathias Laferriere,88010-96785,W,Mathias,Mathias Laferriere,Laferriere,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-117783:Brett Murray,88010-117783,W,Brett,Brett Murray,Murray,4.104999923706055,20,3000,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-58906:Chase De Leo,88010-58906,W,Chase,Chase De Leo,De Leo,1.600000023841858,2,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-68639:Steven Fogarty,88010-68639,W,Steven,Steven Fogarty,Fogarty,0,2,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-9275:Kyle Clifford,88010-9275,W,Kyle,Kyle Clifford,Clifford,5.599999904632568,2,3000,COL@TOR,TOR,COL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-62019:Nikita Soshnikov,88010-62019,W,Nikita,Nikita Soshnikov,Soshnikov,0.800000011920929,8,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-173639:Liam Ohgren,88010-173639,W,Liam,Liam Ohgren,Ohgren,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-180299:Hunter Haight,88010-180299,C,Hunter,Hunter Haight,Haight,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-180302:Josh Pillar,88010-180302,C,Josh,Josh Pillar,Pillar,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-180306:Michael Milne,88010-180306,W,Michael,Michael Milne,Milne,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-170579:Pavol Regenda,88010-170579,W,Pavol,Pavol Regenda,Regenda,4.470588235294118,17,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-43089:Ross Johnston,88010-43089,W,Ross,Ross Johnston,Johnston,1.431578987523129,19,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-180304:Servac Petrovsky,88010-180304,C,Servac,Servac Petrovsky,Petrovsky,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-168024:Nick Abruzzese,88010-168024,C,Nick,Nick Abruzzese,Abruzzese,3.288888931274414,9,3000,COL@TOR,TOR,COL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-161884:Mike O'Leary,88010-161884,W,Mike,Mike O'Leary,O'Leary,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-43132:Martin Frk,88010-43132,W,Martin,Martin Frk,Frk,8.166666666666666,6,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-148096:Alex Steeves,88010-148096,W,Alex,Alex Steeves,Steeves,1.6000000635782878,3,3000,COL@TOR,TOR,COL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-145542:Hendrix Lapierre,88010-145542,C,Hendrix,Hendrix Lapierre,Lapierre,3.7714285169328963,7,3000,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-161421:Tanner Dickinson,88010-161421,C,Tanner,Tanner Dickinson,Dickinson,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-161938:Caedan Bankier,88010-161938,C,Caedan,Caedan Bankier,Bankier,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-116881:Keean Washkurak,88010-116881,C,Keean,Keean Washkurak,Washkurak,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-161939:Pavel Novak,88010-161939,W,Pavel,Pavel Novak,Novak,,,3000,MIN@STL,MIN,STL,O,Illness,,,,W/UTIL
-"","","","","","","","","","","","","",88010-13982:Gustav Nyquist,88010-13982,W,Gustav,Gustav Nyquist,Nyquist,8.75,48,3000,MIN@STL,MIN,STL,IR,Upper body,,,,W/UTIL
-"","","","","","","","","","","","","",88010-179889:Andrei Bakanov,88010-179889,W,Andrei,Andrei Bakanov,Bakanov,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-23233:Alex Galchenyuk,88010-23233,W,Alex,Alex Galchenyuk,Galchenyuk,1.600000023841858,4,3000,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-142023:Marco Rossi,88010-142023,C,Marco,Marco Rossi,Rossi,2.299999952316284,16,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-73941:Tanner Kaspick,88010-73941,C,Tanner,Tanner Kaspick,Kaspick,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-167639:Vladislav Firstov,88010-167639,W,Vladislav,Vladislav Firstov,Firstov,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-8425:Cal Clutterbuck,88010-8425,W,Cal,Cal Clutterbuck,Clutterbuck,4.577777862548828,36,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-148204:Sampo Ranta,88010-148204,W,Sampo,Sampo Ranta,Ranta,2.133333365122477,6,3000,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-168188:Sam Hentges,88010-168188,C,Sam,Sam Hentges,Hentges,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-70921:Henrik Borgstrom,88010-70921,W,Henrik,Henrik Borgstrom,Borgstrom,3.0636363636363635,55,3000,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-97057:Damien Giroux,88010-97057,C,Damien,Damien Giroux,Giroux,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-9002:Richard Panik,88010-9002,W,Richard,Richard Panik,Panik,4.525000095367432,4,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-119594:Bryce Kindopp,88010-119594,W,Bryce,Bryce Kindopp,Kindopp,3.200000047683716,1,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-74029:Ty Ronning,88010-74029,W,Ty,Ty Ronning,Ronning,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-145202:Jacob Perreault,88010-145202,W,Jacob,Jacob Perreault,Perreault,1.600000023841858,1,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-54576:Rocco Grimaldi,88010-54576,W,Rocco,Rocco Grimaldi,Grimaldi,1.8285714558192663,7,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-74035:Beck Malenstyn,88010-74035,W,Beck,Beck Malenstyn,Malenstyn,5.920000076293945,5,3000,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-74039:Garrett Pilon,88010-74039,C,Garrett,Garrett Pilon,Pilon,6.800000190734863,2,3000,BUF@WSH,WSH,BUF,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-170302:Gustav Rydahl,88010-170302,C,Gustav,Gustav Rydahl,Rydahl,,,3000,COL@TOR,COL,TOR,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-117052:Dylan McLaughlin,88010-117052,C,Dylan,Dylan McLaughlin,McLaughlin,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-97095:Benoit-Olivier Groulx,88010-97095,C,Benoit-Olivier,Benoit-Olivier Groulx,Groulx,3.600000169542101,18,3000,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-39240:Luke Witkowski,88010-39240,W,Luke,Luke Witkowski,Witkowski,0,1,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-62293:Matthew Peca,88010-62293,C,Matthew,Matthew Peca,Peca,2.8799999237060545,5,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-180071:Landon Sim,88010-180071,W,Landon,Landon Sim,Sim,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-180072:Brayden Guy,88010-180072,W,Brayden,Brayden Guy,Guy,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-59245:Brandon Baddock,88010-59245,W,Brandon,Brandon Baddock,Baddock,0,1,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82799:Will Bitten,88010-82799,C,Will,Will Bitten,Bitten,2,4,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-183159:Nikita Nesterenko,88010-183159,C,Nikita,Nikita Nesterenko,Nesterenko,,,3000,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-117116:Nathan Todd,88010-117116,C,Nathan,Nathan Todd,Todd,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-117143:Nicholas Robertson,88010-117143,W,Nicholas,Nicholas Robertson,Robertson,6.400000095367432,16,3000,COL@TOR,TOR,COL,IR,Shoulder,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82842:Dylan Sikura,88010-82842,W,Dylan,Dylan Sikura,Sikura,3.5200000762939454,5,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-82849:Adam Gaudette,88010-82849,W,Adam,Adam Gaudette,Gaudette,4.98999989827474,60,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-21921:Riley Sheahan,88010-21921,C,Riley,Riley Sheahan,Sheahan,0.4000000059604645,4,3000,BUF@WSH,BUF,WSH,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-15267:Joseph Cramarossa,88010-15267,C,Joseph,Joseph Cramarossa,Cramarossa,3.799999952316284,4,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-161188:Zack Bolduc,88010-161188,C,Zack,Zack Bolduc,Bolduc,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-151977:Jean-Luc Foudy,88010-151977,C,Jean-Luc,Jean-Luc Foudy,Foudy,2.4888888465033636,9,3000,COL@TOR,COL,TOR,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-79790:Matthew Highmore,88010-79790,W,Matthew,Matthew Highmore,Highmore,1.600000023841858,2,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-148400:Nick Swaney,88010-148400,W,Nick,Nick Swaney,Swaney,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-12732:Michael Sgarbossa,88010-12732,W,Michael,Michael Sgarbossa,Sgarbossa,6.079999923706055,10,3000,BUF@WSH,WSH,BUF,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-117182:Brayden Tracey,88010-117182,W,Brayden,Brayden Tracey,Tracey,1.600000023841858,1,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-97224:Oliver Wahlstrom,88010-97224,W,Oliver,Oliver Wahlstrom,Wahlstrom,8.357142857142858,35,3000,NYI@ANH,NYI,ANH,IR,Lower body,,,,W/UTIL
-"","","","","","","","","","","","","",88010-66513:Glenn Gawdin,88010-66513,C,Glenn,Glenn Gawdin,Gawdin,3.2000001271565757,3,3000,NYI@ANH,ANH,NYI,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-97236:Mikhail Maltsev,88010-97236,W,Mikhail,Mikhail Maltsev,Maltsev,1.9200000762939453,5,3000,COL@TOR,COL,TOR,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-42977:Nic Petan,88010-42977,C,Nic,Nic Petan,Petan,3.799999952316284,8,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-39395:Logan Shaw,88010-39395,C,Logan,Logan Shaw,Shaw,3.717647103702321,17,3000,COL@TOR,TOR,COL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-128491:Mitchell Chaffee,88010-128491,W,Mitchell,Mitchell Chaffee,Chaffee,0.800000011920929,2,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-128503:Hugh McGing,88010-128503,W,Hugh,Hugh McGing,McGing,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-135675:Radim Zohorna,88010-135675,C,Radim,Radim Zohorna,Zohorna,0.800000011920929,8,3000,COL@TOR,TOR,COL,,,,,,C/UTIL
-"","","","","","","","","","","","","",88010-128508:Brandon Biro,88010-128508,W,Brandon,Brandon Biro,Biro,0,1,3000,BUF@WSH,BUF,WSH,,,,,,W/UTIL
-"","","","","","","","","","","","","",88010-15357:Carl Hagelin,88010-15357,W,Carl,Carl Hagelin,Hagelin,4.883018637603184,53,3000,BUF@WSH,WSH,BUF,IR,Hip,,,,W/UTIL
+entry_id,contest_id,contest_name,C,C,W,W,D,D,UTIL,UTIL,G,,Instructions,,,,,,,,,,,,,,,,,
+3083064536,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-43176,88010-12439,88010-23226,88010-11365,88010-97176,88010-70899,88010-82796,88010-83235,,1) Edit your lineup by inserting any player from this list into their appropriate position columns,,,,,,,,,,,,,,,,,
+3083064537,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-58686,88010-58877,88010-59147,88010-97176,88010-70899,88010-73949,88010-83235,,2) You can paste either the Player ID + Name OR ID from their respective columns,,,,,,,,,,,,,,,,,
+3083064538,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-58877,88010-58881,88010-85132,88010-97176,88010-70899,88010-9266,88010-83235,,3) Any information to the right of the last position column will be ignored in the upload. Don't leave blank rows. Any entries after a blank row will not be edited,,,,,,,,,,,,,,,,,
+3083064539,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-15386,88010-12439,88010-23226,88010-12812,88010-97176,88010-70899,88010-82796,88010-83235,,4) You can not use this form to create new entries,,,,,,,,,,,,,,,,,
+3083064540,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-13657,88010-42478,88010-142022,88010-66617,88010-54126,88010-97176,88010-52475,88010-70899,88010-83235,,,,,,,,,,,,,,,,,,,
+3083064541,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-148097,88010-58686,88010-23225,88010-97176,88010-70899,88010-8714,88010-83235,,Player ID + Player Name,Id,Position,First Name,Nickname,Last Name,FPPG,Played,Salary,Game,Team,Opponent,Injury Indicator,Injury Details,Tier,,,Roster Position
+3083064542,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-43176,88010-148097,88010-23226,88010-53866,88010-97176,88010-70899,88010-66617,88010-83235,,88010-41391:Nathan MacKinnon,88010-41391,C,Nathan,Nathan MacKinnon,MacKinnon,23.65370461,54,10400,COL@TOR,COL,TOR,,,,,,C/UTIL
+3083064543,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-43176,88010-12220,88010-66617,88010-54126,88010-84404,88010-52475,88010-70899,88010-83235,,88010-70899:Auston Matthews,88010-70899,C,Auston,Auston Matthews,Matthews,20.34915213,59,10200,COL@TOR,TOR,COL,,,,,,C/UTIL
+3083064544,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70899,88010-81983,88010-12220,88010-15280,88010-12812,88010-97176,88010-8494,88010-23226,88010-83235,,88010-70924:Tage Thompson,88010-70924,C,Tage,Tage Thompson,Thompson,19.97424316,66,9800,BUF@WSH,BUF,WSH,,,,,,C/UTIL
+3083064545,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-58878,88010-23222,88010-66617,88010-12812,88010-97176,88010-70899,88010-8494,88010-8732,,88010-66737:Mikko Rantanen,88010-66737,W,Mikko,Mikko Rantanen,Rantanen,19.10769231,65,9200,COL@TOR,COL,TOR,,,,,,W/UTIL
+3083064546,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-15386,88010-23226,88010-66683,88010-11387,88010-54126,88010-70899,88010-82850,88010-83235,,88010-135875:Kirill Kaprizov,88010-135875,W,Kirill,Kirill Kaprizov,Kaprizov,18.58923152,65,9000,MIN@STL,MIN,STL,O,Lower body,,,,W/UTIL
+3083064547,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-62861,88010-148097,88010-39238,88010-103523,88010-169056,88010-70899,88010-82850,88010-97029,,88010-59276:William Nylander,88010-59276,W,William,William Nylander,Nylander,18.14090983,66,8800,COL@TOR,TOR,COL,,,,,,W/UTIL
+3083064548,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-148101,88010-43176,88010-148097,88010-15280,88010-37881,88010-97176,88010-70899,88010-73949,88010-8732,,88010-80479:Jonas Johansson,88010-80479,G,Jonas,Jonas Johansson,Johansson,5.599999905,1,8600,COL@TOR,COL,TOR,,,,,,G
+3083064549,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-43176,88010-12439,88010-148097,88010-103523,88010-8611,88010-70899,88010-79820,88010-97029,,88010-82094:Alexandar Georgiev,88010-82094,G,Alexandar,Alexandar Georgiev,Georgiev,19.91836735,49,8600,COL@TOR,COL,TOR,,,,,,G
+3083064550,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70899,88010-148097,88010-43134,88010-12460,88010-97176,88010-82796,88010-73940,88010-83235,,88010-83213:Pavel Francouz,88010-83213,G,Pavel,Pavel Francouz,Francouz,17.85000038,16,8600,COL@TOR,COL,TOR,DTD,Lower body,,,,G
+3083064551,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-148101,88010-52475,88010-12220,88010-58877,88010-37881,88010-70199,88010-70899,88010-66683,88010-8732,,88010-8718:Alex Ovechkin,88010-8718,W,Alex,Alex Ovechkin,Ovechkin,17.68387136,62,8400,BUF@WSH,WSH,BUF,DTD,Lower body,,,,W/UTIL
+3083064552,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-58877,88010-66617,88010-169056,88010-97176,88010-70899,88010-73940,88010-15339,,88010-8732:Semyon Varlamov,88010-8732,G,Semyon,Semyon Varlamov,Varlamov,16.03333282,24,8400,NYI@ANH,NYI,ANH,,,,,,G
+3083064553,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-15280,88010-66683,88010-169056,88010-97176,88010-70899,88010-8714,88010-15339,,88010-97232:Ilya Sorokin,88010-97232,G,Ilya,Ilya Sorokin,Sorokin,18.81538508,52,8400,NYI@ANH,NYI,ANH,,,,,,G
+3083064554,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70899,88010-82850,88010-148097,88010-23226,88010-11170,88010-97176,88010-8714,88010-66683,88010-83235,,88010-83235:Ilya Samsonov,88010-83235,G,Ilya,Ilya Samsonov,Samsonov,18.83428606,35,8200,COL@TOR,TOR,COL,,,,,,G
+3083064555,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-52475,88010-23061,88010-23222,88010-97176,88010-97214,88010-70899,88010-39238,88010-83235,,88010-8494:John Tavares,88010-8494,C,John,John Tavares,Tavares,16.42769306,65,8200,COL@TOR,TOR,COL,,,,,,C/UTIL
+3083064556,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70279,88010-148097,88010-58881,88010-12812,88010-97176,88010-70899,88010-8635,88010-8732,,88010-42869:Matt Murray,88010-42869,G,Matt,Matt Murray,Murray,16.65454518,22,8200,COL@TOR,TOR,COL,,,,,,G
+3083064557,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-62445,88010-142022,88010-148097,88010-103523,88010-14457,88010-70899,88010-23061,88010-97029,,88010-66683:Mitchell Marner,88010-66683,W,Mitchell,Mitchell Marner,Marner,16.96969697,66,8100,COL@TOR,TOR,COL,,,,,,W/UTIL
+3083064558,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-41391,88010-23226,88010-8635,88010-103523,88010-23225,88010-43176,88010-52475,88010-8732,,88010-82752:Filip Gustavsson,88010-82752,G,Filip,Filip Gustavsson,Gustavsson,18.84705846,34,8000,MIN@STL,MIN,STL,,,,,,G
+3083064559,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-70513,88010-8495,88010-54126,88010-97176,88010-62861,88010-70899,88010-8732,,88010-8612:Marc-Andre Fleury,88010-8612,G,Marc-Andre,Marc-Andre Fleury,Fleury,16.98000031,40,8000,MIN@STL,MIN,STL,,,,,,G
+3083064560,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-43176,88010-153985,88010-59209,88010-103523,88010-14457,88010-70899,88010-82796,88010-97029,,88010-70168:Alex Tuch,88010-70168,W,Alex,Alex Tuch,Tuch,16.68965517,58,7800,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+3083064561,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-73940:Jordan Kyrou,88010-73940,W,Jordan,Jordan Kyrou,Kyrou,16.55396864,63,7800,MIN@STL,STL,MIN,,,,,,W/UTIL
+3083064562,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70899,88010-58686,88010-66683,88010-54126,88010-70199,88010-82796,88010-8714,88010-8732,,88010-42478:Bo Horvat,88010-42478,C,Bo,Bo Horvat,Horvat,15.9469697,66,7800,NYI@ANH,NYI,ANH,,,,,,C/UTIL
+3083064563,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70899,88010-43134,88010-58877,88010-103523,88010-37881,88010-73949,88010-8887,88010-8732,,88010-103523:Cale Makar,88010-103523,D,Cale,Cale Makar,Makar,16.90192355,52,7700,COL@TOR,COL,TOR,,,,,,D/UTIL
+3083064564,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15287,88010-70899,88010-12439,88010-43134,88010-37881,88010-97176,88010-73949,88010-58877,88010-8732,,88010-68647:Charlie Lindgren,88010-68647,G,Charlie,Charlie Lindgren,Lindgren,13.45714242,28,7600,BUF@WSH,WSH,BUF,,,,,,G
+3083064565,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-21897,88010-52475,88010-12253,88010-23226,88010-54126,88010-8611,88010-58878,88010-70899,88010-83235,,88010-14466:Darcy Kuemper,88010-14466,G,Darcy,Darcy Kuemper,Kuemper,16.24489796,49,7600,BUF@WSH,WSH,BUF,,,,,,G
+3083064566,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-23226,88010-82156,88010-12812,88010-21648,88010-70899,88010-82179,88010-83235,,88010-85132:Rasmus Dahlin,88010-85132,D,Rasmus,Rasmus Dahlin,Dahlin,16.40645181,62,7600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+3083064567,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70899,88010-82122,88010-148097,88010-23226,88010-103523,88010-37881,88010-8714,88010-8478,88010-68647,,88010-12439:Jeff Skinner,88010-12439,W,Jeff,Jeff Skinner,Skinner,15.5031748,63,7500,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+3083064568,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70899,88010-148097,88010-58686,88010-37881,88010-97090,88010-73949,88010-9266,88010-83235,,88010-9015:John Carlson,88010-9015,D,John,John Carlson,Carlson,15.45483891,31,7500,BUF@WSH,WSH,BUF,IR,Face,,,,D/UTIL
+3083064569,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70899,88010-82179,88010-23222,88010-23226,88010-85132,88010-97176,88010-8494,88010-58686,88010-8732,,88010-70513:Pavel Buchnevich,88010-70513,W,Pavel,Pavel Buchnevich,Buchnevich,14.42307692,52,7500,MIN@STL,STL,MIN,,,,,,W/UTIL
+3083064570,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-58878,88010-23222,88010-66683,88010-12812,88010-97214,88010-70899,88010-82179,88010-8732,,88010-8292:Craig Anderson,88010-8292,G,Craig,Craig Anderson,Anderson,16.49230722,26,7400,BUF@WSH,BUF,WSH,,,,,,G
+3083064571,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-58878,88010-12439,88010-148097,88010-54126,88010-97176,88010-70899,88010-58877,88010-8612,,88010-42982:Eric Comrie,88010-42982,G,Eric,Eric Comrie,Comrie,11.42222256,18,7400,BUF@WSH,BUF,WSH,O,Lower body,,,,G
+3083064572,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-128506,88010-42478,88010-12253,88010-23226,88010-59147,88010-97176,88010-82796,88010-59276,88010-83235,,88010-21897:Brock Nelson,88010-21897,C,Brock,Brock Nelson,Nelson,14.39999965,69,7300,NYI@ANH,NYI,ANH,,,,,,C/UTIL
+3083064573,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70899,88010-148097,88010-15280,88010-37881,88010-54126,88010-73949,88010-70922,88010-83235,,88010-97102:Lukas Dostal,88010-97102,G,Lukas,Lukas Dostal,Dostal,14.6181821,11,7200,NYI@ANH,ANH,NYI,,,,,,G
+3083064574,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-21897,88010-12439,88010-23226,88010-8611,88010-97176,88010-65969,88010-70899,88010-83235,,88010-38243:Anthony Stolarz,88010-38243,G,Anthony,Anthony Stolarz,Stolarz,9.563636086,22,7200,NYI@ANH,ANH,NYI,IR,Lower body,,,,G
+3083064576,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-52475,88010-23061,88010-66617,88010-103523,88010-81999,88010-58878,88010-70899,88010-8732,,88010-15268:John Gibson,88010-15268,G,John,John Gibson,Gibson,16.24347853,46,7200,NYI@ANH,ANH,NYI,,,,,,G
+3083064577,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70899,88010-12220,88010-66683,88010-73909,88010-97091,88010-73949,88010-82796,88010-15268,,88010-8633:Thomas Greiss,88010-8633,G,Thomas,Thomas Greiss,Greiss,14.08000031,20,7000,MIN@STL,STL,MIN,,,,,,G
+3083064578,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-73949,88010-148097,88010-66683,88010-54126,88010-97091,88010-82796,88010-9266,88010-83235,,88010-12253:Mats Zuccarello,88010-12253,W,Mats,Mats Zuccarello,Zuccarello,14.45230807,65,7000,MIN@STL,MIN,STL,,,,,,W/UTIL
+3083064579,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-70899,88010-12220,88010-12644,88010-12812,88010-97176,88010-8494,88010-8714,88010-83235,,88010-15339:Jordan Binnington,88010-15339,G,Jordan,Jordan Binnington,Binnington,13.69056558,53,7000,MIN@STL,STL,MIN,,,,,,G
+3083064581,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70899,88010-12439,88010-142022,88010-37881,88010-54126,88010-9266,88010-43134,88010-8732,,88010-41392:Valeri Nichushkin,88010-41392,W,Valeri,Valeri Nichushkin,Nichushkin,14.26315789,38,6800,COL@TOR,COL,TOR,,,,,,W/UTIL
+3083064582,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-52475,88010-148097,88010-58877,88010-23225,88010-73909,88010-58878,88010-66683,88010-8732,,88010-73949:Joel Eriksson Ek,88010-73949,C,Joel,Joel Eriksson Ek,Eriksson Ek,13.62686567,67,6700,MIN@STL,MIN,STL,,,,,,C/UTIL
+3083064584,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-42478,88010-15280,88010-73940,88010-59135,88010-97176,88010-52475,88010-82179,88010-15339,,88010-135680:Justus Annunen,88010-135680,G,Justus,Justus Annunen,Annunen,8.399999619,2,6500,COL@TOR,COL,TOR,,,,,,G
+3083064585,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70279,88010-70899,88010-12220,88010-148097,88010-43200,88010-59147,88010-82850,88010-66683,88010-8732,,88010-180228:Daniel Mannella,88010-180228,G,Daniel,Daniel Mannella,Mannella,,,6500,NYI@ANH,ANH,NYI,,,,,,G
+3083064588,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70899,88010-58686,88010-58877,88010-103523,88010-73909,88010-82179,88010-70513,88010-15339,,88010-96790:Joel Hofer,88010-96790,G,Joel,Joel Hofer,Hofer,11.60000038,2,6500,MIN@STL,STL,MIN,,,,,,G
+3083064589,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70899,88010-43134,88010-66683,88010-14178,88010-81999,88010-82850,88010-8714,88010-83235,,88010-66586:C.J. Motte,88010-66586,G,C.J.,C.J. Motte,Motte,,,6500,MIN@STL,MIN,STL,,,,,,G
+3083064590,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-70899,88010-12253,88010-23226,88010-14178,88010-97176,88010-8714,88010-42841,88010-83235,,88010-43045:Michael Houser,88010-43045,G,Michael,Michael Houser,Houser,33.20000076,2,6500,BUF@WSH,BUF,WSH,,,,,,G
+3083064591,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-42478,88010-153985,88010-66683,88010-169056,88010-54126,88010-73949,88010-8714,88010-83235,,88010-66599:Zane McIntyre,88010-66599,G,Zane,Zane McIntyre,McIntyre,,,6500,MIN@STL,MIN,STL,,,,,,G
+3083064592,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-13657,88010-70899,88010-12220,88010-148097,88010-103523,88010-37881,88010-82796,88010-85132,88010-97029,,88010-180281:Ivan Zhigalov,88010-180281,G,Ivan,Ivan Zhigalov,Zhigalov,,,6500,COL@TOR,COL,TOR,,,,,,G
+3083064593,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-58878,88010-70899,88010-12220,88010-41392,88010-103523,88010-11158,88010-73949,88010-82179,88010-8732,,88010-180298:Keith Petruzzelli,88010-180298,G,Keith,Keith Petruzzelli,Petruzzelli,,,6500,COL@TOR,TOR,COL,,,,,,G
+3083064594,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-12220,88010-43134,88010-103523,88010-8611,88010-70279,88010-70899,88010-8732,,88010-180303:Thomas Milic,88010-180303,G,Thomas,Thomas Milic,Milic,,,6500,MIN@STL,MIN,STL,,,,,,G
+3083064595,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-70899,88010-12439,88010-79820,88010-54126,88010-97176,88010-8714,88010-9266,88010-8732,,88010-8781:Cory Schneider,88010-8781,G,Cory,Cory Schneider,Schneider,21.60000038,1,6500,NYI@ANH,NYI,ANH,,,,,,G
+3083064596,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70279,88010-153985,88010-43134,88010-103523,88010-54126,88010-70899,88010-97176,88010-8732,,88010-161908:Garin Bjorklund,88010-161908,G,Garin,Garin Bjorklund,Bjorklund,,,6500,BUF@WSH,WSH,BUF,,,,,,G
+3083064597,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-128506,88010-42478,88010-66683,88010-8635,88010-12812,88010-169056,88010-52475,88010-82796,88010-83235,,88010-43131:Malcolm Subban,88010-43131,G,Malcolm,Malcolm Subban,Subban,6,4,6500,BUF@WSH,BUF,WSH,,,,,,G
+3083064598,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70899,88010-81983,88010-148097,88010-23226,88010-103523,88010-37881,88010-8611,88010-58877,88010-68647,,88010-66685:Mathew Barzal,88010-66685,C,Mathew,Mathew Barzal,Barzal,12.93620669,58,6500,NYI@ANH,NYI,ANH,O,Lower body,,,,C/UTIL
+3083064599,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70899,88010-12644,88010-66683,88010-103573,88010-12812,88010-73949,88010-82796,88010-97029,,88010-116882:Colten Ellis,88010-116882,G,Colten,Colten Ellis,Ellis,,,6500,MIN@STL,STL,MIN,,,,,,G
+3083064600,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-70899,88010-148097,88010-66683,88010-11365,88010-8611,88010-82179,88010-9196,88010-97029,,88010-180384:Henrik Tikkanen,88010-180384,G,Henrik,Henrik Tikkanen,Tikkanen,,,6500,NYI@ANH,NYI,ANH,,,,,,G
+3083064601,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-70899,88010-12644,88010-148097,88010-37881,88010-54126,88010-82850,88010-58877,88010-83235,,88010-168113:Clay Stevenson,88010-168113,G,Clay,Clay Stevenson,Stevenson,,,6500,BUF@WSH,WSH,BUF,,,,,,G
+3083064602,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-41391,88010-142022,88010-148097,88010-103523,88010-54126,88010-52475,88010-82850,88010-8612,,88010-8883:Ben Bishop,88010-8883,G,Ben,Ben Bishop,Bishop,,,6500,BUF@WSH,BUF,WSH,IR,Knee,,,,G
+3083064603,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70279,88010-148097,88010-58877,88010-103523,88010-8611,88010-70924,88010-59209,88010-8732,,88010-66743:Kenneth Appleby,88010-66743,G,Kenneth,Kenneth Appleby,Appleby,,,6500,NYI@ANH,NYI,ANH,,,,,,G
+3083064604,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-70279,88010-70899,88010-142022,88010-148097,88010-103523,88010-70199,88010-70928,88010-82796,88010-8732,,88010-161995:Gage Alexander,88010-161995,G,Gage,Gage Alexander,Alexander,,,6500,NYI@ANH,ANH,NYI,,,,,,G
+3083064605,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-42478,88010-148097,88010-23226,88010-81999,88010-97091,88010-70899,88010-66617,88010-83235,,88010-169679:Dryden McKay,88010-169679,G,Dryden,Dryden McKay,McKay,,,6500,COL@TOR,TOR,COL,,,,,,G
+3083064606,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-62445,88010-148097,88010-66683,88010-169056,88010-37881,88010-82796,88010-9266,88010-97029,,88010-82163:Olle Eriksson Ek,88010-82163,G,Olle,Olle Eriksson Ek,Eriksson Ek,,,6500,NYI@ANH,ANH,NYI,,,,,,G
+3083064607,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-58878,88010-82179,88010-148097,88010-153985,88010-85132,88010-97176,88010-8494,88010-66683,88010-8732,,88010-97029:Ukko-Pekka Luukkonen,88010-97029,G,Ukko-Pekka,Ukko-Pekka Luukkonen,Luukkonen,15.82857186,28,6500,BUF@WSH,BUF,WSH,,,,,,G
+3083064608,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-142022,88010-58877,88010-103523,88010-11387,88010-52475,88010-9266,88010-8732,,88010-117021:Hunter Jones,88010-117021,G,Hunter,Hunter Jones,Jones,,,6500,MIN@STL,MIN,STL,,,,,,G
+3083064609,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-148101,88010-41391,88010-58877,88010-59276,88010-59135,88010-97176,88010-43176,88010-52475,88010-8732,,88010-170275:Jesper Wallstedt,88010-170275,G,Jesper,Jesper Wallstedt,Wallstedt,,,6500,MIN@STL,MIN,STL,,,,,,G
+3083064610,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-148101,88010-41391,88010-142022,88010-23226,88010-103523,88010-85132,88010-52475,88010-58877,88010-15339,,88010-103200:Joseph Woll,88010-103200,G,Joseph,Joseph Woll,Woll,24,3,6500,COL@TOR,TOR,COL,,,,,,G
+3083064612,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-43176,88010-12439,88010-59209,88010-103523,88010-37881,88010-70899,88010-79820,88010-97029,,88010-117041:Beck Warm,88010-117041,G,Beck,Beck Warm,Warm,,,6500,BUF@WSH,BUF,WSH,,,,,,G
+3083064614,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-52475,88010-148097,88010-59209,88010-12812,88010-97176,88010-62445,88010-8714,88010-8732,,88010-42800:Zach Fucale,88010-42800,G,Zach,Zach Fucale,Fucale,12.19999981,4,6500,BUF@WSH,WSH,BUF,,,,,,G
+3083064615,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-42478,88010-148097,88010-8478,88010-54126,88010-97176,88010-70924,88010-8714,88010-83235,,88010-103220:Erik Kallgren,88010-103220,G,Erik,Erik Kallgren,Kallgren,8.676923312,13,6500,COL@TOR,TOR,COL,,,,,,G
+3083064616,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-42478,88010-58877,88010-66683,88010-85132,88010-97091,88010-52475,88010-82850,88010-83235,,88010-162119:Will Cranley,88010-162119,G,Will,Will Cranley,Cranley,,,6500,MIN@STL,STL,MIN,,,,,,G
+3083064617,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-21897,88010-73949,88010-148097,88010-23226,88010-12812,88010-97176,88010-80028,88010-66683,88010-83235,,88010-117067:Trent Miner,88010-117067,G,Trent,Trent Miner,Miner,,,6500,COL@TOR,COL,TOR,,,,,,G
+3083064618,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-73949,88010-23226,88010-66683,88010-169056,88010-8611,88010-8494,88010-8635,88010-8732,,88010-70483:Artturi Lehkonen,88010-70483,W,Artturi,Artturi Lehkonen,Lehkonen,12.63225826,62,6500,COL@TOR,COL,TOR,O,Finger,,,,W/UTIL
+3083064619,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-42478,88010-148097,88010-59209,88010-169056,88010-23225,88010-82179,88010-66683,88010-97029,,88010-170326:Vadim Zherenko,88010-170326,G,Vadim,Vadim Zherenko,Zherenko,,,6500,MIN@STL,STL,MIN,,,,,,G
+3083064620,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-82796,88010-12220,88010-12253,88010-113272,88010-97176,88010-23226,88010-66683,88010-68647,,88010-14183:Keith Kinkaid,88010-14183,G,Keith,Keith Kinkaid,Kinkaid,17.20000076,2,6500,COL@TOR,COL,TOR,,,,,,G
+3083064621,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-9266,88010-23061,88010-23226,88010-103523,88010-37881,88010-58686,88010-8635,88010-68647,,88010-173422:Dennis Hildeby,88010-173422,G,Dennis,Dennis Hildeby,Hildeby,,,6500,COL@TOR,TOR,COL,,,,,,G
+3083064622,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-52475,88010-12644,88010-153985,88010-97091,88010-97176,88010-70924,88010-66683,88010-83235,,88010-167289:Calle Clang,88010-167289,G,Calle,Calle Clang,Clang,,,6500,NYI@ANH,ANH,NYI,,,,,,G
+3083064623,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-23226,88010-66683,88010-37881,88010-54126,88010-80028,88010-73940,88010-15339,,88010-160183:Hunter Shepard,88010-160183,G,Hunter,Hunter Shepard,Shepard,,,6500,BUF@WSH,WSH,BUF,,,,,,G
+3083064624,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-43176,88010-148097,88010-23226,88010-103523,88010-59147,88010-81983,88010-58881,88010-68647,,88010-97231:Jakub Skarek,88010-97231,G,Jakub,Jakub Skarek,Skarek,,,6500,NYI@ANH,NYI,ANH,,,,,,G
+3083064625,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-52475,88010-15280,88010-23226,88010-70199,88010-97176,88010-70924,88010-70908,88010-15339,,88010-162288:Tristan Lennox,88010-162288,G,Tristan,Tristan Lennox,Lennox,,,6500,NYI@ANH,NYI,ANH,,,,,,G
+3083064626,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-39238,88010-66617,88010-11170,88010-54126,88010-8714,88010-66683,88010-83235,,88010-128506:Trevor Zegras,88010-128506,C,Trevor,Trevor Zegras,Zegras,12.42238788,67,6500,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+3083064627,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-65969,88010-148097,88010-23061,88010-103523,88010-54126,88010-70279,88010-73949,88010-8732,,88010-82912:Troy Terry,88010-82912,W,Troy,Troy Terry,Terry,12.77166646,60,6400,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+3083064628,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-153985,88010-73940,88010-103523,88010-97176,88010-58878,88010-73949,88010-8732,,88010-39238:Anders Lee,88010-39238,W,Anders,Anders Lee,Lee,12.1985509,69,6300,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+3083064629,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-12220,88010-23226,88010-54126,88010-97214,88010-9266,88010-59276,88010-83235,,88010-97214:Noah Dobson,88010-97214,D,Noah,Noah Dobson,Dobson,12.2169227,65,6300,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+3083064630,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-52475,88010-70924,88010-148097,88010-43134,88010-12812,88010-43200,88010-82796,88010-66683,88010-83235,,88010-113279:Dylan Cozens,88010-113279,C,Dylan,Dylan Cozens,Cozens,13.7046152,65,6200,BUF@WSH,BUF,WSH,,,,,,C/UTIL
+3083064631,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-52475,88010-43134,88010-59276,88010-23225,88010-81999,88010-73949,88010-66683,88010-83235,,88010-81983:Robert Thomas,88010-81983,C,Robert,Robert Thomas,Thomas,11.56984166,63,6000,MIN@STL,STL,MIN,,,,,,C/UTIL
+3083064632,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-43176,88010-39238,88010-59276,88010-8611,88010-97091,88010-52475,88010-66683,88010-83235,,88010-148097:Matt Boldy,88010-148097,W,Matt,Matt Boldy,Boldy,12.23582071,67,6000,MIN@STL,MIN,STL,,,,,,W/UTIL
+3083064633,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-70279,88010-148097,88010-43134,88010-103523,88010-8611,88010-81983,88010-58686,88010-68647,,88010-14178:Justin Faulk,88010-14178,D,Justin,Justin Faulk,Faulk,11.20454545,66,6000,MIN@STL,STL,MIN,,,,,,D/UTIL
+3083064634,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-52475,88010-23226,88010-58881,88010-21648,88010-85132,88010-82796,88010-66683,88010-83235,,88010-70279:J.T. Compher,88010-70279,C,J.T.,J.T. Compher,Compher,11.22769212,65,5700,COL@TOR,COL,TOR,,,,,,C/UTIL
+3083064635,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-52475,88010-66617,88010-66683,88010-14178,88010-97091,88010-73949,88010-9266,88010-83235,,88010-61549:Frank Vatrano,88010-61549,W,Frank,Frank Vatrano,Vatrano,10.81492501,67,5600,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+3083064636,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-12253,88010-142022,88010-12812,88010-97176,88010-8714,88010-153985,88010-8732,,88010-21648:Torey Krug,88010-21648,D,Torey,Torey Krug,Krug,10.22499975,48,5600,MIN@STL,STL,MIN,,,,,,D/UTIL
+3083064638,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-43176,88010-12220,88010-66617,88010-103523,88010-169056,88010-70279,88010-82179,88010-8732,,88010-52475:Evgeny Kuznetsov,88010-52475,C,Evgeny,Evgeny Kuznetsov,Kuznetsov,10.8686569,67,5600,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+3083064639,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-148101,88010-41391,88010-23061,88010-23226,88010-103523,88010-59147,88010-43176,88010-52475,88010-8732,,88010-66617:Michael Bunting,88010-66617,W,Michael,Michael Bunting,Bunting,10.02424205,66,5500,COL@TOR,TOR,COL,,,,,,W/UTIL
+3083064640,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-128506,88010-42478,88010-23226,88010-66683,88010-14178,88010-97176,88010-52475,88010-79820,88010-83235,,88010-8635:T.J. Oshie,88010-8635,W,T.J.,T.J. Oshie,Oshie,10.74901985,51,5500,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+3083064641,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-52475,88010-59276,88010-66617,88010-54126,88010-97176,88010-73949,88010-9266,88010-8732,,88010-62445:Evan Rodrigues,88010-62445,C,Evan,Evan Rodrigues,Rodrigues,10.88333356,54,5500,COL@TOR,COL,TOR,,,,,,C/UTIL
+3083064642,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-82796,88010-148097,88010-59276,88010-59147,88010-70199,88010-82850,88010-66683,88010-97029,,88010-70199:Devon Toews,88010-70199,D,Devon,Devon Toews,Toews,10.83492025,63,5400,COL@TOR,COL,TOR,,,,,,D/UTIL
+3083064643,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-8494,88010-12220,88010-12253,88010-14178,88010-54126,88010-8714,88010-23226,88010-83235,,88010-8478:Zach Parise,88010-8478,W,Zach,Zach Parise,Parise,9.408695829,69,5400,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+3083064644,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-52475,88010-153985,88010-23226,88010-73909,88010-97176,88010-70279,88010-73940,88010-15339,,88010-12644:Kyle Palmieri,88010-12644,W,Kyle,Kyle Palmieri,Palmieri,8.897619338,42,5400,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+3083064645,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-82796,88010-12220,88010-12439,88010-85132,88010-8611,88010-8714,88010-66683,88010-83235,,88010-159629:Mason McTavish,88010-159629,C,Mason,Mason McTavish,McTavish,10.03787879,66,5400,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+3083064646,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-82179,88010-12439,88010-23226,88010-37881,88010-97176,88010-82850,88010-66617,88010-8732,,88010-12812:Jared Spurgeon,88010-12812,D,Jared,Jared Spurgeon,Spurgeon,11.34776101,67,5300,MIN@STL,MIN,STL,,,,,,D/UTIL
+3083064647,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-41391,88010-12439,88010-148097,88010-103523,88010-8611,88010-58878,88010-43134,88010-8732,,88010-83057:Victor Olofsson,88010-83057,W,Victor,Victor Olofsson,Olofsson,9.439999624,65,5300,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+3083064648,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-43176,88010-142022,88010-66683,88010-169056,88010-97091,88010-8494,88010-8714,88010-83235,,88010-43176:Ryan Hartman,88010-43176,C,Ryan,Ryan Hartman,Hartman,10.60434756,46,5300,MIN@STL,MIN,STL,,,,,,C/UTIL
+3083064649,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-58878,88010-148097,88010-66683,88010-12812,88010-97176,88010-82796,88010-70513,88010-83235,,88010-37881:Morgan Rielly,88010-37881,D,Morgan,Morgan Rielly,Rielly,10.51176423,51,5300,COL@TOR,TOR,COL,,,,,,D/UTIL
+3083064650,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-58878,88010-148097,88010-41392,88010-103523,88010-54126,88010-73949,88010-97176,88010-8732,,88010-113272:Bowen Byram,88010-113272,D,Bowen,Bowen Byram,Byram,10.02592638,27,5200,COL@TOR,COL,TOR,,,,,,D/UTIL
+3083064651,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-42478,88010-23226,88010-66683,88010-54126,88010-81999,88010-82179,88010-73940,88010-83235,,88010-12460:Cam Fowler,88010-12460,D,Cam,Cam Fowler,Fowler,9.804477976,67,5200,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+3083064652,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-41391,88010-23226,88010-8635,88010-103523,88010-12812,88010-70279,88010-82796,88010-68647,,88010-65969:Dylan Strome,88010-65969,C,Dylan,Dylan Strome,Strome,10.56417892,67,5200,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+3083064653,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-23226,88010-66683,88010-11158,88010-97176,88010-82179,88010-9266,88010-8732,,88010-9266:Brayden Schenn,88010-9266,C,Brayden,Brayden Schenn,Schenn,10.49393902,66,5100,MIN@STL,STL,MIN,,,,,,C/UTIL
+3083064654,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-21897,88010-43176,88010-12644,88010-59276,88010-8611,88010-97176,88010-58878,88010-66683,88010-83235,,88010-73909:Samuel Girard,88010-73909,D,Samuel,Samuel Girard,Girard,9.516949153,59,5100,COL@TOR,COL,TOR,,,,,,D/UTIL
+3083064655,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-15386,88010-66683,88010-8478,88010-37881,88010-54126,88010-42478,88010-8714,88010-83235,,88010-62492:Erik Gustafsson,88010-62492,D,Erik,Erik Gustafsson,Gustafsson,9.549230957,65,5000,COL@TOR,TOR,COL,,,,,,D/UTIL
+3083064656,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-65969,88010-142022,88010-148097,88010-8611,88010-97176,88010-70924,88010-66683,88010-83235,,88010-12843:Adam Henrique,88010-12843,W,Adam,Adam Henrique,Henrique,10.70350834,57,5000,NYI@ANH,ANH,NYI,IR,Knee,,,,W/UTIL
+3083064657,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-70279,88010-148097,88010-23061,88010-37881,88010-97176,88010-73949,88010-82796,88010-68647,,88010-14457:John Klingberg,88010-14457,D,John,John Klingberg,Klingberg,9.023636142,55,5000,MIN@STL,MIN,STL,,,,,,D/UTIL
+3083064658,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-58878,88010-23226,88010-59276,88010-169056,88010-53866,88010-73949,88010-66683,88010-83235,,88010-61246:Colton Parayko,88010-61246,D,Colton,Colton Parayko,Parayko,8.784127372,63,4900,MIN@STL,STL,MIN,,,,,,D/UTIL
+3083064660,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-58878,88010-12253,88010-23226,88010-103523,88010-54126,88010-70924,88010-82796,88010-8732,,88010-23061:Calle Jarnkrok,88010-23061,W,Calle,Calle Jarnkrok,Jarnkrok,7.969491732,59,4800,COL@TOR,TOR,COL,,,,,,W/UTIL
+3083064661,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-23226,88010-59276,88010-59135,88010-97176,88010-52475,88010-8502,88010-15339,,88010-54126:Trevor van Riemsdyk,88010-54126,D,Trevor,Trevor van Riemsdyk,van Riemsdyk,8.513235653,68,4800,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+3083064662,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-43176,88010-148097,88010-66683,88010-103523,88010-12812,88010-82850,88010-79820,88010-97029,,88010-82850:Casey Mittelstadt,88010-82850,C,Casey,Casey Mittelstadt,Mittelstadt,8.371212121,66,4800,BUF@WSH,BUF,WSH,,,,,,C/UTIL
+3083064663,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-80028,88010-12220,88010-148097,88010-103523,88010-37881,88010-23226,88010-66617,88010-68647,,88010-8714:Nicklas Backstrom,88010-8714,C,Nicklas,Nicklas Backstrom,Backstrom,7.864000244,25,4700,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+3083064664,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-43176,88010-41392,88010-70908,88010-103523,88010-97176,88010-52475,88010-73949,88010-8732,,88010-11365:Kevin Shattenkirk,88010-11365,D,Kevin,Kevin Shattenkirk,Shattenkirk,8.254999797,60,4700,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+3083064665,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-70928,88010-12220,88010-148097,88010-103523,88010-73909,88010-82796,88010-66683,88010-97029,,88010-39710:Nick Jensen,88010-39710,D,Nick,Nick Jensen,Jensen,7.981538274,65,4700,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+3083064666,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-62445,88010-23226,88010-8635,88010-37881,88010-97176,88010-73949,88010-80028,88010-8732,,88010-8230:Mark Giordano,88010-8230,D,Mark,Mark Giordano,Giordano,8.200000185,66,4600,COL@TOR,TOR,COL,,,,,,D/UTIL
+3083064667,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-73949,88010-23226,88010-59276,88010-54126,88010-85132,88010-9266,88010-8635,88010-83235,,88010-23438:Jonas Brodin,88010-23438,D,Jonas,Jonas Brodin,Brodin,7.87755102,49,4600,MIN@STL,MIN,STL,IR,Lower body,,,,D/UTIL
+3083064668,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-43176,88010-12644,88010-23226,88010-103523,88010-54126,88010-8714,88010-58881,88010-8732,,88010-97176:Rasmus Sandin,88010-97176,D,Rasmus,Rasmus Sandin,Sandin,8.121052524,57,4600,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+3083064670,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-159629,88010-42478,88010-12439,88010-58877,88010-54126,88010-81999,88010-52475,88010-66683,88010-83235,,88010-15386:Ryan Strome,88010-15386,C,Ryan,Ryan Strome,Strome,7.508955315,67,4500,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+3083064671,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-73949,88010-43134,88010-66683,88010-11365,88010-11387,88010-8494,88010-8495,88010-83235,,88010-53866:Adam Pelech,88010-53866,D,Adam,Adam Pelech,Pelech,8.058333079,48,4500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+3083064672,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-153985,88010-8635,88010-21648,88010-97176,88010-43176,88010-8714,88010-8732,,88010-23226:Tom Wilson,88010-23226,W,Tom,Tom Wilson,Wilson,9.526315789,19,4500,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+3083064673,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-15386,88010-23226,88010-43134,88010-12812,88010-97176,88010-42478,88010-70924,88010-83235,,88010-97091:Martin Fehervary,88010-97091,D,Martin,Martin Fehervary,Fehervary,7.441509319,53,4500,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+3083064674,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-43176,88010-148097,88010-23061,88010-14178,88010-169056,88010-70928,88010-66683,88010-97029,,88010-15287:Jean-Gabriel Pageau,88010-15287,C,Jean-Gabriel,Jean-Gabriel Pageau,Pageau,9.249123021,57,4500,NYI@ANH,NYI,ANH,,,,,,C/UTIL
+3083064676,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-65969,88010-73949,88010-12439,88010-12644,88010-12812,88010-97176,88010-82179,88010-66683,88010-83235,,88010-58985:Jakub Vrana,88010-58985,W,Jakub,Jakub Vrana,Vrana,9.211111281,9,4300,MIN@STL,STL,MIN,,,,,,W/UTIL
+3083064677,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-65969,88010-23226,88010-66683,88010-12812,88010-97176,88010-9266,88010-73940,88010-83235,,88010-148101:Alex Newhook,88010-148101,C,Alex,Alex Newhook,Newhook,7.067692214,65,4300,COL@TOR,COL,TOR,,,,,,C/UTIL
+3083064678,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-42478,88010-43176,88010-12253,88010-148097,88010-11387,88010-97176,88010-80028,88010-66683,88010-83235,,88010-43200:Ryan Pulock,88010-43200,D,Ryan,Ryan Pulock,Pulock,7.576811417,69,4300,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+3083064679,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-15386,88010-41391,88010-12220,88010-23226,88010-103523,88010-81999,88010-52475,88010-73949,88010-8612,,88010-59209:Frederick Gaudreau,88010-59209,W,Frederick,Frederick Gaudreau,Gaudreau,7.925373134,67,4300,MIN@STL,MIN,STL,,,,,,W/UTIL
+3083064680,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-62445,88010-15280,88010-23226,88010-37881,88010-97176,88010-8494,88010-9266,88010-15339,,88010-153985:JJ Peterka,88010-153985,W,JJ,JJ Peterka,Peterka,6.535484068,62,4300,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+3083064681,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-62445,88010-12220,88010-148097,88010-12812,88010-37881,88010-80028,88010-66683,88010-97029,,88010-58977:Sonny Milano,88010-58977,W,Sonny,Sonny Milano,Milano,7.572222109,54,4200,BUF@WSH,WSH,BUF,DTD,Illness,,,,W/UTIL
+3083064682,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-73949,88010-12220,88010-23226,88010-103523,88010-81999,88010-8714,88010-9266,88010-8732,,88010-169056:Owen Power,88010-169056,D,Owen,Owen Power,Power,7.901587108,63,4200,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+3083064683,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-70279,88010-12253,88010-148097,88010-103523,88010-43200,88010-82179,88010-70908,88010-97029,,88010-54481:Jake McCabe,88010-54481,D,Jake,Jake McCabe,McCabe,7.947540783,61,4200,COL@TOR,TOR,COL,,,,,,D/UTIL
+3083064684,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-43134,88010-66683,88010-54126,88010-84404,88010-52475,88010-9266,88010-15339,,88010-82154:Sebastian Aho,88010-82154,D,Sebastian,Sebastian Aho,Aho,6.470312595,64,4200,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+3083064685,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-58878,88010-12253,88010-23226,88010-54126,88010-81999,88010-59276,88010-66683,88010-83235,,88010-8502:Kyle Okposo,88010-8502,W,Kyle,Kyle Okposo,Okposo,7.755932307,59,4200,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+3083064686,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-148097,88010-70922,88010-103523,88010-37881,88010-43176,88010-58878,88010-97029,,88010-13657:Derek Grant,88010-13657,C,Derek,Derek Grant,Grant,7.345161192,31,4200,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+3083064687,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-117048,88010-42478,88010-148097,88010-58686,88010-53866,88010-85132,88010-73949,88010-66683,88010-97029,,88010-15280:Brandon Saad,88010-15280,W,Brandon,Brandon Saad,Saad,8.129999797,60,4200,MIN@STL,STL,MIN,,,,,,W/UTIL
+3083064688,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-23226,88010-79820,88010-37881,88010-85132,88010-52475,88010-8714,88010-15339,,88010-135663:Alexander Romanov,88010-135663,D,Alexander,Alexander Romanov,Romanov,7.323529412,68,4200,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+3083064689,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-142022,88010-148097,88010-21648,88010-54126,88010-52475,88010-58877,88010-8732,,88010-128509:Mattias Samuelsson,88010-128509,D,Mattias,Mattias Samuelsson,Samuelsson,6.424999873,48,4200,BUF@WSH,BUF,WSH,O,Upper body,,,,D/UTIL
+3083064690,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-21897,88010-42478,88010-23226,88010-66683,88010-54126,88010-97090,88010-58878,88010-73949,88010-83235,,88010-14473:Jakob Silfverberg,88010-14473,W,Jakob,Jakob Silfverberg,Silfverberg,7.189393939,66,4100,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+3083064691,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-62861,88010-12220,88010-43134,88010-14457,88010-54126,88010-73949,88010-66683,88010-8732,,88010-80028:David Kampf,88010-80028,C,David,David Kampf,Kampf,6.157575665,66,4100,COL@TOR,TOR,COL,,,,,,C/UTIL
+3083064692,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-43176,88010-70924,88010-148097,88010-70513,88010-11387,88010-97176,88010-82850,88010-8714,88010-8732,,88010-58686:Kasperi Kapanen,88010-58686,W,Kasperi,Kasperi Kapanen,Kapanen,7.7,50,4100,MIN@STL,STL,MIN,,,,,,W/UTIL
+3083064693,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-41391,88010-73949,88010-23061,88010-23226,88010-23225,88010-70199,88010-82796,88010-66683,88010-68647,,88010-9196:Matt Martin,88010-9196,W,Matt,Matt Martin,Martin,5.089855249,69,4100,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+3083064694,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-13657,88010-41391,88010-12220,88010-12253,88010-103523,88010-54126,88010-9266,88010-23226,88010-68647,,88010-8688:Luke Schenn,88010-8688,D,Luke,Luke Schenn,Schenn,7.522806803,57,4100,COL@TOR,TOR,COL,DTD,Personal,,,,D/UTIL
+3083064695,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-142022,88010-15280,88010-12812,88010-37881,88010-42478,88010-43176,88010-97029,,88010-142022:Jack Quinn,88010-142022,W,Jack,Jack Quinn,Quinn,7.793220132,59,4000,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+3083064696,88010-263237673,$500 Wed NHL Five Hole (150 Entries Max),88010-113279,88010-41391,88010-12220,88010-142022,88010-103523,88010-11365,88010-70279,88010-148097,88010-97029,,88010-97055:Calen Addison,88010-97055,D,Calen,Calen Addison,Addison,7.35789463,57,4000,MIN@STL,MIN,STL,,,,,,D/UTIL
+3083064871,88010-263237748,$300 Wed NHL Big $2 Double Up (Top 75 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-82214:Timothy Liljegren,88010-82214,D,Timothy,Timothy Liljegren,Liljegren,7.013207777,53,4000,COL@TOR,TOR,COL,,,,,,D/UTIL
+3083064872,88010-263237748,$300 Wed NHL Big $2 Double Up (Top 75 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-39261:Scott Mayfield,88010-39261,D,Scott,Scott Mayfield,Mayfield,7.779709968,69,4000,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+3083064873,88010-263237748,$300 Wed NHL Big $2 Double Up (Top 75 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-14697:Gabriel Landeskog,88010-14697,W,Gabriel,Gabriel Landeskog,Landeskog,17.50985847,71,4000,COL@TOR,COL,TOR,IR,Knee,,,,W/UTIL
+3083064875,88010-263237748,$300 Wed NHL Big $2 Double Up (Top 75 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-62861:Noel Acciari,88010-62861,C,Noel,Noel Acciari,Acciari,7.335384428,65,4000,COL@TOR,TOR,COL,,,,,,C/UTIL
+3083064876,88010-263237748,$300 Wed NHL Big $2 Double Up (Top 75 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-9124:Ryan O'Reilly,88010-9124,C,Ryan,Ryan O'Reilly,O'Reilly,9.34583346,48,4000,COL@TOR,TOR,COL,IR,Finger,,,,C/UTIL
+3083064964,88010-263237753,$400 Wed NHL Big $5 Double Up (Top 40 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-54194:Josh Manson,88010-54194,D,Josh,Josh Manson,Manson,8.118518405,27,4000,COL@TOR,COL,TOR,O,Lower body,,,,D/UTIL
+3083064966,88010-263237753,$400 Wed NHL Big $5 Double Up (Top 40 Win),88010-43176,88010-70899,88010-58686,88010-66683,88010-39261,88010-97214,88010-73949,88010-82796,88010-97029,,88010-80398:Calle Rosen,88010-80398,D,Calle,Calle Rosen,Rosen,6.914285569,42,3900,MIN@STL,STL,MIN,,,,,,D/UTIL
+3083065083,88010-263247105,H2H vs cicima6709,88010-113279,88010-41391,88010-12220,88010-142022,88010-103523,88010-11365,88010-70279,88010-148097,88010-97029,,88010-43134:Anthony Mantha,88010-43134,W,Anthony,Anthony Mantha,Mantha,7.616666667,60,3900,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-82179:Alexander Kerfoot,88010-82179,C,Alexander,Alexander Kerfoot,Kerfoot,7.343939579,66,3900,COL@TOR,TOR,COL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-70922:Max Jones,88010-70922,W,Max,Max Jones,Jones,4.755555329,54,3900,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-39252:Brock McGinn,88010-39252,W,Brock,Brock McGinn,McGinn,5.949999809,64,3900,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-15255:Josh Leivo,88010-15255,W,Josh,Josh Leivo,Leivo,6.260869565,46,3900,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-84404:Ilya Lyubushkin,88010-84404,D,Ilya,Ilya Lyubushkin,Lyubushkin,4.887272505,55,3900,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-58877:Conor Sheary,88010-58877,W,Conor,Conor Sheary,Sheary,8.227941176,68,3900,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-82156:Max Comtois,88010-82156,W,Max,Max Comtois,Comtois,5.59999977,53,3800,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-73981:Denis Malgin,88010-73981,W,Denis,Denis Malgin,Malgin,5.625490076,51,3800,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-59147:Jake Middleton,88010-59147,D,Jake,Jake Middleton,Middleton,6.454545455,66,3800,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-97096:Isac Lundestrom,88010-97096,C,Isac,Isac Lundestrom,Lundestrom,5.608695652,46,3800,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-82796:Sam Lafferty,88010-82796,C,Sam,Sam Lafferty,Lafferty,7.164912174,57,3800,COL@TOR,TOR,COL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-84346:Pierre Engvall,88010-84346,W,Pierre,Pierre Engvall,Engvall,6.720634824,63,3800,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-11158:T.J. Brodie,88010-11158,D,T.J.,T.J. Brodie,Brodie,6.663636641,44,3800,COL@TOR,TOR,COL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-11170:Nick Leddy,88010-11170,D,Nick,Nick Leddy,Leddy,5.883870771,62,3800,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-15374:Scott Harrington,88010-15374,D,Scott,Scott Harrington,Harrington,5.297297297,37,3700,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-96789:Tyler Tucker,88010-96789,D,Tyler,Tyler Tucker,Tucker,4.069565151,23,3700,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-81999:Henri Jokiharju,88010-81999,D,Henri,Henri Jokiharju,Jokiharju,5.727272727,44,3700,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-62032:Vinnie Hinostroza,88010-62032,W,Vinnie,Vinnie Hinostroza,Hinostroza,6.296296296,27,3700,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-113275:Simon Holmstrom,88010-113275,W,Simon,Simon Holmstrom,Holmstrom,3.240000153,40,3700,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-11387:Matt Irwin,88010-11387,D,Matt,Matt Irwin,Irwin,4.711110998,54,3700,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-23225:Matt Dumba,88010-23225,D,Matt,Matt Dumba,Dumba,6.153846154,65,3700,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-103624:Brandon Duhaime,88010-103624,W,Brandon,Brandon Duhaime,Duhaime,5.282051282,39,3700,MIN@STL,MIN,STL,DTD,Head,,,,W/UTIL
+,,,,,,,,,,,,,88010-54478:Nic Dowd,88010-54478,C,Nic,Nic Dowd,Dowd,7.355555782,54,3700,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-53465:Hudson Fasching,88010-53465,W,Hudson,Hudson Fasching,Fasching,5.711111281,36,3700,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-59135:Justin Holl,88010-59135,D,Justin,Justin Holl,Holl,5.858461351,65,3700,COL@TOR,TOR,COL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-113932:Nikita Alexandrov,88010-113932,C,Nikita,Nikita Alexandrov,Alexandrov,4.888888889,27,3700,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-70928:Sam Steel,88010-70928,C,Sam,Sam Steel,Steel,6.341071538,56,3700,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-117048:Peyton Krebs,88010-117048,C,Peyton,Peyton Krebs,Krebs,5.293103448,58,3700,BUF@WSH,BUF,WSH,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-97090:Alexander Alexeyev,88010-97090,D,Alexander,Alexander Alexeyev,Alexeyev,5.066666497,18,3700,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-82851:Jordan Greenway,88010-82851,W,Jordan,Jordan Greenway,Greenway,4.752000122,50,3700,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-12718:Tyler Pitlick,88010-12718,W,Tyler,Tyler Pitlick,Pitlick,4.359183798,49,3700,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-12220:Marcus Johansson,88010-12220,W,Marcus,Marcus Johansson,Johansson,7.748484756,66,3700,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-58878:Oskar Sundqvist,88010-58878,C,Oskar,Oskar Sundqvist,Sundqvist,6.038982844,59,3700,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-58881:Sammy Blais,88010-58881,W,Sammy,Sammy Blais,Blais,4.218181818,55,3600,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-96800:Urho Vaakanainen,88010-96800,D,Urho,Urho Vaakanainen,Vaakanainen,4.52173913,23,3600,NYI@ANH,ANH,NYI,IR,Hip,,,,D/UTIL
+,,,,,,,,,,,,,88010-39972:Kurtis MacDermid,88010-39972,D,Kurtis,Kurtis MacDermid,MacDermid,2.568421012,38,3600,COL@TOR,COL,TOR,DTD,Lower body,,,,D/UTIL
+,,,,,,,,,,,,,88010-66616:Dakota Mermis,88010-66616,D,Dakota,Dakota Mermis,Mermis,3.200000048,2,3600,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-41591:Jon Merrill,88010-41591,D,Jon,Jon Merrill,Merrill,4.590163934,61,3600,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-8847:Robert Bortuzzo,88010-8847,D,Robert,Robert Bortuzzo,Bortuzzo,2.842105263,38,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-103573:Jacob Bryson,88010-103573,D,Jacob,Jacob Bryson,Bryson,4.164705763,51,3600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-66726:Colton White,88010-66726,D,Colton,Colton White,White,3.291428484,35,3600,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-8903:Marco Scandella,88010-8903,D,Marco,Marco Scandella,Scandella,4.640000153,10,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-82122:Mason Shaw,88010-82122,C,Mason,Mason Shaw,Shaw,5.952000122,50,3600,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-8410:Jack Johnson,88010-8410,D,Jack,Jack Johnson,Johnson,4.709090724,66,3600,COL@TOR,COL,TOR,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-73987:Riley Stillman,88010-73987,D,Riley,Riley Stillman,Stillman,4.084210446,38,3600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-9990:Lars Eller,88010-9990,C,Lars,Lars Eller,Eller,5.910447761,67,3600,COL@TOR,COL,TOR,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-82189:Conor Timmins,88010-82189,D,Conor,Conor Timmins,Timmins,5.996428353,28,3600,COL@TOR,TOR,COL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-8495:Josh Bailey,88010-8495,W,Josh,Josh Bailey,Bailey,6.424590064,61,3600,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-39234:Matt Nieto,88010-39234,W,Matt,Matt Nieto,Nieto,6.432812691,64,3600,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-97098:Simon Benoit,88010-97098,D,Simon,Simon Benoit,Benoit,5.537499905,64,3600,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-74092:Kale Clague,88010-74092,D,Kale,Kale Clague,Clague,3.093333435,30,3600,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-8611:Alex Goligoski,88010-8611,D,Alex,Alex Goligoski,Goligoski,5.243589744,39,3600,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-15302:Nathan Beaulieu,88010-15302,D,Nathan,Nathan Beaulieu,Beaulieu,4.389743511,39,3600,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70117:Steven Santini,88010-70117,D,Steven,Steven Santini,Santini,8,4,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-128502:Scott Perunovich,88010-128502,D,Scott,Scott Perunovich,Perunovich,5.161538344,26,3600,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-37894:Jayson Megna,88010-37894,W,Jayson,Jayson Megna,Megna,2.906122324,49,3500,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-15380:Jordie Benn,88010-15380,D,Jordie,Jordie Benn,Benn,7.266666412,12,3500,COL@TOR,TOR,COL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70170:Carl Dahlstrom,88010-70170,D,Carl,Carl Dahlstrom,Dahlstrom,8.53333346,3,3500,COL@TOR,TOR,COL,O,Shoulder,,,,D/UTIL
+,,,,,,,,,,,,,88010-68642:Ethan Prow,88010-68642,D,Ethan,Ethan Prow,Prow,5,4,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-38947:Andrej Sustr,88010-38947,D,Andrej,Andrej Sustr,Sustr,4.063157734,38,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-81984:Alexey Toropchenko,88010-81984,W,Alexey,Alexey Toropchenko,Toropchenko,4.943396226,53,3500,MIN@STL,STL,MIN,DTD,Upper body,,,,W/UTIL
+,,,,,,,,,,,,,88010-180301:David Spacek,88010-180301,D,David,David Spacek,Spacek,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70225:Gabriel Carlsson,88010-70225,D,Gabriel,Gabriel Carlsson,Carlsson,6.400000254,3,3500,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-180305:Benjamin Finkelstein,88010-180305,D,Benjamin,Benjamin Finkelstein,Finkelstein,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-161940:Kyle Masters,88010-161940,D,Kyle,Kyle Masters,Masters,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-8860:John Moore,88010-8860,D,John,John Moore,Moore,5.542857034,7,3500,NYI@ANH,ANH,NYI,O,Undisclosed,,,,D/UTIL
+,,,,,,,,,,,,,88010-168103:Matthew Kessel,88010-168103,D,Matthew,Matthew Kessel,Kessel,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70325:Paul LaDue,88010-70325,D,Paul,Paul LaDue,LaDue,3.200000048,1,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-23222:Zemgus Girgensons,88010-23222,W,Zemgus,Zemgus Girgensons,Girgensons,5.224999905,64,3500,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-8887:Ryan Reaves,88010-8887,W,Ryan,Ryan Reaves,Reaves,2.933333333,60,3500,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-82116:Dmitri Samorukov,88010-82116,D,Dmitri,Dmitri Samorukov,Samorukov,0,1,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-160964:Carson Lambos,88010-160964,D,Carson,Carson Lambos,Lambos,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-142020:Jamie Drysdale,88010-142020,D,Jamie,Jamie Drysdale,Drysdale,2.488888847,9,3500,NYI@ANH,ANH,NYI,IR,Shoulder,,,,D/UTIL
+,,,,,,,,,,,,,88010-103124:Grant Hutton,88010-103124,D,Grant,Grant Hutton,Hutton,4.150000095,16,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-82161:Brady Lyle,88010-82161,D,Brady,Brady Lyle,Lyle,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-82162:Turner Ottenbreit,88010-82162,D,Turner,Turner Ottenbreit,Ottenbreit,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70903:Olli Juolevi,88010-70903,D,Olli,Olli Juolevi,Juolevi,2.488888847,18,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70909:Logan Brown,88010-70909,C,Logan,Logan Brown,Brown,2.74782612,23,3500,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-70908:Tyson Jost,88010-70908,W,Tyson,Tyson Jost,Jost,6.032786885,61,3500,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-70918:Dennis Cholowski,88010-70918,D,Dennis,Dennis Cholowski,Cholowski,0.800000012,2,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-169736:Simon Johansson,88010-169736,D,Simon,Simon Johansson,Johansson,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-70926:Lucas Johansen,88010-70926,D,Lucas,Lucas Johansen,Johansen,4.800000191,2,3500,BUF@WSH,WSH,BUF,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-97056:Connor Dewar,88010-97056,W,Connor,Connor Dewar,Dewar,5.042424057,66,3500,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-117039:Hunter Skinner,88010-117039,D,Hunter,Hunter Skinner,Skinner,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-82236:Chase Priskie,88010-82236,D,Chase,Chase Priskie,Priskie,2.799999952,4,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-84289:Lawrence Pilut,88010-84289,D,Lawrence,Lawrence Pilut,Pilut,4.470588235,17,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-162118:Griffin Luce,88010-162118,D,Griffin,Griffin Luce,Luce,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-149830:Daemon Hunt,88010-149830,D,Daemon,Daemon Hunt,Hunt,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-149831:Ryan O'Rourke,88010-149831,D,Ryan,Ryan O'Rourke,O'Rourke,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-162117:Tyson Galloway,88010-162117,D,Tyson,Tyson Galloway,Galloway,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-9033:Casey Cizikas,88010-9033,C,Casey,Casey Cizikas,Cizikas,5.664706062,68,3500,NYI@ANH,NYI,ANH,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-8531:Michael Del Zotto,88010-8531,D,Michael,Michael Del Zotto,Del Zotto,8.121428353,28,3500,NYI@ANH,ANH,NYI,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-42841:Nathan Walker,88010-42841,W,Nathan,Nathan Walker,Walker,3.531707392,41,3500,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-180067:Marc-Andre Gaudet,88010-180067,D,Marc-Andre,Marc-Andre Gaudet,Gaudet,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-180065:Michael Buchinger,88010-180065,D,Michael,Michael Buchinger,Buchinger,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-59239:Joe Hicketts,88010-59239,D,Joe,Joe Hicketts,Hicketts,,,3500,MIN@STL,MIN,STL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-59263:Nicolas Aube-Kubel,88010-59263,W,Nicolas,Nicolas Aube-Kubel,Aube-Kubel,4.444444444,45,3500,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-97153:Logan O'Connor,88010-97153,W,Logan,Logan O'Connor,O'Connor,6.381538274,65,3500,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-183169:Anton Malmstrom,88010-183169,D,Anton,Anton Malmstrom,Malmstrom,,,3500,MIN@STL,STL,MIN,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-11150:Marcus Foligno,88010-11150,W,Marcus,Marcus Foligno,Foligno,6.190740515,54,3500,MIN@STL,MIN,STL,O,Lower body,,,,W/UTIL
+,,,,,,,,,,,,,88010-42908:Brad Hunt,88010-42908,D,Brad,Brad Hunt,Hunt,3.768420972,38,3500,COL@TOR,COL,TOR,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-97203:Ryan Merkley,88010-97203,D,Ryan,Ryan Merkley,Merkley,3.738461617,39,3500,COL@TOR,COL,TOR,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-11204:Jake Muzzin,88010-11204,D,Jake,Jake Muzzin,Muzzin,9.199999809,4,3500,COL@TOR,TOR,COL,IR,Neck,,,,D/UTIL
+,,,,,,,,,,,,,88010-82375:Austin Strand,88010-82375,D,Austin,Austin Strand,Strand,2.879999924,5,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-8647:Erik Johnson,88010-8647,D,Erik,Erik Johnson,Johnson,6.094117408,51,3500,COL@TOR,COL,TOR,IR,Ankle,,,,D/UTIL
+,,,,,,,,,,,,,88010-117192:Samuel Bolduc,88010-117192,D,Samuel,Samuel Bolduc,Bolduc,4.933333397,6,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-97228:Robin Salo,88010-97228,D,Robin,Robin Salo,Salo,5.371428353,14,3500,NYI@ANH,NYI,ANH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-79820:Zach Aston-Reese,88010-79820,W,Zach,Zach Aston-Reese,Aston-Reese,3.796825348,63,3500,COL@TOR,TOR,COL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-97242:Jeremy Davies,88010-97242,D,Jeremy,Jeremy Davies,Davies,1.066666683,3,3500,BUF@WSH,BUF,WSH,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-97261:Filip Kral,88010-97261,D,Filip,Filip Kral,Kral,0.800000012,4,3500,COL@TOR,TOR,COL,,,,,,D/UTIL
+,,,,,,,,,,,,,88010-79860:Victor Mete,88010-79860,D,Victor,Victor Mete,Mete,3.199999883,13,3500,COL@TOR,TOR,COL,IR,Lower body,,,,D/UTIL
+,,,,,,,,,,,,,88010-152816:Pontus Holmberg,88010-152816,W,Pontus,Pontus Holmberg,Holmberg,5.310810811,37,3400,COL@TOR,TOR,COL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-15365:Andy Andreoff,88010-15365,W,Andy,Andy Andreoff,Andreoff,3.73333327,3,3300,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-113285:Aliaksei Protas,88010-113285,C,Aliaksei,Aliaksei Protas,Protas,4.70909084,44,3300,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-113286:Brett Leason,88010-113286,W,Brett,Brett Leason,Leason,3.42641521,53,3300,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-8340:Darren Helm,88010-8340,W,Darren,Darren Helm,Helm,1.280000019,5,3300,COL@TOR,COL,TOR,IR,Lower body,,,,W/UTIL
+,,,,,,,,,,,,,88010-8357:Andrew Cogliano,88010-8357,W,Andrew,Andrew Cogliano,Cogliano,5.828571622,63,3300,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-15239:Craig Smith,88010-15239,W,Craig,Craig Smith,Smith,4.747058943,51,3300,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-145545:Jake Neighbours,88010-145545,W,Jake,Jake Neighbours,Neighbours,5.260000102,30,3200,MIN@STL,STL,MIN,IR,Upper body,,,,W/UTIL
+,,,,,,,,,,,,,88010-117013:Adam Beckman,88010-117013,W,Adam,Adam Beckman,Beckman,2.488888847,9,3200,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-169240:Ben Meyers,88010-169240,W,Ben,Ben Meyers,Meyers,2.206060699,33,3200,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-12670:Sam Carrick,88010-12670,C,Sam,Sam Carrick,Carrick,3.460869499,46,3200,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-178156:Sammy Walker,88010-178156,C,Sammy,Sammy Walker,Walker,3.600000064,6,3200,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-113284:Connor McMichael,88010-113284,W,Connor,Connor McMichael,McMichael,0.8,10,3100,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-103077:Joe Snively,88010-103077,W,Joe,Joe Snively,Snively,4.600000064,12,3100,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-8404:Wayne Simmonds,88010-8404,W,Wayne,Wayne Simmonds,Simmonds,2.026666641,15,3100,COL@TOR,TOR,COL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-147770:Josiah Slavin,88010-147770,W,Josiah,Josiah Slavin,Slavin,2.346666718,15,3100,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-82825:Otto Koivula,88010-82825,C,Otto,Otto Koivula,Koivula,3.799999952,8,3100,NYI@ANH,NYI,ANH,O,Lower body,,,,C/UTIL
+,,,,,,,,,,,,,88010-79887:Mike Vecchione,88010-79887,C,Mike,Mike Vecchione,Vecchione,4.800000191,1,3000,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-43022:Connor Brown,88010-43022,W,Connor,Connor Brown,Brown,1.200000048,4,3000,BUF@WSH,WSH,BUF,IR,Knee,,,,W/UTIL
+,,,,,,,,,,,,,88010-96785:Mathias Laferriere,88010-96785,W,Mathias,Mathias Laferriere,Laferriere,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-117783:Brett Murray,88010-117783,W,Brett,Brett Murray,Murray,4.104999924,20,3000,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-58906:Chase De Leo,88010-58906,W,Chase,Chase De Leo,De Leo,1.600000024,2,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-68639:Steven Fogarty,88010-68639,W,Steven,Steven Fogarty,Fogarty,0,2,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-9275:Kyle Clifford,88010-9275,W,Kyle,Kyle Clifford,Clifford,5.599999905,2,3000,COL@TOR,TOR,COL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-62019:Nikita Soshnikov,88010-62019,W,Nikita,Nikita Soshnikov,Soshnikov,0.800000012,8,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-173639:Liam Ohgren,88010-173639,W,Liam,Liam Ohgren,Ohgren,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-180299:Hunter Haight,88010-180299,C,Hunter,Hunter Haight,Haight,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-180302:Josh Pillar,88010-180302,C,Josh,Josh Pillar,Pillar,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-180306:Michael Milne,88010-180306,W,Michael,Michael Milne,Milne,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-170579:Pavol Regenda,88010-170579,W,Pavol,Pavol Regenda,Regenda,4.470588235,17,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-43089:Ross Johnston,88010-43089,W,Ross,Ross Johnston,Johnston,1.431578988,19,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-180304:Servac Petrovsky,88010-180304,C,Servac,Servac Petrovsky,Petrovsky,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-168024:Nick Abruzzese,88010-168024,C,Nick,Nick Abruzzese,Abruzzese,3.288888931,9,3000,COL@TOR,TOR,COL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-161884:Mike O'Leary,88010-161884,W,Mike,Mike O'Leary,O'Leary,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-43132:Martin Frk,88010-43132,W,Martin,Martin Frk,Frk,8.166666667,6,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-148096:Alex Steeves,88010-148096,W,Alex,Alex Steeves,Steeves,1.600000064,3,3000,COL@TOR,TOR,COL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-145542:Hendrix Lapierre,88010-145542,C,Hendrix,Hendrix Lapierre,Lapierre,3.771428517,7,3000,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-161421:Tanner Dickinson,88010-161421,C,Tanner,Tanner Dickinson,Dickinson,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-161938:Caedan Bankier,88010-161938,C,Caedan,Caedan Bankier,Bankier,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-116881:Keean Washkurak,88010-116881,C,Keean,Keean Washkurak,Washkurak,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-161939:Pavel Novak,88010-161939,W,Pavel,Pavel Novak,Novak,,,3000,MIN@STL,MIN,STL,O,Illness,,,,W/UTIL
+,,,,,,,,,,,,,88010-13982:Gustav Nyquist,88010-13982,W,Gustav,Gustav Nyquist,Nyquist,8.75,48,3000,MIN@STL,MIN,STL,IR,Upper body,,,,W/UTIL
+,,,,,,,,,,,,,88010-179889:Andrei Bakanov,88010-179889,W,Andrei,Andrei Bakanov,Bakanov,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-23233:Alex Galchenyuk,88010-23233,W,Alex,Alex Galchenyuk,Galchenyuk,1.600000024,4,3000,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-142023:Marco Rossi,88010-142023,C,Marco,Marco Rossi,Rossi,2.299999952,16,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-73941:Tanner Kaspick,88010-73941,C,Tanner,Tanner Kaspick,Kaspick,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-167639:Vladislav Firstov,88010-167639,W,Vladislav,Vladislav Firstov,Firstov,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-8425:Cal Clutterbuck,88010-8425,W,Cal,Cal Clutterbuck,Clutterbuck,4.577777863,36,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-148204:Sampo Ranta,88010-148204,W,Sampo,Sampo Ranta,Ranta,2.133333365,6,3000,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-168188:Sam Hentges,88010-168188,C,Sam,Sam Hentges,Hentges,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-70921:Henrik Borgstrom,88010-70921,W,Henrik,Henrik Borgstrom,Borgstrom,3.063636364,55,3000,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-97057:Damien Giroux,88010-97057,C,Damien,Damien Giroux,Giroux,,,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-9002:Richard Panik,88010-9002,W,Richard,Richard Panik,Panik,4.525000095,4,3000,NYI@ANH,NYI,ANH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-119594:Bryce Kindopp,88010-119594,W,Bryce,Bryce Kindopp,Kindopp,3.200000048,1,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-74029:Ty Ronning,88010-74029,W,Ty,Ty Ronning,Ronning,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-145202:Jacob Perreault,88010-145202,W,Jacob,Jacob Perreault,Perreault,1.600000024,1,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-54576:Rocco Grimaldi,88010-54576,W,Rocco,Rocco Grimaldi,Grimaldi,1.828571456,7,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-74035:Beck Malenstyn,88010-74035,W,Beck,Beck Malenstyn,Malenstyn,5.920000076,5,3000,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-74039:Garrett Pilon,88010-74039,C,Garrett,Garrett Pilon,Pilon,6.800000191,2,3000,BUF@WSH,WSH,BUF,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-170302:Gustav Rydahl,88010-170302,C,Gustav,Gustav Rydahl,Rydahl,,,3000,COL@TOR,COL,TOR,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-117052:Dylan McLaughlin,88010-117052,C,Dylan,Dylan McLaughlin,McLaughlin,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-97095:Benoit-Olivier Groulx,88010-97095,C,Benoit-Olivier,Benoit-Olivier Groulx,Groulx,3.60000017,18,3000,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-39240:Luke Witkowski,88010-39240,W,Luke,Luke Witkowski,Witkowski,0,1,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-62293:Matthew Peca,88010-62293,C,Matthew,Matthew Peca,Peca,2.879999924,5,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-180071:Landon Sim,88010-180071,W,Landon,Landon Sim,Sim,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-180072:Brayden Guy,88010-180072,W,Brayden,Brayden Guy,Guy,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-59245:Brandon Baddock,88010-59245,W,Brandon,Brandon Baddock,Baddock,0,1,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-82799:Will Bitten,88010-82799,C,Will,Will Bitten,Bitten,2,4,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-183159:Nikita Nesterenko,88010-183159,C,Nikita,Nikita Nesterenko,Nesterenko,,,3000,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-117116:Nathan Todd,88010-117116,C,Nathan,Nathan Todd,Todd,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-117143:Nicholas Robertson,88010-117143,W,Nicholas,Nicholas Robertson,Robertson,6.400000095,16,3000,COL@TOR,TOR,COL,IR,Shoulder,,,,W/UTIL
+,,,,,,,,,,,,,88010-82842:Dylan Sikura,88010-82842,W,Dylan,Dylan Sikura,Sikura,3.520000076,5,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-82849:Adam Gaudette,88010-82849,W,Adam,Adam Gaudette,Gaudette,4.989999898,60,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-21921:Riley Sheahan,88010-21921,C,Riley,Riley Sheahan,Sheahan,0.400000006,4,3000,BUF@WSH,BUF,WSH,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-15267:Joseph Cramarossa,88010-15267,C,Joseph,Joseph Cramarossa,Cramarossa,3.799999952,4,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-161188:Zack Bolduc,88010-161188,C,Zack,Zack Bolduc,Bolduc,,,3000,MIN@STL,STL,MIN,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-151977:Jean-Luc Foudy,88010-151977,C,Jean-Luc,Jean-Luc Foudy,Foudy,2.488888847,9,3000,COL@TOR,COL,TOR,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-79790:Matthew Highmore,88010-79790,W,Matthew,Matthew Highmore,Highmore,1.600000024,2,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-148400:Nick Swaney,88010-148400,W,Nick,Nick Swaney,Swaney,,,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-12732:Michael Sgarbossa,88010-12732,W,Michael,Michael Sgarbossa,Sgarbossa,6.079999924,10,3000,BUF@WSH,WSH,BUF,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-117182:Brayden Tracey,88010-117182,W,Brayden,Brayden Tracey,Tracey,1.600000024,1,3000,NYI@ANH,ANH,NYI,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-97224:Oliver Wahlstrom,88010-97224,W,Oliver,Oliver Wahlstrom,Wahlstrom,8.357142857,35,3000,NYI@ANH,NYI,ANH,IR,Lower body,,,,W/UTIL
+,,,,,,,,,,,,,88010-66513:Glenn Gawdin,88010-66513,C,Glenn,Glenn Gawdin,Gawdin,3.200000127,3,3000,NYI@ANH,ANH,NYI,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-97236:Mikhail Maltsev,88010-97236,W,Mikhail,Mikhail Maltsev,Maltsev,1.920000076,5,3000,COL@TOR,COL,TOR,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-42977:Nic Petan,88010-42977,C,Nic,Nic Petan,Petan,3.799999952,8,3000,MIN@STL,MIN,STL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-39395:Logan Shaw,88010-39395,C,Logan,Logan Shaw,Shaw,3.717647104,17,3000,COL@TOR,TOR,COL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-128491:Mitchell Chaffee,88010-128491,W,Mitchell,Mitchell Chaffee,Chaffee,0.800000012,2,3000,MIN@STL,MIN,STL,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-128503:Hugh McGing,88010-128503,W,Hugh,Hugh McGing,McGing,,,3000,MIN@STL,STL,MIN,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-135675:Radim Zohorna,88010-135675,C,Radim,Radim Zohorna,Zohorna,0.800000012,8,3000,COL@TOR,TOR,COL,,,,,,C/UTIL
+,,,,,,,,,,,,,88010-128508:Brandon Biro,88010-128508,W,Brandon,Brandon Biro,Biro,0,1,3000,BUF@WSH,BUF,WSH,,,,,,W/UTIL
+,,,,,,,,,,,,,88010-15357:Carl Hagelin,88010-15357,W,Carl,Carl Hagelin,Hagelin,4.883018638,53,3000,BUF@WSH,WSH,BUF,IR,Hip,,,,W/UTIL
