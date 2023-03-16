@@ -45,6 +45,7 @@ dates = list(historical_winning_scores.keys())
 weeks = []
 for i in np.arange(0,64,2)[:-1]:
   weeks.append([dates[i],dates[i+1]])
+
 weeks=weeks+[['3/7/23']]
 
 '''
@@ -87,7 +88,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['3/15/23'], strdates=['3/15/23'])    
+pull_stats_live(slate_ids=['3/16/23'], strdates=['3/16/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -156,7 +157,7 @@ roster = slate_optimization(
     # can change allocations significantly even at .786 form .01 
     # increases average dk salaries as well when moved up
     # can very get rid of top proba team/s
-  pct_from_opt_proj=.80, #.786
+  pct_from_opt_proj=.01, #.786
 
   #max pct own:
     # higher field GPPs you want to make more diverse

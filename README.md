@@ -1,18 +1,4 @@
 # fantasy-ryland
-
-INTRO:
-
-Fantasy-Ryland is a automated machine learning pipeline for fantasy sports. check out our twitter @shippersdfs
-
-Currently Fanduel Mainline (fd_mainline) is our premier NFL pipeline and will be under construction as we add the newest
-functionality and feature construction techniques that we developed in our premier NHL model -> Fanduel Get Pucks Deep (fd_gpd). 
-
-Fanduel Mainline will be offline and underconstruction until the start of the 2023-24 season. All our pipelines are currently built for 
-large slates and mostly for GPPs, so there isnt much left to do NFL wise until 2023-24. 
-
-We are currently sharpening our NHL model (GPD) on fanduel in the nickel and quarter contests. It has done amazingly. In only 5 slates
-we have won one contest and placed multiple entries in the top 10 in 2 others.. the hit rate has been phenomal. 
-
 TOP LEVEL METHODOLOGY:
 
 Our approach is a team based approach. we have collected player data (fantasylabs) from 60 or so historical slates. from there....
