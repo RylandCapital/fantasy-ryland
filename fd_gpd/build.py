@@ -33,7 +33,7 @@ from datetime import datetime
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[69], strdates=['3/14/23'])          
+pull_stats(slate_ids=[71], strdates=['3/18/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -88,7 +88,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['3/16/23'], strdates=['3/16/23'])    
+pull_stats_live(slate_ids=['3/21/23'], strdates=['3/21/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -149,9 +149,9 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='3.16.23',
+  slate_date='3.21.23',
   model='ensemble',
-  roster_size=158,
+  roster_size=306,
 
   #pct from opt: 
     # can change allocations significantly even at .786 form .01 
