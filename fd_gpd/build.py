@@ -33,7 +33,7 @@ from datetime import datetime
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[71], strdates=['3/18/23'])          
+pull_stats(slate_ids=[72], strdates=['3/20/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -151,25 +151,25 @@ Based on your contest set:
 roster = slate_optimization(
   slate_date='3.21.23',
   model='ensemble',
-  roster_size=306,
+  roster_size=3,
 
   #pct from opt: 
     # can change allocations significantly even at .786 form .01 
     # increases average dk salaries as well when moved up
     # can very get rid of top proba team/s
-  pct_from_opt_proj=.01, #.786
+  pct_from_opt_proj=.85, #.786
 
   #max pct own:
     # higher field GPPs you want to make more diverse
     # smaller take more of a stand with high pct from optimal
-  max_pct_own=.382,
+  max_pct_own=1,
 
   #dkSalary min 
     #
     #
-  dksalary_min=0,
+  dksalary_min=50000,
 
-  removals = [],
+  removals = ['88253-39710', '88253-11294', '88253-59256','88253-8292','88253-52475'],
   optimization_pool=int(100000), 
   neuter=False
   )

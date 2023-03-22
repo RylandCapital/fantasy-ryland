@@ -22,7 +22,7 @@ if os.path.exists(path) == False:
 cores = 40
 gameday_week = '3.21.23'
 #Start Day -> 148.1 @ 54900
-gameday_optimal_proj = 148.1
+gameday_optimal_proj = 142.9
 
 historical_winning_scores = {  
  '1.6.22': {'day':'thursday', 'slate_id':0, 'winning_score':273.90, 'optimal':337.3},
@@ -79,7 +79,7 @@ historical_winning_scores = {
  '1.26.23': {'day':'thursday', 'slate_id':55, 'winning_score':231.00, 'optimal':355.2},
  '2.7.23': {'day':'tuesday', 'slate_id':56, 'winning_score':209.00, 'optimal':273.2},
  '2.9.23': {'day':'thursday', 'slate_id':57, 'winning_score':231.00, 'optimal':309.8},
- '2.17.23': {'day':'friday', 'slate_id':58, 'winning_score':237.00, 'optimal':301.4},
+ '2.17.23': {'day':'friday', 'slate_id':58, 'winning_score':237.00, 'optimal':301.4}, #remove? 5 game slate
  '2.18.23': {'day':'saturday', 'slate_id':59, 'winning_score':258.00, 'optimal':332.8},
  '2.21.23': {'day':'tuesday', 'slate_id':60, 'winning_score':251.00, 'optimal':332.3},
  '2.23.23': {'day':'thursday', 'slate_id':61, 'winning_score':244.00, 'optimal':342.9},
@@ -92,9 +92,8 @@ historical_winning_scores = {
  '3.11.23': {'day':'saturday', 'slate_id':68, 'winning_score':230, 'optimal':352},
  '3.14.23': {'day':'tuesday', 'slate_id':69, 'winning_score':260, 'optimal':353.9},
  '3.16.23': {'day':'thursday', 'slate_id':70, 'winning_score':224.10, 'optimal':327.4},
- '3.18.23': {'day':'saturday', 'slate_id':71, 'winning_score':252, 'optimal':348.9},   #started gpd2.0 process, 70cash/30gpp, 50/50 1-0 training set
-
- '3.20.23': {'day':'monday', 'slate_id':72, 'winning_score':220.20, 'optimal':293}, 
+ '3.18.23': {'day':'saturday', 'slate_id':71, 'winning_score':252, 'optimal':348.9}, 
+ '3.20.23': {'day':'monday', 'slate_id':72, 'winning_score':220.20, 'optimal':293}, #remove? 5 game slate
 }
 
 
@@ -103,7 +102,7 @@ master_historical_weeks = [
         ]
 
 curr_historical_optimize_weeks = [
-   ['3.18.23']
+   ['3.20.23']
     ]
 
 mlweeks = [1,2] 

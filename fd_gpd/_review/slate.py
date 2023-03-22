@@ -98,14 +98,17 @@ class Data:
         ascending=False) for f in onlyfiles]
         )
 
-      #this brings in live stats (no actual)
+      #this brings in live stats from last pull(no actual)
       stats = salary_arb(slate_date=self.slate_date)
       stats = stats.set_index('RylandID_master')
 
       teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]
+      #below should be the first time you see teams get smaller because of stats being pulled AFTER teams are made on gameday
       teams = teams.set_index('name').join(stats, how='inner', lsuffix='_ot')
-      teams = teams.join(Data(self.slate_date).fantasylabs_historical_stats()[['proj_actpts']], how='left').reset_index()
+      #below could make teams get smaller because of this changes on fantasylabs from gameday to post gameday
+      teams = teams.join(Data(self.slate_date).fantasylabs_historical_stats()[['proj_actpts']], how='inner').reset_index()
 
+      #becuase we had teams lose players above, we must remove any teams that arent full
       nine_confirm = teams.groupby('lineup').apply(lambda x: len(x))
       teams = teams.set_index('lineup').loc[nine_confirm[nine_confirm==9].index.tolist()].reset_index()
 
@@ -148,6 +151,9 @@ class Slate(Data):
 
     rpt = pd.DataFrame([], columns = [
       'Num Teams Predicted',
+      'Num Milly Winner in Pool',
+      'Highest Proba Milly Winner',
+      'Highest Proba Milly Winner Rank',
       'Top Score',
       'Proba of Top Score',
       'Proba Rank', 
@@ -159,13 +165,18 @@ class Slate(Data):
     top_score_id = teams['proj_actpts'].sum().sort_values().index[-1]
     top_proba_id = teams['proba_1'].first().sort_values().index[-1]
     top_ticket_ids = teams['proba_1'].first().sort_values().index[-150:]
+    milly_winner_ids = teams['proj_actpts'].sum()[teams['proj_actpts'].sum()>self.winning_score].index
 
     rpt.loc['', 'Num Teams Predicted'] = len(teams)
+    rpt.loc['', 'Num Milly Winner in Pool'] = '{0} ({1}%)'.format(len(teams['proj_actpts'].sum()[teams['proj_actpts'].sum()>self.winning_score]),
+                                                                  round(100*(len(teams['proj_actpts'].sum()[teams['proj_actpts'].sum()>self.winning_score])/len(teams)),2))
+    rpt.loc['','Highest Proba Milly Winner'] = round(data.loc[milly_winner_ids]['proba_1'].max(),4)
+    rpt.loc['','Highest Proba Milly Winner Rank'] = round(data.loc[milly_winner_ids]['proba_rank'].min(),4)
 
-    rpt.loc['Team Pool', 'Top Score'] = teams['proj_actpts'].sum().loc[top_score_id]
-    rpt.loc['Team Pool', 'Proba of Top Score'] = teams['proba_1'].first().loc[top_score_id]
-    rpt.loc['Team Pool', 'Proba Rank'] = teams['proba_rank'].first().loc[top_score_id]
-    rpt.loc['Team Pool', 'Would Have Won?'] = teams['proj_actpts'].sum().loc[top_score_id]>self.winning_score
+    rpt.loc['Top Team Pool', 'Top Score'] = teams['proj_actpts'].sum().loc[top_score_id]
+    rpt.loc['Top Team Pool', 'Proba of Top Score'] = teams['proba_1'].first().loc[top_score_id]
+    rpt.loc['Top Team Pool', 'Proba Rank'] = teams['proba_rank'].first().loc[top_score_id]
+    rpt.loc['Top Team Pool', 'Would Have Won?'] = teams['proj_actpts'].sum().loc[top_score_id]>self.winning_score
     
     rpt.loc['Top Proba', 'Top Score'] = teams['proj_actpts'].sum().loc[top_proba_id]
     rpt.loc['Top Proba', 'Proba of Top Score'] = teams['proba_1'].first().loc[top_proba_id]
