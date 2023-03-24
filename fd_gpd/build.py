@@ -13,6 +13,8 @@ from fd_gpd._predict.feature_generation.frv1 import buildml_live
 
 from fd_gpd._predict.optimize.optimize_fdt import slate_optimization
 
+from fd_gpd._review.slate import Slate
+
 from multiprocessing import Pool
 from itertools import repeat
 
@@ -33,7 +35,7 @@ from datetime import datetime
 ################################################
 
 '''1. pull historical week/s'''
-pull_stats(slate_ids=[72], strdates=['3/20/23'])          
+pull_stats(slate_ids=[73], strdates=['3/21/23'])          
 
 '''2. optimize team from historical raw data'''
 weeks = curr_historical_optimize_weeks
@@ -88,7 +90,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['3/21/23'], strdates=['3/21/23'])    
+pull_stats_live(slate_ids=['3/23/23'], strdates=['3/23/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -149,7 +151,7 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='3.21.23',
+  slate_date='3.23.23',
   model='ensemble',
   roster_size=3,
 
@@ -157,7 +159,7 @@ roster = slate_optimization(
     # can change allocations significantly even at .786 form .01 
     # increases average dk salaries as well when moved up
     # can very get rid of top proba team/s
-  pct_from_opt_proj=.85, #.786
+  pct_from_opt_proj=.01, #.786
 
   #max pct own:
     # higher field GPPs you want to make more diverse
@@ -169,16 +171,13 @@ roster = slate_optimization(
     #
   dksalary_min=50000,
 
-  removals = ['88253-39710', '88253-11294', '88253-59256','88253-8292','88253-52475'],
+  removals = ['88326-8412', '88326-9278', '88326-82912',
+               '88326-37881', '88326-82156', '88326-43212', '88326-168025',
+               '88326-135677', '88326-101993', '88326-66710', '88326-70909'],
   optimization_pool=int(100000), 
   neuter=False
   )
 
   
 
-# Slate Optimization HyperParameter Search
-# in order to FULLY backtest, you need 
-# 1. slate stats file
-# 2. predictions, 
-# 3. teampools,
-# 4. dksalarys
+Slate('3.21.23').report()
