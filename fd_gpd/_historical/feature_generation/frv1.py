@@ -70,6 +70,16 @@ def buildml(strdates):
             lineups = file.groupby('lineup')
             salaries = lineups['salary'].sum()
             teamstackgroup = file.groupby(['lineup', 'team_team'])
+
+            #new/
+            min_stats = lineups.apply(lambda x: x.sort_values('salary').iloc[0])[['salary',
+                                                                                'proj_pts/sal',
+                                                                                'stats-15_toi',
+                                                                                'stats-month_toi',
+                                                                                'stats-month_pptoi',
+                                                                                'vegas_pts']]
+            min_stats.columns = [i+'_min_salary_player' for i in min_stats.columns]
+            #/new
             
             lencheck = lineups.apply(lambda x: len(x)).value_counts()
             if (lencheck.index[0]==9) & (len(lencheck)==9):
@@ -111,7 +121,16 @@ def buildml(strdates):
                 'teamstats-month_pks',
                 'teamstats-month_pk%',
                 'teamstats-month_opppps',
-                'teamstats-month_opppp%'          
+                'teamstats-month_opppp%',
+                #new
+                'teamstats-month_pp%',
+                'stats-month_toi',
+                'stats-month_pptoi',
+                'stats-month_wins',
+                'stats-month_g',
+                'stats-month_a'
+                #/new
+
                 ].mean()
             team_means.columns = [i+'_mean' for i in team_means.columns]
 
@@ -150,7 +169,15 @@ def buildml(strdates):
                 'teamstats-month_pks',
                 'teamstats-month_pk%',
                 'teamstats-month_opppps',
-                'teamstats-month_opppp%'          
+                'teamstats-month_opppp%',
+                #new
+                'teamstats-month_pp%',
+                'stats-month_toi',
+                'stats-month_pptoi',
+                'stats-month_wins',
+                'stats-month_g',
+                'stats-month_a'
+                #/new         
                 ].std()
             team_stds.columns = [i+'_std' for i in team_stds.columns]
         
@@ -307,6 +334,9 @@ def buildml(strdates):
             analysis = pd.concat([
                                   team_means,
                                   team_stds,
+                                  #new
+                                  min_stats,
+                                  #new
                                   sal_std,
                                   plyrs_eq_0,
                                   plyrs_0,
@@ -356,6 +386,7 @@ def buildml(strdates):
             analysis.columns =  \
                         team_means.columns.tolist() + \
                         team_stds.columns.tolist() + \
+                        min_stats.columns.tolist() + \
                         ['salary_std',
                         'plyrs_eq_0',
                         'plyrs_<_0',
@@ -419,7 +450,7 @@ def buildml(strdates):
             analysis['id'] = analysis['week'].astype(str) + \
             analysis['lineup'].astype(str) 
 
-            analysis['ismilly'] = np.where(analysis['actual_sum']>(historical_winning_scores[str(datee)]['winning_score']*.99), 1,0)
+            analysis['ismilly'] = np.where(analysis['actual_sum']>(historical_winning_scores[str(datee)]['winning_score']*.999), 1,0)
 
             analysis.to_csv('C:\\Users\\{0}\\.fantasy-ryland\\_historical\\gpd\\ml_datasets\\{1}.csv.gz'.format(user, onlyf),
                                compression='gzip', index=False)

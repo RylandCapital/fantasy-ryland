@@ -103,9 +103,13 @@ class Data:
       stats = stats.set_index('RylandID_master')
 
       teams = teams[teams['lineup'].isin(predictions['lineup'].unique())]
+
       #below should be the first time you see teams get smaller because of stats being pulled AFTER teams are made on gameday
+      #so players could have been removed and we need to remove them
       teams = teams.set_index('name').join(stats, how='inner', lsuffix='_ot')
+
       #below could make teams get smaller because of this changes on fantasylabs from gameday to post gameday
+      #injuries, not confirmed goalies etc were on there when I build teams at 12PM on gameday
       teams = teams.join(Data(self.slate_date).fantasylabs_historical_stats()[['proj_actpts']], how='inner').reset_index()
 
       #becuase we had teams lose players above, we must remove any teams that arent full
