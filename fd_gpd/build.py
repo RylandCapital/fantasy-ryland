@@ -90,7 +90,7 @@ GAMEDAY PREDICTION TOOLS
 ################################################
 
 '''pull live week stats from fantasy labs'''
-pull_stats_live(slate_ids=['3/30/23'], strdates=['3/30/23'])    
+pull_stats_live(slate_ids=['4/1/23'], strdates=['4/1/23'])    
 
 workers = [[i] for i in np.arange(1,cores)]
 
@@ -151,7 +151,7 @@ Based on your contest set:
 ################################################
 ################################################
 roster = slate_optimization(
-  slate_date='3.30.23',
+  slate_date='4.1.23',
   model='ensemble',
   roster_size=2,
 
@@ -171,8 +171,7 @@ roster = slate_optimization(
     #
   dksalary_min=50000,
 
-  removals = ['88579-12163','88579-12299','88579-15286','88579-42628',
-              ],
+  removals = ['88647-23438'],
   optimization_pool=int(100000), 
   neuter=False
   )

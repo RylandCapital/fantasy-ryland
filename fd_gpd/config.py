@@ -20,8 +20,8 @@ if os.path.exists(path) == False:
   os.mkdir(path+'_backtesting\\')
 
 cores = 40
-gameday_week = '3.30.23'
-gameday_optimal_proj = 146.8
+gameday_week = '4.1.23'
+gameday_optimal_proj = 156.4
 
 historical_winning_scores = {  
  '1.6.22': {'day':'thursday', 'slate_id':0, 'winning_score':273.90, 'optimal':337.3},
